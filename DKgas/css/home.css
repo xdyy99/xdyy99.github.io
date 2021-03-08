@@ -1,0 +1,475 @@
+.header .header__logo img {
+  opacity: 1;
+  display: block;
+}
+.header .header__logo img:nth-of-type(2) {
+  opacity: 0;
+  display: none;
+}
+.header .header__phone img {
+  opacity: 1;
+  display: block;
+}
+.header .header__phone img:nth-of-type(2) {
+  opacity: 0;
+  display: none;
+}
+
+.header__home {
+  background-color: transparent;
+  color: #fff;
+}
+.header__home .header__logo img {
+  opacity: 0;
+  display: none;
+}
+.header__home .header__logo img:nth-of-type(2) {
+  opacity: 1;
+  display: block;
+}
+.header__home .header__list > li:hover {
+  color: #0E2F56;
+}
+.header__home .header__phone img {
+  opacity: 0;
+  display: none;
+}
+.header__home .header__phone img:nth-of-type(2) {
+  opacity: 1;
+  display: block;
+}
+.header__home .header__phone a {
+  color: #fff;
+}
+.header__home .header__phone a:hover {
+  color: #0E2F56;
+}
+.header__home .header__phone__title {
+  color: #fff;
+}
+.header__home .header__phone::before {
+  background-color: #fff;
+}
+.header__home .header__lang {
+  color: #0E2F56;
+}
+.header__home .lang__set {
+  background-color: #fff;
+}
+.header__home .lang__set::after {
+  background-image: url("../assets/images/Mask Group 1.1.png");
+}
+
+.main__home {
+  padding-top: 0;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: 4rem;
+}
+
+.slick-arrow {
+  display: none !important;
+}
+
+.slick-track {
+  height: max-content !important;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #fff !important;
+}
+
+.slick-dots li:hover button:before {
+  color: #fff;
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: -0.1rem;
+}
+
+.banner {
+  width: 100%;
+  padding: 0;
+}
+
+.banner__slide {
+  display: block;
+  width: 100%;
+}
+
+.banner__item {
+  width: 100%;
+}
+.banner__item img {
+  max-width: 100%;
+  min-width: 117rem;
+}
+
+.banner__content {
+  display: block;
+  width: calc(100% * 7 / 12);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 10rem 3.4rem;
+  color: #fff;
+}
+.banner__content::after {
+  content: "";
+  display: block;
+  width: 0.1rem;
+  height: 37rem;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  top: 10rem;
+}
+.banner__content__bold {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 2.7rem;
+  margin-bottom: 0.8rem;
+  display: block;
+}
+.banner__content__title {
+  font-size: 6rem;
+  font-weight: lighter;
+  line-height: 8rem;
+  white-space: pre-line;
+  display: block;
+  margin-bottom: 1.6rem;
+}
+.banner__content__btn {
+  background-color: #fff;
+  color: #118DF0;
+  padding: 0.9rem 4.3rem;
+}
+
+.info {
+  display: block;
+  width: 100%;
+  padding: 0;
+  background-color: #0E2F56;
+}
+.info::-webkit-scrollbar-track {
+  background-color: #F5F5F5;
+}
+.info::-webkit-scrollbar {
+  height: 0.8rem;
+  background-color: #F5F5F5;
+}
+.info::-webkit-scrollbar-thumb {
+  background-color: #118DF0;
+  border: none;
+}
+.info__list {
+  width: 100%;
+}
+.info__list li {
+  width: calc(100% * 1 / 6);
+  color: #fff;
+  padding: 6rem 3.6rem;
+  transition: 0.3s linear;
+}
+.info__list li:hover {
+  background-color: #118DF0;
+}
+.info__list li:hover .info__img img:nth-of-type(1) {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+.info__list li:hover .info__img img:nth-of-type(2) {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+.info__list li:hover .info__btn::after {
+  background-image: url("../assets/images/Mask Group 4.png");
+}
+.info__item {
+  width: 100%;
+}
+.info__img {
+  display: block;
+  margin-bottom: 1.4rem;
+}
+.info__img img:nth-of-type(2) {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+.info__title {
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  margin-bottom: 1.4rem;
+}
+.info__txt {
+  display: block;
+  opacity: 0.8;
+  width: 100%;
+  white-space: pre-wrap;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  margin-bottom: 2rem;
+}
+.info__btn {
+  display: block;
+  position: relative;
+  width: max-content;
+  padding-right: 3rem;
+  font-weight: bold;
+  line-height: 1.9rem;
+}
+.info__btn::after {
+  content: "";
+  width: 0.8rem;
+  height: 0.8rem;
+  background-image: url("../assets/images/Mask Group 11.png");
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+}
+.info__btn:hover::after {
+  animation-name: arr-move;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes arr-move {
+  0% {
+    transform: translate(0%, -50%);
+  }
+  25% {
+    transform: translate(100%, -50%);
+  }
+  50% {
+    transform: translate(0%, -50%);
+  }
+  75% {
+    transform: translate(100%, -50%);
+  }
+  100% {
+    transform: translate(0%, -50%);
+  }
+}
+.product {
+  text-align: center;
+  width: 100%;
+  background-image: url("../assets/images/Image 3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.product__btn {
+  margin: 0 auto;
+}
+.product__subtitle {
+  color: #118DF0;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 1.9rem;
+}
+.product__title {
+  margin-bottom: 2rem;
+}
+.product__txt {
+  display: block;
+  width: 66%;
+  margin: 0 auto;
+  margin-bottom: 2.5rem;
+  opacity: 0.7;
+  white-space: pre-wrap;
+  overflow: hidden;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+}
+.product__txt__bold {
+  font-weight: bold;
+  text-transform: uppercase;
+  align-items: center;
+}
+
+.exp {
+  width: 100%;
+  overflow: hidden;
+  background-color: #F2F4F6;
+}
+.exp__container {
+  display: flex;
+}
+.exp__left {
+  width: 50%;
+}
+.exp__right {
+  width: 50%;
+  position: relative;
+  z-index: 5;
+}
+.exp__title {
+  margin-bottom: 2rem;
+}
+.exp__txt {
+  display: block;
+  width: calc(100% * 5 / 6);
+  margin-bottom: 2.5rem;
+  opacity: 0.7;
+  white-space: pre-wrap;
+  overflow: hidden;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+}
+.exp__txt__bold {
+  font-weight: bold;
+  text-transform: uppercase;
+  align-items: center;
+}
+.exp__list {
+  position: absolute;
+  bottom: 0;
+  left: 3.8rem;
+  transform: translateY(6.2rem);
+  width: 100%;
+}
+.exp__list li {
+  text-transform: uppercase;
+  color: #0E2F56;
+  font-weight: bold;
+  white-space: pre-wrap;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  margin: 0.7rem;
+  position: relative;
+  transition: 0.5s linear;
+}
+.exp__list li::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 2rem solid #118DF0;
+  border-left: 2rem solid transparent;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+.exp__list li:hover {
+  background-color: #118DF0;
+  color: #fff;
+}
+.exp__list li:hover .exp__num {
+  color: #fff;
+}
+.exp__list__item {
+  padding: 3rem;
+  padding-top: 5.6rem;
+  padding-right: 5rem;
+}
+.exp__num {
+  font-size: 3.6rem;
+  line-height: 4.8rem;
+  color: #118DF0;
+  font-weight: normal;
+  text-transform: none;
+}
+.exp__bg {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 4;
+}
+
+@media only screen and (max-width: 1920px) {
+  .info {
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .info__list {
+    min-width: 192rem;
+  }
+}
+@media only screen and (max-width: 1170px) {
+  .exp__container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .exp__left {
+    width: 100%;
+    text-align: center;
+    z-index: 5;
+    background-color: #F2F4F6;
+  }
+  .exp__left .button {
+    margin: 0 auto;
+    margin-bottom: 2.5rem;
+  }
+  .exp__right {
+    width: 100%;
+  }
+  .exp__txt {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 2.5rem;
+  }
+  .exp__list {
+    position: relative;
+    left: 0;
+    transform: translateY(0);
+    justify-content: center;
+  }
+  .exp__bg {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .header.header__home .header__btn .line {
+    background-color: #fff;
+  }
+
+  .banner__content {
+    width: 100%;
+    left: 0;
+  }
+  .banner__content::after {
+    display: none;
+  }
+  .banner__content__bold {
+    font-size: 1.6rem;
+  }
+  .banner__content__title {
+    font-size: 4rem;
+    line-height: 6rem;
+  }
+
+  .product__txt {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 570px) {
+  .exp__list li {
+    font-size: 1.2rem;
+    margin: 0.5rem;
+  }
+  .exp__list__item {
+    padding: 1rem;
+    padding-top: 2.5rem;
+    padding-right: 2.5rem;
+  }
+  .exp__num {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+}
+
+/*# sourceMappingURL=home.css.map */
