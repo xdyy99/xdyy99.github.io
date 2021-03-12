@@ -66,7 +66,7 @@ $f-txt: "Google Sans";
 ::-webkit-scrollbar {
     display: block;
     width: 8px;
-    height: 4px;
+    height: 8px;
     background-color: #b4b4b4;
 }
 
@@ -580,6 +580,11 @@ $f-txt: "Google Sans";
 
 
 @media only screen and (max-width: 1100px){
+    
+::-webkit-scrollbar {
+    width: 8px;
+    height: 5px;
+}
     .header{
         &__btn{
             width: 100%;

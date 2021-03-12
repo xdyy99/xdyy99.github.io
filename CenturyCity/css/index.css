@@ -50,7 +50,7 @@
   left: 65%;
   bottom: 6.8rem;
 }
-.banner__content:nth-of-type(6) {
+.banner__content:nth-of-type(1) {
   left: 77%;
   top: 30%;
 }
@@ -409,11 +409,14 @@
   transition: 0.3s linear;
 }
 .info__img {
+  width: 100%;
   z-index: 1;
   transform: translateY(-10rem);
   position: relative;
 }
 .info__img img {
+  width: 100%;
+  max-width: none;
   position: relative;
   top: 0;
   left: 0;
@@ -827,6 +830,8 @@
   margin-bottom: -0.5rem;
 }
 .update__bottom__img li img {
+  width: 100%;
+  max-width: none;
   transition: 0.5s linear;
   object-fit: cover;
 }
@@ -861,18 +866,13 @@
   width: 100%;
   max-width: 117rem;
   position: relative;
-  overflow-x: scroll;
-}
-.update__list::-webkit-scrollbar {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-.update__list::-webkit-scrollbar-thumb {
-  background-color: #CF9A2C;
 }
 .update__list li {
   display: block;
-  min-width: calc(117rem / 4 - 1rem);
-  margin-right: 1rem;
+  margin: 0 0.5rem;
+}
+.update__list li img {
+  max-width: none;
 }
 .update__item {
   width: 100%;
@@ -1094,14 +1094,25 @@
   }
 }
 @media only screen and (max-width: 1200px) {
+  .update__title {
+    margin-bottom: 3rem;
+  }
+  .update .section__title {
+    white-space: unset;
+    position: relative;
+  }
   .update__top {
-    max-width: calc(75% - 1rem);
+    width: 100%;
+    max-width: calc(100% - 3rem);
+    margin: 0 1.5rem;
+    transform: translateX(0);
   }
   .update__list {
     max-width: 100%;
   }
   .update__list li {
-    min-width: calc(100% / 3 - 1rem);
+    min-width: none;
+    width: calc(100% / 3 - 1rem);
   }
 
   .news__container {
@@ -1145,7 +1156,7 @@
     left: 60%;
     bottom: 6.8rem;
   }
-  .banner__content:nth-of-type(6) {
+  .banner__content:nth-of-type(1) {
     left: 70%;
     top: 38%;
   }
@@ -1256,25 +1267,6 @@
     width: 100%;
   }
 
-  .update .section__title {
-    white-space: unset;
-    width: 100%;
-    position: relative;
-    margin-bottom: 3rem;
-  }
-  .update__top {
-    transform: translateX(0);
-    max-width: calc(100% - 3rem);
-    margin: 0 1.5rem;
-  }
-  .update__list li {
-    min-width: calc(100% / 3 - 1rem);
-    margin: 0 0.5rem;
-  }
-  .update__list li img {
-    max-width: none;
-  }
-
   .round__bottom {
     flex-wrap: wrap;
   }
@@ -1316,7 +1308,7 @@
     left: 10%;
     bottom: 20rem;
   }
-  .banner__content:nth-of-type(6) {
+  .banner__content:nth-of-type(1) {
     left: 10%;
     top: 30rem;
   }
@@ -1351,11 +1343,6 @@
     left: 0;
     bottom: 0;
     width: 100%;
-  }
-
-  .update__list li {
-    min-width: calc(100% - 1rem);
-    margin: 0 0.5rem;
   }
 
   .reason__grid {
