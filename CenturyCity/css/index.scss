@@ -34,6 +34,7 @@ $f-txt: "Google Sans";
     }
 
     &__content{
+        pointer-events: none;
         position: absolute;
         display: block;
         z-index: 3;
@@ -43,7 +44,7 @@ $f-txt: "Google Sans";
         font-size: 2rem;
         line-height: 2.7rem;
         padding-left: 3rem;
-        width: calc(100% / 3);
+        width: calc(100% / 4);
         border-left: 1px solid #FEE87F;
         height: 3rem;
         transition: 0.5s linear;
@@ -70,6 +71,7 @@ $f-txt: "Google Sans";
         }
 
         &:hover{
+            pointer-events: visible;
             height: 35rem;
             z-index: 4;
             .banner__img{
@@ -147,6 +149,7 @@ $f-txt: "Google Sans";
             }
         }
         &::before{
+            pointer-events: visible;
             content: "";
             display: block;
             width: 6rem;
@@ -199,6 +202,7 @@ $f-txt: "Google Sans";
         transition: 0.3s linear;
     }
     &__title__container{
+        pointer-events: none;
         width: 100%;
         display: block;
         position: absolute;
@@ -919,6 +923,7 @@ $f-txt: "Google Sans";
         li{
             display: block;
             margin: 0 0.5rem;
+            outline: none;
 
             img{
                 max-width: none;
@@ -927,6 +932,7 @@ $f-txt: "Google Sans";
     }
     &__item{
         width: 100%;
+        outline: none;
     }
     &__title{
         display: block;
