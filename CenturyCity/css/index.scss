@@ -384,7 +384,9 @@ $f-txt: "Google Sans";
             position: relative;
             transition: 0.3s linear;
             background-color: #fff;
-            
+            cursor: pointer;
+            user-select: none;
+
             &:hover{
                 background-color: $c-yellow;
                 &::before{
@@ -430,6 +432,7 @@ $f-txt: "Google Sans";
     }
 
     &__img{
+        display: block;
         width: 100%;
         z-index: 1;
         transform: translateY(-10rem);
@@ -678,7 +681,7 @@ $f-txt: "Google Sans";
                     display: block;
                     background-color: $c-blue;
                     width: 0;
-                    height: 100%;
+                    height: calc(100% + 1px);
                     position: absolute;
                     top: 0;
                     left: 0;
@@ -730,6 +733,12 @@ $f-txt: "Google Sans";
     position: relative;
     overflow: hidden;
 
+    .container{
+        padding: 0;
+    }
+    .section__title{
+        margin: 0 1.5rem;
+    }
     .slick-list{
         overflow: visible;
     }
@@ -744,7 +753,7 @@ $f-txt: "Google Sans";
 
     }
     &__item{
-        max-width: calc(100vw - 3rem);
+        max-width: 100%;
         height: auto;
         outline: none;
         position: relative; 
@@ -755,6 +764,7 @@ $f-txt: "Google Sans";
         transition: 0.5s ease-in-out;
         z-index: 5;
         img{
+            max-width: none;
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -863,9 +873,11 @@ $f-txt: "Google Sans";
         
         &__img{
             width: 100%;
+            display: flex;
             flex-wrap: wrap;
 
-            li{
+            a{
+                display: block;
                 position: relative;
                 width: calc(100% / 6);
                 height: 100%;
@@ -1317,6 +1329,7 @@ $f-txt: "Google Sans";
     }
 }
 @media only screen and (max-width: 800px){
+
     .banner{
         &__content{
             font-size: 1.8rem;
@@ -1353,6 +1366,11 @@ $f-txt: "Google Sans";
 
     .info{
         &__tab{
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: translateY(-10rem);
+            padding: 0;
             &__list{
                 flex-wrap: wrap;
                 li{
@@ -1363,6 +1381,7 @@ $f-txt: "Google Sans";
             &__item{
                 padding: 1.5rem;
                 padding-right: 5rem;
+
                 &.active{
                     &::after{
                         border: none;
@@ -1414,7 +1433,18 @@ $f-txt: "Google Sans";
             }
         }
     }
+    .update{
+        &__bottom{
+            width: 100%;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            
+            &__img{
+                min-width: 117rem;
 
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 600px){

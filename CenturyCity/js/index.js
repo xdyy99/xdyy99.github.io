@@ -1,4 +1,7 @@
-
+////////////// galery //////////////
+$(document).ready(function() {
+    $("#lightgallery").lightGallery(); 
+});
 ////////////// wow js //////////////
 wow = new WOW(
     {
@@ -29,40 +32,42 @@ var typeCount6 = 1;
 window.addEventListener("scroll", function () {
     var intPos = document.querySelector(".intro").offsetTop - 600;
     if(window.scrollY > intPos && intro == 1) {
-        timer = setInterval(intType, 5);
+        timer = setInterval(intType, 3);
         intro = 0;
     }
     var infPos1 = document.querySelector(".infoPos1").offsetTop - 350;
     if(window.scrollY > infPos1 && typeCount1 == 1) {
-        timer1 = setInterval(typingTxt1, 5);
+        timer1 = setInterval(typingTxt1, 3);
         typeCount1 = 0;
     }
     var infPos2 = document.querySelector(".infoPos2").offsetTop - 350;
     if(window.scrollY > infPos2 && typeCount2 == 1) {
-        timer2 = setInterval(typingTxt3, 5);
+        timer2 = setInterval(typingTxt3, 3);
         typeCount2 = 0;
     }
     var infPos3 = document.querySelector(".infoPos3").offsetTop - 350;
     if(window.scrollY > infPos3 && typeCount3 == 1) {
-        timer3 = setInterval(typingTxt5, 5);
+        timer3 = setInterval(typingTxt5, 3);
         typeCount3 = 0;
     }
     var infPos4 = document.querySelector(".infoPos4").offsetTop - 350;
     if(window.scrollY > infPos4 && typeCount4 == 1) {
-        timer4 = setInterval(typingTxt7, 5);
+        timer4 = setInterval(typingTxt7, 3);
         typeCount4 = 0;
     }
     var infPos5 = document.querySelector(".infoPos5").offsetTop - 350;
     if(window.scrollY > infPos5 && typeCount5 == 1) {
-        timer5 = setInterval(typingTxt9, 5);
+        timer5 = setInterval(typingTxt9, 3);
         typeCount5 = 0;
     }
     var infPos6 = document.querySelector(".infoPos6").offsetTop - 350;
     if(window.scrollY > infPos6 && typeCount6 == 1) {
-        timer6 = setInterval(typingTxt13, 5);
+        timer6 = setInterval(typingTxt13, 3);
         typeCount6 = 0;
     }
 });
+
+
 
 ////////////// img tab //////////////
 var imgBtn = document.querySelectorAll(".imgBtn");
@@ -88,8 +93,6 @@ $('.demo__slide').slick({
     autoplaySpeed: 3000,
     autoplay: true,
     arrows: false,
-    variableWidth: true,
-    centerMode: true,
   });
 ////////////// slick news //////////////
 $('.news__slide').slick({
@@ -178,7 +181,7 @@ function typingTxt1(){
     char1++;
     if(char1 === typeSplit1.length){
         clearInterval(timer1);
-        timer1 = setInterval(typingTxt2, 5);
+        timer1 = setInterval(typingTxt2, 3);
         return;
     }
 }
@@ -216,7 +219,7 @@ function typingTxt3(){
     char3++;
     if(char3 === typeSplit3.length){
         clearInterval(timer2);
-        timer2 = setInterval(typingTxt4, 5);
+        timer2 = setInterval(typingTxt4, 3);
         return;
     }
 }
@@ -253,7 +256,7 @@ function typingTxt5(){
     char5++;
     if(char5 === typeSplit5.length){
         clearInterval(timer3);
-        timer3 = setInterval(typingTxt6, 5);
+        timer3 = setInterval(typingTxt6, 3);
         return;
     }
 }
@@ -291,7 +294,7 @@ function typingTxt7(){
     char7++;
     if(char7 === typeSplit7.length){
         clearInterval(timer4);
-        timer4 = setInterval(typingTxt8, 5);
+        timer4 = setInterval(typingTxt8, 3);
         return;
     }
 }
@@ -329,7 +332,7 @@ function typingTxt9(){
     char9++;
     if(char9 === typeSplit9.length){
         clearInterval(timer5);
-        timer5 = setInterval(typingTxt10, 5);
+        timer5 = setInterval(typingTxt10, 3);
         return;
     }
 }
@@ -348,7 +351,7 @@ function typingTxt10(){
     char10++;
     if(char10 === typeSplit10.length){
         clearInterval(timer5);
-        timer5 = setInterval(typingTxt11, 5);;
+        timer5 = setInterval(typingTxt11, 3);
         return;
     }
 }
@@ -367,7 +370,7 @@ function typingTxt11(){
     char11++;
     if(char11 === typeSplit11.length){
         clearInterval(timer5);
-        timer5 = setInterval(typingTxt12, 5);
+        timer5 = setInterval(typingTxt12, 3);
         return;
     }
 }
@@ -405,7 +408,7 @@ function typingTxt13(){
     char13++;
     if(char13 === typeSplit13.length){
         clearInterval(timer6);
-        timer6 = setInterval(typingTxt14, 5);
+        timer6 = setInterval(typingTxt14, 3);
         return;
     }
 }
@@ -428,5 +431,7 @@ function typingTxt14(){
         return;
     }
 }
+
+
 
 

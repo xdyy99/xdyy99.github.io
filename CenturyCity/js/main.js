@@ -1,15 +1,23 @@
 ////////////// menu control //////////////
 var menuBtn = document.querySelector(".menuBtn");
 var menu = document.querySelector(".header__bottom");
-
+var menuBg= document.querySelector(".header__bg");
 
 menuBtn.addEventListener("click", menuAct);
-menu.addEventListener("click", menuAct);
+menuBg.addEventListener("click", menuAct);
 function menuAct(){
     menuBtn.classList.toggle("active");
     menu.classList.toggle("active");   
 }
 
+////////////// submenu control //////////////
+var subCtrl = document.querySelector(".submenu__control");
+var subMenu = document.querySelector(".header__submenu");
+subCtrl.addEventListener("click", subAct);
+function subAct(){
+    subCtrl.classList.toggle("active");
+    subMenu.classList.toggle("active");   
+}
 
 
 ////////////// back to top //////////////
