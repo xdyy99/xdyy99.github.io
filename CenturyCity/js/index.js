@@ -1,7 +1,36 @@
-////////////// galery //////////////
+////////////// update galery //////////////
 $(document).ready(function() {
-    $("#lightgallery").lightGallery(); 
+    $("#updategallery").lightGallery(); 
 });
+
+
+////////////// banner justify //////////////
+var ban = document.querySelectorAll(".banner__content");
+var scrW = screen.width; 
+for(let i = 0; i < ban.length; i++){
+    let counting =scrW - ban[i].offsetLeft - ban[i].offsetWidth;
+    if( counting < 0){
+        counting = counting - 15;
+        let value = "transform:translateX("+ counting +"px)!important";
+        ban[i].setAttribute('style', value);
+    }
+}
+
+////////////// banner click //////////////
+var banBtn = document.querySelectorAll(".banner__content");
+
+for(let i = 0; i < banBtn.length; i++){
+    banBtn[i].addEventListener("click", showBan);
+    function showBan() {
+        for(let a = 0; a < banBtn.length; a++){
+            banBtn[a].classList.remove("active");
+        }
+        banBtn[i].classList.add("active");
+
+    }
+}
+
+
 ////////////// wow js //////////////
 wow = new WOW(
     {

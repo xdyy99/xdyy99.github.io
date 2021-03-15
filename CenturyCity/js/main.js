@@ -1,7 +1,7 @@
 ////////////// menu control //////////////
 var menuBtn = document.querySelector(".menuBtn");
 var menu = document.querySelector(".header__bottom");
-var menuBg= document.querySelector(".header__bg");
+var menuBg = document.querySelector(".menuBg");
 
 menuBtn.addEventListener("click", menuAct);
 menuBg.addEventListener("click", menuAct);

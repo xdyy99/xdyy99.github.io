@@ -241,16 +241,16 @@ $f-txt: "Google Sans";
                 padding-right: 3rem;
             }
             .submenu__control{
-                    width: 0;
-                    height: 0;
-                    display: block;
-                    position: absolute;
-                    top: 2.2rem;
-                    right: 1.5rem;
-                    border-top: 0.4rem solid $c-blue;
-                    border-left: 0.4rem solid transparent;
-                    border-right: 0.4rem solid transparent;
-                    transition: 0.3s linear;
+                width: 0;
+                height: 0;
+                display: block;
+                position: absolute;
+                top: 2.2rem;
+                right: 1.5rem;
+                border-top: 0.4rem solid $c-blue;
+                border-left: 0.4rem solid transparent;
+                border-right: 0.4rem solid transparent;
+                transition: 0.3s linear;
             }
         }
         li{
@@ -271,7 +271,6 @@ $f-txt: "Google Sans";
                     opacity: 1;
                     visibility: visible;
                     transform: translateY(0);
-                    max-height: unset;
                 }
                 .submenu__control {
                     transform:  rotate(-90deg);
@@ -694,40 +693,42 @@ $f-txt: "Google Sans";
             li{
                 width: 100%;
                 a{
-                    width: 100%;
+                    width: calc(100% - 6rem);
+
                     &:hover{
-                        background-color: $c-yellow;
-                        color: #fff;
+                        background-color:#fff;
+                        color: $c-yellow;
                         
                     }
                 }
     
                 &:hover{
                     .header__submenu{
-                        transform: translate(0);
-                        height: auto;
+                        transform: translateY(0);
+                    }
+                    .submenu__control {
+                        transform: rotate(-90deg);
+                        border-top: 0.4rem solid $c-yellow;
                     }
                 }
             }
-            .submenu__container{
-                .submenu__control{
-                    right: 2.5rem;
-                    border-top: 0.5rem solid $c-blue;
-                    border-left: 0.5rem solid transparent;
-                    border-right: 0.5rem solid transparent;
-                    transition: 0.3s linear;
-                    transform: rotate(-90deg);
-                    &.active{
-                        transform: rotate(0);
-                        border-top: 0.5rem solid $c-yellow;
-                    }
+            .submenu__control{
+                right: 2.5rem;
+                border-top: 0.5rem solid $c-blue;
+                border-left: 0.5rem solid transparent;
+                border-right: 0.5rem solid transparent;
+                transition: 0.3s linear;
+                transform: rotate(-90deg);
+                
+                &.active{
+                    transform: rotate(0)!important;
+                    border-top: 0.5rem solid $c-yellow;
                 }
             }
         }
         &__submenu{
             position: relative;
             max-height: 0;
-            height: auto;
             overflow: hidden;
             z-index: 0;
             border-left: 1px solid $c-yellow;
@@ -736,7 +737,12 @@ $f-txt: "Google Sans";
             visibility: visible;
             width: calc(100% - 2.5rem);
             margin-left: 2.5rem;
+            transition: 0.5s linear;
 
+            &.active{
+                max-height: 50rem;
+
+            }
             li{
                 width: 100%;
                 a{

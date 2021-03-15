@@ -239,7 +239,6 @@ li {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
-  max-height: unset;
 }
 .header__menu li:hover .submenu__control {
   transform: rotate(-90deg);
@@ -646,17 +645,20 @@ li {
     width: 100%;
   }
   .header__menu li a {
-    width: 100%;
+    width: calc(100% - 6rem);
   }
   .header__menu li a:hover {
-    background-color: #CF9A2C;
-    color: #fff;
+    background-color: #fff;
+    color: #CF9A2C;
   }
   .header__menu li:hover .header__submenu {
-    transform: translate(0);
-    height: auto;
+    transform: translateY(0);
   }
-  .header__menu .submenu__container .submenu__control {
+  .header__menu li:hover .submenu__control {
+    transform: rotate(-90deg);
+    border-top: 0.4rem solid #CF9A2C;
+  }
+  .header__menu .submenu__control {
     right: 2.5rem;
     border-top: 0.5rem solid #0C2545;
     border-left: 0.5rem solid transparent;
@@ -664,14 +666,13 @@ li {
     transition: 0.3s linear;
     transform: rotate(-90deg);
   }
-  .header__menu .submenu__container .submenu__control.active {
-    transform: rotate(0);
+  .header__menu .submenu__control.active {
+    transform: rotate(0) !important;
     border-top: 0.5rem solid #CF9A2C;
   }
   .header__submenu {
     position: relative;
     max-height: 0;
-    height: auto;
     overflow: hidden;
     z-index: 0;
     border-left: 1px solid #CF9A2C;
@@ -680,6 +681,10 @@ li {
     visibility: visible;
     width: calc(100% - 2.5rem);
     margin-left: 2.5rem;
+    transition: 0.5s linear;
+  }
+  .header__submenu.active {
+    max-height: 50rem;
   }
   .header__submenu li {
     width: 100%;
