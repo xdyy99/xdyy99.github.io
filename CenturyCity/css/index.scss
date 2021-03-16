@@ -986,6 +986,7 @@ $f-txt: "Google Sans";
     width: 100%;
     overflow: hidden;
     background-color: #E8EBEF;
+    padding-bottom: 7rem;
 
     .slick-prev:before {
         content: '';
@@ -1519,6 +1520,8 @@ $f-txt: "Google Sans";
         }
     }
     .news{
+        padding-bottom: 3rem;
+        
         .slick-next{
             transform: translate(-0.5rem, -2.8rem);
         }
