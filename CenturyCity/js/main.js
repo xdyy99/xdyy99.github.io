@@ -42,11 +42,14 @@ function  backToTop(){
   for(let i = 0; i < menuActBtn.length - 1; i++){
       menuActBtn[i].addEventListener("click", scrollBack);
   }
+  menuActBtn[1].addEventListener("click", scrollBack2);
+
   function scrollBack(){
     setTimeout(function(){ window.scrollBy(0,-100); }, 1000);
-    
   }
-
+  function scrollBack2(){
+    setTimeout(function(){ window.scrollBy(0,-175); }, 1000);
+  }
 
 ////////////// scroll //////////////
 
