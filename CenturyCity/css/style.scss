@@ -120,6 +120,10 @@ $f-txt: "Google Sans";
         transition: 0.3s linear;
         a{
             display: block;
+            img{
+                display: block;
+                height: 100%;
+            }
         }
     }
     &__top{
@@ -688,7 +692,7 @@ $f-txt: "Google Sans";
             flex-direction: column;
             width: 100%;
             height: max-content;
-            overflow-y: scroll;
+            overflow-y: auto;
             padding-bottom: 4rem;
             li{
                 width: 100%;
@@ -712,17 +716,20 @@ $f-txt: "Google Sans";
                     }
                 }
             }
-            .submenu__control{
-                right: 2.5rem;
-                border-top: 0.5rem solid $c-blue;
-                border-left: 0.5rem solid transparent;
-                border-right: 0.5rem solid transparent;
-                transition: 0.3s linear;
-                transform: rotate(-90deg);
-                
-                &.active{
-                    transform: rotate(0)!important;
-                    border-top: 0.5rem solid $c-yellow;
+
+            .submenu__container{
+                .submenu__control{
+                    right: 2.5rem;
+                    border-top: 0.5rem solid $c-blue;
+                    border-left: 0.5rem solid transparent;
+                    border-right: 0.5rem solid transparent;
+                    transition: 0.3s linear;
+                    transform: rotate(-90deg);
+                    
+                    &.active{
+                        transform: rotate(0)!important;
+                        border-top: 0.5rem solid $c-yellow;
+                    }
                 }
             }
         }
@@ -800,7 +807,7 @@ $f-txt: "Google Sans";
         }
     }
     .main{
-        padding-top: 10.5rem;
+        padding-top: 10rem;
     }
 
 }

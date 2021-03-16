@@ -108,6 +108,10 @@ li {
 .header__logo a {
   display: block;
 }
+.header__logo a img {
+  display: block;
+  height: 100%;
+}
 .header__top {
   width: 100%;
   background-color: #fff;
@@ -638,7 +642,7 @@ li {
     flex-direction: column;
     width: 100%;
     height: max-content;
-    overflow-y: scroll;
+    overflow-y: auto;
     padding-bottom: 4rem;
   }
   .header__menu li {
@@ -658,7 +662,7 @@ li {
     transform: rotate(-90deg);
     border-top: 0.4rem solid #CF9A2C;
   }
-  .header__menu .submenu__control {
+  .header__menu .submenu__container .submenu__control {
     right: 2.5rem;
     border-top: 0.5rem solid #0C2545;
     border-left: 0.5rem solid transparent;
@@ -666,7 +670,7 @@ li {
     transition: 0.3s linear;
     transform: rotate(-90deg);
   }
-  .header__menu .submenu__control.active {
+  .header__menu .submenu__container .submenu__control.active {
     transform: rotate(0) !important;
     border-top: 0.5rem solid #CF9A2C;
   }
@@ -734,7 +738,7 @@ li {
   }
 
   .main {
-    padding-top: 10.5rem;
+    padding-top: 10rem;
   }
 }
 @media only screen and (max-width: 800px) {
