@@ -27,6 +27,30 @@ for(let i = 0; i < banBtn.length; i++){
 }
 
 
+////////////// intro count //////////////
+var introNum = document.querySelectorAll(".introCount");
+function Num(){
+    for(let i = 0; i < introNum.length; i++){
+        let introMax = parseInt(introNum[i].textContent);
+        let delayCount = 0;
+        
+        for(let x = 0; x <= introMax; x++){
+
+            let delay = setInterval(function (){
+                introNum[i].textContent = x.toString();
+                stopDelay();
+                return;
+            }, x * 2000 / introMax);
+
+            function stopDelay(){
+                clearInterval(delay);
+                delay = null;
+            }
+            delayCount++;      
+        }        
+    }
+}
+
 ////////////// wow js //////////////
 wow = new WOW(
     {
@@ -53,6 +77,7 @@ var typeCount3 = 1;
 var typeCount4 = 1;
 var typeCount5 = 1;
 var typeCount6 = 1;
+var introCountAnimate = 1;
 ////////////// scroll //////////////
 var scrWidth = screen.width; 
 window.addEventListener("scroll", function () {
@@ -94,6 +119,13 @@ window.addEventListener("scroll", function () {
             timer6 = setInterval(typingTxt13, 10);
             typeCount6 = 0;
         }
+
+            // intro num count
+        var introPos = document.querySelector(".intro").offsetTop - 300; 
+        if(window.scrollY > introPos && introCountAnimate == 1){
+        Num();
+        introCountAnimate = 0;
+    }
     }
 });
 
