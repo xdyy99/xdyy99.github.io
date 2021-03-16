@@ -1,0 +1,77 @@
+$c-blue: #0C2545;
+$c-yellow: #CF9A2C;
+
+$f-title: "Playfair Display";
+$f-txt: "Google Sans";
+
+@mixin center-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.list{
+    padding: 0;
+    width: 100%;
+    position: relative;
+    transform: translateY(-6rem);
+    
+    &__grid{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 3rem;
+
+    }
+
+    &__item{
+        width: 100%;
+        box-shadow: 1rem 1rem 3rem rgba(0,0,0, 0.16);
+        background-color: #fff;
+        height: 100%;
+        position: relative;
+        a{
+            outline: none;
+        }
+
+        &__info{
+            padding: 3.5rem;
+            padding-bottom: 6rem;
+            text-align: center;
+            
+            
+        }
+        &__link{
+            font-size: 1.8rem;
+            line-height: 3rem;
+            font-weight: bold;
+            transition: 0.3s linear;
+            &:hover{
+                color: $c-yellow;
+            }
+        }
+        &__img{
+            width: 100%;
+        }
+        .readmore{
+            display: block;
+            margin-top: 0.5rem;
+            padding: 0.5rem;
+            color: $c-yellow;
+            font-family: $f-title;
+            text-decoration: underline;
+            position: absolute;
+            bottom: 3.7rem;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: 0.3s linear;
+            font-weight: bold;
+
+            &:hover{
+                color: #fff;
+                background-color: $c-yellow;
+            }
+        }
+    }
+
+}

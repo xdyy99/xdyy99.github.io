@@ -547,7 +547,23 @@ $f-txt: "Google Sans";
         }
     }
 }
-
+.page{
+    padding: 0;
+    width: 100%;
+    background-image: url(../assets/images/page.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    &__title{
+        width: max-content;
+        font-size: 6rem;
+        line-height: 8rem;
+        font-family: $f-title;
+        color: #fff;
+        padding: 12rem 0 14rem;
+        margin: 0 auto;
+    }
+}
 
 
 

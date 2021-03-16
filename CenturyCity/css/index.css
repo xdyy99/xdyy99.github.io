@@ -1015,9 +1015,9 @@
   left: 50%;
   transform: translateX(-50%);
   transition: 0.3s linear;
+  font-weight: bold;
 }
 .news__item .readmore:hover {
-  font-weight: bold;
   color: #fff;
   background-color: #CF9A2C;
 }
@@ -1104,14 +1104,13 @@
 
 .spanTxt {
   opacity: 0;
-  padding-left: 0.1rem;
-  transition: 0.1s linear;
+  line-height: 4rem;
+  transition: 0.5s linear;
 }
 
 .fade {
   opacity: 1;
-  padding-left: 0rem;
-  transition: 0.05s linear;
+  line-height: 3rem;
 }
 
 @media only screen and (max-width: 1750px) {
