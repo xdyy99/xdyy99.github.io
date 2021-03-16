@@ -61,37 +61,37 @@ window.addEventListener("scroll", function () {
 
         var intPos = document.querySelector(".intro").offsetTop - 600;
         if(window.scrollY > intPos && intro == 1) {
-            timer = setInterval(intType, 3);
+            timer = setInterval(intType, 1);
             intro = 0;
         }
         var infPos1 = document.querySelector(".infoPos1").offsetTop - 350;
         if(window.scrollY > infPos1 && typeCount1 == 1) {
-            timer1 = setInterval(typingTxt1, 3);
+            timer1 = setInterval(typingTxt1, 1);
             typeCount1 = 0;
         }
         var infPos2 = document.querySelector(".infoPos2").offsetTop - 350;
         if(window.scrollY > infPos2 && typeCount2 == 1) {
-            timer2 = setInterval(typingTxt3, 3);
+            timer2 = setInterval(typingTxt3, 1);
             typeCount2 = 0;
         }
         var infPos3 = document.querySelector(".infoPos3").offsetTop - 350;
         if(window.scrollY > infPos3 && typeCount3 == 1) {
-            timer3 = setInterval(typingTxt5, 3);
+            timer3 = setInterval(typingTxt5, 1);
             typeCount3 = 0;
         }
         var infPos4 = document.querySelector(".infoPos4").offsetTop - 350;
         if(window.scrollY > infPos4 && typeCount4 == 1) {
-            timer4 = setInterval(typingTxt7, 3);
+            timer4 = setInterval(typingTxt7, 1);
             typeCount4 = 0;
         }
         var infPos5 = document.querySelector(".infoPos5").offsetTop - 350;
         if(window.scrollY > infPos5 && typeCount5 == 1) {
-            timer5 = setInterval(typingTxt9, 3);
+            timer5 = setInterval(typingTxt9, 1);
             typeCount5 = 0;
         }
         var infPos6 = document.querySelector(".infoPos6").offsetTop - 350;
         if(window.scrollY > infPos6 && typeCount6 == 1) {
-            timer6 = setInterval(typingTxt13, 3);
+            timer6 = setInterval(typingTxt13, 1);
             typeCount6 = 0;
         }
     }
@@ -152,10 +152,9 @@ $('.news__slide').slick({
 	]
 });
 ////////////// slick update //////////////
-
 // top
 $('.update__slide').slick({
-    infinite: true,
+    infinite: false,
     slidesToShow: 4,
     slidesToScroll: 1,
     arrows: false,
@@ -184,6 +183,7 @@ $('.update__slide').slick({
 
 
 //bottom
+$(document).ready(function() {
 if(scrWidth < 800) {
     $('.update__bottom__img').slick({
         infinite: false,
@@ -203,13 +203,22 @@ if(scrWidth < 800) {
       ]
     });
 }
-
+});
 
 
 ////////////// update galery //////////////
+// top
 $(document).ready(function() {
-    $('.uptGallery').lightGallery({
-        selector: '.uptItem',
+    $('.uptGalTop').lightGallery({
+        selector: '.uptItemTop',
+    }); 
+});
+
+
+// bottom
+$(document).ready(function() {
+    $('.uptGalBot').lightGallery({
+        selector: '.uptItemBot',
     }); 
 });
 
@@ -255,7 +264,7 @@ if(scrWidth > 600){
         char1++;
         if(char1 === typeSplit1.length){
             clearInterval(timer1);
-            timer1 = setInterval(typingTxt2, 3);
+            timer1 = setInterval(typingTxt2, 1);
             return;
         }
     }
@@ -293,7 +302,7 @@ if(scrWidth > 600){
         char3++;
         if(char3 === typeSplit3.length){
             clearInterval(timer2);
-            timer2 = setInterval(typingTxt4, 3);
+            timer2 = setInterval(typingTxt4, 1);
             return;
         }
     }
@@ -330,7 +339,7 @@ if(scrWidth > 600){
         char5++;
         if(char5 === typeSplit5.length){
             clearInterval(timer3);
-            timer3 = setInterval(typingTxt6, 3);
+            timer3 = setInterval(typingTxt6, 1);
             return;
         }
     }
@@ -368,7 +377,7 @@ if(scrWidth > 600){
         char7++;
         if(char7 === typeSplit7.length){
             clearInterval(timer4);
-            timer4 = setInterval(typingTxt8, 3);
+            timer4 = setInterval(typingTxt8, 1);
             return;
         }
     }
@@ -406,7 +415,7 @@ if(scrWidth > 600){
         char9++;
         if(char9 === typeSplit9.length){
             clearInterval(timer5);
-            timer5 = setInterval(typingTxt10, 3);
+            timer5 = setInterval(typingTxt10, 1);
             return;
         }
     }
@@ -425,7 +434,7 @@ if(scrWidth > 600){
         char10++;
         if(char10 === typeSplit10.length){
             clearInterval(timer5);
-            timer5 = setInterval(typingTxt11, 3);
+            timer5 = setInterval(typingTxt11, 1);
             return;
         }
     }
@@ -444,7 +453,7 @@ if(scrWidth > 600){
         char11++;
         if(char11 === typeSplit11.length){
             clearInterval(timer5);
-            timer5 = setInterval(typingTxt12, 3);
+            timer5 = setInterval(typingTxt12, 1);
             return;
         }
     }
@@ -482,7 +491,7 @@ if(scrWidth > 600){
         char13++;
         if(char13 === typeSplit13.length){
             clearInterval(timer6);
-            timer6 = setInterval(typingTxt14, 3);
+            timer6 = setInterval(typingTxt14, 1);
             return;
         }
     }

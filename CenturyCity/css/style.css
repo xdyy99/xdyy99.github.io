@@ -491,17 +491,6 @@ li {
 .button.footer__btn {
   float: right;
 }
-.button.footer__btn:hover {
-  box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.16);
-  padding: 0.5rem;
-}
-.button.footer__btn:hover::after {
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  transform: translateX(0);
-}
 .button::after {
   content: "";
   display: block;

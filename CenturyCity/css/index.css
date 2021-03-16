@@ -95,6 +95,7 @@
   animation-name: blink;
   animation-duration: 1s;
   animation-iteration-count: infinite;
+  z-index: -1;
 }
 .banner__content.reverse::before {
   left: 0;
@@ -705,6 +706,7 @@
   background-color: #E7EAEE;
   position: relative;
   overflow: hidden;
+  padding-bottom: 7rem;
 }
 .demo .container {
   padding: 0;
@@ -741,6 +743,7 @@
   height: 100%;
   object-fit: cover;
   transition: 2s linear;
+  cursor: pointer;
 }
 .demo__item:hover {
   overflow: hidden;
@@ -848,22 +851,23 @@
 .update__bottom__img .slick-slide > div {
   margin-bottom: -0.5rem;
 }
-.update__bottom__img .uptItem {
+.update__bottom__img .uptItemBot {
   display: block;
   height: 100%;
   position: relative;
   width: calc(100% / 6);
   overflow: hidden;
 }
-.update__bottom__img .uptItem img {
+.update__bottom__img .uptItemBot img {
   display: block;
   height: 100%;
   width: 100%;
   max-width: none;
   transition: 0.5s linear;
   object-fit: cover;
+  cursor: pointer;
 }
-.update__bottom__img .uptItem:hover img {
+.update__bottom__img .uptItemBot:hover img {
   transform: scale(1.2);
 }
 .update .section__title {
@@ -902,6 +906,7 @@
 }
 .update__list li img {
   max-width: none;
+  cursor: pointer;
 }
 .update__item {
   width: 100%;
@@ -1270,6 +1275,7 @@
     float: none;
   }
   .round__link li a {
+    min-width: 0;
     width: 100%;
     text-align: center;
     padding: 2rem 4rem;
@@ -1314,6 +1320,10 @@
   }
 }
 @media only screen and (max-width: 800px) {
+  .demo {
+    padding-bottom: 3rem;
+  }
+
   .banner__content {
     width: 50%;
     max-width: max-content;

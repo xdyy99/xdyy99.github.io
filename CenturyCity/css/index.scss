@@ -110,6 +110,7 @@ $f-txt: "Google Sans";
                 animation-name: blink;
                 animation-duration: 1s;
                 animation-iteration-count: infinite;
+                z-index: -1 ;
             }
         }
 
@@ -733,6 +734,7 @@ $f-txt: "Google Sans";
     background-color: #E7EAEE;
     position: relative;
     overflow: hidden;
+    padding-bottom: 7rem;
 
     .container{
         padding: 0;
@@ -770,6 +772,7 @@ $f-txt: "Google Sans";
             height: 100%;
             object-fit: cover;
             transition: 2s linear;
+            cursor: pointer;
         }
 
         &:hover{
@@ -886,13 +889,12 @@ $f-txt: "Google Sans";
                     margin-bottom: -0.5rem;
                 }   
             }
-            .uptItem{
+            .uptItemBot{
                 display: block;
                 height: 100%;
                 position: relative;
                 width: calc(100% / 6);
                 overflow: hidden;
-
 
                 img{
                     display: block;
@@ -901,6 +903,7 @@ $f-txt: "Google Sans";
                     max-width: none;
                     transition: 0.5s linear;
                     object-fit: cover;
+                    cursor: pointer;
                 }
 
                 &:hover{
@@ -951,6 +954,7 @@ $f-txt: "Google Sans";
 
             img{
                 max-width: none;
+                cursor: pointer;
             }
         }
     }
@@ -1368,6 +1372,7 @@ $f-txt: "Google Sans";
                     }
                 }
                 a{
+                    min-width: 0;
                     width: 100%;
                     text-align: center;
                     padding: 2rem 4rem;
@@ -1417,7 +1422,9 @@ $f-txt: "Google Sans";
     }
 }
 @media only screen and (max-width: 800px){
-
+    .demo{
+        padding-bottom: 3rem;
+    }
     .banner{
         &__content{
             width: 50%;
