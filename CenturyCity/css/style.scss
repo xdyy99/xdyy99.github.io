@@ -283,7 +283,7 @@ $f-txt: "Google Sans";
             }
         }
 
-        .current__menu__item{
+        .active{
             &   > a{
                 color: $c-yellow;
             }

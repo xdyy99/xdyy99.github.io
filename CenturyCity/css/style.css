@@ -248,10 +248,10 @@ li {
   transform: rotate(-90deg);
   border-top: 0.4rem solid #fff;
 }
-.header__menu .current__menu__item > a {
+.header__menu .active > a {
   color: #CF9A2C;
 }
-.header__menu .current__menu__item .submenu__control {
+.header__menu .active .submenu__control {
   border-top: 0.4rem solid #CF9A2C;
 }
 .header__submenu {

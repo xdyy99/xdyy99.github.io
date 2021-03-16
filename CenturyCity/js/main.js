@@ -27,6 +27,27 @@ function  backToTop(){
     })
   }
 
+////////////// menu click //////////////
+  var menuActBtn = document.querySelectorAll(".header__menu__item");
+
+  var gioithieu = document.querySelector("#gioithieu");
+  var vitri = document.querySelector("#vitri");
+  var tienich = document.querySelector("#tienich");
+  var sanpham = document.querySelector("#sanpham");
+  var matbang = document.querySelector("#matbang");
+  var thuvien = document.querySelector("#thuvien");
+  var tintuc = document.querySelector("#tintuc");
+  var lienhe = document.querySelector("#lienhe");
+
+  for(let i = 0; i < menuActBtn.length - 1; i++){
+      menuActBtn[i].addEventListener("click", scrollBack);
+  }
+  function scrollBack(){
+    setTimeout(function(){ window.scrollBy(0,-100); }, 1000);
+    
+  }
+
+
 ////////////// scroll //////////////
 
 window.addEventListener("scroll", function () {
@@ -40,6 +61,40 @@ window.addEventListener("scroll", function () {
     var header = document.querySelector(".header");
     if(window.scrollY > 100) header.classList.add("header__small");
     else header.classList.remove("header__small");
+
+
+
+    if(window.scrollY > gioithieu.offsetTop - 200 && window.scrollY < gioithieu.offsetTop + gioithieu.offsetHeight - 200) 
+    menuActBtn[0].classList.add("active")
+    else menuActBtn[0].classList.remove("active");
+
+    if(window.scrollY > vitri.offsetTop - 200 && window.scrollY < vitri.offsetTop + vitri.offsetHeight - 200) 
+    menuActBtn[1].classList.add("active")
+    else menuActBtn[1].classList.remove("active");
+
+    if(window.scrollY > tienich.offsetTop - 200 && window.scrollY < tienich.offsetTop + tienich.offsetHeight - 200) 
+    menuActBtn[2].classList.add("active")
+    else menuActBtn[2].classList.remove("active");
+    
+    if(window.scrollY > sanpham.offsetTop - 200 && window.scrollY < sanpham.offsetTop + sanpham.offsetHeight - 200) 
+    menuActBtn[3].classList.add("active")
+    else menuActBtn[3].classList.remove("active");
+    
+    if(window.scrollY > matbang.offsetTop - 200 && window.scrollY < matbang.offsetTop + matbang.offsetHeight - 200) 
+    menuActBtn[4].classList.add("active")
+    else menuActBtn[4].classList.remove("active");
+    
+    if(window.scrollY > thuvien.offsetTop - 200 && window.scrollY < thuvien.offsetTop + thuvien.offsetHeight - 200) 
+    menuActBtn[5].classList.add("active")
+    else menuActBtn[5].classList.remove("active");
+
+    if(window.scrollY > tintuc.offsetTop - 200 && window.scrollY < tintuc.offsetTop + tintuc.offsetHeight - 200) 
+    menuActBtn[6].classList.add("active")
+    else menuActBtn[6].classList.remove("active");
+
+    if(window.scrollY > lienhe.offsetTop - 200 && window.scrollY < lienhe.offsetTop + lienhe.offsetHeight - 200) 
+    menuActBtn[7].classList.add("active")
+    else menuActBtn[7].classList.remove("active");
 
 });
 

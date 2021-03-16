@@ -57,7 +57,6 @@ var typeCount6 = 1;
 var scrWidth = screen.width; 
 window.addEventListener("scroll", function () {
 
-
     if(scrWidth > 600){
 
         var intPos = document.querySelector(".intro").offsetTop - 600;
@@ -95,7 +94,6 @@ window.addEventListener("scroll", function () {
             timer6 = setInterval(typingTxt13, 3);
             typeCount6 = 0;
         }
-
     }
 });
 

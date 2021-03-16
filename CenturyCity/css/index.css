@@ -777,6 +777,10 @@
   display: flex;
 }
 
+.lg-group {
+  margin: 0 auto;
+}
+
 .sodo {
   width: 100%;
   background-image: url("../assets/images/Group 56.png");
