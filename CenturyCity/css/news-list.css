@@ -36,6 +36,10 @@
 .list__item__img {
   width: 100%;
 }
+.list__item__img img {
+  max-width: none;
+  object-fit: cover;
+}
 .list__item .readmore {
   display: block;
   margin-top: 0.5rem;
@@ -53,6 +57,58 @@
 .list__item .readmore:hover {
   color: #fff;
   background-color: #CF9A2C;
+}
+.list__pag {
+  width: 100%;
+  display: block;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+
+.pag__list {
+  width: max-content;
+  margin: 0 auto;
+}
+.pag__item {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 9.9rem;
+  border: 1px solid #D5D5D5;
+  margin: 0 0.5rem;
+  font-size: 1.8rem;
+  line-height: 3rem;
+  text-align: center;
+  padding-top: 0.5rem;
+  font-weight: bold;
+  background-color: #fff;
+  transition: 0.3s linear;
+  color: #000;
+}
+.pag__item:hover {
+  background-color: #CF9A2C;
+  color: #fff;
+}
+.pag__item.active {
+  background-color: #CF9A2C;
+  color: #fff;
+}
+
+@media only screen and (max-width: 1100px) {
+  .list__grid {
+    grid-template-columns: auto auto;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .list {
+    transform: translateY(0);
+    padding: 3rem 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .list__grid {
+    grid-template-columns: auto;
+  }
 }
 
 /*# sourceMappingURL=news-list.css.map */

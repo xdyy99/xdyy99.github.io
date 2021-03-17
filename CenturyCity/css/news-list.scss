@@ -52,6 +52,10 @@ $f-txt: "Google Sans";
         }
         &__img{
             width: 100%;
+            img{
+                max-width: none;
+                object-fit: cover;
+            }
         }
         .readmore{
             display: block;
@@ -74,4 +78,70 @@ $f-txt: "Google Sans";
         }
     }
 
+    &__pag{
+        width: 100%;
+        display: block;
+        padding-top: 3rem;
+        padding-bottom: 4rem;
+    }
 }
+
+.pag{
+    &__list{
+        width: max-content;
+        margin: 0 auto;
+    }
+
+    &__item{
+        display: block;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 9.9rem;
+        border: 1px solid #D5D5D5;
+        margin: 0 0.5rem;
+        font-size: 1.8rem;
+        line-height: 3rem;
+        text-align: center;
+        padding-top: 0.5rem;
+        font-weight: bold;
+        background-color: #fff;
+        transition: 0.3s linear;
+        color: #000;
+
+        &:hover{
+            background-color: $c-yellow;
+            color: #fff;
+        }
+
+        &.active{
+            background-color: $c-yellow;
+            color: #fff; 
+        }
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    .list{
+        &__grid{
+            grid-template-columns: auto auto;
+        }
+    }
+}
+@media only screen and (max-width: 800px){
+    .list{ 
+        transform: translateY(0);
+        padding:3rem 0;
+    }
+}
+@media only screen and (max-width:600px){
+    .list{
+        &__grid{
+            grid-template-columns: auto ;
+        }
+    }
+}
+
+
+
+
+

@@ -747,10 +747,18 @@ li {
   .main {
     padding-top: 10rem;
   }
+
+  .page {
+    background-position: 0;
+  }
 }
 @media only screen and (max-width: 800px) {
   .section {
     padding: 6rem 0;
+  }
+
+  .page__title {
+    padding: 0;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -764,6 +772,11 @@ li {
   .footer__form {
     width: 100%;
     margin-bottom: 4rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .page__title {
+    font-size: 4rem;
   }
 }
 

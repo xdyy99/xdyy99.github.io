@@ -340,6 +340,8 @@
   color: #CF9A2C;
   font-size: 2.4rem;
   line-height: 3rem;
+  width: 20rem;
+  max-width: 100%;
 }
 .intro__grid__txt {
   font-size: 1.8rem;
@@ -636,7 +638,7 @@
   background-color: transparent;
 }
 .round__link li a:hover::after {
-  width: 100%;
+  width: calc(100% + 2px);
 }
 .round__link li a::before {
   content: "";
@@ -653,10 +655,10 @@
   display: block;
   background-color: #0C2545;
   width: 0;
-  height: calc(100% + 1px);
+  height: calc(100% + 2px);
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -0.1rem;
+  left: -0.1rem;
   transition: 0.3s linear;
   z-index: -1;
 }

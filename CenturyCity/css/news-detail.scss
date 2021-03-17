@@ -1,0 +1,72 @@
+$c-blue: #0C2545;
+$c-yellow: #CF9A2C;
+
+$f-title: "Playfair Display";
+$f-txt: "Google Sans";
+
+.doc{
+    width: 100%;
+    overflow: hidden;
+
+    &__container{
+        display: flex;
+    }
+    &__title{
+        width: calc(100% / 3);
+    }
+    &__content{
+        width: calc(100% * 2 / 3);
+    }
+
+    &__txt{
+        font-size: 1.8rem;
+        line-height: 3rem;
+        color: #000;
+        opacity: 0.7;
+        white-space:pre-line;
+        display: block;
+        margin-bottom: 4rem;
+
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+    }
+
+    &__sub{
+        font-size: 2.4rem;
+        line-height: 3.2rem;
+        font-weight: bold;
+        font-family: $f-title;
+        display: block;
+        margin-bottom: 4rem;
+    }
+
+    &__img{
+        width: 100%;
+        display: block;
+        margin-bottom: 4rem;
+
+        img{
+            max-width: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    .doc{
+    
+        &__container{
+            flex-direction: column;
+        }
+        &__title{
+            width: 100%;
+            .section__title{
+                white-space: unset;
+            }
+            margin-bottom: 4rem;
+        }
+        &__content{
+            width: 100%;
+        }
+    }
+}
