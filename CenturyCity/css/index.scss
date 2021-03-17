@@ -363,7 +363,16 @@ $f-txt: "Google Sans";
 .info{
     width: 100%;
     padding-top: 0;
-    
+    &.section__tab{
+        display: none;
+        &.active{
+            display: block;
+        }
+    }
+    &.tab__container{
+        width: 100%;
+        padding: 0;
+    }
     &__tab{
         z-index: 2;
         position: absolute;
@@ -446,14 +455,8 @@ $f-txt: "Google Sans";
             position: relative;
             top: 0;
             left: 0;
-            display: none;
-            opacity: 0;
             transition: 0.3s linear;
             transition-delay: 0.3s;
-            &.active{
-                display: block;
-                opacity: 1;
-            }
         }
     }
 

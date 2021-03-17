@@ -353,6 +353,16 @@
   width: 100%;
   padding-top: 0;
 }
+.info.section__tab {
+  display: none;
+}
+.info.section__tab.active {
+  display: block;
+}
+.info.tab__container {
+  width: 100%;
+  padding: 0;
+}
 .info__tab {
   z-index: 2;
   position: absolute;
@@ -430,14 +440,8 @@
   position: relative;
   top: 0;
   left: 0;
-  display: none;
-  opacity: 0;
   transition: 0.3s linear;
   transition-delay: 0.3s;
-}
-.info__img img.active {
-  display: block;
-  opacity: 1;
 }
 .info__content {
   display: flex;

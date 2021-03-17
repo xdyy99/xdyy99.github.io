@@ -66,7 +66,7 @@ var lienhe = document.querySelector("#lienhe");
 for(let i = 0; i < menuActBtn.length - 1; i++){
     menuActBtn[i].addEventListener("click", scrollBack);
 }
-menuActBtn[1].addEventListener("click", scrollBack2);
+
 
 function scrollBack(){
   setTimeout(function(){ window.scrollBy(0,-100); }, 1000);
@@ -88,8 +88,6 @@ var typeCount1 = 1;
 var typeCount2 = 1;
 var typeCount3 = 1;
 var typeCount4 = 1;
-var typeCount5 = 1;
-var typeCount6 = 1;
 var introCountAnimate = 1;
 ////////////// scroll //////////////
 var scrWidth = screen.width; 
@@ -158,16 +156,6 @@ window.addEventListener("scroll", function () {
             timer4 = setInterval(typingTxt7, 10);
             typeCount4 = 0;
         }
-        var infPos5 = document.querySelector(".infoPos5").offsetTop - 350;
-        if(window.scrollY > infPos5 && typeCount5 == 1) {
-            timer5 = setInterval(typingTxt9, 10);
-            typeCount5 = 0;
-        }
-        var infPos6 = document.querySelector(".infoPos6").offsetTop - 350;
-        if(window.scrollY > infPos6 && typeCount6 == 1) {
-            timer6 = setInterval(typingTxt13, 10);
-            typeCount6 = 0;
-        }
 
             // intro num count
         var introPos = document.querySelector(".intro").offsetTop - 300; 
@@ -180,20 +168,20 @@ window.addEventListener("scroll", function () {
 
 
 
-////////////// img tab //////////////
-var imgBtn = document.querySelectorAll(".imgBtn");
-var imgTab = document.querySelectorAll(".imgTab");
-imgBtn[1].classList.add("active");
-imgTab[1].classList.add("active");
-for(let i = 0; i < imgBtn.length; i++){
-    imgBtn[i].addEventListener("click", showLine);
+////////////// section tab //////////////
+var secBtn = document.querySelectorAll(".secBtn");
+var secTab = document.querySelectorAll(".section__tab");
+secBtn[0].classList.add("active");
+secTab[0].classList.add("active");
+for(let i = 0; i < secBtn.length; i++){
+    secBtn[i].addEventListener("click", showLine);
     function showLine() {
-        for(let a = 0; a < imgBtn.length; a++){
-            imgBtn[a].classList.remove("active");
-            imgTab[a].classList.remove("active");
+        for(let a = 0; a < secBtn.length; a++){
+            secBtn[a].classList.remove("active");
+            secTab[a].classList.remove("active");
         }
-        imgBtn[i].classList.add("active");
-        imgTab[i].classList.add("active");
+        secBtn[i].classList.add("active");
+        secTab[i].classList.add("active");
     }
 }
 ////////////// slick demo //////////////
@@ -478,120 +466,6 @@ if(scrWidth > 600){
         if(char8 === typeSplit8.length){
             clearInterval(timer4);
             timer4 = null;
-            return;
-        }
-    }
-    ////////////// txt typing 9 //////////////
-    var typeTxt9 = document.querySelector(".type__txt9");
-    var typeStr9 = typeTxt9.textContent;
-    var typeSplit9 = typeStr9.split("\ ");
-    typeTxt9.textContent ="";
-    for(let i = 0; i < typeSplit9.length; i++){
-        typeTxt9.innerHTML += "<span class=\"spanTxt\ typeTxt9\">"+ typeSplit9[i] +"\ </span>";
-    }
-    let char9 = 0;
-    function typingTxt9(){
-        let spanTxt = document.querySelectorAll(".typeTxt9")[char9];
-        spanTxt.classList.add("fade");
-        char9++;
-        if(char9 === typeSplit9.length){
-            clearInterval(timer5);
-            timer5 = setInterval(typingTxt10, 10);
-            return;
-        }
-    }
-    ////////////// txt typing 10 //////////////
-    var typeTxt10 = document.querySelector(".type__txt10");
-    var typeStr10 = typeTxt10.textContent;
-    var typeSplit10 = typeStr10.split("\ ");
-    typeTxt10.textContent ="";
-    for(let i = 0; i < typeSplit10.length; i++){
-        typeTxt10.innerHTML += "<span class=\"spanTxt\ typeTxt10\">"+ typeSplit10[i] +"\ </span>";
-    }
-    let char10 = 0;
-    function typingTxt10(){
-        let spanTxt = document.querySelectorAll(".typeTxt10")[char10];
-        spanTxt.classList.add("fade");
-        char10++;
-        if(char10 === typeSplit10.length){
-            clearInterval(timer5);
-            timer5 = setInterval(typingTxt11, 10);
-            return;
-        }
-    }
-    ////////////// txt typing 11 //////////////
-    var typeTxt11 = document.querySelector(".type__txt11");
-    var typeStr11 = typeTxt11.textContent;
-    var typeSplit11 = typeStr11.split("\ ");
-    typeTxt11.textContent ="";
-    for(let i = 0; i < typeSplit11.length; i++){
-        typeTxt11.innerHTML += "<span class=\"spanTxt\ typeTxt11\">"+ typeSplit11[i] +"\ </span>";
-    }
-    let char11 = 0;
-    function typingTxt11(){
-        let spanTxt = document.querySelectorAll(".typeTxt11")[char11];
-        spanTxt.classList.add("fade");
-        char11++;
-        if(char11 === typeSplit11.length){
-            clearInterval(timer5);
-            timer5 = setInterval(typingTxt12, 10);
-            return;
-        }
-    }
-    ////////////// txt typing 12 //////////////
-    var typeTxt12 = document.querySelector(".type__txt12");
-    var typeStr12 = typeTxt12.textContent;
-    var typeSplit12 = typeStr12.split("\ ");
-    typeTxt12.textContent ="";
-    for(let i = 0; i < typeSplit12.length; i++){
-        typeTxt12.innerHTML += "<span class=\"spanTxt\ typeTxt12\">"+ typeSplit12[i] +"\ </span>";
-    }
-    let char12 = 0;
-    function typingTxt12(){
-        let spanTxt = document.querySelectorAll(".typeTxt12")[char12];
-        spanTxt.classList.add("fade");
-        char12++;
-        if(char12 === typeSplit12.length){
-            clearInterval(timer5);
-            timer5 = null;
-            return;
-        }
-    }
-    ////////////// txt typing 13 //////////////
-    var typeTxt13 = document.querySelector(".type__txt13");
-    var typeStr13 = typeTxt13.textContent;
-    var typeSplit13 = typeStr13.split("\ ");
-    typeTxt13.textContent ="";
-    for(let i = 0; i < typeSplit13.length; i++){
-        typeTxt13.innerHTML += "<span class=\"spanTxt\ typeTxt13\">"+ typeSplit13[i] +"\ </span>";
-    }
-    let char13 = 0;
-    function typingTxt13(){
-        let spanTxt = document.querySelectorAll(".typeTxt13")[char13];
-        spanTxt.classList.add("fade");
-        char13++;
-        if(char13 === typeSplit13.length){
-            clearInterval(timer6);
-            timer6 = setInterval(typingTxt14, 10);
-            return;
-        }
-    }
-    ////////////// txt typing 14 //////////////
-    var typeTxt14 = document.querySelector(".type__txt14");
-    var typeStr14 = typeTxt14.textContent;
-    var typeSplit14 = typeStr14.split("\ ");
-    typeTxt14.textContent ="";
-    for(let i = 0; i < typeSplit14.length; i++){
-        typeTxt14.innerHTML += "<span class=\"spanTxt\ typeTxt14\">"+ typeSplit14[i] +"\ </span>";
-    }
-    let char14 = 0;
-    function typingTxt14(){
-        let spanTxt = document.querySelectorAll(".typeTxt14")[char14];
-        spanTxt.classList.add("fade");
-        char14++;
-        if(char14 === typeSplit14.length){
-            clearInterval(timer6);
-            timer6 = null;
             return;
         }
     }
