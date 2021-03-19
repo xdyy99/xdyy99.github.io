@@ -124,7 +124,9 @@
         .submenu{
             background-color: #fff;
         }
-        
+        .header__icon{
+            margin: 0;
+        }
         .icon__list{
             li{
                 img:nth-of-type(1){
@@ -196,6 +198,12 @@
                 }
             }
         }
+    }
+    &__btn{
+        display: none;
+    }
+    &__bg{
+        display: none;
     }
 }
 .submenu{
