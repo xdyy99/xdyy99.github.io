@@ -1,4 +1,32 @@
-
+////////////// slick //////////////
+$('.grid').slick({
+  infinite: false,
+  speed: 300,
+  slidesToShow: 4,
+  autoplaySpeed: 3000,
+  autoplay: true,
+  arrows: false,
+  responsive: [
+    {
+		  breakpoint: 1100,
+		  settings: {
+			slidesToShow: 3 ,
+		  }
+		},
+		{
+		  breakpoint: 800,
+		  settings: {
+			slidesToShow: 2,
+		  }
+		},
+		{
+		  breakpoint: 600,
+		  settings: {
+			slidesToShow: 1,
+		  }
+		}
+	]
+});
 
   ////////////// menu control //////////////
   var menuBtn = document.querySelector(".menuBtn");
@@ -18,7 +46,8 @@
   
   subBtn.addEventListener("click", subAct);
   function subAct(){
-    if( screen.width < 1200){
+    if( window.innerWidth < 1200){
+      
       subBtn.classList.toggle("active");
       subMenu.classList.toggle("active");   
     }
