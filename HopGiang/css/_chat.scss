@@ -1,0 +1,27 @@
+.chat{
+    display: block;
+    position: fixed;
+    bottom: 0;
+    right: 1.5rem;
+    background-color: #035AA6;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    padding: 1rem 3rem;
+    padding-left: 5rem;
+    cursor: pointer;
+    z-index: 9  ;
+    transform: translateY(100%);
+    transition: 0.5s linear;
+
+    &__icon{
+        position: absolute;
+        width: 1.5rem;
+        height: 1.5rem;
+        top: 50%;
+        left: 3rem;
+        transform: translateY(-50%);
+    }
+    &.active{
+        transform: translateY(0);
+    }
+}
