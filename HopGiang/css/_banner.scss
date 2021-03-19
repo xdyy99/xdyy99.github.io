@@ -157,6 +157,9 @@
     }
 
     &__select{
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
         width: 20%;
         max-width: max-content;
         padding: 1.6rem;
@@ -288,6 +291,9 @@
             
         }
         &__select{
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
             width: max-content;
             padding: 1rem;
             padding-right: 3rem;
