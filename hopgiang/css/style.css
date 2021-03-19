@@ -726,8 +726,7 @@ li {
   background: linear-gradient(180deg, #371853 0%, rgba(118, 65, 147, 0.6) 50%, #764193 100%);
 }
 .banner__container {
-  padding-top: 13rem;
-  padding-bottom: 9rem;
+  margin-top: 13rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -748,7 +747,7 @@ li {
   width: 100%;
   display: flex;
   position: relative;
-  padding: 8rem 0;
+  margin-top: 8rem;
   position: relative;
   z-index: 5;
 }
