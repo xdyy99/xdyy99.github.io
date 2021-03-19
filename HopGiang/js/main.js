@@ -1,6 +1,5 @@
 
-var srcW = screen.width;
-if(srcW < 1200){
+
   ////////////// menu control //////////////
   var menuBtn = document.querySelector(".menuBtn");
   var menu = document.querySelector(".header__menu");
@@ -19,10 +18,12 @@ if(srcW < 1200){
   
   subBtn.addEventListener("click", subAct);
   function subAct(){
+    if( screen.width < 1200){
       subBtn.classList.toggle("active");
       subMenu.classList.toggle("active");   
+    }
   }
-}
+
 
 
 ////////////// back to top //////////////

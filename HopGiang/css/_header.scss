@@ -124,6 +124,15 @@
         .submenu{
             background-color: #fff;
         }
+        .submenu__btn{
+            background-color: $c-pur;
+            &::after{
+                background-color: $c-pur;
+            }
+            &.active{
+                background-color: $c-pur;
+            }
+        }
         .header__icon{
             margin: 0;
         }
@@ -348,6 +357,7 @@
                 }
             }
         }
+    
         &__icon{
             display: none;
         }
@@ -355,6 +365,7 @@
     .submenu__btn{
         cursor: pointer;
     }
+
 }
 
 @media only screen and (max-width: 900px) {
@@ -451,14 +462,13 @@
         &:hover{
             background-color: #fff;
         }
-
         &__btn{
             background-color: $c-pur;
             &::after{
                 background-color: $c-pur;
             }
             &.active{
-                background-color: $c-pur;
+                    background-color: $c-pur;
             }
         }
 

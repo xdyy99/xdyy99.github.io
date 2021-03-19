@@ -312,6 +312,15 @@ li {
 .header__small .submenu {
   background-color: #fff;
 }
+.header__small .submenu__btn {
+  background-color: #764193;
+}
+.header__small .submenu__btn::after {
+  background-color: #764193;
+}
+.header__small .submenu__btn.active {
+  background-color: #764193;
+}
 .header__small .header__icon {
   margin: 0;
 }
