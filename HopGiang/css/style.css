@@ -86,6 +86,7 @@ li {
   position: relative;
   width: 100%;
   height: 100%;
+  pointer-events: none;
   z-index: 2;
 }
 .main__bg img {
@@ -235,17 +236,21 @@ li {
 .header__right {
   display: flex;
   align-items: center;
-  width: 50%;
+  width: calc(50% + 1.5rem);
 }
 .header__right__item {
   display: flex;
+  align-items: center;
+  width: calc((100% - 4.4rem) / 3);
+  padding: 1rem;
 }
 .header__right__item > a {
   display: block;
-  margin: 0 1rem;
+  width: calc(100% - 4.5rem);
   line-height: 2.1rem;
   font-size: 1.6rem;
   transition: 0.3s linear;
+  margin-left: 1rem;
 }
 .header__right__item > a .header__top__title {
   display: block;
@@ -256,7 +261,9 @@ li {
 }
 .header__right__img {
   display: block;
-  margin-left: 1rem;
+}
+.header__right__img img {
+  width: 3.5rem;
 }
 .header__right .header__top__line {
   display: block;
@@ -869,19 +876,17 @@ li {
   text-transform: uppercase;
   align-self: center;
   margin-right: 1.5rem;
-  min-width: max-content;
+  width: calc(55% - 13rem);
 }
 .search__select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  width: 20%;
-  max-width: max-content;
+  width: 13rem;
   padding: 1.6rem;
   padding-right: 3.7rem;
   border-radius: 0.5rem;
   font-size: 1.4rem;
-  appearance: none;
   background: url("../assets/images/Mask Group 86.png") right 2rem center/1rem no-repeat;
   background-color: #fff;
   cursor: pointer;
@@ -889,7 +894,7 @@ li {
 .search__input {
   display: block;
   margin: 0 0.5rem;
-  width: 30%;
+  width: calc(45% - 13rem);
   justify-self: stretch;
   padding: 1.5rem 2rem;
   color: rgba(0, 0, 0, 0.15);
@@ -900,13 +905,13 @@ li {
 }
 .search__btn {
   display: block;
-  padding: 1.8rem 5.4rem 1.5rem;
-  max-width: max-content;
+  width: 13rem;
+  padding: 1.8rem;
+  text-align: center;
   background-color: #fff;
   border-radius: 0.5rem;
   position: relative;
   transition: 0.3s linear;
-  width: 20%;
 }
 .search__btn img {
   width: 2.3rem;
@@ -932,8 +937,11 @@ li {
   .search__right {
     transform: translate(0);
   }
+  .search__title {
+    width: calc(40% - 13rem);
+  }
   .search__input {
-    width: 80%;
+    width: calc(60% - 13rem);
   }
 }
 @media only screen and (max-width: 1199px) {
@@ -956,16 +964,6 @@ li {
     padding: 4rem 2rem;
     border-radius: 1rem;
   }
-  .search__input {
-    width: 100%;
-  }
-  .search__left {
-    transform: translate(0);
-    margin-bottom: 1.5rem;
-  }
-  .search__right {
-    transform: translate(0);
-  }
 }
 @media only screen and (max-width: 900px) {
   .search__container {
@@ -979,20 +977,18 @@ li {
     font-size: 2rem;
   }
   .search__input {
-    width: calc(100% - 23.5rem);
+    width: calc(100% - 27rem);
   }
   .search__select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    width: max-content;
     padding: 1rem;
     padding-right: 3rem;
     background: url("../assets/images/Mask Group 86.png") right 1rem center/1rem no-repeat;
     background-color: #fff;
   }
   .search__btn {
-    width: max-content;
     padding: 1rem 4rem;
   }
 }
@@ -1017,24 +1013,29 @@ li {
     padding-left: 6.5rem;
     display: block;
   }
-  .banner__btn img {
-    left: 6rem;
-  }
   .banner__app a {
     display: block;
     margin-bottom: 1.5rem;
   }
 
   .search__btn {
-    padding: 1rem 2rem;
+    padding: 1rem 3rem;
   }
   .search__input {
-    width: calc(100% - 19.5rem);
+    width: 100%;
+    margin: 1rem 0;
+  }
+  .search__select {
+    max-width: none;
+    width: 100%;
   }
 }
 .guide {
   width: 100%;
   position: relative;
+}
+.guide .section__title {
+  z-index: 5;
 }
 .guide__img {
   display: block;

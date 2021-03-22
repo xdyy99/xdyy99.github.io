@@ -34,17 +34,22 @@
     &__right{
         display: flex;
         align-items: center;
-        width: 50%;
+        width: calc(50% + 1.5rem);
 
         &__item{
             display: flex;
+            align-items: center;
+            width: calc((100% - 4.4rem) / 3);
+            padding: 1rem;
+
 
             & > a{
                 display: block;
-                margin: 0 1rem;
+                width: calc(100% - 4.5rem);
                 line-height: 2.1rem;
                 font-size: 1.6rem;
                 transition: 0.3s linear;
+                margin-left: 1rem;
 
                 .header__top__title{
                     display: block;
@@ -59,7 +64,9 @@
 
         &__img{
             display: block;
-            margin-left: 1rem;
+            img{
+                width: 3.5rem;
+            }
         }
 
         .header__top__line{

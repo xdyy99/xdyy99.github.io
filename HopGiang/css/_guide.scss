@@ -2,7 +2,9 @@
     width: 100%;
     position: relative; 
     
-
+    .section__title{
+        z-index: 5;
+    }
     &__img{
         display: block;
         position: absolute;
