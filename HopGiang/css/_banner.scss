@@ -169,6 +169,7 @@
         appearance: none;
         background: url('../assets/images/Mask\ Group\ 86.png') right 2rem center / 1rem no-repeat;
         background-color: #fff;
+        cursor: pointer;
     }
 
     &__input{
@@ -186,7 +187,7 @@
     }
     &__btn{
         display: block;
-        padding: 1.5rem 5.4rem;
+        padding: 1.8rem 5.4rem 1.5rem;
         max-width: max-content;
         background-color: #fff;
         border-radius: 0.5rem;
