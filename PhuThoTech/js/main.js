@@ -5,8 +5,6 @@ if(slide !== null){
     infinite: true,
     speed: 300,
     slidesToShow: 3,
-    autoplaySpeed: 5000,
-    autoplay: true,
     dots: true,
     arrows: false,
     responsive: [
