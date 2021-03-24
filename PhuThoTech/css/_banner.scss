@@ -1,0 +1,155 @@
+.banner{
+    width: 100%;
+    height: 70rem;
+    position: relative;
+    padding:0;
+
+    &.home{
+        height: 90rem;
+        .banner__title{
+            font-size: 6rem;
+            line-height: 7.2rem;
+        }
+        .banner__content{
+            width: 94rem;
+            height: 72rem;
+            padding-top: 19rem;
+        }
+    }
+    &__img{
+        display: block;
+        width: 100%;
+        height: 100%;
+        img{
+            height: 100%;
+            max-width: 100%;
+            object-fit: cover;
+        }
+    }
+    &__content{
+        position: absolute;
+        width: 85rem;
+        height: 63rem;
+        background-image: url('../assets/images/ban.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top right;
+
+        left: 0;
+        bottom: 0;
+        padding: 19rem 13rem 0 22rem;
+        display: block;
+    }
+
+    &__title{
+        font-size: 5rem;
+        line-height: 6.1rem;
+        font-weight: bold;
+        white-space: pre-line;
+        margin-bottom: 4.5rem;
+
+
+    }
+    .spanTxt{
+        opacity: 0;
+        transition: 0.5s linear;
+    }
+    .fade{
+        opacity: 1;
+    }
+}
+@media only screen and (max-width: 1600px) {
+    .banner{
+        &.home{
+            height: 80rem;
+            .banner__title{
+                font-size: 5rem;
+                line-height: 6.1rem;
+            }
+            .banner__content{
+                width: 84rem;
+                height: 65rem;
+                padding-top: 16rem;
+            }
+        }
+        &__content{
+            width: 70rem;
+            height: 48rem;
+            padding-top: 8rem;
+            padding-left: 10rem;
+        }
+        &__title{
+            font-size: 4rem;
+            line-height: 5rem;
+        }
+
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .banner{
+        height: 50rem;
+        &.home{
+            height: 50rem;
+            .banner__title{
+                font-size: 3rem;
+                line-height: 4rem;
+                margin-bottom: 2rem;
+            }
+            .banner__content{
+                width: 60rem;
+                height: 38rem;
+                padding-top: 6rem;
+                padding-left: 8rem;
+            }
+        }
+
+        &__content{
+            width: 60rem;
+            height: 38rem;
+            padding-top: 6rem;
+            padding-left: 8rem;
+        }
+        &__title{
+            font-size: 3rem;
+            line-height: 4rem;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .banner{
+
+        &.home{
+            .banner__title{
+                font-size: 3rem;
+                line-height: 4rem;
+                margin-bottom: 2rem;
+            }
+            .banner__content{
+                width: 100%;
+                height: 100%;
+                padding: 1.5rem;
+                padding-top: 16rem;
+            }
+        }
+        &__content{
+            padding: 1.5rem;
+            padding-top: 16rem ;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            background-position: top left;
+        }
+        &__title{
+            white-space: unset;
+            margin-bottom: 3rem;
+            padding: 0 10%;
+        }
+        .button{
+            margin: 0 auto;
+            margin-top: 3rem;
+        }
+    }
+}

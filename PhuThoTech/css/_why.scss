@@ -1,0 +1,143 @@
+.why{
+    position: relative;
+    background-image: url(../assets/images/wave.png);
+    background-size: cover;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    .section__title{
+        text-align: center;
+    }
+    &__list{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: -4rem;
+
+        li{
+            width: 50%;
+            margin-bottom: 4rem;
+            .why__item{
+                width: 35%;
+                margin:0 auto;
+                .bold{
+                    display: block;
+                    font-weight: bold;
+                }
+                img{
+                    width: 5rem;
+                    height: 5rem;
+                    margin-bottom: 1rem;
+                }
+            }
+            &:nth-of-type(odd){
+                .why__item{
+                    text-align: right;
+                    margin-right: 35%;
+                }
+            }
+
+            &:nth-of-type(even){
+                .why__item{
+                    text-align: left;
+                    margin-left: 35%;
+                }
+            }
+        }
+    }
+    &__img{
+        position: absolute;
+        width: 34.5rem;
+        height: 34.5rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: -1;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .why{
+        &__list{
+            li{
+                .why__item{
+                    width: 50%;
+                    margin: 0;
+                }
+                &:nth-of-type(odd){
+                    .why__item{
+                        margin-right: 0;
+                    }
+                }
+    
+                &:nth-of-type(even){
+                    .why__item{
+                        margin-left: 0;
+                        float: right;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .why{
+        &__list{
+            li{
+                .why__item{
+                    width: 100%;
+                    margin: 0;
+                    
+                }
+                &:nth-of-type(odd){
+                    .why__item{
+                        text-align: center;
+                        padding-right: 1.5rem;
+                    }
+                }
+    
+                &:nth-of-type(even){
+                    .why__item{
+                        text-align: center;
+                        padding-left: 1.5rem;
+                    }
+                }
+                &:last-of-type{
+                    width: 100%;
+                    padding: 0;
+                }
+                &:empty{
+                    display: none;
+                }
+            }
+        }
+        &__img{
+            opacity: 0.2;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .why{
+        &__list{
+            li{
+                width: 100%;
+
+                &:nth-of-type(odd){
+                    .why__item{
+                        padding: 0rem;
+                    }
+                }
+    
+                &:nth-of-type(even){
+                    .why__item{
+                        padding: 0;
+                    }
+                }
+            }
+        }
+        &__img{
+            opacity: 0.2;
+        }
+    }
+}
