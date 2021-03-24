@@ -293,6 +293,9 @@
     .header{
         &__logo{
             width: 16rem;
+            img{
+                width: 14rem;
+            }
         }
         &__right{
             padding: 1rem 0;
@@ -309,8 +312,8 @@
         &__menu{
             display: block;
             width: 36rem;
-            height: calc(100vh - 10.6rem);
-            top: 10.6rem;
+            height: calc(100vh - 9.7rem);
+            top: 9.7rem;
             left: 0;
             position: absolute;
             z-index: 11;

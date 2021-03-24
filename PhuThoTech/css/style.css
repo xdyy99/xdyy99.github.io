@@ -408,6 +408,9 @@ li {
   .header__logo {
     width: 16rem;
   }
+  .header__logo img {
+    width: 14rem;
+  }
   .header__right {
     padding: 1rem 0;
   }
@@ -420,8 +423,8 @@ li {
   .header__menu {
     display: block;
     width: 36rem;
-    height: calc(100vh - 10.6rem);
-    top: 10.6rem;
+    height: calc(100vh - 9.7rem);
+    top: 9.7rem;
     left: 0;
     position: absolute;
     z-index: 11;
