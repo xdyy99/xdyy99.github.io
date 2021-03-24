@@ -301,6 +301,11 @@
             padding: 1rem 0;
         }
     }
+    .search{
+        &__box{
+            top: calc(100% + 4.5rem);
+        }
+    }
     .submenu__btn{
         cursor: pointer;
     }

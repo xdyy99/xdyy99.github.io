@@ -54,10 +54,10 @@
         border-radius: 1.6rem;
         outline: none;
         &:hover{
-            box-shadow: 1rem 1rem 3rem rgba(255,255,255, 0.4);
+            box-shadow: 0rem 0rem 3rem rgba(255,255,255, 0.4);
             .slide__item__container::after{
-                width: 100rem;
-                height: 100rem;
+                width: 150rem;
+                height: 150rem;
                 background-color: #067BCC;
             }
             .slide__content{
@@ -83,7 +83,7 @@
                 top: 100%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                transition: 0.7s linear;
+                transition: 1s linear;
             }
 
         }

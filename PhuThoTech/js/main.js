@@ -53,6 +53,12 @@ if(slidedt !== null){
     	  settings: {
     		slidesToShow: 2,
     	  }
+    	},
+      {
+    	  breakpoint: 500,
+    	  settings: {
+    		slidesToShow: 1,
+    	  }
     	}
     ]
   });
@@ -151,14 +157,14 @@ window.addEventListener("scroll", function () {
         }
     }
 
-// //////////// wow js //////////////
-// wow = new WOW(
-//   {
-//   boxClass:     'wow',      // default
-//   animateClass: 'animate__animated', // default
-//   offset:       0,          // default
-//   mobile:       true,       // default
-//   live:         true        // default
-// }
-// )
-// wow.init(); 
+//////////// wow js //////////////
+wow = new WOW(
+  {
+  boxClass:     'wow',      // default
+  animateClass: 'animate__animated', // default
+  offset:       0,          // default
+  mobile:       true,       // default
+  live:         true        // default
+}
+)
+wow.init(); 
