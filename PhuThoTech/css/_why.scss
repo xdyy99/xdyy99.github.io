@@ -19,8 +19,17 @@
             width: 50%;
             margin-bottom: 4rem;
             .why__item{
+                padding: 1.5rem;
                 width: 35%;
-                margin:0 auto;
+                margin:-1.5rem auto;
+                transition: 0.3s linear;
+                border-radius: 0.8rem;
+
+                &:hover{
+                    background-color: rgba(255,255,255, 0.3);
+                    color: $c-blu;
+                    box-shadow: 0 0 3rem rgba(16,113,189,0.6);
+                }
                 .bold{
                     display: block;
                     font-weight: bold;

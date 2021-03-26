@@ -115,6 +115,8 @@ function  backToTop(){
       top: 0,
     })
   }
+ document.onload = backToTop();
+
 
 
 

@@ -1,10 +1,7 @@
 .half{
     padding: 0;
 
-    &.grey{
-        background-color: #F8F8F8;
-    }
-    &.reverse{
+    &:nth-child(even){
         .half__container{
             flex-direction: row-reverse;
         }
@@ -23,8 +20,17 @@
                     right: none;
                 }
             }
+            &.half__list{
+                padding-left: 0;
+                padding-right: 22rem;
+            }
+
+            &.giaiphapxd{
+                padding: 18rem 0;
+                padding-right: 18rem;
+            }
         }
-        
+
     }
     &__container{
         display: flex;
@@ -39,6 +45,11 @@
         }
         &:last-of-type{
             padding-right: 0;
+        }
+        &.half__list{
+            padding: 19rem 0;
+            padding-left: 22rem;
+            
         }
         &.half__img{
             padding: 0;
@@ -55,14 +66,48 @@
                 right: 0;
             }
         }
-
+        &.giaiphapxd{
+            padding: 18rem 0;
+            padding-left: 18rem;
+        }
         .blue{
             display: block;
+            &.inline{
+                display: inline-block;
+            }
         }
+        
+
 
     }
 
+    &__txt{
+        display: block;
+        margin-bottom: 4rem;
+        padding-left: 2rem;
+        position: relative;
+        line-height: 3.4rem;
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+        &::after{
+            content: "";
+            display: block;
+            width: 0.8rem;
+            height: 0.8rem;
+            background-color: $c-blu;
+            position: absolute;
+            top: 1rem;
+            left: 0;
+            transform: rotate(45deg);
+        }
+    }
 
+    &__icon{
+        width: 5.5rem;
+        height: 5.5rem;
+        margin-bottom: 2rem;
+    }
 }
 
 @media only screen and (max-width: 1300px) {
@@ -77,8 +122,11 @@
                 padding-left: 1.5rem;
                 padding-right: 0;
             }
+            &.half__list{
+                padding: 15rem 3rem;
+            }
         }
-        &.reverse{
+        &:nth-child(even){
 
             .half__item{
                 &:first-of-type{
@@ -89,8 +137,23 @@
                     padding-left: 0;
                     padding-right: 1.5rem;
                 }
+                &.half__list{
+                    padding: 15rem 3rem;
+                }
+            }
+            &.giaiphapxd{
+                .half__item{
+                    padding: 10rem 0;
+                    padding-right: 1.5rem;
+                }
             }
             
+        }
+        &.giaiphapxd{
+            .half__item{
+                padding: 10rem 0;
+                padding-left: 1.5rem;
+            }
         }
     }
 }
@@ -122,8 +185,13 @@
                 margin: 0 auto;
                 margin-top: 4rem;
             }
+            &.half__list{
+                padding: 6rem 0;
+            }
+        
         }
-        &.reverse{
+
+        &:nth-child(even){
             .half__container{
                 flex-direction: column;
             }
@@ -136,6 +204,9 @@
                 &:last-of-type{
                     padding-left: 0;
                     padding-right: 0;
+                }
+                &.half__list{
+                    padding: 6rem 0;
                 }
             }
             
