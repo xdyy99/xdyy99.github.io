@@ -1,0 +1,105 @@
+.relative{
+    padding: 8rem 0;
+
+    &__slide{
+        width: calc(100% + 3rem);
+        margin: 0 -1.5rem;
+    }
+    &__item{
+        display: block;
+        width: calc(100% / 3);
+        margin: 0 1.5rem;
+        outline: none;
+    }
+    &__img{
+        outline: none;
+        display: block;
+        width: 100%;
+        height: 28rem;
+        margin-bottom: 2.5rem;
+        overflow: hidden;
+
+        &:hover{
+            img{
+                transform: scale(1.1);
+            }
+        }
+
+        img{
+            display: block;
+            height: 100%;
+            max-width: none;
+            object-fit: cover;
+            transition: 0.3s linear;
+        }
+    }
+    &__link{
+        outline: none;
+        font-size: 2.2rem;
+        line-height: 3.2rem;
+        font-weight: bold;
+        display: block;
+        text-align: center;
+        transition: 0.3s linear;
+        margin-bottom: 1.5rem;
+        padding: 0 3rem;
+
+        &:hover{
+            color: $c-blu;
+        }
+    }
+    .slick-dots{
+        bottom: 0;
+        position: relative;
+        
+        li{
+            width: max-content;
+            height: max-content;
+            margin: 0.7rem;
+            &.slick-active{
+                button{
+                    width: 1.2rem;
+                    height: 1.2rem;
+                    opacity: 1;
+                }
+            }
+            button{
+                width: 0.8rem;
+                height: 0.8rem;
+                background-color: $c-blu;
+                opacity: 0.4;
+                border-radius: 99.9rem;
+                transition: 0.3s linear;
+                &::before{
+                    display: none;
+                }
+                &:hover{
+                    opacity: 1;
+                }
+                
+            }
+        }
+    }
+    .slick-dotted.slick-slider {
+        margin-bottom: 0;
+    }
+    &__txt{
+        text-align: center;
+        white-space: pre-wrap; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        padding: 0 2rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .relative{
+        &__img{
+            height: 23rem;
+        }
+    }
+}

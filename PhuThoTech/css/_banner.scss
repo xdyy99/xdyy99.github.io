@@ -57,40 +57,6 @@
     .fade{
         opacity: 1;
     }
-    .breadcrumb{
-
-            font-size: 1.8rem;
-            line-height: 3.2rem;
-            padding-left: 3rem;
-            position: relative;
-            transition: 0.3s linear;
-            &:first-of-type{
-                padding-left: 0;
-                &::after{
-                    display: none;
-                }
-            }
-            &.active{
-                font-weight: bold;
-            }
-            &:hover{
-                color: $c-blu;
-            }
-
-            &::after{
-                content: "";
-                display: block;
-                width: 0.6rem;
-                height: 0.6rem;
-                border-radius: 9.9rem;
-                background-color: $c-blu;
-                position: absolute;
-                left: 1.2rem;
-                top: 0.8rem;
-
-            }
-
-    }
 }
 @media only screen and (max-width: 1600px) {
     .banner{
@@ -166,6 +132,8 @@
                 height: 100%;
                 padding: 1.5rem;
                 padding-top: 16rem;
+                background-image: none;
+                background-color: rgba(255,255,255, 0.8);
             }
         }
         &__content{
@@ -174,8 +142,10 @@
             text-align: center;
             width: 100%;
             height: 100%;
-            background-position: top left;
+            background-image: none;
+            background-color: rgba(255,255,255, 0.8);
         }
+
         &__title{
             white-space: unset;
             margin-bottom: 3rem;

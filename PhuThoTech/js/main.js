@@ -23,6 +23,31 @@ if(slide !== null){
     ]
   });
 }
+////////////// slide relative //////////////
+sliderlt = document.querySelector(".relative__slide");
+if(sliderlt !== null){
+  $('.relative__slide').slick({
+    infinite: true,
+    speed: 300,
+    slidesToShow: 3,
+    dots: true,
+    arrows: false,
+    responsive: [
+    	{
+    	  breakpoint: 900,
+    	  settings: {
+    		slidesToShow: 2,
+    	  }
+    	},
+    	{
+    	  breakpoint: 600,
+    	  settings: {
+    		slidesToShow: 1,
+    	  }
+    	}
+    ]
+  });
+}
 ////////////// slide doi tac //////////////
 slidedt = document.querySelector(".logodt__slide");
 if(slidedt !== null){
@@ -137,24 +162,26 @@ window.addEventListener("scroll", function () {
 
 
     ////////////// banner  typing //////////////
-    let timer = setInterval(typingTxt, 20);
     var typeTxt = document.querySelector(".banner__title");
-    var typeStr = typeTxt.textContent;
-    var typeSplit = typeStr.split("");
-    typeTxt.textContent ="";
-    for(let i = 0; i < typeSplit.length; i++){
-        typeTxt.innerHTML += "<span class=\"spanTxt\">"+ typeSplit[i] +"</span>";
-    }
-    let char = 0;
-    function typingTxt(){
-        let spanTxt = document.querySelectorAll(".spanTxt")[char];
-        spanTxt.classList.add("fade");
-        char++;
-        if(char === typeSplit.length){
-            clearInterval(timer);
-            timer = null;
-            return;
-        }
+    if(typeTxt !== null){
+      let timer = setInterval(typingTxt, 20);
+      var typeStr = typeTxt.textContent;
+      var typeSplit = typeStr.split("");
+      typeTxt.textContent ="";
+      for(let i = 0; i < typeSplit.length; i++){
+          typeTxt.innerHTML += "<span class=\"spanTxt\">"+ typeSplit[i] +"</span>";
+      }
+      let char = 0;
+      function typingTxt(){
+          let spanTxt = document.querySelectorAll(".spanTxt")[char];
+          spanTxt.classList.add("fade");
+          char++;
+          if(char === typeSplit.length){
+              clearInterval(timer);
+              timer = null;
+              return;
+          }
+      }
     }
 
 //////////// wow js //////////////

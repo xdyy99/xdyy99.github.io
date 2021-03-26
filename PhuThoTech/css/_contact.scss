@@ -1,0 +1,111 @@
+.contact{
+    width: 100%;
+    &__container{
+        display: flex;
+        padding: 0
+    }
+    &__left{
+        width: 50%;
+        padding: 0 1.5rem;
+    }
+    &__right{
+        width: 50%;
+        padding: 0 1.5rem;
+    }
+    &__item{
+        width: 60%;
+        padding-left: 5rem;
+        margin-bottom: 3rem;
+        position: relative;
+
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+        img{
+            display: block;
+            width: 3.5rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        a{  
+            transition: 0.3s linear;
+            &:hover{
+                color: $c-blu;
+            }
+        }
+    }
+    &__form{
+        display: flex;
+        flex-wrap: wrap;
+        width: calc(100% + 2rem);
+        margin: 0 -1rem;
+    }
+    &__label{
+        padding: 1rem;
+        width: 100%;
+
+        &.small{
+            width: 50%;
+        }
+        .button{
+            float: right;
+            margin-top: 1.5rem;
+        }
+    }
+    &__inp{
+        display: block;
+        width: 100%;
+        margin-top: 1rem;
+        background-color: #F6F6F6;
+        height: 4.4rem;
+        border: 1px solid rgba(0,0,0, 0.1);
+        padding: 1rem;
+        transition: 0.3s linear;
+        &:focus{
+            background-color: rgba(255,255,255, 0.1);
+            box-shadow: 0 0 1rem rgba(16,113,189, 0.6);
+            border: 0;
+            color: $c-blu;
+        }
+    }
+    &__mess{
+        height: 17.5rem;
+    }
+
+}
+
+@media only screen and (max-width: 900px) {
+    .contact{
+        &__container{
+            flex-wrap: wrap;
+        }
+        &__left{
+            width: 100%;
+            margin-bottom: 6rem;
+        }
+        &__right{
+            width: 100%;
+        }
+        &__label{
+            .button{
+                float: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .contact{
+        &__label{
+            &.small{
+                width: 100%;
+            }
+            .button{
+                
+                margin: 0 auto;
+                margin-top: 1.5rem;
+            }
+        }
+    }
+}

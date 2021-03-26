@@ -1,0 +1,34 @@
+.breadcrumb{
+
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+    padding-left: 3rem;
+    position: relative;
+    transition: 0.3s linear;
+    &:first-of-type{
+        padding-left: 0;
+        &::after{
+            display: none;
+        }
+    }
+    &.active{
+        font-weight: bold;
+    }
+    &:hover{
+        color: $c-blu;
+    }
+
+    &::after{
+        content: "";
+        display: block;
+        width: 0.6rem;
+        height: 0.6rem;
+        border-radius: 9.9rem;
+        background-color: $c-blu;
+        position: absolute;
+        left: 1.2rem;
+        top: 0.8rem;
+
+    }
+
+}
