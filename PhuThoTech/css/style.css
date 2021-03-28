@@ -134,12 +134,42 @@ li {
   background: #1071bd;
   background: linear-gradient(0deg, #1071bd 0%, #2aaae1 100%);
   transition: 0.3s linear;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.button::after {
+  content: "";
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  border-radius: 9.9rem;
+  top: -1px;
+  left: 110%;
+  background: linear-gradient(-90deg, white 0%, #2aaae1 100%);
+  display: block;
+  position: absolute;
+  z-index: -1;
+  transform-origin: bottom;
+  transition: 0.5s linear;
 }
 .button:hover {
-  box-shadow: 0rem 0rem 3rem rgba(0, 0, 0, 0.16);
+  box-shadow: 0rem 0rem 3rem rgba(42, 170, 225, 0.5);
+  color: #1071BD;
+}
+.button:hover::after {
+  animation: scan 0.5s linear;
+  left: -1px;
+  transition: 0.5s linear;
 }
 
-@keyframes flashing {}
+@keyframes scan {
+  0% {
+    left: -110%;
+  }
+  100% {
+    left: -1px;
+  }
+}
 @media only screen and (max-width: 1200px) {
   body {
     font-size: 1.6rem;
@@ -256,6 +286,9 @@ li {
 .header__small .header__right {
   padding: 1rem 0;
 }
+.header__small .search__box {
+  top: calc(100% + 2.5rem);
+}
 
 .menu__list {
   width: calc(100% - 3.3rem);
@@ -265,6 +298,15 @@ li {
   line-height: 2rem;
   position: relative;
   z-index: 11;
+}
+.menu__list .hiding {
+  opacity: 0;
+  transform: translateY(-4rem);
+  transition: 0.6s linear;
+}
+.menu__list .showin {
+  opacity: 1;
+  transform: translateY(0);
 }
 .menu__list li {
   position: relative;
@@ -397,7 +439,7 @@ li {
   position: absolute;
   align-items: stretch;
   right: 0;
-  top: calc(100% + 2.5rem);
+  top: calc(100% + 4rem);
   background-color: rgba(255, 255, 255, 0.5);
   box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.16);
   width: 40rem;
@@ -433,6 +475,9 @@ li {
   }
   .header__right {
     padding: 1rem 0;
+  }
+  .header__small .search__box {
+    top: calc(100% + 4.5rem);
   }
 
   .search__box {
@@ -522,7 +567,7 @@ li {
     transform: translateX(0);
     max-height: 0;
     overflow: hidden;
-    transition: 1s;
+    transition: 1s linear;
   }
   .submenu.active {
     max-height: 50rem;
@@ -2250,6 +2295,107 @@ li {
     column-count: 1;
     column-gap: 0;
   }
+}
+.detail__banner {
+  background-image: url(../assets/images/chitietbv.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 65rem;
+}
+.detail__banner .container {
+  height: 100%;
+  position: relative;
+}
+.detail__banner__content {
+  width: calc(100% * 3.5 / 12);
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+  color: #fff;
+}
+.detail__title {
+  font-size: 5.5rem;
+  line-height: 7.4rem;
+  display: block;
+  margin-bottom: 2.5rem;
+}
+.detail__title .bold {
+  font-weight: bold;
+}
+.detail__txt {
+  white-space: pre-wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+}
+.detail__tab {
+  padding: 2.5rem 0 3rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.detail__tab__title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 3.2rem;
+  position: relative;
+  cursor: pointer;
+}
+.detail__tab__title::after {
+  content: "";
+  display: block;
+  width: 2.2rem;
+  height: 2.2rem;
+  background-image: url("../assets/images/Mask Group 46.png");
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.3s linear;
+}
+.detail__tab__content {
+  display: flex;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 1s linear;
+}
+.detail__tab__list {
+  width: 50%;
+  padding-right: 6rem;
+}
+.detail__tab__list li {
+  display: block;
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 3rem;
+}
+.detail__tab__list li:last-of-type {
+  margin-bottom: 0;
+}
+.detail__tab__list li::after {
+  content: "+";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.detail__tab__img {
+  width: 50%;
+}
+.detail__tab__img img {
+  max-width: 100%;
+}
+.detail__tab.active .detail__tab__title::after {
+  transform: translateY(-50%) rotate(-180deg);
+}
+.detail__tab.active .detail__tab__content {
+  opacity: 1;
+  margin-top: 3rem;
+  max-height: 100rem;
 }
 
 /*# sourceMappingURL=style.css.map */

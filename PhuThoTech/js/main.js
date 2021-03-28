@@ -1,3 +1,23 @@
+    ////////////// menu animate  showin //////////////
+    var hiding = document.querySelectorAll(".hiding");
+    if(hiding !== null){
+      let timingshow = setInterval(showin, 300);
+      let numberlist = 0;
+      function showin(){
+          let showinItem = document.querySelectorAll(".hiding")[numberlist];
+          if(showinItem !== undefined){
+            showinItem.classList.add("showin");
+          }
+          numberlist++;
+          if(numberlist === hiding.length){
+              clearInterval(timingshow);
+              timeimg = null;
+              return;
+          }
+      }
+    }
+
+
 ////////////// slide //////////////
 slide = document.querySelector(".slide__container");
 if(slide !== null){
@@ -130,8 +150,23 @@ for(let i = 0; i < subBtn.length; i++){
     function serAct(){    
       serBox.classList.toggle("active");   
     }
-  
 
+
+     ////////////// giai phap chi tiet tab //////////////
+  var detailTab = document.querySelectorAll(".detailTab");
+  if(detailTab !== null){
+    detailTab[0].classList.toggle("active");
+    for(let i = 0; i < detailTab.length; i++){
+        detailTab[i].addEventListener("click", detailShow);
+        function detailShow() {
+            for(let a = 0; a < detailTab.length; a++){
+                if( a === i ){
+                  detailTab[a].classList.toggle("active");
+                }
+            }
+        }
+    }
+  }
 
 
 ////////////// back to top //////////////

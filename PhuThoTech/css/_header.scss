@@ -85,6 +85,9 @@
         .header__right{
             padding: 1rem 0;
         }
+        .search__box{
+            top: calc(100% + 2.5rem);
+        }
     }
 }
 .menu{
@@ -97,6 +100,15 @@
         position: relative;
         z-index: 11;
 
+        .hiding{
+            opacity: 0;
+            transform: translateY(-4rem);
+            transition: 0.6s linear;
+        }
+        .showin{
+            opacity: 1;
+            transform: translateY(0);
+        }
         li{
             position: relative;
             z-index: 11;
@@ -254,7 +266,7 @@
         position: absolute;
         align-items: stretch;
         right: 0;
-        top: calc(100% + 2.5rem);
+        top: calc(100% + 4rem);
         background-color: rgba(255, 255, 255, 0.5);
         box-shadow: 1rem 1rem 3rem rgba(0,0,0, 0.16);
         width: 40rem;
@@ -300,6 +312,11 @@
         &__right{
             padding: 1rem 0;
         }
+        &__small{
+            .search__box{
+                top: calc(100% + 4.5rem);
+            }
+        }
     }
     .search{
         &__box{
@@ -309,6 +326,7 @@
     .submenu__btn{
         cursor: pointer;
     }
+
 
 }
 
@@ -397,7 +415,7 @@
         transform: translateX(0);
         max-height: 0;
         overflow: hidden;
-        transition: 1s;
+        transition: 1s linear;
         &.active{
             max-height: 50rem;
             margin-left: 1.5rem;
