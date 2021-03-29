@@ -16,8 +16,19 @@
           }
       }
     }
-
-
+////////////// banner slider //////////////
+slideBan = document.querySelector(".banner__slider");
+if(slideBan !== null){
+  $('.banner__slider').slick({
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    // autoplaySpeed: 3000,
+    // autoplay: true,
+    dots: true,
+    arrows: false,
+  });
+}
 ////////////// slide //////////////
 slide = document.querySelector(".slide__container");
 if(slide !== null){
@@ -154,10 +165,12 @@ for(let i = 0; i < subBtn.length; i++){
 
      ////////////// giai phap chi tiet tab //////////////
   var detailTab = document.querySelectorAll(".detailTab");
+  var detailBtn = document.querySelectorAll(".detail__tab__title");
+
   if(detailTab !== null){
-    for(let i = 0; i < detailTab.length; i++){
+    for(let i = 0; i < detailBtn.length; i++){
         detailTab[0].classList.add("active");
-        detailTab[i].addEventListener("click", detailShow);
+        detailBtn[i].addEventListener("click", detailShow);
         function detailShow() {
             for(let a = 0; a < detailTab.length; a++){
                 if( a === i ){
@@ -194,8 +207,6 @@ window.addEventListener("scroll", function () {
     else header.classList.remove("header__small");
 });
 
-
-
     ////////////// banner  typing //////////////
     var typeTxt = document.querySelector(".banner__title");
     if(typeTxt !== null){
@@ -225,7 +236,7 @@ wow = new WOW(
   boxClass:     'wow',      // default
   animateClass: 'animate__animated', // default
   offset:       0,          // default
-  mobile:       true,       // default
+  mobile:       false,       // default
   live:         true        // default
 }
 )

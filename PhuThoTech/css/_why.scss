@@ -18,12 +18,15 @@
         li{
             width: 50%;
             margin-bottom: 4rem;
+            align-self: stretch;
+
             .why__item{
                 padding: 1.5rem;
                 width: 35%;
                 margin:-1.5rem auto;
                 transition: 0.3s linear;
                 border-radius: 0.8rem;
+                height: 100%;
 
                 &:hover{
                     background-color: rgba(255,255,255, 0.3);
@@ -94,7 +97,9 @@
 @media only screen and (max-width: 900px) {
     .why{
         &__list{
+            justify-content: center;
             li{
+                align-self: stretch;
                 .why__item{
                     width: 100%;
                     margin: 0;
@@ -113,37 +118,8 @@
                         padding-left: 1.5rem;
                     }
                 }
-                &:last-of-type{
-                    width: 100%;
-                    padding: 0;
-                }
                 &:empty{
                     display: none;
-                }
-            }
-        }
-        &__img{
-            opacity: 0.2;
-        }
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    .why{
-        &__list{
-            li{
-                width: 100%;
-
-                &:nth-of-type(odd){
-                    .why__item{
-                        padding: 0rem;
-                    }
-                }
-    
-                &:nth-of-type(even){
-                    .why__item{
-                        padding: 0;
-                    }
                 }
             }
         }

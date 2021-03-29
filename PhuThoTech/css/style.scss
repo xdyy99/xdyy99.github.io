@@ -138,6 +138,7 @@ $c-blu: #1071BD;
   position: relative;
   overflow: hidden;
   z-index: 1;
+  outline: none;
 
   &::after{
     content:"";

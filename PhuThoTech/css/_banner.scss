@@ -3,6 +3,47 @@
     height: 70rem;
     position: relative;
     padding:0;
+    outline: none;
+    &__slider{
+        .slick-track{
+            width: 100%;
+            display: flex;
+            overflow: hidden;
+            height: 100%;
+        }
+        &.slick-slider {
+            margin-bottom: 0;
+        }
+        .slick-dots{
+            position: absolute;
+            bottom: 3rem;
+            li{
+                &.slick-active{
+                    button{
+                        background-color: #fff;
+                    }
+                }
+                button{
+                    width: 1rem;
+                    height: 1rem;
+                    background-color: rgba(255,255,255,0.3);
+                    border: 2px solid #fff;
+                    border-radius: 99.9rem;
+                    transition: 0.3s linear;
+                    &::before{
+                        display: none;
+                    }
+                    &:hover{
+                        background-color: $c-blu;
+                    }
+                    
+                }
+            }
+        }
+    }
+
+
+
 
     &.home{
         height: 90rem;
@@ -37,17 +78,25 @@
         background-position: top right;
         left: 0;
         bottom: 0;
-        padding: 24rem 13rem 0 22rem;
+        padding: 24rem 0 0 22rem;
         display: block;
+        
+        .shape-outside{
+                shape-outside: polygon(49% 0, 100% 1%, 100% 100%, 25% 100%, 93% 40%);
+                width: 70.8rem;
+                height: 52.5rem;
+                float: right;
+        }
+        .button{
+            display: inline-block;
+        }
     }
 
     &__title{
         font-size: 5rem;
         line-height: 6.1rem;
-        font-weight: bold;
-        white-space: pre-line;
+        font-weight: 900;
         margin-bottom: 3rem;
-
 
     }
     .spanTxt{
@@ -88,6 +137,22 @@
 @media only screen and (max-width: 1200px) {
     .banner{
         height: 50rem;
+
+        &__slider{
+            .slick-dots{
+                bottom: 1.5rem;
+                li{
+                    &.slick-active{
+                        button{
+                            background-color: $c-blu;
+                        }
+                    }
+                    button{
+                        border: 2px solid $c-blu;     
+                    }
+                }
+            }
+        }
         &.home{
             height: 50rem;
             .banner__title{
@@ -144,12 +209,18 @@
             height: 100%;
             background-image: none;
             background-color: rgba(255,255,255, 0.8);
+            .shape-outside{
+                display: none;
+            }
         }
 
         &__title{
             white-space: unset;
             margin-bottom: 3rem;
             padding: 0 10%;
+            br{
+                display: none;
+            }
         }
         .button{
             margin: 0 auto;
