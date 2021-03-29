@@ -2332,6 +2332,7 @@ li {
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   display: -webkit-box;
+  line-height: 3.2rem;
 }
 .detail__tab {
   padding: 2.5rem 0 3rem;
@@ -2343,6 +2344,7 @@ li {
   line-height: 3.2rem;
   position: relative;
   cursor: pointer;
+  padding-right: 2.5rem;
 }
 .detail__tab__title::after {
   content: "";
@@ -2396,6 +2398,68 @@ li {
   opacity: 1;
   margin-top: 3rem;
   max-height: 100rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  .detail__banner {
+    height: 50rem;
+  }
+  .detail__title {
+    font-size: 4.5rem;
+    line-height: 6rem;
+  }
+  .detail__txt {
+    line-height: 2.6rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .detail__banner {
+    height: 50rem;
+  }
+  .detail__banner__content {
+    width: calc(100% / 3);
+  }
+  .detail__title {
+    font-size: 4rem;
+    line-height: 4.5rem;
+  }
+  .detail__txt {
+    line-height: 2.6rem;
+  }
+  .detail__tab {
+    padding: 1.5rem 0;
+  }
+  .detail__tab__content {
+    flex-direction: column-reverse;
+  }
+  .detail__tab__list {
+    width: 100%;
+    padding-right: 0;
+  }
+  .detail__tab__img {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  .detail__tab__title {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .detail__banner .container {
+    background-color: rgba(16, 113, 189, 0.8);
+  }
+  .detail__banner__content {
+    width: calc(100% - 3rem);
+    text-align: center;
+  }
+  .detail__title {
+    font-size: 4rem;
+    line-height: 4.5rem;
+  }
+  .detail__txt {
+    -webkit-line-clamp: 3;
+    white-space: unset;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -36,6 +36,7 @@
         -webkit-line-clamp: 4;
         -webkit-box-orient: vertical;
         display: -webkit-box;
+        line-height: 3.2rem;
     }
     &__tab{
         padding: 2.5rem 0 3rem;
@@ -48,6 +49,7 @@
             line-height: 3.2rem;
             position: relative;
             cursor: pointer;
+            padding-right: 2.5rem;
 
             &::after{
                 content: "";
@@ -107,6 +109,83 @@
                 margin-top: 3rem;
                 max-height: 100rem;
             }
+        }
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .detail{
+        &__banner{
+            height: 50rem;
+        }
+        &__title{
+            font-size: 4.5rem;
+            line-height: 6rem;
+        }
+        &__txt{
+            line-height: 2.6rem;
+        }
+    }
+}
+
+
+
+@media only screen and (max-width: 900px) {
+    .detail{
+        &__banner{
+            height: 50rem;
+            &__content{
+                width: calc(100% / 3);
+            }
+        }
+    
+        &__title{
+            font-size: 4rem;
+            line-height: 4.5rem;
+        }
+        &__txt{
+            line-height: 2.6rem;
+        }
+
+        &__tab{
+            padding: 1.5rem 0;
+            &__content{
+                flex-direction: column-reverse;
+            }
+            &__list{
+                width: 100%;
+                padding-right: 0;
+            }
+            &__img{
+                width: 100%;
+                margin-bottom: 1.5rem;
+            }
+            &__title{
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .detail{
+        &__banner{
+            .container{
+                background-color: rgba(16,113,189,0.8);
+            }
+            &__content{
+                width: calc(100% - 3rem);
+                text-align: center;
+                
+            }
+        }
+    
+        &__title{
+            font-size: 4rem;
+            line-height: 4.5rem;
+        }
+        &__txt{
+            -webkit-line-clamp: 3;
+            white-space: unset;
         }
     }
 }

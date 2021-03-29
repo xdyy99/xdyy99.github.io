@@ -155,8 +155,8 @@ for(let i = 0; i < subBtn.length; i++){
      ////////////// giai phap chi tiet tab //////////////
   var detailTab = document.querySelectorAll(".detailTab");
   if(detailTab !== null){
-    detailTab[0].classList.toggle("active");
     for(let i = 0; i < detailTab.length; i++){
+        detailTab[0].classList.add("active");
         detailTab[i].addEventListener("click", detailShow);
         function detailShow() {
             for(let a = 0; a < detailTab.length; a++){
