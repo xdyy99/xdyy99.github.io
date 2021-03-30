@@ -16,7 +16,7 @@ body {
   display: block;
   font-size: 2rem;
   line-height: 3.2rem;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   color: #000;
 }
 
@@ -83,7 +83,7 @@ li {
 }
 
 .main {
-  margin-top: 11.7rem;
+  margin-top: 13.4rem;
   overflow: hidden;
 }
 
@@ -178,7 +178,7 @@ li {
   }
 
   .main {
-    margin-top: 9.7rem;
+    margin-top: 10rem;
   }
 
   .section__title {
@@ -217,6 +217,7 @@ li {
   left: 0;
   z-index: 10;
   background-color: #fff;
+  transition: 0.3s linear;
 }
 .header__container {
   width: 100%;
@@ -225,6 +226,7 @@ li {
 }
 .header__logo {
   padding: 1rem;
+  transition: 0.3s linear;
 }
 .header__logo a {
   display: block;
@@ -239,10 +241,10 @@ li {
   flex-direction: column;
   align-items: flex-end;
   padding: 3rem 0 1.5rem;
+  transition: 0.3s linear;
 }
 .header__lang {
   display: block;
-  margin-top: -1rem;
 }
 .header__lang a {
   display: inline-block;
@@ -265,12 +267,13 @@ li {
   color: #1071BD;
 }
 .header__lang a img {
+  display: block;
   width: 1rem;
   height: 1rem;
   position: absolute;
   top: 50%;
   left: 1rem;
-  transform: translateY(-50%);
+  transform: translateY(-0.6rem);
 }
 .header__lang a.active {
   color: #1071BD;
@@ -280,6 +283,9 @@ li {
   justify-content: flex-end;
   align-items: center;
   width: 100%;
+}
+.header__small {
+  box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.16);
 }
 .header__small .header__logo {
   width: 16rem;
@@ -299,15 +305,6 @@ li {
   line-height: 2rem;
   position: relative;
   z-index: 11;
-}
-.menu__list .hiding {
-  opacity: 0;
-  transform: translateY(-4rem);
-  transition: 0.6s linear;
-}
-.menu__list .showin {
-  opacity: 1;
-  transform: translateY(0);
 }
 .menu__list li {
   position: relative;
@@ -464,6 +461,7 @@ li {
   width: 20%;
   border-top-right-radius: 0.8rem;
   border-bottom-right-radius: 0.8rem;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 1199px) {
@@ -520,7 +518,7 @@ li {
   }
   .menu__btn {
     display: block;
-    padding: 2rem;
+    padding: 1.5rem;
     position: relative;
     z-index: 13;
     cursor: pointer;
@@ -747,16 +745,15 @@ li {
 }
 .banner {
   width: 100%;
-  height: 70rem;
   position: relative;
   padding: 0;
   outline: none;
+  padding-top: 6.6rem;
 }
 .banner__slider .slick-track {
   width: 100%;
   display: flex;
   overflow: hidden;
-  height: 100%;
 }
 .banner__slider.slick-slider {
   margin-bottom: 0;
@@ -783,7 +780,11 @@ li {
   background-color: #1071BD;
 }
 .banner.home {
-  height: 90rem;
+  padding-top: 18rem;
+  align-self: stretch;
+  height: auto;
+  display: flex;
+  align-items: flex-end;
 }
 .banner.home .banner__title {
   font-size: 6rem;
@@ -792,11 +793,17 @@ li {
 }
 .banner.home .banner__content {
   width: 94rem;
-  height: 72rem;
+  padding-bottom: 9rem;
   padding-top: 19rem;
+  position: relative;
+  bottom: 0;
 }
 .banner__img {
   display: block;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 }
@@ -806,23 +813,12 @@ li {
   object-fit: cover;
 }
 .banner__content {
-  position: absolute;
-  width: 85rem;
-  height: 63rem;
-  background-image: url("../assets/images/ban.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top right;
-  left: 0;
-  bottom: 0;
-  padding: 24rem 0 0 22rem;
   display: block;
-}
-.banner__content .shape-outside {
-  shape-outside: polygon(49% 0, 100% 1%, 100% 100%, 25% 100%, 93% 40%);
-  width: 70.8rem;
-  height: 52.5rem;
-  float: right;
+  width: 85rem;
+  background-image: url("../assets/images/ban.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 24rem 10rem 16rem 22rem;
 }
 .banner__content .button {
   display: inline-block;
@@ -832,6 +828,7 @@ li {
   line-height: 6.1rem;
   font-weight: 900;
   margin-bottom: 3rem;
+  white-space: pre-line;
 }
 .banner .spanTxt {
   opacity: 0;
@@ -842,21 +839,16 @@ li {
 }
 
 @media only screen and (max-width: 1600px) {
-  .banner.home {
-    height: 80rem;
-  }
   .banner.home .banner__title {
     font-size: 5rem;
     line-height: 6.1rem;
   }
   .banner.home .banner__content {
     width: 84rem;
-    height: 65rem;
     padding-top: 16rem;
   }
   .banner__content {
     width: 70rem;
-    height: 48rem;
     padding-top: 12rem;
     padding-left: 10rem;
   }
@@ -866,9 +858,6 @@ li {
   }
 }
 @media only screen and (max-width: 1200px) {
-  .banner {
-    height: 50rem;
-  }
   .banner__slider .slick-dots {
     bottom: 1.5rem;
   }
@@ -877,9 +866,6 @@ li {
   }
   .banner__slider .slick-dots li button {
     border: 2px solid #1071BD;
-  }
-  .banner.home {
-    height: 50rem;
   }
   .banner.home .banner__title {
     font-size: 3rem;
@@ -894,7 +880,6 @@ li {
   }
   .banner__content {
     width: 60rem;
-    height: 38rem;
     padding-top: 10rem;
     padding-left: 8rem;
   }
@@ -905,6 +890,12 @@ li {
   }
 }
 @media only screen and (max-width: 600px) {
+  .banner {
+    padding: 0;
+  }
+  .banner.home {
+    padding: 0;
+  }
   .banner.home .banner__title {
     font-size: 3rem;
     line-height: 4rem;
@@ -915,6 +906,7 @@ li {
     height: 100%;
     padding: 1.5rem;
     padding-top: 16rem;
+    padding-bottom: 18rem;
     background-image: none;
     background-color: rgba(255, 255, 255, 0.8);
   }
@@ -922,6 +914,7 @@ li {
     padding: 1.5rem;
     padding-top: 16rem;
     text-align: center;
+    padding-bottom: 18rem;
     width: 100%;
     height: 100%;
     background-image: none;
@@ -1562,8 +1555,7 @@ li {
 .why {
   position: relative;
   background-image: url(../assets/images/wave.png);
-  background-size: cover;
-  background-position: bottom right;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 .why .section__title {
@@ -1588,7 +1580,7 @@ li {
   margin: -1.5rem auto;
   transition: 0.3s linear;
   border-radius: 0.8rem;
-  height: 100%;
+  height: calc(100% + 3rem);
 }
 .why__list li .why__item:hover {
   background-color: rgba(255, 255, 255, 0.3);
@@ -1664,6 +1656,7 @@ li {
 .slide {
   background: #1071bd;
   background: linear-gradient(0deg, #1071bd 0%, #2aaae1 100%);
+  color: #fff;
 }
 .slide .section__title {
   text-align: center;
@@ -1711,6 +1704,7 @@ li {
   height: 100%;
   border-radius: 1.6rem;
   outline: none;
+  color: #000;
 }
 .slide__item:hover {
   box-shadow: 0rem 0rem 3rem rgba(255, 255, 255, 0.4);
@@ -1742,7 +1736,7 @@ li {
   top: 100%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: 1s linear;
+  transition: 0.5s linear;
 }
 .slide__item a {
   outline: none;
@@ -2273,6 +2267,7 @@ li {
 }
 .contact__mess {
   height: 17.5rem;
+  resize: none;
 }
 
 @media only screen and (max-width: 900px) {
@@ -2420,7 +2415,7 @@ li {
   line-height: 3.2rem;
   position: relative;
   cursor: pointer;
-  padding-right: 2.5rem;
+  padding-right: 4.5rem;
 }
 .detail__tab__title::after {
   content: "";

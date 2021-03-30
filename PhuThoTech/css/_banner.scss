@@ -1,18 +1,18 @@
 .banner{
     width: 100%;
-    height: 70rem;
     position: relative;
     padding:0;
     outline: none;
+    padding-top: 6.6rem;
     &__slider{
         .slick-track{
             width: 100%;
             display: flex;
             overflow: hidden;
-            height: 100%;
         }
         &.slick-slider {
             margin-bottom: 0;
+        
         }
         .slick-dots{
             position: absolute;
@@ -46,7 +46,11 @@
 
 
     &.home{
-        height: 90rem;
+        padding-top: 18rem;
+        align-self: stretch;
+        height: auto;
+        display: flex;
+        align-items: flex-end;
         .banner__title{
             font-size: 6rem;
             line-height: 7.2rem;
@@ -54,12 +58,18 @@
         }
         .banner__content{
             width: 94rem;
-            height: 72rem;
+            padding-bottom: 9rem;
             padding-top: 19rem;
+            position: relative;
+            bottom: 0;
         }
     }
     &__img{
         display: block;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
         img{
@@ -69,24 +79,13 @@
         }
     }
     &__content{
-        position: absolute;
-        width: 85rem;
-        height: 63rem;
-        background-image: url('../assets/images/ban.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: top right;
-        left: 0;
-        bottom: 0;
-        padding: 24rem 0 0 22rem;
         display: block;
+        width: 85rem;
+        background-image: url('../assets/images/ban.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        padding: 24rem 10rem 16rem 22rem;
         
-        .shape-outside{
-                shape-outside: polygon(49% 0, 100% 1%, 100% 100%, 25% 100%, 93% 40%);
-                width: 70.8rem;
-                height: 52.5rem;
-                float: right;
-        }
         .button{
             display: inline-block;
         }
@@ -97,7 +96,7 @@
         line-height: 6.1rem;
         font-weight: 900;
         margin-bottom: 3rem;
-
+        white-space: pre-line;
     }
     .spanTxt{
         opacity: 0;
@@ -110,20 +109,18 @@
 @media only screen and (max-width: 1600px) {
     .banner{
         &.home{
-            height: 80rem;
+
             .banner__title{
                 font-size: 5rem;
                 line-height: 6.1rem;
             }
             .banner__content{
                 width: 84rem;
-                height: 65rem;
                 padding-top: 16rem;
             }
         }
         &__content{
             width: 70rem;
-            height: 48rem;
             padding-top: 12rem;
             padding-left: 10rem;
         }
@@ -136,7 +133,6 @@
 }
 @media only screen and (max-width: 1200px) {
     .banner{
-        height: 50rem;
 
         &__slider{
             .slick-dots{
@@ -154,7 +150,6 @@
             }
         }
         &.home{
-            height: 50rem;
             .banner__title{
                 font-size: 3rem;
                 line-height: 4rem;
@@ -170,7 +165,6 @@
 
         &__content{
             width: 60rem;
-            height: 38rem;
             padding-top: 10rem;
             padding-left: 8rem;
         }
@@ -185,8 +179,9 @@
 
 @media only screen and (max-width: 600px) {
     .banner{
-
+        padding: 0;
         &.home{
+            padding: 0;
             .banner__title{
                 font-size: 3rem;
                 line-height: 4rem;
@@ -197,6 +192,7 @@
                 height: 100%;
                 padding: 1.5rem;
                 padding-top: 16rem;
+                padding-bottom: 18rem;
                 background-image: none;
                 background-color: rgba(255,255,255, 0.8);
             }
@@ -205,6 +201,7 @@
             padding: 1.5rem;
             padding-top: 16rem ;
             text-align: center;
+            padding-bottom: 18rem;
             width: 100%;
             height: 100%;
             background-image: none;
