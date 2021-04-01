@@ -629,89 +629,49 @@ if(pdBig && pdSmall){
 
 
   //mouse move paralax effect
-  const qImg = document.querySelector(".pro__dots");
   var proDots = document.querySelector(".pro__dots");
-  var proBtn = document.querySelectorAll(".dot");
 
+// render dot
+let proCheck = document.querySelector(".pro__board");
+if(proCheck){
 
-
-// render
-  var Position =
-[
-    {
-        _posX: "33.7222%",
-        _posY: "35.6287%",
-    },
-    {
-        _posX: "39.5%",
-        _posY: "28.8423%", 
-    },
-    {
-        _posX: "73.2778%",
-        _posY: "13.6727%", 
-    }
-]
-
-for(let p = 0; p < Position.length; p++){
-    let pCount = p + 1;
-    proDots.innerHTML += "<span class=\"dot\">"+ pCount  +"\ </span>";
-    let dotPos = document.querySelectorAll(".dot");
-    dotPos[p].style.top = Position[p]._posY;
-    dotPos[p].style.left = Position[p]._posX;
-    resetPro();
-}
-
-
-
-// add more dot
-  qImg.addEventListener("click", 
-function (e) {
-    let _w = qImg.offsetWidth;
-    let _h = qImg.offsetHeight;
-
-    let _posX = (e.offsetX - 15) / _w * 100;
-    let _posY = (e.offsetY - 15) / _h * 100;
-    let _perX = _posX + "%";
-    let _perY = _posY + "%";
-
-
-    let dot = document.querySelectorAll(".dot");
-    dotCount= dot.length + 1;
-
-    proDots.innerHTML += "<span class=\"dot\">"+ dotCount  +"\ </span>";
-    let dotPos = document.querySelectorAll(".dot");
-    dotPos[dot.length].style.top = _perY;
-    dotPos[dot.length].style.left = _perX;
-    Position[dot.length] = 
-    {
-        _posX : _perX,
-        _posY : _perY,
-    }
-    console.log( Position);
-    resetPro();
-
-});
-
-    function resetPro() {
-        let proBtn = document.querySelectorAll(".dot");
-        let proItems = document.querySelectorAll(".pro__item");
-        console.log('reset:' + proBtn.length);
-        for(let i = 0; i < proBtn.length && i < proItems.length; i++){
-            proBtn[i].addEventListener("mouseover", showItem);
-            proBtn[i].addEventListener("mouseout", hideItem);
-
-            proItems[i].addEventListener("mouseover", showItem);
-            proItems[i].addEventListener("mouseout", hideItem);
+    for(let p = 0; p < Position.length; p++){
+        let pCount = p + 1;
     
-            function showItem() {   
-                proItems[i].classList.add('active');
-                proBtn[i].classList.add('active');
-            }
-            function hideItem() {   
-                proItems[i].classList.remove('active');
-                proBtn[i].classList.remove('active');
+        proDots.innerHTML += "<div class=\"dot "+ Position[p].code +"\"><a href=\""+ Position[p].link +"\">"+ pCount +"</a><span class=\"dot__tooltip\">" + Position[p].name + "</span></div>";
+    
+        let dotPos = document.querySelectorAll(".dot");
+        dotPos[p].style.top = Position[p]._posY;
+        dotPos[p].style.left = Position[p]._posX;
+    }
+    
+    resetPro();
+    function resetPro() {
+        let max = document.querySelectorAll(".pro__item").length;
+        for(t = 0; t < max; t++){
+            let proItems = document.querySelectorAll(`.${Position[t].code}`);
+            if(proItems){
+                for(let i = 0; i < proItems.length; i++){
+                    proItems[i].addEventListener("mouseover", 
+                    function showItem() {
+                        for(let a = 0; a < proItems.length; a++){
+                            proItems[a].classList.add('active');
+                        }
+                    });
+                    proItems[i].addEventListener("mouseout",         
+                    function hideItem() { 
+                        for(let b = 0; b < proItems.length; b++){
+                            proItems[b].classList.remove('active');
+                        }
+                    });
+                }
             }
         }
-    }
+    } 
+}
+  
+
+
+
 
 

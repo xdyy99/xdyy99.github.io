@@ -650,6 +650,80 @@
  }
 
  .pro{
+     &__getName{
+        position: absolute;
+        display: none;
+        z-index: 5;
+        width: 18rem;
+        max-width: 18rem;
+        background-color: #fff;
+        box-shadow: 1rem 1rem 3rem rgba(0,0,0, 0.16);
+        border-radius: 0.5rem;
+        overflow: hidden;
+        &:hover{
+            .pro__name__list{
+                max-height: 20rem;
+                overflow-y: auto;
+            }
+            .pro__name__title{
+                border-bottom: 2px solid #fff;
+                &::after{
+                    transform: rotate(90deg);
+                }
+            }
+        }
+     }
+     &__name{
+         &__title{
+             display: block;
+             font-size: 1.4rem;
+             padding: 1rem;
+             padding-right: 3rem;
+             background-color: #1688CF;
+             color: #fff;
+             border-bottom: 2px solid transparent;
+             transition: 0.3s linear;
+             position: relative;
+             &::after{
+                content: "";
+                display: block;
+                width: 0;
+                height: 0;
+                border: 5px solid transparent;
+                border-left: 5px solid #fff;
+                position: absolute;
+                top: 1.3rem;
+                right: 1.5rem;
+                transition: 0.3s linear;
+             }
+         }
+         &__list{
+            max-height: 0;
+            overflow: hidden;
+            transition: 0.3s linear;
+            &::-webkit-scrollbar {
+                transition: 0.3s linear;
+                display: block;
+                width: 8px;
+                height: 8px;
+                background-color: rgba(0,0,0, 0.2);
+            }
+            
+            &::-webkit-scrollbar-thumb{
+                background-color: #66A5CC;
+            }
+            li{
+                font-size: 1.2rem;
+                padding: 1.5rem;
+                transition: 0.3s linear;
+                cursor: pointer;
+                &:hover{
+                    background-color: #1688CF;
+                    color: #fff;
+                }
+            }
+         }
+     }
      &__container{
          display: flex;
          align-items: center;
@@ -667,7 +741,49 @@
          background-color: #f8f8f8;
          width: 90rem;
          margin-right: 3rem;
+         img{
+             display: block;
+             width: 100%;
+
+         }
      }
+     &__del{
+         display: inline-block;
+         font-size: 1.4rem;
+         color: #fff;
+         background-color: #ff3f32;
+         padding: 1rem 2rem;
+         text-transform: uppercase;
+         border-radius: 1rem;
+         opacity: 0.5;
+         transition: 0.3s linear;
+         cursor: pointer;
+         position: absolute;
+         right: 3rem;
+         bottom: 0;
+         transform: translate(calc(-100% - 1.5rem),100%);
+         &:hover{
+             opacity: 1;
+         }
+     }
+     &__save{
+        display: inline-block;
+        font-size: 1.4rem;
+        color: #fff;
+        background-color: #1688CF;
+        padding: 1rem 2rem;
+        text-transform: uppercase;
+        border-radius: 1rem;
+        opacity: 0.5;
+        transition: 0.3s linear;
+        position: absolute;
+        right: 3rem;
+        bottom: 0;
+        transform: translateY(100%);
+        &:hover{
+            opacity: 1;
+        }
+    }
      &__dots{
          width: 100%;
          height: 100%;
@@ -677,18 +793,49 @@
          .dot{
              cursor: pointer;
              position: absolute;
-             display: flex;
-             align-items: center;
-             justify-content: center;
-             width: 3rem;
-             height: 3rem;
-             border-radius: 9.9rem;
-             background-color: #CECECE;
-             color: #000;
-             font-size: 1.8rem;
-             line-height: 1.8rem;
-             transition: 0.3s linear;
-             z-index: 1 ;
+             z-index: 1;
+            &__tooltip{
+                pointer-events: none;
+                position: absolute;
+                width: max-content;
+                font-size: 1.4rem;
+                font-weight: 300;
+                padding: 0.5rem 2rem;
+                background-color: #1688CF;
+                color: #fff;
+                border-radius: 0.8rem;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%,  -1.5rem);
+                opacity: 0;
+                visibility: hidden;
+                transition: 0.5s linear;
+                &::after{
+                    content: "";
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    border: 5px solid transparent;
+                    border-top: 5px solid #1688CF;
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translate(-50%, 95%);
+                }
+            }
+             a{
+                width: 3rem;
+                height: 3rem;
+                border-radius: 9.9rem;
+                background-color: #CECECE;
+                color: #000;
+                font-size: 1.8rem;
+                line-height: 1.8rem;
+                transition: 0.3s linear;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+             }
              &::after{
                  content: "";
                  z-index: -1;
@@ -702,21 +849,39 @@
                  left: 50%;
                  transform: translate(-50%, -50%);
                  animation: blink 1.5s linear 0s infinite;
+                 pointer-events: none;
              }
              &:hover{
-                 background-color: #1688CF;
-                 color: #fff;
+                 z-index: 2;
+                 a{
+                    background-color: #1688CF;
+                    color: #fff;
+                 }
+                 .dot__tooltip{
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translate(-50%, calc(-100% - 1.5rem));
+                 }
                  &::after{
                     background-color: #1688CF;
                  }
              }
              &.active{
-                background-color: #1688CF;
-                color: #fff;
+                z-index: 2;
+                a{
+                    background-color: #1688CF;
+                    color: #fff;
+                }
+                .dot__tooltip{
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translate(-50%, calc(-100% - 1.5rem));
+                 }
                 &::after{
                     background-color: #1688CF;
                  }
              }
+             
         }
      }
      &__list{
@@ -753,6 +918,11 @@
             left: 1.5rem;
             border: none;
             background-color: #fff;
+            cursor: pointer;
+            img{
+                display: block;
+                width: 100%;
+            }
         }
     }
     &__item{
@@ -761,6 +931,7 @@
         background-color: #fff;
         margin-bottom: 1rem;
         opacity: 1;
+        border: 3px solid transparent;
         transition: 0.3s linear;
         &:hover{
             opacity: 1;
@@ -823,8 +994,74 @@
     0%{width: 3rem; height: 3rem; opacity: 0.6;}
     100%{width: 5rem; height: 5rem; opacity: 0.3;}
 }
+@media only screen and (max-width: 1600px) {
+    .pro__img{
+        width: calc(100% - 3rem);
+        img{
+            width:100%
+        }
+    }
+}
 
+@media only screen and (max-width: 1199px) {
+    .pro{
+        &__img{
+            width: 100%;
+            margin-right: 0;
+            position: relative;
+            transform: none;
+        }
+        &__container{
+            flex-wrap: wrap;
+        }
+        &__board{
+            width: 100%;
+            padding: 10rem 6rem;
+            height: auto;
+            padding-top: 12rem;
+        }
+        &__list{
+            width: 100%;
+            height: auto;
+            padding: 0 6rem;
+        }
+        &List{
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+        }
 
+        &__item{
+            width: calc(50% - 0.5rem);
+            margin-right: 1rem;
+            &:nth-of-type(even){
+                margin-right: 0;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 900px) {
+    .pro{
+        &__board{
+            width: 100%;
+            padding: 12rem  0 6rem ;
+        }
+        &__list{
+            padding: 0 ;
+        }
+    }
+}
+@media only screen and (max-width: 600px) {
+    .pro{
+        &List{
+            padding-top: 1.5rem;
+        }
+        &__item{
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+}
 
 
 
