@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <title>Order</title>
+      <meta http-equiv="Cache-control" content="no-cache" />
+      <meta http-equiv="Expires" content="-1" />
+      <meta name="robots" content="noodp,noydir" />
+      <meta name="format-detection" content="telephone=no" />
+      <meta property="og:site_name" content="" />
+      <meta name="description" content=" " />
+      <meta name="keywords" content="" />
+      <meta name="viewport" content="width=device-width, user-scalable=no">
+      <meta property="og:title" content="" />
+      <meta property="og:type" content="website" />
+      <meta property="og:image" content="" />
+      <meta property="og:description" content="" />
+      <meta name="format-detection" content="telephone=no" />
+      <link rel="stylesheet" type="text/css" href="css/style.css" />
+      <link rel="stylesheet" type="text/css" href="css/fontawesome/css/all.css" />
+      <link href="css/select2.css" rel="stylesheet" />
+   </head>
+   <body>
+      
+         <!-- Header -->
+         <div class="bg-navbar"></div>
+         <header class="header">
+            <div class="container">
+               <div class="header__inner">
+                  <a href="#" class="header__logo"><img src="images/logo-2.png" alt=""></a>
+                  <div class="nav-icon">
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                  </div>
+                  <nav class="navbar navbar-collapse" >
+                     <ul class="navbar-nav left">
+                        <li class="current-menu-item"><a href="">Giới thiệu</a></li>
+                        <li><a href="">Sản phẩm</a></li>
+                        <li class="dropdown">
+                           <a href="">Tuyển dụng</a>
+                           <div class="sub-menu-wrap">
+                              <ul class="sub-menu">
+                                 <li><a href="#">Somethings</a></li>
+                                 <li><a href="#">Somethings</a></li>
+                                 <li><a href="#">Somethings</a></li>
+                                 <li><a href="#">Somethings</a></li>
+                              </ul>
+                           </div>
+                        </li>
+                     </ul>
+                     <ul class="navbar-nav right">
+                        <li><a href="">Liên hệ</a></li>
+                        <li class="login action-user">
+                           <div class="box-user">
+                              <a href="#" class="btn-user">
+                                 <div class="user-img inline"><img src="images/user.png" alt=""></div>
+                                 <p class="user-name inline">Phương Nguyễn</p>
+                              </a>
+                              <a href="#" class="user-out inline">Thoát</a>
+                              <div class="sub-menu-wrap">
+                                 <ul class="sub-menu">
+                                     <li><a href="login.html">Đăng nhập</a></li>
+                                     <li><a href="sign-up.html">Đăng kí</a></li>
+                                     <li><a href="#">Tạo đơn hàng</a></li>
+                                 </ul>
+                             </div>
+                           </div>
+                        </li>
+                     </ul>
+                  </nav>
+               </div>
+            </div>
+         </header>
+
+         <!-- Content -->
+         <div class="cart-page">
+            <div class="section content content-order">
+               <div class="wrap-cart">
+                   <div class="container">
+                       <div class="rows">
+                           <div class="box-select relative">
+                              <span class="search-icon"><i class="far fa-search"></i></span>
+                              <select class="search-product js-states form-control"  name="state">
+                                 <option></option>
+                                 <option price="100" value="product-1">product-1</option>
+                                 <option price="200" value="product-2">product-2</option>
+                                 <option price="300" value="product-3">product-3</option>
+                                 <option price="500" value="product-4">product-4</option>
+                                 <option price="600" value="product-5">product-5</option>
+                                 <option price="700" value="product-6">product-6</option>
+                                 <option price="700" value="product-6">product-7</option>
+                                 <option price="700" value="product-6">product-8</option>
+                                 <option price="700" value="product-6">product-9</option>
+                                 <option price="700" value="product-6">product-10</option>
+                                 <option price="700" value="product-6">product-11</option>
+                                 <option price="700" value="product-6">product-12</option>
+                                 <option price="700" value="product-6">product-13</option>
+                                 <option price="700" value="product-6">product-14</option>
+                               </select>
+                           </div>
+                           <div class="box-create text-right">
+                               <a href="#" class="btn-create">
+                                   <span class="icon-plus inline"><i class="fal fa-plus"></i></span>
+                                   <span class="btn-text inline">tải lên excel</span>
+                               </a>
+                           </div>
+                       </div>
+                       <div class="row">
+                           <div class="col-md-12">
+                              <div class="order">
+                                 <table class="order-table">
+                                    <thead>
+                                       <tr>
+                                           <th>STT</th>
+                                           <th>tên hàng</th>
+                                           <th>đơn vị</th>
+                                           <th>số lượng</th>
+                                           <th>đơn giá</th>
+                                           <th>thành tiền</th>
+                                           <th></th>
+                                       </tr>
+                                    </thead>
+                                    <tbody>
+                                       <!-- <tr>
+                                          <td>01</td>
+                                          <td>Tên sản phẩm demo</td>
+                                          <td>Cái</td>
+                                          <td class="amount-product">
+                                             <div class="amount-box">
+                                                <span class="change-amount input-number-decrement">–</span>
+                                                   <input class="input-number" type="text" value="1" min="0">
+                                                <span class="change-amount input-number-increment">+</span>
+                                             </div>
+                                          </td>
+                                          <td>780,000</td>
+                                          <td>780,000</td>
+                                          <td><img src="images/delete.svg" alt=""></td>
+                                       </tr> -->
+                                    </tbody>
+                                 </table>
+                              </div>
+                           </div>
+                        </div>
+                       <div class="row ">
+                          <div class="col-md-12">
+                             <div class="box-total text-right">
+                                <div class="total inline">Tổng cộng</div>
+                                <div class="inline product"><span>0</span> sản phẩm</div>
+                                <div class="inline price">0</div>
+                             </div>
+                          </div>
+                       </div>
+                       <div class="row">
+                          <div class="col-md-12">
+                             <div class="comment">
+                                <textarea name="" id="" cols="30" rows="6" placeholder="Ghi chú..."></textarea>
+                             </div>
+                          </div>
+                          <div class="col-md-12">
+                              <div class="box-btn-save">
+                                 <a class="inline btn btn-blue" href="">Lưu</a>
+                                 <a class="inline btn btn-lightblue" href="">hủy</a>
+                              </div>
+                          </div>
+                       </div>
+                   </div>
+               </div>
+            </div>
+         </div>
+         <style>
+            .footer {
+                display: block;
+                position: relative;
+                bottom: inherit;
+                left: inherit;
+             }
+             .header {
+                display: block;
+                opacity: 1;
+             }
+         </style>
+         <!-- Footer -->
+         <div class="footer">
+            <div class="container h-100">
+               <div class="row h-100">
+                  <div class="col-md-6 col-sm-12 col-12 h-100">
+                     <div class="footer__content h-100">
+                        <span class="footer-text">Designed and developed by Mona Media</span>
+                     </div>
+                  </div>
+                  <div class="col-md-6 col-sm-12 col-12 h-100">
+                     <div class="footer__content h-100">
+                        <ul class="footer__content--list">
+                           <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                           <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                           <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                           <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                        </ul>
+                        <div class="footer__content--hotline">
+                           <a href="#">
+                              <span>Hotline</span>
+                              <p class="number">1900 456 456</p>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      
+      <script type="text/javascript" src="js/jquery3.3.1.js"></script>
+      <script type="text/javascript" src="js/Magnific-Popup-master/jquery.magnific-popup.min.js"></script>
+      <script type="text/javascript" src="js/slick-1.8.1/slick.min.js"></script>
+      <script type="text/javascript" src="js/lightGallery-master/dist/js/lightgallery-all.min.js"></script>
+      <script type="text/javascript"src="js/wow-master/wow.min.js"></script>
+      <script type="text/javascript" src="js/main.js"></script>
+
+      <!-- Script riêng -->
+      <script type="text/javascript" src="js/cart.js"></script>
+      <script src="js/select2.js"></script>
+      <script>
+         /* Search Product */  
+         $(".search-product").select2({
+            placeholder: "Search ID, Tên sản phẩm, Mô tả",
+         });
+
+      </script>
+
+   </body>
+</html>
