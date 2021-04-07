@@ -1,0 +1,146 @@
+.doitac{
+    &__slide{
+        &__container{
+            background-color: #F8F8F8;
+            padding: 6rem 0;
+        }
+        .slick-track{
+            display: flex;
+            align-items: center;
+        }
+        .slick-dots{
+            
+            display: flex;
+            justify-content: center;
+            bottom: -4rem;
+            li{ 
+                width: max-content;
+                height: max-content;
+                button{
+                    width: 0.8rem;
+                    height: 0.8rem;
+                    padding: 0;
+                    border-radius: 10rem;
+                    border: 2px solid rgba(0,0,0, 0.2);
+                    overflow: hidden;
+                    appearance: none;
+                    &::before{
+                        display: none;
+                    }
+                }
+                &.slick-active{
+                    button{
+                        border: 2px solid $c-gre;
+                    }
+                }
+            }
+    
+        }
+        a{
+            outline: none;
+            img{
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &__main{
+        background-image: url('../../assets/images/ycbg.jpg');
+        @include default-background;
+        padding: 10rem 0 30rem;
+        color: #fff;
+        position: relative;
+
+        .blur{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.9;
+            background: rgb(37,86,31);
+            background: linear-gradient(0deg, rgba(37,86,31,1) 0%, rgba(73,171,61,1) 100%);
+        }
+    }
+    &__container{
+        display: flex;
+    }
+    &__content{
+        width: calc(100% * 7 / 12);
+        padding-right: 7rem;
+        .section__subtitle{
+            color: #fff;
+        }
+    }
+    &__list{
+        width: calc(100% * 5 / 12);
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1.5rem;
+        li{
+            width: 50%;
+            font-weight: bold;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            transition: 0.3s linear;
+            img{
+                width: 7rem;
+                height: 7rem;
+                display: block;
+                margin-bottom: 2rem;
+            }
+            &:hover{
+                background-color: rgba(0,0,0, 0.2);
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 900px) {
+    .doitac{
+        &__main{
+            padding: 6rem 0;
+        }
+        &__container{
+            flex-direction: column;
+        }
+        &__content{
+            width: 100%;
+            text-align: center;
+            padding-right: 0;
+        }
+        &__list{
+            width: 100% ;
+
+            padding: 1.5rem 0;
+            li{
+                width: calc(100% / 3);
+                margin-bottom: 0;
+                text-align: center;
+                img{
+                    width: 6rem;
+                    height: 6rem;
+                    margin: 0 auto;
+                    margin-bottom: 2rem;
+                }
+                &:hover{
+                    background-color: rgba(0,0,0, 0.2);
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 500px) {
+    .doitac{
+        &__list{
+            width: 100% ;
+
+            padding: 1.5rem 0;
+            li{
+                width: 100%;
+            }
+        }
+    }
+}

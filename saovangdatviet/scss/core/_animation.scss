@@ -1,0 +1,21 @@
+@keyframes gogo{
+    0%{ right: 2.7rem;}
+    50%{ right: 0.7rem;}
+    100%{ right: 2.7rem;}
+}
+@keyframes gogo2{
+    0%{ left: 2.7rem;}
+    50%{ left: 0.7rem;}
+    100%{ left: 2.7rem;}
+}
+
+@keyframes jumping{
+    0%{ transform: translate(-50%, calc(-50% - 1.2rem));}
+    50%{ transform: translate(-50%, calc(-50% + 0.5rem));}
+    100%{ transform: translate(-50%, calc(-50% - 1.2rem));}
+}
+
+@keyframes play-btn{
+    0%{ width: 3rem; height: 3rem; opacity: 0.5;}
+    100%{ width: 6rem; height: 6rem; opacity: 0.1;}
+}

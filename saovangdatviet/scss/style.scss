@@ -1,0 +1,202 @@
+// core //
+@import url(../assets/fonts/Roboto/stylesheet.css);
+@import url(../assets/fonts/Oswald/stylesheet.css);
+@import './core/reset';
+@import './core/var-mix';
+@import './core/mona';
+@import './core/animation';
+@import './core/font';
+
+// style //
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+  }   
+  
+  body {
+    width: 100%;
+    display: block;
+    @include fz-16;
+    font-family: 'Roboto' ,sans-serif;
+    color: #000;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  input, select, button, textarea {
+    outline: none;
+    border: none;
+  }
+  .rs__form{
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+  }
+  
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+  
+  li {
+    list-style-type: none;
+  }
+
+::-webkit-scrollbar {
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: rgba(0,0,0, 0.2);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: $c-gre;
+}
+::selection {
+    background: $c-gre;
+    color: #fff;
+}
+
+
+.section{
+    width: 100%;
+    padding: 10rem 0;
+    position: relative;
+
+    &.grey{
+      background-color: #F8F8F8;
+  }
+}
+.container{
+    width:100%;
+    max-width: 120rem;
+    padding: 0 1.5rem;
+    position: relative;
+    margin: 0 auto;
+
+    &__full{
+      width:100%;
+      max-width: 192rem;
+      padding: 0 1.5rem;
+      position: relative;
+      margin: 0 auto;
+    }
+}
+
+.main{
+  margin-top: 15.5rem;
+  overflow: hidden;
+}
+.section__title{
+  @include fz-30;
+  display: block;
+  position: relative;
+  margin-bottom: 4rem;
+
+  .green{
+    color: $c-gre;
+  }
+}
+.section__subtitle{
+  @include fz-20;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 1.5rem;
+  color: $c-gre;
+}
+.txt{
+  opacity: 0.7;
+}
+
+
+
+.button{
+  text-align: left;
+  width: max-content;
+  min-width: 17rem;
+  display: block;
+  @include fz-16;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 3rem;
+  padding: 1.7rem;
+  padding-right: 5rem;
+  background-color: $c-gre;
+  transition: 0.3s linear;
+  position: relative;
+  z-index: 1;
+  outline: none;
+  cursor: pointer;
+
+  &::after{
+    content:"";
+    width: 1.6rem;
+    height: 1.6rem;
+    background-image: url('../assets/images/arr-right.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    top: 1.7rem;
+    right: 1.7rem;
+    display: block;
+    position: absolute;
+    z-index: -1;
+  }
+
+  &:hover{
+    box-shadow: 0rem 0rem 3rem rgba(0,0,0, 0.16);
+    &::after{
+      animation: gogo 1s linear infinite;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .main{
+    margin-top: 13.5rem;
+  }
+
+}
+@media only screen and (max-width: 900px) {
+    .section{
+      padding:  6rem 0;
+    }
+    .main{
+      margin-top: 14.8rem;
+    }
+}
+@media only screen and (max-width: 650px) {
+  .main{
+    margin-top: 13.7rem;
+  }
+}
+
+
+
+
+// component //
+@import './components/header';
+@import './components/footer';
+@import './components/backToTop';
+@import './components/banner';
+@import './components/breadcrumb';
+
+
+@import './components/banner-slider';
+@import './components/video';
+@import './components/product';
+@import './components/duan';
+@import './components/doitac';
+@import './components/yeucau';
+@import './components/news';
