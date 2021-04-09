@@ -1,0 +1,245 @@
+.linhvuc {
+    .section__title {
+        text-align: center;
+    }
+    .section__subtitle {
+        text-align: center;
+    }
+    &__flex {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+    &__slide {
+        padding: 0;
+        .slick-dots {
+            display: flex;
+            justify-content: center;
+            bottom: -4rem;
+            li {
+                width: max-content;
+                height: max-content;
+                button {
+                    width: 0.8rem;
+                    height: 0.8rem;
+                    padding: 0;
+                    border-radius: 10rem;
+                    border: 2px solid rgba(0, 0, 0, 0.2);
+                    overflow: hidden;
+                    appearance: none;
+                    &::before {
+                        display: none;
+                    }
+                }
+                &.slick-active {
+                    button {
+                        border: 2px solid $c-gre;
+                    }
+                }
+            }
+        }
+    }
+    &__item {
+        width: calc(25% - 3rem);
+        margin: 1.5rem;
+        background-color: #fff;
+        transition: 0.3s linear;
+        box-shadow: 0 0 3rem rgba(0, 0, 0, 0.16);
+        overflow: hidden;
+        z-index: 1;
+        outline: none;
+        &:hover {
+            background-color: $c-gre;
+            color: #fff;
+            .linhvuc__content {
+                &::after {
+                    border-left: 54rem solid $c-gre;
+                }
+                .readmore {
+                    color: #fff;
+                    &::after {
+                        background-image: url("../assets/images/arr-right.png");
+                    }
+                }
+            }
+            .linhvuc__subtitle {
+                color: #fff;
+            }
+        }
+    }
+    &__img {
+        display: block;
+        width: 100%;
+        padding-bottom: 75%;
+        position: relative;
+        overflow: hidden;
+        outline: none;
+        img {
+            max-width: none;
+            height: 100%;
+            @include center-abs;
+            transition: 0.5s linear;
+        }
+        &:hover {
+            img {
+                height: calc(100% + 3rem);
+            }
+        }
+    }
+    &__txt {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    &__content {
+        padding: 1rem 3rem 3.5rem;
+        position: relative;
+
+        &::after {
+            content: "";
+            width: 0;
+            height: 0;
+            display: block;
+            border-top: 8rem solid transparent;
+            border-left: 54rem solid #fff;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translateY(-100%);
+            z-index: 2;
+            transition: 0.3s linear;
+        }
+    }
+    &__title {
+        display: block;
+        @include fz-18;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    &__subtitle {
+        @include fz-14;
+        color: $c-gre;
+        transition: 0.3s linear;
+    }
+    .readmore {
+        display: block;
+        padding-right: 2.5rem;
+        color: $c-gre;
+        font-weight: bold;
+        transition: 0.3s linear;
+        margin-top: 2rem;
+        position: relative;
+        width: max-content;
+        outline: none;
+        &::after {
+            content: "";
+            width: 1.6rem;
+            height: 1.6rem;
+            display: block;
+            background-image: url("../assets/images/arr-right1.png");
+            @include default-background;
+            position: absolute;
+            right: 0;
+            top: 0.2rem;
+            transition: 0.3s linear;
+        }
+        &:hover {
+            &::after {
+                right: -1.6rem;
+            }
+        }
+    }
+}
+.nhansu__slide {
+    padding: 0;
+    .slick-track {
+        display: flex;
+        height: auto;
+    }
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        bottom: -3rem;
+        li {
+            width: max-content;
+            height: max-content;
+            button {
+                width: 0.8rem;
+                height: 0.8rem;
+                padding: 0;
+                border-radius: 10rem;
+                border: 2px solid rgba(0, 0, 0, 0.2);
+                overflow: hidden;
+                appearance: none;
+                &::before {
+                    display: none;
+                }
+            }
+            &.slick-active {
+                button {
+                    border: 2px solid $c-gre;
+                }
+            }
+        }
+    }
+    .slick-slide {
+        outline: none;
+        > div {
+            display: flex;
+        }
+    }
+    .linhvuc {
+        &__content {
+            padding: 3rem 2.5rem;
+        }
+        &__img {
+            padding-bottom: 100%;
+        }
+        &__item {
+            width: calc(25% - 3rem);
+            text-align: center;
+        }
+        &__title {
+            width: 100%;
+            display: block;
+            @include fz-16;
+            margin-bottom: 0.5rem;
+        }
+        &__subtitle {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .linhvuc {
+        &__item {
+            width: calc(100% / 3 - 3rem);
+        }
+    }
+}
+@media only screen and (max-width: 700px) {
+    .linhvuc {
+        &__item {
+            width: calc(50% - 3rem);
+        }
+    }
+}
+@media only screen and (max-width: 500px) {
+    .linhvuc {
+        &__item {
+            width: calc(100% - 3rem);
+        }
+    }
+}
+@media only screen and (max-width: 450px) {
+    .nhansu__slide .slick-slide > div {
+        display: block;
+    }
+}

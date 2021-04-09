@@ -6,7 +6,7 @@
         width: calc(100% - 3rem);
         bottom: 0;
         color: #fff;
-        background-image: url('../../assets/images/ycbg1.jpg');
+        background-image: url('../assets/images/ycbg1.jpg');
         @include default-background;
         &::after {
             content: "";
@@ -52,6 +52,7 @@
             background-color: #000;
             margin: 0;
             float: right;
+            min-width: 20rem;
         }
     }
 }   

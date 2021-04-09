@@ -1,0 +1,14 @@
+.share {
+    width: 100%;
+    padding: 1.5rem 2rem;
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: space-between;
+    &__title {
+        font-weight: bold;
+    }
+    .social__item {
+        margin-right: 1rem;
+    }
+    margin-bottom: 2.5rem;
+}

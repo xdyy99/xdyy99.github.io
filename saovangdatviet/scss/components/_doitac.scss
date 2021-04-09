@@ -46,7 +46,7 @@
     }
 
     &__main{
-        background-image: url('../../assets/images/ycbg.jpg');
+        background-image: url('../assets/images/ycbg.jpg');
         @include default-background;
         padding: 10rem 0 30rem;
         color: #fff;

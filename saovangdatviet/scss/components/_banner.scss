@@ -1,35 +1,49 @@
-.banner{
+.banner {
     position: relative;
-    &__content{
+    &__content {
         position: relative;
         z-index: 4;
         padding: 23rem 0;
         text-align: center;
         color: #fff;
     }
-    &__title{
+    &__title {
         @include fz-55;
         text-transform: uppercase;
         margin-bottom: 1.3rem;
     }
-    img{
+    img {
         top: 0;
         left: 0;
         z-index: 1;
         position: absolute;
-        width: max-content;
+        min-width: 100%;
+        max-width: none;
         height: 100%;
         object-fit: cover;
     }
-    .blur{
+    .blur {
         position: absolute;
         display: block;
-        background-color: rgba(0,0,0, 0.6);
+        background-color: rgba(0, 0, 0, 0.6);
         width: 100%;
         height: 100%;
         top: 0;
         left: 0;
         z-index: 2;
         mix-blend-mode: overlay;
+    }
+}
+.no--banner {
+    padding-top: 2rem;
+}
+@media only screen and (max-width: 900px) {
+    .banner__content {
+        padding: 18rem 0;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .banner__content {
+        padding: 15rem 0;
     }
 }

@@ -38,7 +38,7 @@
                 &::before{
                     left: unset;
                     animation: gogo 1s linear infinite;
-                    background-image: url('../../assets/images/arr-right.png');
+                    background-image: url('../assets/images/arr-right.png');
                 }
             }
             &::before{
@@ -46,7 +46,7 @@
                 display: block;
                 width: 2.4rem;
                 height: 2.4rem;
-                background-image: url('../../assets/images/arr-right1.png');
+                background-image: url('../assets/images/arr-right1.png');
                 @include default-background;
                 @include center-abs;
             }
@@ -92,7 +92,7 @@
                 width: 3.4rem;
                 height: 3.4rem;
                 display: block;
-                background-image: url('../../assets/images/video-play.png');
+                background-image: url('../assets/images/video-play.png');
                 @include default-background;
                 @include center-abs;
                 z-index: 2;
