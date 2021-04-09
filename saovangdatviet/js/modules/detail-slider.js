@@ -14,6 +14,7 @@ export default function detailSlider() {
         $(".detail__slide__small").slick({
             infinite: false,
             slidesToShow: 3,
+            speed: 1200,
             slidesToScroll: 1,
             asNavFor: ".detail__slide__big",
             focusOnSelect: true,
