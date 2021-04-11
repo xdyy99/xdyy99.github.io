@@ -143,6 +143,11 @@
         &__link {
             @include fz-20;
             font-weight: bold;
+            outline: none;
+            transition: 0.3s linear;
+            &:hover {
+                color: $c-gre;
+            }
         }
     }
 }
