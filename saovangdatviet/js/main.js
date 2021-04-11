@@ -17,6 +17,7 @@ import relaSlider from "./modules/rela-slider.js";
 import insSlider from "./modules/ins-slider.js";
 import visionSlider from "./modules/vision-slider.js";
 import lvSlider from "./modules/linhvucslider.js";
+import hisSLider from "./modules/his-slider.js";
 import typing from "./modules/typing.js";
 import counting from "./modules/counting.js";
 
@@ -40,6 +41,7 @@ window.addEventListener("DOMContentLoaded", () => {
     insSlider();
     visionSlider();
     lvSlider();
+    hisSLider();
     typing();
     counting();
 });
