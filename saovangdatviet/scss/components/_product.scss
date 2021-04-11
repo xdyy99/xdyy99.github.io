@@ -1,70 +1,72 @@
-.product{
-    background-image: url('../assets/images/dmt-bg.jpg');
+.product {
+    background-image: url("../assets/images/dmt-bg.jpg");
     @include default-background;
     position: relative;
-    &::before{
+    &::before {
         position: absolute;
         content: "";
         width: 364px;
         height: 499px;
-        background-image: url('../assets/images/dotdot.png');
-        z-index: 5; 
+        background-image: url("../assets/images/dotdot.png");
+        z-index: 5;
         top: -40rem;
-        right: -10rem; 
+        right: -10rem;
+        pointer-events: none;
     }
-    &::after{
+    &::after {
         position: absolute;
         content: "";
         width: 364px;
         height: 499px;
-        background-image: url('../assets/images/dotdot.png');
-        z-index: 5; 
+        background-image: url("../assets/images/dotdot.png");
+        z-index: 5;
         bottom: -25rem;
-        left: -10rem; 
+        left: -10rem;
+        pointer-events: none;
     }
 
-    &__container{
+    &__container {
         display: flex;
     }
-    &__content{
+    &__content {
         width: calc(100% / 3);
         padding-right: 3rem;
-        .button{
+        .button {
             display: inline-block;
             margin-right: 3rem;
         }
-        &__btn{
+        &__btn {
             font-weight: bold;
             text-decoration: underline;
             display: inline-block;
             position: relative;
-            &::after{
+            &::after {
                 content: "";
                 width: 1.6rem;
                 height: 1.6rem;
-                background-image: url('../assets/images/arr-right1.png');
+                background-image: url("../assets/images/arr-right1.png");
                 @include default-background;
                 position: absolute;
                 top: 0.1rem;
                 right: -2.6rem;
                 transition: 0.3s linear;
             }
-            &:hover{
+            &:hover {
                 color: $c-gre;
-                &::after{
+                &::after {
                     right: -4.2rem;
-                }     
+                }
             }
         }
     }
-    &__slider__container{
+    &__slider__container {
         width: calc(100% * 2 / 3);
         position: relative;
         align-items: center;
     }
 }
 
-.product__slide{
+.product__slide {
     width: 117rem;
     position: absolute;
     left: 7rem;
@@ -72,11 +74,11 @@
     transform: translateY(-50%);
     display: flex;
 
-    .slick-track{
+    .slick-track {
         display: flex;
         height: 100%;
     }
-    .slick-dots{
+    .slick-dots {
         width: max-content;
         right: unset;
         left: -3rem;
@@ -85,34 +87,34 @@
         display: flex;
         transform: translate(-100%, calc(-50% - 2rem));
         flex-direction: column;
-        li{ 
+        li {
             width: max-content;
             height: max-content;
             margin-bottom: 1.5rem;
-            &:last-of-type{
+            &:last-of-type {
                 margin-bottom: 0;
             }
-            button{
+            button {
                 width: 0.8rem;
                 height: 0.8rem;
                 padding: 0;
                 border-radius: 10rem;
-                border: 2px solid rgba(0,0,0, 0.2);
+                border: 2px solid rgba(0, 0, 0, 0.2);
                 overflow: hidden;
                 appearance: none;
-                &::before{
+                &::before {
                     display: none;
                 }
             }
-            &.slick-active{
-                button{
+            &.slick-active {
+                button {
                     border: 2px solid $c-gre;
                 }
             }
         }
-
     }
-    .slick-prev, .slick-next {
+    .slick-prev,
+    .slick-next {
         display: block;
         width: 2rem;
         height: 4rem;
@@ -123,102 +125,102 @@
         top: unset;
         bottom: unset;
         text-transform: none;
-        &::before{
+        &::before {
             display: none;
         }
         z-index: 2;
     }
-    .slick-next{
+    .slick-next {
         top: 9rem;
-        background-image: url('../assets/images/next-pro.png');
-        &:hover{
-            background-image: url('../assets/images/next-pro1.png');
+        background-image: url("../assets/images/next-pro.png");
+        &:hover {
+            background-image: url("../assets/images/next-pro1.png");
         }
     }
-    .slick-prev{
+    .slick-prev {
         bottom: 9rem;
-        background-image: url('../assets/images/prev-pro.png');
-        &:hover{
-            background-image: url('../assets/images/prev-pro1.png');
+        background-image: url("../assets/images/prev-pro.png");
+        &:hover {
+            background-image: url("../assets/images/prev-pro1.png");
         }
     }
- 
-    &__item{
+
+    &__item {
         margin-bottom: 3rem;
-        margin-right: 3rem; 
+        margin-right: 3rem;
         background-color: #fff;
         transition: 0.3s linear;
-        box-shadow: 0 0 3rem rgba(0,0,0, 0.16);
+        box-shadow: 0 0 3rem rgba(0, 0, 0, 0.16);
         overflow: hidden;
         z-index: 1;
         outline: none;
-        &:hover{
+        &:hover {
             background-color: $c-gre;
             color: #fff;
-            .product__slide__content{
-                &::after{
-                    border-left: 27rem solid $c-gre;
+            .product__slide__content {
+                &::after {
+                    border-left: 54rem solid $c-gre;
                 }
-                .readmore{
+                .readmore {
                     color: #fff;
-                    &::after{
-                        background-image: url('../assets/images/arr-right.png');
+                    &::after {
+                        background-image: url("../assets/images/arr-right.png");
                     }
                 }
             }
         }
     }
-    &__img{
+    &__img {
         display: block;
         width: 100%;
         padding-bottom: 75%;
         position: relative;
         overflow: hidden;
         outline: none;
-        img{
+        img {
             max-width: none;
             height: 100%;
             @include center-abs;
             transition: 0.5s linear;
         }
-        &:hover{
-            img{
+        &:hover {
+            img {
                 height: calc(100% + 3rem);
             }
-            
         }
     }
-    &__content{
+    &__content {
         padding: 1rem 3rem 3.5rem;
         position: relative;
-        &::after{
+        &::after {
             content: "";
             width: 0;
             height: 0;
             display: block;
-            border-top: 4rem solid transparent;
-            border-left: 27rem solid #fff;
+            border-top: 8rem solid transparent;
+            border-left: 54rem solid #fff;
             position: absolute;
             top: 0;
-            left: 0;
+            right: 0;
             transform: translateY(-3.8rem);
             z-index: 2;
             transition: 0.3s linear;
+            pointer-events: none;
         }
     }
-    &__txt{
+    &__txt {
         display: -webkit-box;
         -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;  
+        -webkit-box-orient: vertical;
         overflow: hidden;
     }
-    &__title{
+    &__title {
         display: block;
         @include fz-18;
         font-weight: bold;
         margin-bottom: 1rem;
     }
-    .readmore{
+    .readmore {
         display: block;
         padding-right: 2.5rem;
         color: $c-gre;
@@ -228,102 +230,100 @@
         position: relative;
         width: max-content;
         outline: none;
-        &::after{
+        &::after {
             content: "";
             width: 1.6rem;
             height: 1.6rem;
             display: block;
-            background-image: url('../assets/images/arr-right1.png');
+            background-image: url("../assets/images/arr-right1.png");
             @include default-background;
             position: absolute;
             right: 0;
             top: 0.2rem;
             transition: 0.3s linear;
         }
-        &:hover{
-            &::after{
-               right: -1.6rem;
+        &:hover {
+            &::after {
+                right: -1.6rem;
             }
         }
     }
 }
 
 @media only screen and (max-width: 1200px) {
-    .product{
-        &::before{
+    .product {
+        &::before {
             display: none;
         }
-        &::after{
+        &::after {
             display: none;
         }
-        &__container{
+        &__container {
             flex-wrap: wrap;
         }
-        &__content{
+        &__content {
             width: 100%;
             max-width: 50rem;
             padding-right: 0;
             padding-bottom: 6rem;
-            .button{
+            .button {
                 display: inline-block;
                 margin-right: 3rem;
-                &:last-of-type{
+                &:last-of-type {
                     margin-right: 0;
                 }
             }
         }
-        &__slider__container{
-            width: 100% ;
-
+        &__slider__container {
+            width: 100%;
         }
     }
-    
-.product__slide{
-    width:  calc(100% + 3rem);
-    position: relative;
-    left: 0;
-    top: 0;
-    transform: none;
-    display: flex;
 
-    .slick-track{
+    .product__slide {
+        width: calc(100% + 3rem);
+        position: relative;
+        left: 0;
+        top: 0;
+        transform: none;
         display: flex;
-        height: 100%;
-    }
-    .slick-dots{
-        width: max-content;
-        right: unset;
-        left: 50%;
-        bottom: -3rem;
-        top: unset;
-        display: flex;
-        transform: translate(-50%, 100%);
-        flex-direction: row;
-        li{ 
+
+        .slick-track {
+            display: flex;
+            height: 100%;
+        }
+        .slick-dots {
             width: max-content;
-            height: max-content;
-            margin-bottom: 1.5rem;
-            &:last-of-type{
-                margin-bottom: 0;
+            right: unset;
+            left: 50%;
+            bottom: -3rem;
+            top: unset;
+            display: flex;
+            transform: translate(-50%, 100%);
+            flex-direction: row;
+            li {
+                width: max-content;
+                height: max-content;
+                margin-bottom: 1.5rem;
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
             }
         }
 
-    }
+        .slick-next {
+            display: none;
+        }
+        .slick-prev {
+            display: none;
+        }
 
-    .slick-next{
-        display: none;
+        &__item {
+            display: none;
+        }
     }
-    .slick-prev{
-        display: none;
-    }
- 
-    &__item{
-       display: none;
-    }
-}
 }
 @media only screen and (max-width: 450px) {
-    .product__content__btn{
+    .product__content__btn {
         display: block;
         margin-top: 3rem;
         max-width: max-content;

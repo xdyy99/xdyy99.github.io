@@ -1,27 +1,36 @@
 ////////////// exp num //////////////
-var expNum = document.querySelectorAll(".exp__item-num");
-    function Num(){
+export default function counting() {
+    var num = document.querySelectorAll(".number");
 
-        for(let i = 0; i < expNum.length; i++){
-            let expMax = parseInt(expNum[i].textContent);
-            let delayCount = 0;
-            
-            for(let x = 0; x <= expMax; x++){
+    if (num.length != 0) {
+        let run = 1;
+        window.addEventListener("scroll", function () {
+            var vidPos =
+                document.querySelector(".video").offsetTop -
+                window.innerHeight +
+                100;
 
-                let delay = setInterval(function (){
-                    expNum[i].textContent = x.toString();
-                    stopDelay();
-                    return;
-                }, x * 2000 / expMax);
+            if (window.scrollY > vidPos && run === 1) {
+                for (let i = 0; i < num.length; i++) {
+                    let numMax = parseInt(num[i].textContent);
+                    let delayCount = 0;
+                    console.log("run 1");
+                    for (let x = 0; x <= numMax; x++) {
+                        let delay = setInterval(function () {
+                            num[i].textContent = x.toString();
+                            stopDelay();
+                            return;
+                        }, (x * 1500) / numMax);
 
-                function stopDelay(){
-                    clearInterval(delay);
-                    delay = null;
+                        function stopDelay() {
+                            clearInterval(delay);
+                            delay = null;
+                        }
+                        delayCount++;
+                    }
                 }
-                delayCount++;   
-                
+                run = 0;
             }
-                
-            }
-
+        });
     }
+}

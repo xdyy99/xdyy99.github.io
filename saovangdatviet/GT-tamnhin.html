@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="./css/style.min.css">
     <link rel="stylesheet" href="./css/backdoor.css">
 
-    <title>Giới thiệu tầm nh</title>
+    <title>Giới thiệu tầm nhìn</title>
 </head>
 <body>
     <header class="header">
@@ -182,9 +182,9 @@
                 <div class="container">
                     <div class="banner__content">
                         <h1 class="banner__title">giới thiệu</h1>
-                        <a href="" class="breadcrumb">Trang chủ</a>
-                        <a href="" class="breadcrumb">Giới thiệu</a>
-                        <a href="" class="breadcrumb active">Tầm nhìn chiến lược</a>
+                        <a href="" class="breadcrumb wow animate__fadeIn" data-wow-delay="0.6s">Trang chủ</a>
+                        <a href="" class="breadcrumb wow animate__fadeIn" data-wow-delay="0.8s">Giới thiệu</a>
+                        <a href="" class="breadcrumb wow animate__fadeIn active" data-wow-delay="1s">Tầm nhìn chiến lược</a>
                     </div>
                 </div>
             </div>
@@ -194,9 +194,9 @@
             <div class="container">
                 <div class="vision__container">
                     <div class="vision__content">
-                        <span class="section__subtitle">Giới thiệu</span>
-                        <h2 class="section__title">Công ty TNHH Xây dựng Thương mại Dịch vụ Sao Vàng Đất Việt</h2>
-                        <div class="txt">
+                        <span class="section__subtitle wow animate__fadeInLeft" data-wow-delay="0.3s">Giới thiệu</span>
+                        <h2 class="section__title wow animate__fadeInLeft">Công ty TNHH Xây dựng Thương mại Dịch vụ Sao Vàng Đất Việt</h2>
+                        <div class="txt wow animate__fadeInLeft">
                           <span class="bold">
                                 Được thành lập từ năm 2005, Sao Vàng Đất Việt là doanh nghiệp có nhiều năm kinh nghiệm trong lĩnh vực xây dựng, thương mại và dịch vụ, đặc biệt đối với ngành xây dựng công trình, cơ sở hạ tầng sản xuất và đô thị tại Việt Nam.
                           </span>  
@@ -261,10 +261,10 @@
 
         <section class="section linhvuc">
             <div class="container">
-                <span class="section__subtitle">Giới thiệu</span>
-                <h2 class="section__title">Lĩnh vực hoạt động</h2>
+                <span class="section__subtitle wow animate__fadeInDown">Giới thiệu</span>
+                <h2 class="section__title wow animate__fadeInDown" data-wow-delay="0.3s">Lĩnh vực hoạt động</h2>
             </div>
-            <div class="container linhvuc__slide">
+            <div class="container linhvuc__slide wow animate__fadeInUp" data-wow-delay="0.6s">
                 <div class="linhvuc__item">
                     <a href="" class="linhvuc__img">
                         <img src="./assets/images/dmt1.jpg" alt="">
@@ -470,7 +470,14 @@
 
     <script    src="./js/libs/slick/slick.min.js"></script>
     <script src="./js/libs/magnific/jquery.magnific-popup.min.js"></script>
-    <script src="./js/libs/wowjs/wow.min.js"></script>
+    <script src="./js/libs/wowjs/wow.min.js"></script><script>    wow = new WOW({
+        boxClass: "wow",
+        animateClass: "animate__animated",
+        offset: 0,
+        mobile: false,
+        live: true,
+    });
+    wow.init();</script>
     <script src="./js/main.js" type="module" defer></script>
 </body>
 </html>

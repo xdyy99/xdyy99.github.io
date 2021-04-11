@@ -1,14 +1,3 @@
-//////////// wow js //////////////
-// wow = new WOW({
-//     boxClass: "wow", // default
-//     animateClass: "animate__animated", // default
-//     offset: 0, // default
-//     mobile: false, // default
-//     live: true, // default
-// });
-// wow.init();
-//////////////////////////////////
-
 import backToTop from "./modules/backToTop.js";
 import menu from "./modules/menu.js";
 import bannerSlider from "./modules/banner-slider.js";
@@ -28,6 +17,8 @@ import relaSlider from "./modules/rela-slider.js";
 import insSlider from "./modules/ins-slider.js";
 import visionSlider from "./modules/vision-slider.js";
 import lvSlider from "./modules/linhvucslider.js";
+import typing from "./modules/typing.js";
+import counting from "./modules/counting.js";
 
 window.addEventListener("DOMContentLoaded", () => {
     backToTop();
@@ -49,4 +40,6 @@ window.addEventListener("DOMContentLoaded", () => {
     insSlider();
     visionSlider();
     lvSlider();
+    typing();
+    counting();
 });

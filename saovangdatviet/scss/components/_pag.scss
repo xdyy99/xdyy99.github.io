@@ -1,56 +1,57 @@
-.pag{
+.pag {
     display: flex;
     width: 100%;
     margin-top: 2rem;
     justify-content: center;
     align-items: center;
 
-
-    li{
-        border: 1px solid transparent;
+    li {
         margin-right: 0.5rem;
         transition: 0.3s linear;
-        &:last-of-type{
+        &:last-of-type {
             margin-right: 0;
         }
-        a{
+        a {
+            border: 1px solid transparent;
             width: 4.4rem;
             height: 4.4rem;
             display: flex;
             justify-content: center;
             align-items: center;
-            
+
             transition: 0.5s linear;
-            img{
+            img {
                 display: block;
                 width: 1.8rem;
                 height: 1.8rem;
-                &:nth-of-type(2){
+                &:nth-of-type(2) {
                     display: none;
                 }
             }
         }
-        &.arrow{
-            border: 1px solid $c-gre;
+        &.arrow {
+            a {
+                border: 1px solid $c-gre;
+            }
         }
-        &.active{
-            border: 1px solid $c-gre;
-            a{  
+        &.active {
+            a {
+                border: 1px solid $c-gre;
                 background-color: $c-gre;
                 color: #fff;
                 font-weight: bold;
             }
         }
-        &:hover{
-            border: 1px solid $c-gre;
-            a{
+        &:hover {
+            a {
+                border: 1px solid $c-gre;
                 background-color: $c-gre;
                 color: #fff;
-                img{
-                    &:nth-of-type(1){
+                img {
+                    &:nth-of-type(1) {
                         display: none;
                     }
-                    &:nth-of-type(2){
+                    &:nth-of-type(2) {
                         display: block;
                     }
                 }
@@ -59,12 +60,12 @@
     }
 }
 @media only screen and (max-width: 900px) {
-    .pag{
-        li{
-            a{
+    .pag {
+        li {
+            a {
                 width: 3rem;
                 height: 3rem;
-                img{
+                img {
                     width: 1.5rem;
                     height: 1.5rem;
                 }

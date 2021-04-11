@@ -11,6 +11,21 @@
         @include fz-55;
         text-transform: uppercase;
         margin-bottom: 1.3rem;
+        .spanTxt {
+            opacity: 0;
+            display: inline-block;
+            position: relative;
+            transform: scale(30) translateX(-70%);
+            transition: 0.3s linear;
+            &.space {
+                display: inline;
+            }
+            &.fade {
+                opacity: 1;
+                transition: 0.3s linear;
+                transform: none;
+            }
+        }
     }
     img {
         top: 0;

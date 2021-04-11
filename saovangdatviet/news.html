@@ -183,8 +183,8 @@
                 <div class="container">
                     <div class="banner__content">
                         <h1 class="banner__title">Tin tức</h1>
-                        <a href="" class="breadcrumb">Trang chủ</a>
-                        <a href="" class="breadcrumb active">Tin tức</a>
+                        <a href="" class="breadcrumb  wow animate__fadeIn" data-wow-delay="0.6s">Trang chủ</a>
+                        <a href="" class="breadcrumb active  wow animate__fadeIn" data-wow-delay="0.8s">Tin tức</a>
                     </div>
                 </div>
         </div>
@@ -193,16 +193,16 @@
             <div class="container aside__container">
                 <div class="aside__col">
                     <ul class="col__list">
-                        <li>
+                        <li class="wow animate__fadeInLeft" data-wow-delay="0.2s">
                             <div class="col__item">
-                                <h3 class="col__title">tìm kiếm</h3>
+                                <h3 class="col__title">Tìm kiếm</h3>
                                 <div class="col__search">
                                     <input class="col__search__inp rs__form" type="text" placeholder="Nhập từ khoá">
                                     <a class="col__search__btn" href=""><img src="./assets/images/ser-ic.png" alt=""></a>
                                 </div>
                             </div>
                         </li>
-                        <li>
+                        <li class="wow animate__fadeInLeft" data-wow-delay="0.3s">
                             <div class="col__item">
                                 <h3 class="col__title">Danh mục</h3>
                                 <div class="col__link">
@@ -213,7 +213,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li>
+                        <li class="wow animate__fadeInLeft" data-wow-delay="0.4s">
                             <div class="col__item">
                                 <h3 class="col__title">Tin nổi bật</h3>
                                 <div class="col__news">
@@ -236,7 +236,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li>
+                        <li class="wow animate__fadeInLeft" data-wow-delay="0.5s">
                             <div class="col__item">
                                 <h3 class="col__title">tags</h3>
                                 <div class="col__tags">
@@ -255,10 +255,10 @@
                     <span class="line"></span>
                 </div>
                 <div class="aside__main">
-                    <h2 class="section__title">
+                    <h2 class="section__title wow animate__fadeInRight" data-wow-delay="0s">
                         Tin tức mới
                     </h2>
-                    <div class="news__flex">
+                    <div class="news__flex wow animate__fadeInRight" data-wow-delay="0.3s">
                         <div class="news__item">
                             <a href="" class="news__img">
                                 <img src="./assets/images/tin1.jpg" alt="">
@@ -515,7 +515,14 @@
     <script    src="./js/libs/slick/slick.min.js"></script>
     <script src="./js/libs/magnific/jquery.magnific-popup.min.js"></script>
     <script src="./js/libs/gallery/lightgallery-all.min.js"></script>
-    <script src="./js/libs/wowjs/wow.min.js"></script>
+    <script src="./js/libs/wowjs/wow.min.js"></script><script>    wow = new WOW({
+        boxClass: "wow",
+        animateClass: "animate__animated",
+        offset: 0,
+        mobile: false,
+        live: true,
+    });
+    wow.init();</script>
     <script src="./js/main.js" type="module" defer></script>
 </body>
 </html> 

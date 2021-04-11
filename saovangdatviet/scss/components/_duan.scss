@@ -92,6 +92,10 @@
             }
             &__link {
                 @include fz-16;
+                transition: 0.3s linear;
+                &:hover {
+                    color: $c-gre;
+                }
             }
         }
         &.active {

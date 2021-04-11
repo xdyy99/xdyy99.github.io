@@ -182,9 +182,9 @@
                 <div class="container">
                     <div class="banner__content">
                         <h1 class="banner__title">điện mặt trời</h1>
-                        <a href="" class="breadcrumb">Trang chủ</a>
-                        <a href="" class="breadcrumb">Lĩnh vực hoạt động</a>
-                        <a href="" class="breadcrumb active">Điện mặt trời</a>
+                        <a href="" class="breadcrumb wow animate__fadeIn" data-wow-delay="0.6s">Trang chủ</a>
+                        <a href="" class="breadcrumb wow animate__fadeIn" data-wow-delay="0.8s">Lĩnh vực hoạt động</a>
+                        <a href="" class="breadcrumb active wow animate__fadeIn" data-wow-delay="1s">Điện mặt trời</a>
                     </div>
                 </div>
             </div>
@@ -192,7 +192,7 @@
 
         <section class="section linhvuc">
             <div class="container linhvuc__flex">
-                <div class="linhvuc__item">
+                <div class="linhvuc__item wow animate__fadeInUp" data-wow-delay="0">
                     <a href="" class="linhvuc__img">
                         <img src="./assets/images/dmt1.jpg" alt="">
                     </a>
@@ -204,7 +204,7 @@
                         <a class="readmore" href="">Xem thêm</a>
                     </div>
                 </div>
-                <div class="linhvuc__item">
+                <div class="linhvuc__item wow animate__fadeInUp" data-wow-delay="0.1s">
                     <a href="" class="linhvuc__img">
                         <img src="./assets/images/dmt2.jpg" alt="">
                     </a>
@@ -216,7 +216,7 @@
                         <a class="readmore" href="">Xem thêm</a>
                     </div>
                 </div>
-                <div class="linhvuc__item">
+                <div class="linhvuc__item wow animate__fadeInUp" data-wow-delay="0.2s">
                     <a href="" class="linhvuc__img">
                         <img src="./assets/images/dmt3.jpg" alt="">
                     </a>
@@ -228,7 +228,7 @@
                         <a class="readmore" href="">Xem thêm</a>
                     </div>
                 </div>
-                <div class="linhvuc__item">
+                <div class="linhvuc__item wow animate__fadeInUp" data-wow-delay="0.3s">
                     <a href="" class="linhvuc__img">
                         <img src="./assets/images/dmt4.jpg" alt="">
                     </a>
@@ -240,7 +240,7 @@
                         <a class="readmore" href="">Xem thêm</a>
                     </div>
                 </div>
-                <div class="linhvuc__item">
+                <div class="linhvuc__item wow animate__fadeInUp" data-wow-delay="0.4s">
                     <a href="" class="linhvuc__img">
                         <img src="./assets/images/dmt1.jpg" alt="">
                     </a>
@@ -252,7 +252,7 @@
                         <a class="readmore" href="">Xem thêm</a>
                     </div>
                 </div>
-                <div class="linhvuc__item">
+                <div class="linhvuc__item wow animate__fadeInUp" data-wow-delay="0.5s">
                     <a href="" class="linhvuc__img">
                         <img src="./assets/images/dmt2.jpg" alt="">
                     </a>
@@ -264,7 +264,7 @@
                         <a class="readmore" href="">Xem thêm</a>
                     </div>
                 </div>
-                <div class="linhvuc__item">
+                <div class="linhvuc__item wow animate__fadeInUp" data-wow-delay="0.6s">
                     <a href="" class="linhvuc__img">
                         <img src="./assets/images/dmt3.jpg" alt="">
                     </a>
@@ -276,7 +276,7 @@
                         <a class="readmore" href="">Xem thêm</a>
                     </div>
                 </div>
-                <div class="linhvuc__item">
+                <div class="linhvuc__item wow animate__fadeInUp" data-wow-delay="0.7s">
                     <a href="" class="linhvuc__img">
                         <img src="./assets/images/dmt4.jpg" alt="">
                     </a>
@@ -396,7 +396,14 @@
     <script src="./js/libs/jquery-1.12.4.min.js"></script>
     <script src="./js/libs/slick/slick.min.js"></script>
     <script src="./js/libs/magnific/jquery.magnific-popup.min.js"></script>
-    <script src="./js/libs/wowjs/wow.min.js"></script>
+    <script src="./js/libs/wowjs/wow.min.js"></script><script>    wow = new WOW({
+        boxClass: "wow",
+        animateClass: "animate__animated",
+        offset: 0,
+        mobile: false,
+        live: true,
+    });
+    wow.init();</script>
     <script src="./js/main.js" type="module" defer></script>
 </body>
 </html> 

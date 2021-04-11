@@ -182,8 +182,8 @@
                 <div class="container">
                     <div class="banner__content">
                         <h1 class="banner__title">Liên hệ</h1>
-                        <a href="" class="breadcrumb">Trang chủ</a>
-                        <a href="" class="breadcrumb active">Liên hệ</a>
+                        <a href="" class="breadcrumb wow animate__fadeIn" data-wow-delay="0.6s">Trang chủ</a>
+                        <a href="" class="breadcrumb wow animate__fadeIn active" data-wow-delay="0.8s">Liên hệ</a>
                     </div>
                 </div>
             </div>
@@ -191,7 +191,7 @@
 
         <section class="section lienhe">
             <div class="container">
-                <div class="lienhe__content">
+                <div class="lienhe__content wow animate__lightSpeedInRight">
                     <div class="lienhe__title">
                         <img src="./assets/images/Mask Group 39.png" alt="">
                         <h2 class="section__title">Yêu cầu hỗ trợ</h2>
@@ -219,7 +219,7 @@
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.419874953806!2d106.64809701534743!3d10.779118762090123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed189fa855d%3A0xf63e15bfce46baef!2sC%C3%B4ng%20ty%20TNHH%20-%20MONA%20MEDIA!5e0!3m2!1svi!2s!4v1617778106499!5m2!1svi!2s" allowfullscreen="" loading="lazy"></iframe>
             </div>
             <div class="container diachi__container">
-                <div class="diachi__content">
+                <div class="diachi__content wow animate__zoomIn">
                     <h2 class="section__title">Địa chỉ liên hệ</h2>
                     <ul class="diachi__list">
                         <li>
@@ -351,7 +351,14 @@
     <script src="./js/libs/jquery-1.12.4.min.js"></script>
     <script    src="./js/libs/slick/slick.min.js"></script>
     <script src="./js/libs/magnific/jquery.magnific-popup.min.js"></script>
-    <script src="./js/libs/wowjs/wow.min.js"></script>
+    <script src="./js/libs/wowjs/wow.min.js"></script><script>    wow = new WOW({
+        boxClass: "wow",
+        animateClass: "animate__animated",
+        offset: 0,
+        mobile: false,
+        live: true,
+    });
+    wow.init();</script>
     <script src="./js/main.js" type="module" defer></script>
 </body>
 </html> 

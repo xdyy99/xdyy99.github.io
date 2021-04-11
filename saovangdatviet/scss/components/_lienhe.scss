@@ -1,51 +1,59 @@
-.lienhe{
-    &::before{
+.lienhe {
+    &::before {
         position: absolute;
         content: "";
         width: 364px;
         height: 499px;
-        background-image: url('../assets/images/dotdot.png');
-        z-index: -1; 
+        background-image: url("../assets/images/dotdot.png");
+        z-index: -1;
         top: -11rem;
-        left: 13rem; 
+        left: 13rem;
+        pointer-events: none;
     }
-    &__content{
+    &__content {
         width: 100%;
         display: flex;
-
     }
-    &__title{
+    &__title {
         background-color: $c-gre;
         width: calc(100% / 3);
         color: #fff;
         padding: 5rem;
-        img{
+        img {
             display: block;
             width: 5rem;
             height: 5rem;
-            margin-bottom: 2rem ;
+            margin-bottom: 2rem;
         }
     }
-    &__form{
+    &__form {
         width: calc(100% * 2 / 3);
         padding: 5rem;
         background-color: #fff;
-        box-shadow: 1rem 1rem 3rem rgba(0,0,0, 0.16);
-        &__input{
+        box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.16);
+        &__input {
             width: 100%;
-            border: 1px solid #D6D6D6;
+            border: 1px solid #d6d6d6;
             padding: 1.5rem;
             margin-bottom: 1rem;
+            transition: 0.3s linear;
+            &:focus {
+                border: 1px solid $c-gre;
+            }
         }
-        &__txt{
+        &__txt {
             width: 100%;
             height: 12rem;
             padding: 1.5rem;
-            border: 1px solid #D6D6D6;
+            border: 1px solid #d6d6d6;
             resize: none;
             margin-bottom: 1rem;
+            transition: 0.3s linear;
+            &:focus {
+                border: 1px solid $c-gre;
+            }
         }
-        &__btn{
+        &__btn {
             background-color: #000;
             margin: 0;
             float: right;
@@ -54,42 +62,41 @@
     }
 }
 @media only screen and (max-width: 850px) {
-    .lienhe{
-
-        &__title{
+    .lienhe {
+        &__title {
             width: calc(100% / 2);
             padding: 3rem;
             text-align: center;
-            img{
+            img {
                 width: 4rem;
                 height: 4rem;
                 margin: 0 auto;
                 margin-bottom: 2rem;
             }
         }
-        &__form{
+        &__form {
             width: calc(100% / 2);
             padding: 3rem;
         }
     }
 }
 @media only screen and (max-width: 600px) {
-    .lienhe{
-        &__content{
+    .lienhe {
+        &__content {
             flex-direction: column;
         }
-        &__title{
+        &__title {
             width: 100%;
             padding: 3rem;
             text-align: center;
-            img{
+            img {
                 width: 4rem;
                 height: 4rem;
                 margin: 0 auto;
                 margin-bottom: 2rem;
             }
         }
-        &__form{
+        &__form {
             width: 100%;
             padding: 3rem;
         }
