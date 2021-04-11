@@ -1,30 +1,30 @@
-.back__to__top{
+.back__to__top {
     display: block;
     width: 6rem;
     height: 6rem;
     border-radius: 9.9rem;
     background-color: $c-gre;
-    box-shadow: 0rem 0rem 3rem rgba(0,0,0, 0.16);
+    box-shadow: 0rem 0rem 3rem rgba(0, 0, 0, 0.16);
     position: fixed;
     bottom: 5rem;
     right: 3rem;
-    z-index: 10;
+    z-index: 7;
     transform: translateX(3rem);
     opacity: 0;
     transition: 0.5s linear;
-    &.active{
+    &.active {
         transform: translateX(0);
         opacity: 1;
     }
     cursor: pointer;
 
-    &:hover{
-        &::after{ 
+    &:hover {
+        &::after {
             animation: jumping 1s linear 0s infinite;
         }
     }
 
-    &::after{
+    &::after {
         content: "";
         width: 0;
         height: 0;
@@ -37,21 +37,19 @@
     }
 }
 
-
-
 @media only screen and (max-width: 1600px) {
-    .back__to__top{
+    .back__to__top {
         width: 5rem;
         height: 5rem;
     }
 }
 @media only screen and (max-width: 1200px) {
-    .back__to__top{
+    .back__to__top {
         width: 4rem;
         height: 4rem;
         right: 1.5rem;
         bottom: 3rem;
-        &::after{
+        &::after {
             border: 0.8rem solid transparent;
             border-bottom: 0.8rem solid #fff;
         }
