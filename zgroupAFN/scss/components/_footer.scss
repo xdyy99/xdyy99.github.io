@@ -205,7 +205,7 @@
 }
 .active {
     .copyright {
-        animation: fade 0.2s linear 4.5s forwards;
+        animation: fade 0.2s linear 3.8s forwards;
     }
 
     .footer__content {
@@ -230,7 +230,7 @@
                 animation: width 0.3s ease-in 1.4s forwards;
             }
             label {
-                animation: opacity 0.2s ease-in 3.1s forwards;
+                animation: opacity 0.2s ease-in 3s forwards;
             }
         }
         &:nth-of-type(3) {
@@ -238,7 +238,7 @@
                 animation: width 0.3s ease-in 1.6s forwards;
             }
             label {
-                animation: opacity 0.2s ease-in 3.3s forwards;
+                animation: opacity 0.2s ease-in 3.1s forwards;
             }
         }
         &:nth-of-type(4) {
@@ -246,13 +246,13 @@
                 animation: width 0.3s ease-in 1.8s forwards;
             }
             label {
-                animation: opacity 0.2s ease-in 3.5s forwards;
+                animation: opacity 0.2s ease-in 3.2s forwards;
             }
         }
 
         &:nth-of-type(6) {
             label {
-                animation: fadeleft 0.2s linear 4.1s forwards;
+                animation: fadeleft 0.2s linear 3.6s forwards;
             }
         }
         .svg__top {
@@ -270,15 +270,85 @@
     }
     .footer__form {
         .button {
-            animation: fadeleft 0.2s linear 4.3s forwards;
+            animation: fadeleft 0.2s linear 3.7s forwards;
         }
     }
     .footer__mess {
         textarea {
-            animation: opacity 0.3s ease-in 3.5s forwards;
+            animation: opacity 0.3s ease-in 3.4s forwards;
         }
         label {
-            animation: opacity 0.2s ease-in 3.7s forwards;
+            animation: opacity 0.2s ease-in 3.5s forwards;
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .footer {
+        flex-wrap: wrap;
+        &__content {
+            width: 100%;
+            padding-right: 0;
+        }
+
+        &__form {
+            width: 100%;
+        }
+
+        &__mess {
+            width: 100%;
+            margin-top: 3rem;
+            textarea {
+                height: 18rem;
+            }
+        }
+        &__inp {
+            .svg__left {
+                max-height: 17rem;
+            }
+            .svg__right {
+                max-height: 17.2rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .footer {
+        .menu__link {
+            li {
+                margin: 0;
+            }
+        }
+        &__form {
+            .button {
+                margin-left: auto;
+            }
+        }
+        &__inp {
+            padding: 1rem 0;
+            width: 100%;
+            &:nth-of-type(6) {
+                width: 50%;
+            }
+            .svg__left {
+                left: 0;
+            }
+            .svg__right {
+                right: 0;
+            }
+            .svg__line {
+                left: 0;
+                max-width: 100%;
+            }
+            .svg__bottom {
+                left: 0;
+                max-width: 100%;
+            }
+            .svg__top {
+                left: 0;
+                max-width: 100%;
+            }
         }
     }
 }

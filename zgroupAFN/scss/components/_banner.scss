@@ -7,7 +7,7 @@
 .banner__svg {
     stroke: #fff;
     stroke-width: 4px;
-    animation: draw 4s ease-in forwards;
+    animation: draw 3.5s ease-in forwards;
     stroke-dasharray: 4000;
     stroke-dashoffset: 5000;
 
@@ -59,5 +59,43 @@
         display: block;
         width: 50%;
         line-height: 1.5;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .banner {
+        &__left {
+            width: 80%;
+        }
+        &__content {
+            align-items: flex-end;
+        }
+
+        &__txt {
+            width: 100%;
+        }
+        &__bg {
+            width: 100%;
+        }
+    }
+}
+@media only screen and (max-width: 768px) {
+    .banner {
+        &__bg {
+            width: 120%;
+            padding-bottom: 15rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &__content {
+            padding-top: 5rem;
+            align-items: center;
+        }
+    }
+}
+@media only screen and (max-width: 500px) {
+    .banner {
+        &__bg {
+            padding-bottom: 30rem;
+        }
     }
 }

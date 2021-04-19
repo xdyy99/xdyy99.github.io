@@ -12,8 +12,6 @@ export default function menu() {
         menuBg.classList.toggle("active");
         let time = 0;
 
-        console.log(timer[1]);
-        console.log("clear");
         clearTimeout(timer[30]);
         if (on) {
             for (let i = 1; i < 25; i++) {
@@ -44,7 +42,6 @@ export default function menu() {
             }
         }
         on = !on;
-        console.log(timer[1]);
     }
 
     /// menu anime ///
