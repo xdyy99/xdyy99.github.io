@@ -1,0 +1,111 @@
+.intro .cls-1 {
+    fill: #fff;
+    stroke: #000;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+    stroke-width: 260px;
+}
+
+.intro {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(24, 24, 24, 0.6);
+    &:nth-of-type(odd) {
+        .intro {
+            &__container {
+                flex-direction: row-reverse;
+            }
+            &__content {
+                padding: 0;
+                padding-left: 6rem;
+            }
+            &__svg {
+                left: 10%;
+            }
+            &__subtxt {
+                right: unset;
+            }
+        }
+    }
+
+    &__container {
+        display: flex;
+        width: 80%;
+    }
+    &__content {
+        padding: 0;
+        padding-right: 6rem;
+    }
+    &__item {
+        width: 50%;
+        position: relative;
+    }
+    &__title {
+        @include fz-110;
+        font-family: "HALDEN PAINTED SOLID", sans-serif;
+        text-shadow: 0 0 50px rgba(0, 0, 0, 0.75);
+    }
+    &__txt {
+        line-height: 1.5;
+        display: block;
+        margin: 2rem 0 3rem;
+    }
+    &__subtxt {
+        width: 50%;
+        display: block;
+        @include fz-32;
+        color: #f9c33c;
+        font-family: "Caveat", sans-serif;
+        position: absolute;
+        bottom: 0;
+        transform: rotate(-5deg);
+        right: 0;
+        opacity: 0;
+    }
+
+    &__bg {
+        position: relative;
+    }
+    &__svg {
+        width: 70%;
+        position: absolute;
+        left: 30%;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: -1;
+        stroke: #fff;
+        stroke-width: 4px;
+
+        stroke-dasharray: 4000;
+        stroke-dashoffset: 5000;
+        image {
+            display: block;
+            width: 90%;
+            margin-top: 5rem;
+        }
+    }
+}
+
+.small__draw {
+    display: block;
+
+    fill: transparent;
+    mix-blend-mode: screen;
+    stroke: #f8f8f8;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+    stroke-width: 260px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+}
+.active {
+    & > .intro__svg {
+        animation: draw 3s ease-out forwards;
+    }
+    .intro__subtxt {
+        animation: opacity 0.2s ease-in 1.5s forwards;
+    }
+}

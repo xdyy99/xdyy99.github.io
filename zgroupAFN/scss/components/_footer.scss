@@ -1,0 +1,284 @@
+.footer {
+    display: flex;
+    align-items: center;
+    position: relative;
+    &__content {
+        width: 50%;
+        padding-right: 3rem;
+        .txt {
+            line-height: 1.5;
+            display: block;
+            margin-bottom: 2rem;
+            opacity: 0;
+        }
+    }
+    &__title {
+        opacity: 0;
+        @include fz-75;
+        font-family: "HALDEN PAINTED", sans-serif;
+        display: block;
+        margin-bottom: 1rem;
+    }
+    &__form {
+        width: 50%;
+        padding-top: 3rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        .button {
+            padding: 2rem;
+            opacity: 0;
+            &::after {
+                width: 18rem;
+                left: unset;
+                right: -9rem;
+            }
+        }
+    }
+    &__inp {
+        width: 50%;
+        padding: 1.5rem;
+        position: relative;
+        .file__label {
+            @include fz-27;
+            cursor: pointer;
+            padding-left: 3.5rem;
+            position: relative;
+            transition: 0.3s linear;
+            display: inline-block;
+
+            &::after {
+                content: "";
+                width: 2.7rem;
+                height: 2.7rem;
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                background-image: url("../assets/images/plus.png");
+                @include default-background;
+                transition: 0.3s linear;
+                pointer-events: none;
+            }
+            &:hover {
+                padding-left: 4.5rem;
+                &::after {
+                    transform: translateY(-50%) rotate(180deg) scale(1.5);
+                }
+            }
+        }
+        .file__inp {
+            opacity: 0;
+            position: absolute;
+            z-index: -1;
+        }
+        input {
+            width: 100%;
+            display: block;
+            background-color: rgb(24, 24, 24);
+            color: #fff;
+            padding-bottom: 2rem;
+            font-family: "Roboto Slab", sans-serif;
+            font-weight: 300;
+            @include fz-22;
+        }
+        label {
+            @include fz-18;
+            color: #f9c33c;
+            font-family: "Caveat", sans-serif;
+            opacity: 0;
+        }
+        .svg__line {
+            path {
+                fill: #f9c33c;
+            }
+            pointer-events: none;
+            position: absolute;
+            color: #fff;
+            left: 1.5rem;
+            bottom: 4rem;
+            width: 0;
+            max-width: calc(100% - 3rem);
+            height: 0.5rem;
+            transition: 0.1s linear;
+        }
+        .svg__bottom {
+            path {
+                fill: #f9c33c;
+            }
+            pointer-events: none;
+            position: absolute;
+            color: #fff;
+            left: 1.5rem;
+            bottom: 4rem;
+            width: 0;
+            max-width: calc(100% - 3rem);
+            height: 0.5rem;
+            transition: 0.1s linear;
+        }
+        .svg__top {
+            path {
+                fill: #f9c33c;
+            }
+            pointer-events: none;
+            position: absolute;
+            color: #fff;
+            left: 1.5rem;
+            top: 1.5rem;
+            width: 0;
+            max-width: calc(100% - 3rem);
+            height: 0.5rem;
+            transition: 0.1s linear;
+        }
+        .svg__left {
+            path {
+                fill: #f9c33c;
+            }
+            pointer-events: none;
+            position: absolute;
+            color: #fff;
+            left: 1.5rem;
+            top: 1.5rem;
+            width: 0.5rem;
+            transform: scaleX(2);
+            height: 0;
+            max-height: 21.5rem;
+            transition: 0.1s linear;
+        }
+        .svg__right {
+            path {
+                fill: #f9c33c;
+            }
+            pointer-events: none;
+            position: absolute;
+            color: #fff;
+            right: 1.5rem;
+            top: 1.5rem;
+            width: 0.5rem;
+            transform: scaleX(2);
+            height: 0;
+            max-height: 21.7rem;
+            transition: 0.1s linear;
+        }
+    }
+    &__mess {
+        width: 100%;
+        margin-top: 3rem;
+        textarea {
+            padding: 1.5rem;
+            opacity: 0;
+            width: 100%;
+            font-family: "Roboto Slab", sans-serif;
+            font-weight: 300;
+            @include fz-18;
+            display: block;
+            background-color: rgb(24, 24, 24);
+            color: #fff;
+            padding-bottom: 2rem;
+            height: 22rem;
+            resize: none;
+        }
+    }
+    .copyright {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 3rem;
+        text-align: center;
+        opacity: 0;
+        color: #fff;
+        @include fz-14;
+
+        span {
+            color: rgba(255, 255, 255, 0.4);
+            letter-spacing: 1px;
+        }
+        a {
+            font-weight: bold;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+.active {
+    .copyright {
+        animation: fade 0.2s linear 4.5s forwards;
+    }
+
+    .footer__content {
+        .footer__title {
+            animation: opacity 0.3s linear 0.2s forwards;
+        }
+        .txt {
+            animation: opacity 0.3s linear 0.4s forwards;
+        }
+    }
+    .footer__inp {
+        &:nth-of-type(1) {
+            .svg__line {
+                animation: width 0.3s ease-in 1.2s forwards;
+            }
+            label {
+                animation: opacity 0.2s ease-in 2.9s forwards;
+            }
+        }
+        &:nth-of-type(2) {
+            .svg__line {
+                animation: width 0.3s ease-in 1.4s forwards;
+            }
+            label {
+                animation: opacity 0.2s ease-in 3.1s forwards;
+            }
+        }
+        &:nth-of-type(3) {
+            .svg__line {
+                animation: width 0.3s ease-in 1.6s forwards;
+            }
+            label {
+                animation: opacity 0.2s ease-in 3.3s forwards;
+            }
+        }
+        &:nth-of-type(4) {
+            .svg__line {
+                animation: width 0.3s ease-in 1.8s forwards;
+            }
+            label {
+                animation: opacity 0.2s ease-in 3.5s forwards;
+            }
+        }
+
+        &:nth-of-type(6) {
+            label {
+                animation: fadeleft 0.2s linear 4.1s forwards;
+            }
+        }
+        .svg__top {
+            animation: width 0.3s ease-in 2s forwards;
+        }
+        .svg__left {
+            animation: height 0.3s ease-in 2.3s forwards;
+        }
+        .svg__right {
+            animation: height 0.3s ease-in 2.3s forwards;
+        }
+        .svg__bottom {
+            animation: width 0.3s ease-in 2.6s forwards;
+        }
+    }
+    .footer__form {
+        .button {
+            animation: fadeleft 0.2s linear 4.3s forwards;
+        }
+    }
+    .footer__mess {
+        textarea {
+            animation: opacity 0.3s ease-in 3.5s forwards;
+        }
+        label {
+            animation: opacity 0.2s ease-in 3.7s forwards;
+        }
+    }
+}

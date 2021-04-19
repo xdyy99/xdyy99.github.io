@@ -1,0 +1,350 @@
+.header {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+    > * {
+        pointer-events: auto;
+    }
+    &__left {
+        position: relative;
+        z-index: 20;
+        a {
+            display: block;
+            width: 10.8rem;
+            height: 100%;
+            img {
+                display: block;
+            }
+        }
+    }
+}
+.menu {
+    &__show {
+        position: relative;
+        z-index: 20;
+        margin-top: 2rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        &.active {
+            .menu__name__item {
+                &:nth-of-type(1) {
+                    opacity: 0;
+                }
+                &:nth-of-type(2) {
+                    display: block;
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+            .menu__btn {
+                transform: rotateY(-180deg);
+                .line:nth-of-type(1) {
+                    transform: translateY(0.6rem) rotate(45deg);
+                }
+                .line:nth-of-type(2) {
+                    opacity: 0;
+                }
+                .line:nth-of-type(3) {
+                    transform: translateY(-0.6rem) rotate(-45deg);
+                }
+                &:hover {
+                    .line:nth-of-type(1) {
+                        width: 2rem;
+                    }
+                    .line:nth-of-type(3) {
+                        width: 2rem;
+                    }
+                }
+            }
+        }
+    }
+    &__name {
+        display: block;
+        width: max-content;
+        margin-right: 0.5rem;
+        position: relative;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        @include fz-30;
+        font-family: "HALDEN PAINTED", sans-serif;
+        &__item {
+            transition: 0.3s ease-in;
+            opacity: 1;
+            &:nth-of-type(2) {
+                position: absolute;
+                top: 0;
+                right: 0;
+                opacity: 0;
+            }
+        }
+    }
+    &__btn {
+        transition: 0.3s linear;
+        width: 4rem;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .line {
+            display: block;
+            width: 2rem;
+            height: 0.2rem;
+            background-color: #d52d2f;
+            border-radius: 0.5rem;
+            margin-bottom: 0.4rem;
+            transition: 0.1s linear;
+        }
+        &:hover {
+            .line:nth-of-type(1) {
+                width: 1.4rem;
+            }
+            .line:nth-of-type(3) {
+                width: 1.4rem;
+            }
+        }
+    }
+
+    &__main {
+        top: 0;
+        left: 0;
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+        height: 100vh;
+        padding: 9% 10% 0;
+        pointer-events: none;
+    }
+    &__bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 2500%;
+        height: 100%;
+        transition: 0s;
+        transform: translateX(2%);
+        transition: background 0.5s ease-in;
+        background-image: url("../assets/images/anime.png");
+        background-size: 100% 100%;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        z-index: 9;
+        &.active {
+            opacity: 0.95;
+        }
+    }
+    &__content {
+        display: flex;
+        position: relative;
+        z-index: 11;
+        flex-wrap: wrap;
+        height: 100%;
+        justify-content: space-between;
+    }
+    &__left {
+        width: 50%;
+        height: calc(100% - 15rem);
+    }
+    &__right {
+        width: 43%;
+        align-self: center;
+    }
+    &__bottom {
+        width: 100%;
+        align-self: flex-end;
+        margin: 3rem 0;
+        text-align: center;
+        opacity: 0;
+        @include fz-14;
+
+        span {
+            color: rgba(255, 255, 255, 0.4);
+            letter-spacing: 1px;
+        }
+        a {
+            font-weight: bold;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    &__list {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+
+        li {
+            position: relative;
+            width: max-content;
+            opacity: 0;
+            a {
+                position: relative;
+                @include fz-65;
+                font-family: "HALDEN PAINTED", sans-serif;
+                .mini {
+                    @include fz-14;
+                    font-family: "Roboto Slab", sans-serif;
+                    display: block;
+                    padding-bottom: 0.4rem;
+                    color: rgba(255, 255, 255, 0.8);
+                }
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 100%;
+                }
+                &:hover {
+                    ~ .sub__text {
+                        transform: translate(53%, 100%);
+                    }
+                    ~ .svg__line {
+                        width: 100%;
+                    }
+                }
+            }
+            .svg__line {
+                path {
+                    fill: #f9c33c;
+                }
+                pointer-events: none;
+                position: absolute;
+                color: #fff;
+                left: 0;
+                top: 90%;
+                width: 0;
+                height: 0.7rem;
+                transition: 0.1s linear;
+            }
+            .sub__text {
+                position: absolute;
+                @include fz-18;
+                color: #f9c33c;
+                font-family: "Caveat", sans-serif;
+                max-width: 20rem;
+                line-height: 0.95;
+                bottom: 0;
+                right: 0;
+                transform: rotate(-5deg) translate(50%, 100%);
+                transition: 0.1s linear;
+            }
+        }
+    }
+    &__right__content {
+        margin-bottom: 6rem;
+        opacity: 0;
+        .title {
+            @include fz-29;
+        }
+        .bold {
+            font-weight: bold;
+        }
+        .txt {
+            display: block;
+            margin: 1.8rem 0 5rem;
+            line-height: 1.6;
+        }
+    }
+    &__link {
+        li {
+            opacity: 0;
+            display: block;
+            position: relative;
+            padding: 1.5rem 0;
+            padding-left: 4.5rem;
+            @include fz-24;
+            img {
+                width: 3.2rem;
+                height: 2.8rem;
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            div {
+                font-weight: bold;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+.active {
+    pointer-events: auto;
+    .menu__content {
+        animation: fade 0.2s linear forwards;
+    }
+    .menu__list {
+        li {
+            &:nth-of-type(1) {
+                animation: fade 0.2s linear forwards;
+            }
+            &:nth-of-type(2) {
+                animation: fade 0.2s linear 0.1s forwards;
+            }
+            &:nth-of-type(3) {
+                animation: fade 0.2s linear 0.2s forwards;
+            }
+            &:nth-of-type(4) {
+                animation: fade 0.2s linear 0.3s forwards;
+            }
+            &:nth-of-type(5) {
+                animation: fade 0.2s linear 0.4s forwards;
+            }
+        }
+    }
+    .menu__right__content {
+        animation: fade 0.2s linear 0.6s forwards;
+    }
+    .menu__link {
+        li {
+            &:nth-of-type(1) {
+                animation: fade 0.2s linear 0.8s forwards;
+            }
+            &:nth-of-type(2) {
+                animation: fade 0.2s linear 0.9s forwards;
+            }
+            &:nth-of-type(3) {
+                animation: fade 0.2s linear 1s forwards;
+            }
+        }
+    }
+    .menu__bottom {
+        animation: fade 0.2s linear 1.2s forwards;
+    }
+}
+.out {
+    .menu__content {
+        animation: fadeout 0.3s linear forwards;
+    }
+    .menu__list {
+        li {
+            opacity: 1;
+        }
+    }
+    .menu__right__content {
+        opacity: 1;
+    }
+    .menu__link {
+        li {
+            opacity: 1;
+        }
+    }
+    .menu__bottom {
+        opacity: 1;
+    }
+}

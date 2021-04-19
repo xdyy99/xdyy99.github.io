@@ -1,0 +1,63 @@
+.banner__bg {
+    width: 85%;
+    padding: 10px;
+    margin: 0 auto;
+    position: relative;
+}
+.banner__svg {
+    stroke: #fff;
+    stroke-width: 4px;
+    animation: draw 4s ease-in forwards;
+    stroke-dasharray: 4000;
+    stroke-dashoffset: 5000;
+
+    image {
+        display: block;
+        width: 100%;
+        margin-top: 5rem;
+    }
+}
+.big__draw {
+    width: 100%;
+    display: block;
+    height: 50vh;
+    fill: transparent;
+    mix-blend-mode: screen;
+    stroke: #f8f8f8;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+    stroke-width: 260px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-25%, calc(-25% - 3rem));
+}
+
+.banner {
+    &__content {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(24, 24, 24, 0.6);
+    }
+    &__left {
+        width: 80%;
+    }
+    &__title {
+        @include fz-180;
+        font-family: "HALDEN PAINTED SOLID", sans-serif;
+        text-shadow: 0 0 50px rgba(0, 0, 0, 0.75);
+        padding-top: 3rem;
+    }
+    &__txt {
+        display: block;
+        width: 50%;
+        line-height: 1.5;
+    }
+}

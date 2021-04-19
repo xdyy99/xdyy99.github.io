@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'HALDEN PAINTED';
+    src: url('HALDEN.woff2') format('woff2'),
+        url('HALDEN.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HALDEN PAINTED SOLID';
+    src: url('HALDENPAINTEDSOLID.woff2') format('woff2'),
+        url('HALDENPAINTEDSOLID.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
