@@ -1,0 +1,19 @@
+.tuyen {
+    .news__txt {
+        -webkit-line-clamp: 3;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .tuyen {
+        .news__txt {
+            -webkit-line-clamp: 2;
+        }
+    }
+}
+@media only screen and (max-width: 500px) {
+    .tuyen {
+        .news__txt {
+            -webkit-line-clamp: 3;
+        }
+    }
+}

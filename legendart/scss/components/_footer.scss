@@ -1,0 +1,121 @@
+.footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: auto;
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__item {
+        width: 50%;
+        &:nth-of-type(even) {
+            text-align: right;
+        }
+    }
+    &__title {
+        @include fz-18;
+        text-transform: uppercase;
+        font-weight: bold;
+        display: block;
+
+        line-height: (40/16);
+    }
+    &__link {
+        opacity: 0.7;
+        transition: 0.3s linear;
+        &:hover {
+            @media only screen and (min-width: 901px) {
+                opacity: 1;
+            }
+        }
+    }
+    &__list {
+        column-count: 2;
+        gap: 13rem;
+        li {
+            line-height: (40/16);
+            a {
+                opacity: 0.7;
+                transition: 0.3s linear;
+                font-weight: 500;
+                &:hover {
+                    @media only screen and (min-width: 901px) {
+                        opacity: 1;
+                    }
+                }
+            }
+            &.active {
+                a {
+                    font-weight: bold;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &__logo {
+        margin-top: 2rem;
+        width: max-content;
+        a {
+            display: block;
+            width: 14.2rem;
+        }
+    }
+    .copyright {
+        color: #8d8d8d;
+        width: calc(100% - 14.2rem);
+        align-self: center;
+        margin-top: 2rem;
+        a {
+            transition: 0.3s linear;
+            @include fz-16;
+            &:hover {
+                @media only screen and (min-width: 901px) {
+                    color: #000;
+                }
+            }
+            img {
+                display: inline-block;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .footer {
+        &__logo {
+            a {
+                width: 12rem;
+            }
+        }
+        &__list {
+            column-gap: 10rem;
+        }
+    }
+}
+@media only screen and (max-width: 700px) {
+    .footer {
+        &__list {
+            column-gap: 0;
+        }
+    }
+}
+@media only screen and (max-width: 500px) {
+    .footer {
+        &__item {
+            width: 100%;
+            text-align: center;
+
+            &:nth-of-type(even) {
+                text-align: center;
+            }
+            &.copyright {
+                width: 100%;
+            }
+        }
+        &__logo {
+            a {
+                margin: 0 auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.breadcrumb {
+    &__container {
+        width: 100%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    @include fz-16;
+    display: inline-block;
+    line-height: calc(19 / 16);
+    position: relative;
+    opacity: 0;
+    transition: 0.2s linear;
+    padding: 1.5rem 2rem;
+    margin-right: 0.5rem;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    &.active {
+        font-weight: 500;
+        color: #fff;
+        background-color: #3e3935;
+    }
+    &:hover {
+        @media only screen and (min-width: 901px) {
+            color: #f6b92f;
+            &.active {
+                color: #fff;
+                background-color: #3e3935;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 768px) {
+    .breadcrumb {
+        &__container {
+            padding-bottom: 0.3rem;
+        }
+        margin-top: 0.3rem;
+        padding: 1rem;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+}

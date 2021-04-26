@@ -1,0 +1,74 @@
+@keyframes button {
+    0% {
+        transform: translate(-100%, -105%);
+    }
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+@keyframes fadeDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes fadeLeft {
+    0% {
+        transform: translate(-100%, -105%);
+    }
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+@keyframes gogo2 {
+    0% {
+        left: 1.7rem;
+    }
+    25% {
+        left: 0.7rem;
+    }
+    50% {
+        left: 1.7rem;
+    }
+    75% {
+        left: 2.7rem;
+    }
+    100% {
+        left: 1.7rem;
+    }
+}
+
+@keyframes jumping {
+    0% {
+        transform: translate(-50%, calc(-50% - 1.2rem));
+    }
+    50% {
+        transform: translate(-50%, calc(-50% + 0.5rem));
+    }
+    100% {
+        transform: translate(-50%, calc(-50% - 1.2rem));
+    }
+}
+@keyframes play-btn {
+    0% {
+        width: 3rem;
+        height: 3rem;
+        opacity: 0.5;
+    }
+    100% {
+        width: 6rem;
+        height: 6rem;
+        opacity: 0.1;
+    }
+}
+@keyframes fade {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,114 @@
+.detail {
+    .section__title {
+        margin: 4.5rem 0 1rem;
+    }
+    .date {
+        display: block;
+        text-align: center;
+        font-weight: bold;
+        color: #d3d5d7;
+        text-transform: uppercase;
+    }
+    &__content {
+        padding: 4.5rem 0 8rem;
+    }
+    &__txt {
+        line-height: calc(24 / 16);
+        font-weight: 500;
+        color: #3e3935;
+        display: block;
+        margin-bottom: 3rem;
+        font-weight: 500;
+    }
+    &__img {
+        &__small {
+            float: left;
+            width: calc(100% / 3);
+            display: inline-block;
+            margin-right: 3rem;
+            margin-bottom: 10rem;
+        }
+        &__big {
+            float: right;
+            width: calc(100% * 5 / 12 + 3rem);
+            margin-left: 3rem;
+            margin-top: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        img {
+            width: 100%;
+        }
+        &__name {
+            font-weight: 500;
+            font-style: italic;
+            display: block;
+            text-align: center;
+            margin-top: 2rem;
+        }
+    }
+}
+@media only screen and (max-width: 910px) {
+    .detail {
+        .section__title {
+            br {
+                display: none;
+            }
+            margin: 3rem 0 1rem;
+            padding: 0 4rem;
+        }
+        &__content {
+            padding: 3rem 0 4rem;
+        }
+        &__txt {
+            margin-bottom: 1.5rem;
+        }
+        &__img {
+            &__small {
+                width: max-content;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 768px) {
+    .detail {
+        .section__title {
+            padding: 0;
+        }
+        &__content {
+            padding: 3rem 0 3rem;
+            &__container {
+                flex-direction: column;
+                align-items: center;
+                &.reverse {
+                    flex-direction: column;
+                }
+            }
+        }
+
+        &__img {
+            &__small {
+                margin-bottom: 3rem;
+            }
+            &__big {
+                float: none;
+                margin: 1.5rem auto;
+                width: max-content;
+                max-width: 100%;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 600px) {
+    .detail {
+        &__img {
+            &__small {
+                float: none;
+                margin: 0 auto 3rem;
+                width: 100%;
+                img {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
