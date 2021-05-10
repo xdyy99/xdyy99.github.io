@@ -1,0 +1,90 @@
+.news {
+    &__link {
+        padding: 7rem 3rem 3rem;
+        position: sticky;
+        top: 0;
+    }
+    &__list {
+        li {
+            padding-top: 2rem;
+            a {
+                display: flex;
+                &:hover {
+                    @media only screen and (min-width: 901px) {
+                        .news__info__title {
+                            color: #e7194a;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__img {
+        width: 14rem;
+        &__ratio {
+            width: 100%;
+            padding-top: 64%;
+        }
+        position: relative;
+        overflow: hidden;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            max-height: none;
+            min-width: 100%;
+            min-height: 100%;
+        }
+    }
+    &__info {
+        width: calc(100% - 14rem);
+        padding-left: 1.5rem;
+        &__title {
+            transition: 0.2s linear;
+            font-weight: bold;
+            line-height: calc(19 / 16);
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+        .date {
+            @include fz-14;
+            opacity: 0.5;
+        }
+    }
+}
+@media only screen and (max-width: 900px) {
+    .news {
+        &__link {
+            padding: 3rem 1.5rem;
+            position: static;
+        }
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            li {
+                width: calc(50% - 1.5rem);
+            }
+        }
+        &__img {
+            width: 12rem;
+        }
+    }
+}
+@media only screen and (max-width: 600px) {
+    .news {
+        &__list {
+            justify-content: center;
+            li {
+                width: 100%;
+                max-width: 37.5rem;
+            }
+        }
+        &__img {
+            width: 14rem;
+        }
+    }
+}

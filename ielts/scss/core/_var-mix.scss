@@ -1,0 +1,24 @@
+$c-red:#E7194A;
+$c-blu:#262E67;
+
+
+
+
+@mixin center-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin center-abs {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin default-background {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

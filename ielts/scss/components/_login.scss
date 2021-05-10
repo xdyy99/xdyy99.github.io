@@ -1,0 +1,383 @@
+.login {
+    &__link {
+        padding: 0 7rem;
+        padding-top: 14.5rem;
+        &__title {
+            display: block;
+            width: max-content;
+            font-weight: bold;
+            margin-bottom: 6rem;
+        }
+        &__btn {
+            transition: 0.3s linear;
+            display: block;
+            padding: 1.5rem;
+            line-height: 1;
+            padding-left: 5.4rem;
+            position: relative;
+            color: #fff;
+            border-radius: 0.4rem;
+            margin-bottom: 1rem;
+            &::after {
+                content: "";
+                display: block;
+
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: 50% 50%;
+                position: absolute;
+                top: 50%;
+                left: 1.4rem;
+                transform: translateY(-50%);
+            }
+            &:hover {
+                @media only screen and (min-width: 901px) {
+                    background-color: #262e67;
+                }
+            }
+        }
+    }
+    &__fb {
+        background-color: #527ebe;
+        &::after {
+            width: 2.6rem;
+            height: 2.6rem;
+            background-image: url("../assets/images/iface.png");
+        }
+    }
+    &__phone {
+        background-color: #36c031;
+        &::after {
+            width: 2rem;
+            height: 2rem;
+            background-image: url("../assets/images/iphone.png");
+        }
+    }
+    .section__title {
+        margin-bottom: 4.5rem;
+    }
+    &__btn {
+        min-width: 15rem;
+        @include fz-14;
+        text-transform: uppercase;
+        width: max-content;
+        padding: 1.5rem 3.5rem;
+        background-color: #262e67;
+        transition: 0.2s linear;
+        font-weight: bold;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 0.4rem;
+        &:hover {
+            @media only screen and (min-width: 901px) {
+                background-color: #e7194a;
+            }
+        }
+    }
+    &__inp {
+        @include fz-16;
+        opacity: 0.5;
+        padding: 1.7rem;
+        display: block;
+        width: 100%;
+        border-radius: 0.4rem;
+        border: 1px solid #d8d8d8;
+        transition: 0.3s linear;
+        &:focus {
+            opacity: 1;
+            border: 1px solid #262e67;
+            + label {
+                color: #262e67;
+            }
+        }
+    }
+    &__text {
+        @include fz-16;
+        opacity: 0.5;
+        padding: 1.7rem;
+        display: block;
+        width: 100%;
+        border-radius: 0.4rem;
+        border: 1px solid #d8d8d8;
+        transition: 0.3s linear;
+        resize: none;
+        height: 12rem;
+        &:focus {
+            opacity: 1;
+            border: 1px solid #262e67;
+            + label {
+                color: #262e67;
+            }
+        }
+    }
+    &__signup {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 2rem;
+        a {
+            font-weight: bold;
+            color: #e7194a;
+            transition: 0.2s linear;
+            &:hover {
+                @media only screen and (min-width: 901px) {
+                    color: #262e67;
+                }
+            }
+        }
+    }
+    &__sel {
+        display: block;
+        width: 100%;
+        background-image: url("../assets/images/sel.png");
+        background-repeat: no-repeat;
+        background-size: 10px 5px;
+        background-position: 97% 50%;
+        @include fz-16;
+        padding: 1.7rem;
+        padding-right: 2.5rem;
+        border-radius: 0.4rem;
+        border: 1px solid #d8d8d8;
+        transition: 0.3s linear;
+        &:focus {
+            border: 1px solid #262e67;
+        }
+    }
+    &__check {
+        width: 2.6rem;
+        height: 2.6rem;
+        position: absolute;
+        z-index: 2;
+        opacity: 0;
+        cursor: pointer;
+    }
+    &__check:checked {
+        ~ .remember {
+            opacity: 1;
+            color: #262e67;
+        }
+        ~ .login__checkbox {
+            background-color: #262e67;
+            &::after {
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+    &__checkbox {
+        transition: 0.2s linear;
+        display: block;
+        width: 2.4rem;
+        height: 2.4rem;
+        background-color: #fff;
+        border-radius: 0.4rem;
+        border: 1px solid #d8d8d8;
+        position: relative;
+        overflow: hidden;
+        &::after {
+            content: "";
+            display: block;
+            width: 16px;
+            height: 16px;
+            background-image: url("../assets/images/check.png");
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 150%);
+            transition: 0.3s linear;
+        }
+    }
+    &__form {
+        .form__hidden {
+            display: none;
+        }
+        form {
+            padding-right: 7rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            label {
+                display: block;
+                width: max-content;
+                font-weight: bold;
+                margin-bottom: 1rem;
+                transition: 0.2s linear;
+                user-select: none;
+                cursor: pointer;
+            }
+        }
+
+        .form__item {
+            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column-reverse;
+            width: 100%;
+            position: relative;
+            &.half {
+                width: calc(50% - 0.5rem);
+                margin-right: 1rem;
+                &:nth-of-type(2) {
+                    margin-right: 0;
+                }
+                &:nth-of-type(5) {
+                    margin-right: 0;
+                }
+            }
+            &:hover {
+                @media only screen and (min-width: 901px) {
+                    &::after {
+                        width: 100%;
+                    }
+                }
+            }
+            &.form__btn {
+                margin-left: auto;
+                width: max-content;
+
+                padding-right: 0;
+                &::after {
+                    display: none;
+                }
+            }
+        }
+        .form__check {
+            align-items: center;
+            width: max-content;
+            flex-direction: row;
+            label {
+                margin-bottom: 0;
+                margin-left: 1rem;
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+.signup__popup {
+    margin: 0 auto;
+    background-color: #fff;
+    width: 100%;
+    max-width: 90rem;
+    padding: 3rem 5rem;
+    position: relative;
+    .section__title {
+        text-align: center;
+    }
+    .popup__close {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        cursor: pointer;
+        color: #262e67;
+        i {
+            font-size: 2rem;
+        }
+        &:hover {
+            color: #e7194a;
+        }
+    }
+    form {
+        padding: 0;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .login {
+        &__link {
+            padding: 14.5rem 1.5rem 0;
+        }
+        &__form {
+            form {
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .login {
+        .section__title {
+            margin: 3rem 0 2rem;
+            text-align: center;
+        }
+        &__form {
+            form {
+                margin: 0 auto;
+                max-width: 60rem;
+            }
+        }
+        &__link {
+            padding: 3rem 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            &__title {
+                width: 100%;
+                margin-bottom: 1.5rem;
+                text-align: center;
+            }
+            &__btn {
+                margin: 0 0.5rem 1rem;
+                min-width: 26rem;
+            }
+        }
+    }
+    .signup__popup {
+        .signup__form {
+            .form__item {
+                width: 100%;
+                margin-bottom: 2rem;
+                padding: 0;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 600px) {
+    .signup {
+        &__form {
+            form {
+                align-items: center;
+                flex-direction: column;
+            }
+            .form__item {
+                &.form__btn {
+                    margin: 0 auto;
+                    margin-bottom: 3rem;
+                }
+                margin-bottom: 2.5rem;
+                width: 100%;
+                max-width: 40rem;
+                &:nth-of-type(odd) {
+                    padding-right: 0;
+                }
+                &:nth-of-type(odd) {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+    .signup__popup {
+        padding: 3rem;
+        .signup__form {
+            .form__item {
+                max-width: none;
+            }
+        }
+        .popup__header {
+            flex-direction: column;
+        }
+        .popup__title {
+            margin-top: 3rem;
+            width: 100%;
+        }
+    }
+}
+@media only screen and (max-width: 400px) {
+    .login {
+        &__form {
+            .form__item.half {
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+    }
+}
