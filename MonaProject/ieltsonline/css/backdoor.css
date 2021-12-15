@@ -93,3 +93,8 @@ label.c-box.hl-false .box {
 .dragging {
   pointer-events: auto !important;
 }
+.footer__top {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
