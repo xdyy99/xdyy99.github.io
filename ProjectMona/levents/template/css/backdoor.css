@@ -1,0 +1,47 @@
+.sty__con {
+  flex-wrap: wrap;
+  margin-bottom: -6rem;
+}
+.sty__con .col {
+  width: 50%;
+  margin-bottom: 6rem;
+}
+@media only screen and (max-width: 1440px) {
+  .sty__con {
+    margin-bottom: -3rem;
+  }
+  .sty__con .col {
+    margin-bottom: 3rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .sty__con .col {
+    width: 100%;
+  }
+  .club__btn {
+    margin-bottom: 6rem;
+  }
+}
+.ft__btn__more {
+  width: 100%;
+  padding-top: 5px;
+  background-color: #fff;
+}
+.check__cp .form__inp {
+  padding: 0;
+  align-self: stretch;
+}
+.filter__wrap {
+  width: 100%;
+}
+video {
+  max-width: 100%;
+}
+.ft {
+  margin-top: auto;
+}
+@media only screen and (min-width: 1201px) {
+  .acc__main {
+    padding-top: 9.7rem;
+  }
+}

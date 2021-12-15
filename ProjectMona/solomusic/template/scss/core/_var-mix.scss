@@ -1,0 +1,59 @@
+// Color
+$c-pri: #7a7a7a;
+$c-sec: #00cfcf;
+
+$c-bla: #303030;
+$c-red: #c52d2e;
+$c-gre: #4fb3ac;
+
+// mixin default
+@mixin center-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin default-background {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+// mixin advance
+
+@mixin lc($value: 3) {
+  display: -webkit-box;
+  -webkit-line-clamp: $value;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+@mixin max($value) {
+  @media screen and (max-width: $value) {
+    @content;
+  }
+}
+@mixin min($value) {
+  @media screen and (min-width: $value) {
+    @content;
+  }
+}
+@mixin hover($value: 1200px) {
+  &:hover {
+    @media screen and (min-width: $value) {
+      @content;
+    }
+  }
+}
+@mixin sqr($value: 4rem) {
+  width: $value;
+  height: $value;
+}
+@mixin cir($value: 4rem) {
+  width: $value;
+  height: $value;
+  border-radius: 999px;
+}
+
+@mixin VW($value) {
+  width: calc(($value / 1920) * 100vw);
+}

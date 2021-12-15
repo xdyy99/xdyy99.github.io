@@ -1,0 +1,322 @@
+// Font //
+@import url('../assets/fonts/spartan/stylesheet.css');
+
+// Lib //
+@import url('../js/libs/swiper/swiper-bundle.min.css');
+@import url('../js/libs/gallery/lightgallery.min.css');
+@import url('../js/libs/fontawesome/css/all.css');
+@import url('../js/libs/magnific/magnific-popup.css');
+@import url('../js/libs/aos/aos.css');
+@import url('../js/libs/fullpage/fullpage.min.css');
+@import url('../js/libs/select2/select2.min.css');
+
+// Core //
+@import './core/var-mix';
+@import './core/reset';
+@import './core/font';
+@import './core/animation';
+@import './core/mona';
+@import './core/default';
+
+// Common style // ROBOTO LIGHT
+body {
+  @include fz(18);
+  font-family: 'Spartan', Arial;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.8);
+}
+input,
+select,
+button,
+textarea {
+  font-family: 'Spartan', Arial;
+  @include fz(15);
+  line-height: calc(18 / 15);
+}
+.main {
+  margin-bottom: auto;
+}
+.sec-ft {
+  padding: 8.07vw 8.85vw 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.sec-mg {
+  padding: 11.3vw 8.85vw 0;
+  min-height: 100vh;
+  @include max(1200px) {
+    min-height: 0;
+  }
+}
+.sec-full {
+  min-height: 100vh;
+  position: relative;
+  @include max(1200px) {
+    min-height: 0;
+  }
+}
+.sec-title {
+  @include fz(40);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 2.44vw;
+  line-height: calc(47 / 40);
+  letter-spacing: 0.1em;
+  &-wrap {
+    margin-bottom: 2.44vw;
+    .sec-title {
+      padding-top: 0.31vw;
+      line-height: 1;
+      margin-bottom: 0;
+      width: max-content;
+    }
+  }
+}
+.sub-title {
+  display: flex;
+  flex-grow: 1;
+  margin-left: 3.17vw;
+  position: relative;
+  align-items: center;
+
+  .img {
+    @include sqr(2.23vw);
+    margin-right: 0.78vw;
+  }
+  .txt {
+    @include fz(16);
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: calc(19 / 16);
+  }
+  &::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: calc(100% - 0.26vw);
+    top: 50%;
+    left: -1.56vw;
+    background-color: #7a7a7a;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transition: 0.3s ease;
+  }
+}
+.sub-list {
+  flex-grow: 1;
+  margin-left: 4.73vw;
+  position: relative;
+  align-items: center;
+  &::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: calc(100% - 0.26vw);
+    top: 50%;
+    left: -2.34vw;
+    background-color: #7a7a7a;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+  ul {
+    columns: 2;
+    column-gap: 2.34vw;
+    flex-wrap: wrap;
+    height: calc(100% + 0.52vw);
+    max-width: 100%;
+    width: max-content;
+    margin-bottom: -0.52vw;
+    a {
+      @include hover() {
+        color: $c-pri;
+      }
+    }
+    li {
+      @include fz(10);
+      font-weight: bold;
+      width: max-content;
+      margin-bottom: 0.52vw;
+
+      height: max-content;
+      text-transform: uppercase;
+    }
+  }
+}
+.woocommerce-checkout .btn-join {
+  @include hover {
+    color: rgba(0, 0, 0, 0.8);
+    // background-color: #000;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+  }
+}
+.btn-white,
+.btn-pri {
+  box-sizing: border-box;
+  display: block;
+  border-radius: 6px;
+  background-color: #000;
+  padding: 0.76vw 1.82vw 0.42vw;
+  line-height: calc(18 / 15);
+  font-weight: bold;
+  letter-spacing: 0.5em;
+  border: 1px solid #000;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  @include hover {
+    color: $c-pri;
+    background-color: #fff;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+  }
+  @include max(1200px) {
+    padding: 1.3rem 1.5rem 1rem;
+  }
+}
+
+.btn-white {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.8);
+
+  @include hover {
+    color: $c-pri;
+    background-color: #000;
+  }
+}
+.btn-grey {
+  user-select: none;
+  display: block;
+  padding: 1.3vw 1.56vw 0.93vw;
+  background-color: #4c4c4c;
+  border-radius: 6px;
+  @include fz(20);
+  font-weight: bold;
+  line-height: calc(23 / 20);
+  @include hover() {
+    background-color: #000;
+    color: $c-pri;
+  }
+  @include max(1200px) {
+    padding: 1.3rem 1.5rem 1rem;
+  }
+}
+.fp-viewing-hfp1 a[href='#hfp1'],
+.fp-viewing-hfp2 a[href='#hfp2'],
+.fp-viewing-hfp3 a[href='#hfp3'],
+.fp-viewing-hfp4 a[href='#hfp4'],
+.fp-viewing-hfp5 a[href='#hfp5'],
+.fp-viewing-hfp6 a[href='#hfp6'] {
+  color: $c-pri;
+}
+.hp-footer,
+.hp9 {
+  height: auto !important;
+  .fp-tableCell {
+    height: auto !important;
+  }
+  .sec-ft {
+    padding-top: 0;
+    min-height: 0 !important;
+  }
+}
+
+@include max(1200px) {
+  .sec-ft,
+  .sec-mg {
+    padding: 11rem 1.5rem 0;
+    height: auto;
+  }
+  .sec-title {
+    @include fz(30);
+    margin-bottom: 4rem;
+    &-wrap {
+      margin-bottom: 4rem;
+      .sec-title {
+        padding-top: 5px;
+      }
+    }
+  }
+  .sub-title {
+    margin-left: 6rem;
+
+    .img {
+      @include sqr(30px);
+      margin-right: 1.5rem;
+    }
+    &::after {
+      height: calc(100% - 5px);
+      left: -3rem;
+    }
+  }
+  .sub-list {
+    margin-left: 6rem;
+    &::after {
+      height: calc(100% - 1.5rem);
+      left: -3rem;
+      top: 2px;
+      transform: translateX(-50%);
+    }
+    ul {
+      columns: 2;
+      column-gap: 3rem;
+      height: auto;
+      margin-bottom: -1rem;
+      li {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+@include max(768px) {
+  .sec-title-wrap {
+    display: block;
+    .sec-title {
+      margin-bottom: 2rem;
+    }
+  }
+  .sub-title {
+    .txt {
+      @include fz(14);
+    }
+    margin-left: 3rem;
+    margin-bottom: 3rem;
+  }
+  .sub-list {
+    margin-left: 3rem;
+
+    ul {
+      columns: 2;
+      column-gap: 3rem;
+      height: calc(100% + 1rem);
+      margin-bottom: -1rem;
+      li {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+// Component //
+@import './components/header';
+@import './components/menu';
+@import './components/ban';
+@import './components/pop';
+@import './components/search';
+@import './components/contact';
+@import './components/swiper';
+@import './components/footer';
+@import './components/form';
+@import './components/common';
+@import './components/product';
+
+//
+@import './components/gallery';
+@import './components/pagination';
+
+// Page //
+@import './pages/hieu';
+@import './pages/roll';
+@import './pages/fix';
+@import './pages/checkout';

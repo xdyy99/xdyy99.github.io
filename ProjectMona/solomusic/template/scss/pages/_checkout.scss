@@ -1,0 +1,263 @@
+.co {
+  &-wrap {
+    align-items: flex-start;
+  }
+  &-img {
+    width: 14.58vw;
+    margin-right: 2.91vw;
+    position: sticky;
+    top: 11.3vw;
+    img {
+      width: 100%;
+    }
+  }
+  &-space {
+    margin-bottom: 2.6vw;
+  }
+  &-main {
+    width: 31.45vw;
+    padding-right: 1.87vw;
+    border-right: 1px solid #7a7a7a;
+    padding-bottom: 7.29vw;
+  }
+  &-title {
+    @include fz(20);
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    margin-bottom: 2.6vw;
+    text-align: center;
+  }
+  &-sub {
+    @include fz(20);
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.23vw;
+    padding-left: 0.62vw;
+  }
+
+  .form {
+    margin-bottom: 4.32vw;
+  }
+  &-txt {
+    @include fz(10);
+    font-weight: bold;
+    text-align: center;
+    margin-top: -2.08vw;
+    margin-bottom: 1.56vw;
+    color: #7a7a7a;
+  }
+  &-bill {
+    width: 33.28vw;
+    position: sticky;
+    top: 9vw;
+    .prod-item {
+      width: 100%;
+    }
+    .prod-wrap {
+      flex-direction: row;
+    }
+    .prod-img {
+      @include sqr(9.42vw);
+
+      margin: 0 2.08vw;
+    }
+    .prod-info-x {
+      width: 19.42vw;
+      margin-right: auto;
+    }
+    .price-cover {
+      .num,
+      .sale-off {
+        @include fz(10);
+      }
+    }
+    .price-disc {
+      @include max(414px) {
+        width: max-content;
+      }
+    }
+    .price-disc .num {
+      @include fz(15);
+    }
+    .prod-price {
+      width: 15.46vw;
+    }
+  }
+  &-sum {
+    padding-left: 2.08vw;
+    margin-bottom: 7.29vw;
+    .title {
+      line-height: 1;
+      @include fz(20);
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 1.56vw;
+    }
+  }
+  &-row {
+    @include fz(15);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    margin-bottom: 0.88vw;
+  }
+  &-total {
+    margin-top: 3.38vw;
+    @include fz(20);
+    font-weight: bold;
+    letter-spacing: 0.1em;
+  }
+}
+@include max(1200px) {
+  .co {
+    &-img {
+      width: 10rem;
+      margin-right: 3rem;
+      top: 11rem;
+    }
+    &-space {
+      margin-bottom: 3rem;
+    }
+    &-main {
+      width: calc((100% - 13rem) / 2);
+      padding-right: 3rem;
+      padding-bottom: 10rem;
+    }
+    &-title {
+      margin-bottom: 3rem;
+    }
+    &-sub {
+      margin-bottom: 2rem;
+      padding-left: 1.5rem;
+    }
+
+    .form {
+      margin-bottom: 5rem;
+    }
+    &-txt {
+      margin-top: -2rem;
+      margin-bottom: 3rem;
+      font-size: 10px;
+    }
+    &-bill {
+      width: calc((100% - 13rem) / 2);
+      top: 7vw;
+      .prod-img {
+        @include sqr(10rem);
+        margin: 0 3rem;
+      }
+      .prod-info-x {
+        width: calc(100% - 16rem);
+      }
+      .price-cover {
+        .num,
+        .sale-off {
+          font-size: 10px;
+        }
+      }
+      .prod-price {
+        width: 100%;
+        max-width: 25rem;
+      }
+    }
+    &-sum {
+      padding-left: 3rem;
+      margin-bottom: 10rem;
+      .title {
+        margin-bottom: 2rem;
+      }
+    }
+    &-row {
+      margin-bottom: 1.5rem;
+    }
+    &-total {
+      margin-top: 3rem;
+    }
+  }
+}
+@include max(768px) {
+  .co {
+    &-img {
+      margin-right: 0;
+    }
+
+    &-wrap {
+      flex-wrap: wrap;
+    }
+    &-main {
+      width: calc(100% - 10rem);
+      margin-left: auto;
+      padding: 0 1.5rem 8rem;
+      order: 3;
+      border: none;
+    }
+
+    &-bill {
+      width: calc(100% - 10rem);
+      margin-left: auto;
+      padding: 0 1.5rem 8rem;
+      position: static;
+      .prod-item {
+        padding: 0;
+      }
+      .prod-img {
+        @include sqr(10rem);
+        margin: 0 1.5rem;
+      }
+      .prod-info-x {
+        width: calc(100% - 13rem);
+      }
+    }
+    &-sum {
+      padding-left: 0rem;
+      margin-bottom: 4rem;
+      .title {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+@include max(480px) {
+  .co {
+    &-img {
+      margin-bottom: 5rem;
+      width: 100%;
+      position: relative;
+      top: 0;
+      padding-top: 50%;
+      img {
+        position: absolute;
+        top: 0;
+        width: auto;
+        height: calc(100vw - 3rem) !important;
+        transform: translate(0%, -100%) rotate(90deg);
+        transform-origin: bottom left;
+      }
+    }
+
+    &-main {
+      width: calc(100%);
+      padding: 0 0 6rem;
+    }
+
+    &-bill {
+      width: 100%;
+      padding: 0 0 6rem;
+      position: static;
+      .prod-item {
+        padding: 0;
+      }
+      .prod-img {
+        @include sqr(10rem);
+        margin: 0;
+        margin-right: 1.5rem;
+      }
+      .prod-info-x {
+        width: calc(100% - 11.5rem);
+      }
+      .prod-price {
+        max-width: none;
+      }
+    }
+  }
+}

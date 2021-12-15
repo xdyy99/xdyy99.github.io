@@ -1,0 +1,40 @@
+.page-404 {
+  text-align: center;
+  height: 100vh;
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  background-color: #fff;
+  height: 100vh;
+  @include max-media(768px) {
+    clip-path: polygon(30% 0%, 70% 0%, 100% 10%, 100% 90%, 70% 100%, 30% 100%, 0 90%, 0 10%);
+  }
+  &-img {
+    width: 76.5rem;
+    max-width: 80%;
+    margin: 0 auto -10rem;
+    @include max-media(768px) {
+      margin-bottom: -7rem;
+    }
+    @include max-media(480px) {
+      margin-bottom: -3rem;
+    }
+  }
+  &-title {
+    @include fz(72);
+    @include naX();
+    margin-bottom: 1rem;
+  }
+  &-txt {
+    max-width: 80%;
+    margin: 0 auto 4rem;
+  }
+  &-btn {
+    display: inline-block;
+    padding: 1.5rem 3.8rem;
+    background-color: #303030;
+    border-radius: 99px;
+    color: #fff;
+    @include hover() {
+      background-color: $c-pri;
+    }
+  }
+}

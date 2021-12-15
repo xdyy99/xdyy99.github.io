@@ -1,0 +1,201 @@
+// Font //
+@import url('../assets/fonts/svn/light/stylesheet.css');
+@import url('../assets/fonts/svn/light-ita/stylesheet.css');
+@import url('../assets/fonts/svn/medium/stylesheet.css');
+@import url('../assets/fonts/svn/medium-ita/stylesheet.css');
+@import url('../assets/fonts/svn/xlight/stylesheet.css');
+@import url('../assets/fonts/svn/xlight-ita/stylesheet.css');
+
+// Libs //
+@import url('../js/libs/fontawesome/css/all.css');
+@import url('../js/libs/magnific/magnific-popup.css');
+@import url('../js/libs/swiper/swiper-bundle.min.css');
+@import url('../js/libs/aos/aos.css');
+@import url('../js/libs/gallery/lightgallery.min.css');
+@import url('../js/libs/select2/select2.min.css');
+
+// Core //
+@import './core/reset';
+@import './core/var-mix';
+@import './core/mona';
+@import './core/animation';
+@import './core/font';
+@import './core/default';
+
+// Common style //
+
+body {
+  @include svnL();
+  line-height: 19px;
+  @include fz(14);
+}
+input,
+select,
+button,
+textarea {
+  @include fz(14);
+  @include svnL();
+}
+hr {
+  height: 1px;
+  border: none;
+  border-top: 1px solid rgba(112, 112, 112, 0.3);
+}
+.main {
+}
+.sec-title {
+  @include fz(16);
+  @include svnM();
+  text-transform: uppercase;
+  margin-bottom: 5.2rem;
+  text-align: center;
+}
+@include max-media(1200px) {
+  .sec-title {
+    margin-bottom: 4rem;
+  }
+}
+@include max-media(768px) {
+  .sec-title {
+    margin-bottom: 2rem;
+  }
+}
+.btn-pri-whi,
+.btn-pri {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  position: relative;
+  background-color: $c-pri;
+  z-index: 1;
+  line-height: 1.5;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid $c-pri;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.5s ease;
+    z-index: -1;
+  }
+  @include hover() {
+    box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.4);
+    border: 1px solid #000;
+    &::after {
+      height: 102%;
+    }
+  }
+}
+.btn-pri-whi {
+  background-color: #fff;
+  border: none;
+  &::after {
+    width: 0;
+    top: 0;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @include hover() {
+    color: #fff;
+    border: none;
+    box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.4);
+    &::after {
+      width: 100%;
+    }
+  }
+}
+.btn-disable {
+  pointer-events: none;
+  opacity: 0.7;
+  user-select: none;
+}
+.btn-sec {
+  background-color: #fff;
+
+  display: block;
+  max-width: 100%;
+  width: max-content;
+  padding: 5px 52px;
+  border: 1px solid #d9d9d9;
+  @include fz(14);
+  position: relative;
+  text-align: center;
+  line-height: 1.5;
+  z-index: 1;
+  &::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 100%;
+    background-color: #47474c;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: 0.5s ease;
+
+    z-index: -1;
+  }
+  @include hover() {
+    color: #fff;
+    &::after {
+      width: 100%;
+    }
+  }
+}
+.popup__container {
+  width: max-content;
+  max-width: 100%;
+  margin: 0 auto;
+}
+// Component //
+@import './components/header';
+@import './components/menu';
+@import './components/lang';
+@import './components/cart';
+@import './components/amount';
+@import './components/search';
+@import './components/wish';
+@import './components/backtotop';
+@import './components/news';
+@import './components/form';
+@import './components/footer';
+@import './components/heart';
+@import './components/ban';
+@import './components/swiper';
+@import './components/sty';
+@import './components/product';
+@import './components/breadcrumb';
+@import './components/gallery';
+@import './components/ins';
+@import './components/club';
+@import './components/rela';
+@import './components/filter';
+@import './components/apply';
+@import './components/siba';
+@import './components/voucher';
+@import './components/table';
+@import './components/info';
+@import './components/user';
+
+// Page //
+@import './pages/blog';
+@import './pages/cus';
+@import './pages/sty-co';
+@import './pages/rcm';
+@import './pages/qa';
+@import './pages/check';
+@import './pages/acc';
+@import './pages/contact';
+@import './pages/member';
+@import './pages/shop';
+@import './pages/order';

@@ -1,0 +1,201 @@
+@include min(901px) {
+  .dt-cart,
+  .common-info {
+    align-self: flex-start;
+    position: sticky;
+    top: 11.35vw;
+  }
+  .common-info {
+    margin-bottom: 4.32vw;
+  }
+}
+.prod-addcart > a {
+  letter-spacing: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  @include hover {
+    color: #fff;
+    background: #000;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+  }
+  span {
+    letter-spacing: 0.1em;
+  }
+}
+.prod-addcart .available-addcart > a {
+  letter-spacing: 0.5rem;
+  @include fz(8);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  @include hover {
+    color: #fff;
+    background-color: #000;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+  }
+}
+.fpSec .common-info {
+  margin-bottom: 0;
+}
+.pop-membership .text {
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  color: #7a7a7a;
+}
+.pop-member,
+.pop-membership,
+.pop-thankyou1,
+.pop-thankyou2 {
+  .content {
+    letter-spacing: 0.1em;
+  }
+  .title {
+    letter-spacing: 0;
+  }
+  .heading {
+    font-weight: 800;
+  }
+}
+.pop-member {
+  .form-area p {
+    letter-spacing: 0.1em;
+  }
+  .inner-wrapper {
+    padding-right: 1.77vw;
+  }
+  .ta-l {
+    margin-top: 1.19vw;
+  }
+  .form-btn {
+    letter-spacing: 0.5em;
+  }
+}
+.overlay-bg.visible {
+  z-index: 15;
+}
+.popup {
+  z-index: 15;
+}
+.thankyou {
+  background-color: transparent;
+}
+.woocommerce-order > .thankyouContent {
+  position: relative;
+  margin-bottom: 1.56vw;
+  width: 100%;
+  height: auto;
+  transform: none;
+  left: 0;
+  top: 0;
+  @include max(1200px) {
+    margin-top: 12rem !important;
+  }
+}
+.hd-btn {
+  position: relative;
+}
+.cart-number {
+  font-weight: 600;
+  padding-top: 0.46vw;
+  @include fz(15);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include max(1200px) {
+    padding-top: 7px;
+    @include fz(15);
+  }
+}
+.zoomWrap {
+  overflow: hidden;
+  cursor: zoom-in;
+}
+@include min(1201px) {
+  .prod-sel select {
+    padding-right: 1.82vw;
+  }
+}
+.prod-item {
+  position: relative;
+}
+.product-remove {
+  position: absolute;
+  top: 0;
+  right: 1.5rem;
+  @include min(769px) {
+    right: 0;
+  }
+}
+.co-bill .prod-img a {
+  display: block;
+  height: 100%;
+}
+.co-bill .prod-img img {
+  object-fit: contain;
+  display: block;
+  height: 100%;
+}
+.form-btn {
+  input {
+    display: block;
+    width: calc(100% + 1.82vw + 1.82vw);
+    cursor: pointer;
+    padding: 0.76vw 1.82vw 0.42vw;
+    margin: -0.76vw -1.82vw -0.42vw;
+    @media screen and (max-width: 1200px) {
+      padding: 1.3rem 1.5rem 1rem;
+      margin: -1.3rem -1.5rem -1rem;
+      width: calc(100% + 3rem);
+    }
+  }
+}
+.desc-dt {
+  color: #000;
+}
+.menu__wrap .menu-item {
+  letter-spacing: 0.1em;
+}
+.ft {
+  color: rgba($color: #676767, $alpha: 0.8);
+  a {
+    &::after {
+      background-color: #fff;
+    }
+    @include hover {
+      color: #fff;
+    }
+  }
+}
+.roll-mem-title {
+  color: #000;
+}
+.rb-title {
+  color: #000;
+}
+.xtxt-sticky {
+  position: sticky;
+  top: 9vw;
+  @include max(1200px) {
+    display: none;
+  }
+}
+.btn-pri {
+  font-weight: 600;
+}
+.pop-book-txt,
+.pop-con .service-item p,
+.pop-exchange .content,
+.prod-name .desc {
+  letter-spacing: 0;
+}
+.prod-price .price-disc .membership {
+  border: 1px solid #000;
+  @include hover() {
+    background-color: #fff;
+    color: $c-pri;
+  }
+}

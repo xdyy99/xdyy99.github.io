@@ -1,0 +1,38 @@
+$c-primary: #a9d046;
+$c-secondary: #ff725e;
+
+@mixin center-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin center-abs {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin default-background {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+@mixin overtext($args) {
+  display: -webkit-box;
+  -webkit-line-clamp: $args;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+// MIXINS
+@mixin max-media($args) {
+  @media screen and (max-width: $args) {
+    @content;
+  }
+}
+@mixin min-media($args) {
+  @media screen and (min-width: $args) {
+    @content;
+  }
+}

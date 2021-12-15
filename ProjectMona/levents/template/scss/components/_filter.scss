@@ -1,0 +1,247 @@
+.filter {
+  margin-bottom: 4.5rem;
+  &__btn {
+    img {
+      @include sqr(16px);
+      margin-right: 10px;
+    }
+    @include fz(16);
+    margin: -10px auto -10px -10px;
+    padding: 10px;
+    cursor: pointer;
+    user-select: none;
+    @include hover() {
+      img {
+        animation: bigbabol 0.5s linear;
+      }
+    }
+  }
+  &__select {
+    width: max-content;
+    select {
+      padding: 5px 50px 5px 25px;
+      background: url('../assets/images/svg/ic-arr.svg') 85% 50% / 12px no-repeat #fff;
+      border: 1px solid #d9d9d9;
+      width: 22rem;
+      margin-left: 10px;
+    }
+  }
+  &__main {
+    & > .col-9 {
+      border-left: 1px solid rgba(112, 112, 112, 0.3);
+    }
+  }
+  &__check {
+    margin-bottom: auto;
+
+    .form__check {
+      width: 50%;
+      margin-bottom: 2.2rem;
+    }
+    .col-4 {
+      &:first-child {
+        margin: 0 auto;
+      }
+      align-content: baseline;
+    }
+    .form__ctxt {
+      color: #c0c0c0;
+    }
+  }
+  &__txt {
+    margin-bottom: 3.5rem;
+    width: 100%;
+  }
+  &__ctrl {
+    border-top: 1px solid rgba(112, 112, 112, 0.3);
+    padding: 2.5rem 0;
+    .total {
+      @include fz(16);
+    }
+  }
+  &__sub {
+    width: 17rem;
+    margin-right: 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+    &__wrap {
+      justify-content: flex-end;
+    }
+  }
+  &__type {
+    max-width: 25rem;
+    .form__ctxt {
+      color: #c0c0c0;
+    }
+    .form__check {
+      border-bottom: 1px solid rgba(112, 112, 112, 0.3);
+      padding: 2.5rem 0;
+      margin: 0;
+      label {
+        margin-bottom: 0;
+        width: calc(100% - 30px);
+      }
+      &:last-child {
+        border-bottom: none;
+      }
+      &:first-child {
+        padding-top: 0;
+      }
+    }
+  }
+
+  &__wrap {
+    position: absolute;
+    width: 100vw;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    background-color: #fff;
+    z-index: 5;
+    border-bottom: 1px solid rgba(112, 112, 112, 0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s linear;
+    &.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .filter__btn {
+      padding: 0 1.5rem;
+      width: max-content;
+      position: absolute;
+      top: 3.5rem;
+    }
+  }
+  &__plus {
+    @include sqr(30px);
+    cursor: pointer;
+    img {
+      transition: 0.3s linear;
+    }
+    @include hover() {
+      img {
+        transform: rotate(180deg);
+      }
+    }
+    &.active {
+      img {
+        filter: brightness(0);
+        transform: rotate(45deg);
+      }
+    }
+  }
+  &__dropdown {
+    width: 100%;
+    padding: 0 2rem;
+    opacity: 0;
+    transition: 0.3s ease;
+    pointer-events: none;
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+    &.active {
+      margin-top: 2.5rem;
+      opacity: 1;
+      pointer-events: auto;
+      height: auto;
+    }
+    .form__check {
+      padding: 0;
+      border-bottom: none;
+      margin-bottom: 1.8rem;
+    }
+  }
+  &__close {
+    float: right;
+    color: #7f7f7f;
+    @include fz(14);
+    text-transform: none;
+    cursor: pointer;
+    @include svnL();
+    @include hover() {
+      @include svnM();
+      color: #e2002a;
+    }
+  }
+}
+.pd__page {
+  position: relative;
+  .con {
+    position: static;
+  }
+}
+@include max-media(1200px) {
+  .filter {
+    &__ctrl {
+      .col-10 {
+        width: 100%;
+        padding: 0;
+      }
+    }
+    &__type {
+      .form__check {
+        padding: 1.5rem 0;
+      }
+    }
+    &__dropdown {
+      .form__check {
+        padding: 0;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+@include max-media(768px) {
+  .filter {
+    &__main {
+      flex-wrap: wrap;
+      .col-3 {
+        width: 100%;
+      }
+      .col-9 {
+        width: 100%;
+        border: none;
+      }
+    }
+    &__type {
+      max-width: none;
+      margin-bottom: 2.5rem;
+    }
+    &__check {
+      flex-wrap: wrap;
+      & > .col-4 {
+        width: 100%;
+        margin-bottom: 2.5rem;
+        padding: 0;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      .form__check {
+        width: calc(100% / 3);
+        margin-bottom: 1rem;
+      }
+    }
+    &__txt {
+      margin-bottom: 1.5rem;
+    }
+    &__wrap {
+      .filter__btn {
+        display: none;
+      }
+    }
+    &__ctrl {
+      padding: 1.5rem 0;
+      &__wrap {
+        flex-wrap: wrap;
+      }
+      .total {
+        width: 100%;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+    }
+  }
+}

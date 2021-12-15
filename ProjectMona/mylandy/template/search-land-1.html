@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-control" content="no-cache" />
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="" />
+
+    <link rel="icon" type="image/png" href="./assets/images/favicon/fav.png" />
+
+    <link rel="stylesheet" href="./css/style.min.css" />
+    <link rel="stylesheet" href="./css/backdoor.css" />
+
+    <title>Search land 1</title>
+  </head>
+  <body>
+    <header class="hd hdJS">
+      <div class="con">
+        <div class="hd__wrap">
+          <div class="hd__logo">
+            <a href="#">
+              <img src="./assets/images/logo.png" alt="" />
+            </a>
+          </div>
+          <div class="hd__menu menu menuBoard hov-df">
+            <div class="menu__wrap">
+              <ul id="menu-main-menu">
+                <li class="menu-item current-menu-item">
+                  <a href="#"> 서비스소개</a>
+                </li>
+
+                <li class="menu-item">
+                  <a href="#"> 상품소개 </a>
+                </li>
+                <li class="menu-item">
+                  <a href="#"> 토지조회 </a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">의뢰하기</a>
+                </li>
+
+                <li class="menu-item dropdown">
+                  <a href="javascript:void(0)"> 커뮤니티</a>
+
+                  <ul class="submenu">
+                    <li class="menu-item">
+                      <a href="#">공지사항</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#"> FAQ </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#"> Q&A </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#"> 제휴문의</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item dropdown hd__mb">
+                  <a href="javascript:void(0)"> 마이페이지 </a>
+
+                  <ul class="submenu">
+                    <li class="menu-item">
+                      <a href="#">정보변경 </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#">조회결과 </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#">상품의뢰 </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#">질의답변 </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#">로그아웃 </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="hd__mb">
+                <div class="hd__btn">
+                  <div class="hd__btn__item">
+                    <a href="#">
+                      <img src="./assets/images/svg/hd-btn1.svg" alt="" />
+                    </a>
+                  </div>
+                  <div class="hd__btn__item">
+                    <a href="#">
+                      <img src="./assets/images/svg/hd-btn2.svg" alt="" />
+                    </a>
+                  </div>
+                  <div class="hd__btn__item actPanel">
+                    <div class="hd__toggle__btn user user-noti actBtn">
+                      <img src="./assets/images/user.jpg" alt="" />
+                    </div>
+                    <div class="hd-sub">
+                      <!-- <ul>
+                        <li>
+                          <a href="#"> 로그인 </a>
+                        </li>
+                        <li>
+                          <a href="#"> 회원가입 </a>
+                        </li>
+                      </ul> -->
+
+                      <ul>
+                        <li>
+                          <a href="#"> 정보변경 </a>
+                        </li>
+                        <li>
+                          <a href="#"> 조회결과 </a>
+                        </li>
+                        <li>
+                          <a href="#"> 상품의뢰 </a>
+                        </li>
+                        <li>
+                          <a href="#"> 질의답변</a>
+                        </li>
+                        <li>
+                          <a href="#"> 로그아웃 </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="menuBg menu__bg"></div>
+          </div>
+          <div class="hd__ser">
+            <form action="#">
+              <div class="hd__ser__wrap">
+                <input type="text" class="rs-form hd__ser__inp" placeholder="검색" />
+                <button type="submit" class="rs-form hd__ser__btn">
+                  <img src="./assets/images/svg/ser-ic.svg" alt="" />
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="hd__btn hd__dt">
+            <div class="hd__btn__item">
+              <a href="#">
+                <img src="./assets/images/svg/hd-btn1.svg" alt="" />
+              </a>
+            </div>
+            <div class="hd__btn__item">
+              <a href="#">
+                <img src="./assets/images/svg/hd-btn2.svg" alt="" />
+              </a>
+            </div>
+            <div class="hd__btn__item actPanel">
+              <div class="hd__toggle__btn user user-noti actBtn">
+                <img src="./assets/images/user.jpg" alt="" />
+              </div>
+              <div class="hd-sub">
+                <!-- <ul>
+                        <li>
+                          <a href="#"> 로그인 </a>
+                        </li>
+                        <li>
+                          <a href="#"> 회원가입 </a>
+                        </li>
+                      </ul> -->
+
+                <ul>
+                  <li>
+                    <a href="#"> 정보변경 </a>
+                  </li>
+                  <li>
+                    <a href="#"> 조회결과 </a>
+                  </li>
+                  <li>
+                    <a href="#"> 상품의뢰 </a>
+                  </li>
+                  <li>
+                    <a href="#"> 질의답변</a>
+                  </li>
+                  <li>
+                    <a href="#"> 로그아웃 </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="menu__btn menuBtn">
+            <svg class="menu__svg" viewBox="0 0 100 100">
+              <path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path>
+              <path d="m 30,50 h 40"></path>
+              <path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="land">
+        <div class="con">
+          <h1 class="land-title">토지조회</h1>
+          <div class="acc">
+            <div class="acc-ser-head fl-ct">
+              <div class="ser-info">
+                <div class="f-bold ser-big">#ID_name#님의 남아있는 토지조회 열람 건</div>
+                <div class="ser-small">(2021년 8월 10일 오후 3시 30분 기준)</div>
+              </div>
+              :
+              <div class="ser-num">
+                <span class="ser-num-big c-gre">10</span>
+                <span class="f-bold">건</span>
+              </div>
+              <div class="ser-btn">
+                <a href="#"
+                  >토지 조회 횟수 <br />
+                  충전하기
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="land-ser full">
+            <form action="">
+              <div class="land-ser-grey fl-ct">
+                <input type="text" class="rs-form land-inp" value="필지주소 입력 - 지번(OO동 1-1 또는 OO리 1-1), 도로명(OO로 1)" />
+                <button class="rs-form btn-pri">검색</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="land-map" id="map"></div>
+
+          <div class="land-guide">
+            <div class="f-bold title">※ 이용가이드 안내</div>
+            <ul>
+              <li>토지조회는 베이직 상품 이용권을 소유하신 분만 이용 가능합니다.</li>
+              <li>
+                베이직 상품 이용권은 회원가입 시 최초 10회 이용권이 제공되며, 이용권 소진 시 추가 구매를 통해 이용하실 수 있습니다. – 10회 / 50,000원
+              </li>
+              <li>모든 이용 상품은 부가세(VAT) 별도이며, 결제 시 10%의 부가세가 추가됩니다.</li>
+              <li>
+                베이직 상품은 추가 결제건에 한하여 환불이 가능하며, 환불 진행 시 고객센터로 문의하여 주시기 바랍니다. <a href="#"> (Q&A 바로가기) </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="ft">
+      <div class="con">
+        <div class="ft-head fl-ct">
+          <div class="ft-logo">
+            <a href="#">
+              <img src="./assets/images/logo-2.png" alt="" />
+            </a>
+          </div>
+          <div class="ft-line">
+            <div class="ft-btn fl-ct backToTop">
+              <img src="./assets/images/svg/arr-up.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="ft-wrap fl-wrap">
+          <div class="col-3">
+            <ul class="ft-list">
+              <li><a href="#"> 서비스소개 </a></li>
+              <li><a href="#"> 개인정보처리방침 </a></li>
+              <li><a href="#"> 이용약관 </a></li>
+              <li><a href="#">이메일주소 무단수집거부 </a></li>
+            </ul>
+          </div>
+          <div class="col-3">
+            <ul class="ft-list">
+              <li>
+                <span class="f-bold">㈜드론오렌지 </span>
+              </li>
+              <li>대표 : 정념</li>
+              <li>사업자등록번호 : 895-81-00203</li>
+              <li>통신판매신고 : 000-00-000000</li>
+            </ul>
+          </div>
+
+          <div class="col-6">
+            <ul class="ft-list">
+              <li><span class="f-bold">제주사무실 </span> 제주도 제주시 제주한라대학교 하이테크센터 1층 1121호</li>
+              <li><span class="f-bold">기술연구소 </span> 제주도 제주시 첨단로 213-3 스마트빌딩 321호</li>
+              <li><span class="f-bold">서울사무실 </span> 서울특별시 강남구 역삼로 165 해성빌딩 7층</li>
+              <li><span class="f-bold">해외법인인 </span> 베트남 호치민 소재법인(2022년 1월)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="ft-bot fl-ct jus-spa">
+          <a href="https://mona.media/" class="ft-copy">Designed and developed by Mona Media</a>
+          <a href="#" class="ft-chat fl-ct">
+            <img src="./assets/images/svg/chat-ic.svg" alt="" />
+            의뢰하기
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/libs/jquery-3.6.0.min.js"></script>
+    <script src="./js/libs/select2/select2.min.js"></script>
+    <script src="./js/libs/magnific/jquery.magnific-popup.min.js"></script>
+    <script src="./js/libs/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/libs/aos/aos.min.js"></script>
+    <script src="https://unpkg.com/@googlemaps/markerclusterer@1.0.8/dist/index.umd.js"></script> 
+    <script>
+      let mmap = [
+        {
+          title: ' 제주특별자치도 제주시 영평동 2169-10',
+          txt: '(도로명) 제주특별자치도 제주시 곱은이길 3 ',
+          btn: '열람하기',
+          link: '#',
+          img: 'http://thietke.monamedia.net/mylandy/template/assets/images/svg/mk0.svg',
+          lat: 10.7791188,
+          lng: 106.648097,
+        },
+        {
+          title: ' 제주특별자치도 제주시 영평동 2169-100',
+          txt: '(도로명) 제주특별자치도 제주시 곱은이길 321 ',
+          btn: '열람하기 321',
+          link: '#',
+          img: 'http://thietke.monamedia.net/mylandy/template/assets/images/svg/mk1.svg',
+          lat: 10.4034998,
+          lng: 107.0530107,
+        },
+        {
+          title: ' 제주특별자치도 제주시 영평동 2169-0',
+          txt: '(도로명) 제주특별자치도 제주시 곱은이길 123 ',
+          btn: '열람하기 123',
+          link: '#',
+          img: 'http://thietke.monamedia.net/mylandy/template/assets/images/svg/mk2.svg',
+          lat: 10.8661238,
+          lng: 106.8007311,
+        },
+      ];
+
+      function initMap() {
+        const markers = [];
+        const infoWindow = [];
+        // FIRST POSITION
+        const pos = { lat: mmap[0].lat, lng: mmap[0].lng };
+        const map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: pos,
+        });
+
+        mmap.forEach((el, i) => {
+          const eachPos = {
+            position: {
+              lat: el.lat,
+              lng: el.lng,
+            },
+            map,
+            icon: el.img,
+            title: el.title,
+          };
+          const contentString =
+            '<div id="content" class="map-wrap">' +
+            '<div id="siteNotice">' +
+            '</div>' +
+            `<h1 id="firstHeading" class="map-title"> ` +
+            el.title +
+            ` </h1>` +
+            '<div id="bodyContent" class="map-content">' +
+            `<p class="map-txt"> ` +
+            el.txt +
+            ` </p>` +
+            `<a href="` +
+            el.link +
+            ` " class="map-btn btn-pri">` +
+            el.btn +
+            ` </a>` +
+            '</div>' +
+            '</div>';
+
+          infoWindow[i] = new google.maps.InfoWindow({
+            content: contentString,
+          });
+
+          markers[i] = new google.maps.Marker(eachPos);
+
+          markers[i].addListener('click', () => {
+            infoWindow[i].open({
+              anchor: markers[i],
+              map,
+              shouldFocus: false,
+            });
+          });
+        });
+
+        new markerClusterer.MarkerClusterer({
+          map,
+          markers,
+        });
+      }
+    </script>
+    <script
+      type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIBv2NSaXOucmqnItW7y7wpQXKH0MoNJE&callback=initMap&v=weekly"
+      defer
+    ></script>
+
+    <script>
+      AOS.init({
+        disable: function () {
+          var maxWidth = 480;
+          return window.innerWidth < maxWidth;
+        },
+        duration: 800,
+        once: 'true',
+      });
+    </script>
+    <script src="./js/main.js" type="module" defer></script>
+  </body>
+</html>

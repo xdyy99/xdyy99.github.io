@@ -1,0 +1,95 @@
+.read {
+    width: 100%;
+    overflow: hidden;
+    .section__title {
+        margin-bottom: 0;
+    }
+    .swiper-chung {
+        width: calc(100% + 3rem);
+        margin: 0 -1.5rem;
+        position: relative;
+        z-index: 4;
+    }
+    .swiper-container {
+        overflow: unset;
+        padding-top: 3rem;
+    }
+    .swiper-slide {
+        width: 25%;
+        padding: 0 1.5rem;
+        &:hover {
+            @media only screen and (min-width: 901px) {
+                .read__item {
+                    transform: translate3d(0, -2rem, 0);
+                    .read__img {
+                        img {
+                            transform: translate(-50%, -50%) scale(1.1);
+                        }
+                    }
+                    .read__title {
+                        color: #e7194a;
+                    }
+                }
+            }
+        }
+    }
+    &__item {
+        width: 100%;
+        text-align: center;
+        transition: 0.3s ease;
+    }
+    &__img {
+        width: 100%;
+        margin-bottom: 1.5rem;
+        display: block;
+        padding-top: 66%;
+        position: relative;
+        overflow: hidden;
+        transition: 0.2s linear;
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transition: 0.3s ease;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            width: 100%;
+            min-width: 100%;
+            min-height: 100%;
+            max-width: none;
+        }
+    }
+    &__title {
+        font-weight: bold;
+        color: #371f62;
+        display: block;
+        margin-bottom: 0.7rem;
+        transform: 0.2s linear;
+    }
+    &__date {
+        @include fz-14;
+        transition: 0.2s linear;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .read {
+        padding-bottom: 4rem;
+        .swiper-slide {
+            width: calc(100% / 3);
+        }
+    }
+}
+@media only screen and (max-width: 600px) {
+    .read {
+        .swiper-slide {
+            width: 50%;
+        }
+    }
+}
+@media only screen and (max-width: 500px) {
+    .read {
+        .swiper-slide {
+            width: 100%;
+        }
+    }
+}

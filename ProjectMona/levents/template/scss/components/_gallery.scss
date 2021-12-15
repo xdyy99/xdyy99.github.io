@@ -1,0 +1,33 @@
+.lg-backdrop {
+  background-color: #fff;
+}
+.lg-toolbar {
+  background-color: $c-sec;
+}
+.lg-outer .lg-thumb-outer {
+  background-color: $c-sec;
+}
+.lg-outer .lg-thumb {
+  margin: 0 auto;
+  padding: 5px 0;
+}
+.lg-outer .lg-thumb-item {
+  border-radius: 0;
+}
+.lg-outer .lg-thumb-item.active,
+.lg-outer .lg-thumb-item:hover {
+  border-color: #000;
+}
+.lg-img-wrap img {
+  box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.16);
+}
+.lg-outer .lg-toogle-thumb {
+  background-color: $c-sec;
+  &::after {
+    color: #fff;
+  }
+}
+.lg-icon::before,
+.lg-icon::after {
+  color: #fff;
+}

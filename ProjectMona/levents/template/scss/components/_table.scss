@@ -1,0 +1,42 @@
+.table {
+  border: 1px solid rgba(112, 112, 112, 0.15);
+  margin-bottom: 3rem;
+  border-collapse: collapse;
+  .col-x {
+    width: calc(100% * 2 / 9);
+  }
+  .col-b {
+    width: calc(100% * 7 / 9);
+  }
+  &:last-child() {
+    margin-bottom: 0;
+  }
+  * {
+    padding: 0;
+  }
+  .title {
+    background-color: #f0f0f0;
+    @include svnM();
+    text-transform: capitalize;
+    padding: 1.5rem 0;
+    border: 1px solid rgba(112, 112, 112, 0.15);
+  }
+  .value {
+    height: 5rem;
+    position: relative;
+    border: 1px solid rgba(112, 112, 112, 0.15);
+    &.active {
+      background: url('../assets/images/svg/dot.svg') 50% 50% / 12px no-repeat;
+    }
+  }
+}
+@include max-media(480px) {
+  .table {
+    > .col-6 {
+      width: 100%;
+    }
+    .title {
+      padding: 1rem 0;
+    }
+  }
+}

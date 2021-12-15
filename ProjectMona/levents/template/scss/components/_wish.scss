@@ -1,0 +1,152 @@
+.wish {
+  width: calc(100vw - 3rem);
+  max-width: 108rem;
+  margin: 0 auto;
+  padding: 3rem;
+  background-color: #fff;
+  .btn-pri {
+    @include hover() {
+      box-shadow: none;
+    }
+  }
+  &__btn {
+    display: block;
+    user-select: none;
+    @include hover() {
+      @include svnM();
+      animation: bigbabol 0.5s ease;
+    }
+  }
+  &__con {
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  &__head {
+    margin-bottom: 3rem;
+    .title {
+      @include fz(30);
+    }
+  }
+  &__close {
+    padding: 5px 0;
+    user-select: none;
+    cursor: pointer;
+    @include hover {
+      color: $c-red;
+      @include svnM();
+    }
+  }
+  &__title {
+    padding: 1.25rem 0;
+    .img {
+      width: 10%;
+    }
+    .info {
+      width: 30%;
+    }
+    .price,
+    .stt {
+      width: 15%;
+    }
+    &__btn {
+      width: 20%;
+    }
+    .cart__del {
+      pointer-events: none;
+    }
+  }
+  .cart__img {
+    margin-right: 3rem;
+  }
+  .cart__info {
+    @include fz(14);
+    .title {
+      flex-grow: 1;
+      margin-bottom: 0;
+    }
+  }
+  &__random {
+    padding-top: 3rem;
+    .title {
+      @include fz(16);
+      @include svnM();
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+    }
+    .txt {
+      line-height: 20px;
+      margin-bottom: 4.5rem;
+    }
+  }
+}
+@include max-media(1200px) {
+  .wish {
+    padding: 1.5rem;
+    .cart__img {
+      margin-right: 1.5rem;
+    }
+    &__head {
+      margin-bottom: 1.5rem;
+    }
+    &__random {
+      padding-top: 1.5rem;
+      .txt {
+        margin-bottom: 2rem;
+      }
+    }
+    &__btn {
+      a {
+        padding: 1.3rem 1.5rem;
+      }
+    }
+  }
+}
+@include max-media(900px) {
+  .wish {
+    padding: 1.5rem;
+    .cart__img {
+      margin-right: 1.5rem;
+    }
+    &__head {
+      margin-bottom: 1.5rem;
+    }
+    &__random {
+      padding-top: 1.5rem;
+      .txt {
+        margin-bottom: 2rem;
+      }
+    }
+    .cart__info {
+      .title {
+        max-width: 35%;
+      }
+    }
+  }
+}
+@include max-media(768px) {
+  .wish {
+    max-width: 550px;
+    &__title {
+      display: none;
+      & + hr {
+        display: none;
+      }
+    }
+    .cart__info {
+      .title {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+@include max-media(480px) {
+  .wish {
+    &__random {
+      .btn-sec {
+        margin: 0 auto;
+      }
+    }
+  }
+}

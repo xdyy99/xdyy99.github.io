@@ -1,0 +1,58 @@
+.quote {
+  background-image: url('../assets/images/quote.png');
+  background-size: 269px 177px;
+  background-position: 50% 60%;
+  background-repeat: no-repeat;
+
+  &__big {
+    @include fz-40;
+    letter-spacing: -1px;
+    display: block;
+    margin-top: -1.5rem;
+    padding: 1.5rem 0;
+  }
+  &__small {
+    opacity: 0.7;
+    font-style: italic;
+    padding: 1.5rem 0;
+  }
+  .upper {
+    text-transform: uppercase;
+  }
+  &__speaker {
+    padding: 1.5rem 0;
+    display: flex;
+    align-items: center;
+  }
+  &__ava {
+    width: 60px;
+    height: 60px;
+    border-radius: 9.9rem;
+    margin-right: 1.5rem;
+    img {
+      width: 100%;
+    }
+  }
+  &__info {
+    .name {
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+    .role {
+      @include fz-14;
+      color: $c-secondary;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .quote {
+    background: none;
+    text-shadow: 0.5rem 0.5rem 3rem rgba(0, 0, 0, 0.16);
+    &__small {
+      opacity: 1;
+      padding: 0 0 2rem;
+    }
+  }
+}

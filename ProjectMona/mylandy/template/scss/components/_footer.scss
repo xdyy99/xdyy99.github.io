@@ -1,0 +1,121 @@
+.ft {
+  padding: 5rem 0;
+  &-head {
+    margin-bottom: 3rem;
+  }
+  &-logo {
+    width: 36.7rem;
+    a {
+      display: block;
+    }
+    img {
+      display: block;
+    }
+  }
+  &-line {
+    width: calc(100% - 36.7rem);
+    height: 1px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  &-btn {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    background-color: $c-bla;
+    cursor: pointer;
+    img {
+      width: 16px;
+      transition: 0.5s ease;
+    }
+    @include cir(7rem);
+    transform: translateY(-50%);
+    transition: 0.3s ease;
+    @include hover() {
+      background-color: $c-pri;
+      box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.16);
+      img {
+        transform: rotateX(-360deg);
+      }
+    }
+  }
+  &-wrap {
+    margin: 0 -1.5rem;
+    margin-bottom: 5rem;
+  }
+  &-list {
+    line-height: 2;
+    a {
+      transition: 0.2s linear;
+      @include hover() {
+        color: $c-pri;
+      }
+    }
+  }
+  &-chat {
+    padding: 1.2rem 2.7rem;
+    @include fz(14);
+    color: $c-pri;
+    border-radius: 99px;
+    background-color: #fff;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+    transition: 0.2s linear;
+    white-space: nowrap;
+    img {
+      display: block;
+      margin-right: 7px;
+      margin-bottom: -7px;
+      transition: 0.2s linear;
+    }
+    @include hover() {
+      color: #fff;
+      background-color: $c-pri;
+      img {
+        filter: brightness(0) invert(1);
+      }
+    }
+  }
+  &-copy {
+    transition: 0.2s linear;
+    margin-right: 3rem;
+    @include hover() {
+      color: #0077c3;
+    }
+  }
+}
+
+@include max-media(768px) {
+  .ft {
+    &-wrap {
+      margin-bottom: 3rem;
+      .col-3 {
+        width: 50%;
+        margin-bottom: 2rem;
+      }
+      .col-6 {
+        width: 100%;
+      }
+    }
+  }
+}
+@include max-media(480px) {
+  .ft {
+    &-wrap {
+      .col-3 {
+        width: 100%;
+      }
+    }
+    &-logo {
+      width: 25rem;
+    }
+    &-list {
+      @include fz(15);
+    }
+    &-line {
+      width: calc(100% - 25rem);
+    }
+    &-btn {
+      @include cir(5rem);
+    }
+  }
+}

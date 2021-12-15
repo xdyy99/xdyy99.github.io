@@ -1,0 +1,123 @@
+.service {
+  text-align: center;
+  position: relative;
+  padding-bottom: 0;
+  z-index: 2;
+  &__title {
+    @include fz-40;
+    width: max-content;
+    margin: 0 auto 5rem;
+    padding: 0 3rem;
+    text-align: center;
+    .blue {
+      font-weight: 900;
+      color: $c-primary;
+    }
+  }
+  &__img {
+    display: block;
+    margin: 0 auto;
+
+    &.mgb {
+      margin: 0 auto 7rem;
+    }
+  }
+  .section__title {
+    margin: 2.5rem auto 3.7rem;
+  }
+  .intro__list {
+    text-align: left;
+    width: 100%;
+    max-width: 70rem;
+    margin: 0 auto;
+  }
+  &__para {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: 0.3s ease;
+    &.par {
+      &1 {
+        top: 45rem;
+        left: 47rem;
+      }
+      &2 {
+        top: 45rem;
+        right: 35rem;
+      }
+      &3 {
+        top: 50%;
+        left: 20rem;
+      }
+      &4 {
+        top: 45%;
+        right: 15rem;
+      }
+      &5 {
+        top: 70%;
+        right: 25rem;
+      }
+      &6 {
+        top: 35rem;
+        left: 22rem;
+      }
+      &7 {
+        top: 20rem;
+        right: 3rem;
+      }
+      &8 {
+        top: 80%;
+        right: 5rem;
+      }
+      &9 {
+        bottom: -27rem;
+        left: 37rem;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1440px) {
+  .service__para {
+    opacity: 0.5;
+    &.par2 {
+      display: none;
+    }
+    &.par3 {
+      left: -3rem;
+    }
+    &.par4 {
+      right: -2rem;
+    }
+    &.par5 {
+      right: -2rem;
+    }
+  }
+}
+@media only screen and (max-width: 900px) {
+  .service {
+    .section__title {
+      margin: 1rem 0;
+    }
+    &__title {
+      margin-bottom: 3rem;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .service {
+    .section__title {
+      br {
+        display: none;
+      }
+      .blue {
+        display: inline;
+      }
+    }
+    &__para {
+      &.par3,
+      &.par4 {
+        display: none;
+      }
+    }
+  }
+}

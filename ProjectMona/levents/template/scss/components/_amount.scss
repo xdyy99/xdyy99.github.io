@@ -1,0 +1,47 @@
+.amount {
+  .plus,
+  .minus {
+    width: 10px;
+    height: 1px;
+    background-color: #7f7f7f;
+    cursor: pointer;
+    position: relative;
+    &::before {
+      content: '';
+      width: 30px;
+      height: 30px;
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    @include hover() {
+      border-right-color: #000;
+      &::after {
+        background-color: #000;
+      }
+    }
+  }
+  .plus {
+    &::after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 10px;
+      background-color: #7f7f7f;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: 0.3s ease;
+    }
+  }
+  .number {
+    display: block;
+    text-align: center;
+    width: max-content;
+    margin: 0 5px;
+    @include fz(16);
+  }
+}

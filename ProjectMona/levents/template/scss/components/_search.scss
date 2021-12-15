@@ -1,0 +1,256 @@
+.ser {
+  padding: 4rem 0;
+  position: absolute;
+  top: calc(100% + 1px);
+  background-color: #fff;
+  width: 100%;
+  transform: scale(0.6);
+  transform-origin: top;
+  transition: 0.3s linear;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 1rem 1rem 3rem rgba(122, 83, 83, 0.1);
+  &.active {
+    transform: scale(1);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  &__btn {
+    cursor: pointer;
+    position: relative;
+    img {
+      @include sqr(18px);
+      transition: 0.2s linear;
+    }
+    @include hover() {
+      animation: bigbabol 0.5s ease;
+      img {
+        filter: brightness(0);
+      }
+    }
+  }
+  &__key {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    li {
+      display: inline-block;
+      margin-right: 5.5rem;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    a {
+      color: #707070;
+      display: block;
+      padding: 5px;
+      position: relative;
+      text-transform: uppercase;
+      @include fz(16);
+      line-height: 24px;
+      transition: 0.2s linear;
+      &::after {
+        content: '';
+        display: block;
+        width: 120%;
+        height: 120%;
+        border: 1px solid transparent;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.5s ease;
+        pointer-events: none;
+      }
+      @include hover() {
+        color: #000;
+        &::after {
+          width: 100%;
+          height: 100%;
+          border: 1px solid #000;
+        }
+      }
+    }
+  }
+  &__form {
+    margin-bottom: 5.2rem;
+    &__wrap {
+      @include fz(16);
+      line-height: 24px;
+    }
+    &__inp {
+      padding: 1.3rem 3.1rem;
+      flex-grow: 1;
+      border: 1px solid #707070;
+    }
+    &__btn {
+      width: max-content;
+      max-width: 100%;
+      margin-left: 1.5rem;
+      padding: 1.3rem 10.2rem;
+    }
+  }
+  &__pop {
+    .title {
+      margin-bottom: 3rem;
+      @include fz(16);
+    }
+    &__list {
+      max-height: 13rem;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-content: flex-start;
+      margin: 0 -5px;
+      width: calc(100% + 10px);
+      li {
+        display: block;
+        height: calc(13rem / 3);
+        width: 10%;
+      }
+      a {
+        padding: 5px;
+        @include hover() {
+          @include svnM();
+        }
+      }
+    }
+  }
+  &__mb {
+    &__btn,
+    &__wrap {
+      display: none;
+    }
+  }
+}
+@include max-media(1200px) {
+  .ser {
+    padding: 2rem 0;
+    &__key {
+      li {
+        margin-right: 3rem;
+      }
+    }
+    &__form {
+      margin-bottom: 3rem;
+    }
+    &__pop {
+      .title {
+        margin-bottom: 1.5rem;
+      }
+      &__list {
+        overflow: hidden;
+        li {
+          width: 15%;
+        }
+      }
+    }
+  }
+}
+@include max-media(768px) {
+  .ser {
+    &__key {
+      li {
+        margin-right: 2rem;
+      }
+    }
+    &__form {
+      margin-bottom: 1.5rem;
+      &__btn {
+        padding: 1.3rem 5rem;
+        margin-left: 1rem;
+      }
+    }
+    &__pop {
+      &__list {
+        max-height: 10rem;
+        li {
+          width: 20%;
+          height: calc(10rem / 3);
+        }
+      }
+    }
+  }
+}
+@include max-media(550px) {
+  .ser {
+    &__pop {
+      &__list {
+        li {
+          width: 25%;
+        }
+      }
+    }
+  }
+}
+@include max-media(480px) {
+  .ser {
+    &__logo {
+      width: 8rem;
+    }
+    &__mb {
+      &__hid {
+        display: none;
+      }
+
+      &__btn {
+        display: block;
+      }
+
+      &__close {
+        font-size: 16px;
+        @include sqr(30px);
+        justify-content: flex-end;
+      }
+      &__head {
+        margin-bottom: 20px;
+      }
+      &__wrap {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #fff;
+        z-index: 12;
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: 0.5s ease;
+        padding: 30px;
+        &.active {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        input {
+          display: block;
+          width: 100%;
+          @include fz(16);
+        }
+      }
+    }
+  }
+}
+@include max-media(400px) {
+  .ser {
+    &__key {
+      li {
+        margin-right: 5px;
+      }
+    }
+    &__form {
+      &__inp {
+        padding: 1.3rem;
+      }
+      &__btn {
+        padding: 1.3rem 2.5rem;
+      }
+    }
+    &__pop {
+      &__list {
+        li {
+          width: calc(100% / 3);
+        }
+      }
+    }
+  }
+}

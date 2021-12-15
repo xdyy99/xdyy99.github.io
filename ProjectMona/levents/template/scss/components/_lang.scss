@@ -1,0 +1,36 @@
+.lang {
+  position: relative;
+  z-index: 11;
+  &.active {
+    .lang__list {
+      opacity: 1;
+      pointer-events: auto;
+      transform: rotateX(0);
+    }
+  }
+  &__btn {
+    cursor: pointer;
+  }
+  &__ic {
+    margin-left: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__list {
+    opacity: 0;
+    pointer-events: 0;
+    transform-origin: top center;
+    transform: rotateX(90deg);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.1);
+    width: max-content;
+    a {
+      display: block;
+      padding: 4px 17px 6px 9px;
+    }
+  }
+}

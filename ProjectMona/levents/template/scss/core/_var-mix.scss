@@ -1,0 +1,71 @@
+// Color
+$c-pri: #47474c;
+$c-sec: #707070;
+
+$c-red: #af0933;
+
+// mixin default
+@mixin center-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin default-background {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+// mixin advance
+
+@mixin lc($value: 3) {
+  display: -webkit-box;
+  -webkit-line-clamp: $value;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+@mixin max-media($value) {
+  @media screen and (max-width: $value) {
+    @content;
+  }
+}
+@mixin min-media($value) {
+  @media screen and (min-width: $value) {
+    @content;
+  }
+}
+@mixin hover($value: 1200px) {
+  &:hover {
+    @media screen and (min-width: $value) {
+      @content;
+    }
+  }
+}
+@mixin sqr($value: 4rem) {
+  width: $value;
+  height: $value;
+}
+@mixin cir($value: 4rem) {
+  width: $value;
+  height: $value;
+  border-radius: 999px;
+}
+@mixin svnL() {
+  font-family: 'SVN-Futura light', sans-serif;
+}
+@mixin svnLI() {
+  font-family: 'SVN-Futura Light Italic', sans-serif;
+}
+@mixin svnM() {
+  font-family: 'SVN-Futura Medium', sans-serif;
+}
+@mixin svnMI() {
+  font-family: 'SVN-Futura Medium Italic', sans-serif;
+}
+@mixin svnX() {
+  font-family: 'SVN-Futura X', sans-serif;
+}
+@mixin svnXI() {
+  font-family: 'SVN-Futura XI', sans-serif;
+}

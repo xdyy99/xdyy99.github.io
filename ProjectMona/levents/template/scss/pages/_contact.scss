@@ -1,0 +1,264 @@
+.ct {
+  &__map {
+    width: 100%;
+    height: 100%;
+    background: url('../assets/images/map.gif') 50% 50% / 30% no-repeat #fff;
+    &__mini {
+      background: url('../assets/images/map.gif') 50% 50% / 30% no-repeat #fff;
+      flex-grow: 1;
+    }
+  }
+  .sec-title {
+    text-align: left;
+    margin-bottom: 3.2rem;
+  }
+  &__main {
+    margin-left: auto;
+    max-width: 73rem;
+  }
+  &__link {
+    margin-left: 10px;
+  }
+  &__list {
+    max-width: 47rem;
+    margin-bottom: 3.2rem;
+    li {
+      margin-bottom: 2.2rem;
+      display: flex;
+      align-items: center;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    span {
+      margin-left: 10px;
+    }
+    a {
+      @include svnM();
+    }
+    img {
+      @include sqr(14px);
+      margin: 0 5px 0 10px;
+    }
+    .ct__btn {
+      text-align: center;
+      margin-bottom: 0;
+      @include svnL();
+    }
+    .ct__mb {
+      text-align: center;
+      margin: 0 0 0 auto;
+      @include svnL();
+    }
+  }
+  &__btn {
+    width: 15rem;
+    margin-bottom: 6rem;
+  }
+  &__item {
+    margin-bottom: 4.5rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__ic {
+    padding-right: 26px;
+    position: relative;
+    width: max-content;
+    &::after {
+      content: '';
+      display: block;
+      width: 16px;
+      height: 16px;
+      background-image: url('../assets/images/svg/ic-add.svg');
+      position: absolute;
+      right: 0;
+      top: 9px;
+      transform: translateY(-50%);
+      transition: 0.3s ease;
+    }
+  }
+  &__img {
+    width: 32rem;
+    margin-right: 3rem;
+    min-height: 100%;
+    .rto-box {
+      padding-top: 64.7%;
+    }
+  }
+  &__info {
+    width: calc(100% - 35rem);
+    .title {
+      @include fz(16);
+      padding-right: 26px;
+      line-height: 24px;
+      position: relative;
+      display: inline-block;
+      @include svnM();
+      margin-bottom: 3rem;
+      &::after {
+        content: '';
+        display: block;
+        width: 16px;
+        height: 16px;
+        background-image: url('../assets/images/svg/ic-add.svg');
+        position: absolute;
+        right: 0;
+        top: 12px;
+        transform: translateY(-50%);
+        transition: 0.3s ease;
+      }
+    }
+    .address {
+      @include svnL();
+      color: #47474c;
+      margin-bottom: 2rem;
+    }
+    .time {
+      margin-bottom: 2rem;
+      span {
+        @include svnM();
+        color: #7f7f7f;
+      }
+    }
+
+    .ct__btn {
+      margin-bottom: 0;
+    }
+    .phone {
+      margin-bottom: 2rem;
+      a {
+        @include svnM();
+        color: #7f7f7f;
+        transition: 0.2s linear;
+        @include hover() {
+          color: #000;
+        }
+      }
+    }
+  }
+  &__form {
+    width: calc(100% + 3rem);
+    margin: 0 -1.5rem;
+    .ct__btn {
+      margin-bottom: 0;
+    }
+  }
+  &__pic {
+    .rto-box {
+      padding-top: 56%;
+    }
+  }
+  &__thumb {
+    cursor: pointer;
+    .rto-box {
+      padding-top: 56%;
+      background-color: #fff;
+      transition: 0.3s ease;
+    }
+    img {
+      mix-blend-mode: luminosity;
+    }
+    .swiper-slide-active {
+      img {
+        background-color: transparent;
+      }
+    }
+  }
+  .swiper-thumb {
+    margin-top: 3rem;
+  }
+}
+.swiper-slide-thumb-active {
+  .ct__thumb {
+    .rto-box {
+      background-color: transparent;
+    }
+  }
+}
+@include max-media(1200px) {
+  .ct {
+    .con {
+      > .col-6 {
+        margin-bottom: 3rem;
+        &:nth-child(1) {
+          margin-bottom: 0;
+          order: 2;
+        }
+        width: 100%;
+      }
+      > .col-4,
+      > .col-8 {
+        width: 50%;
+      }
+    }
+    &__map__mini {
+      height: 40rem;
+    }
+    &__btn {
+      margin-bottom: 3rem;
+    }
+    &__map {
+      height: 40rem;
+    }
+    &__main {
+      max-width: 768px;
+      margin: 0 auto;
+    }
+  }
+}
+@include max-media(768px) {
+  .ct {
+    .con {
+      > .col-4,
+      > .col-8 {
+        width: 100%;
+      }
+    }
+    .swiper-thumb {
+      margin-top: 10px;
+      margin-bottom: 3rem;
+    }
+  }
+}
+@include max-media(480px) {
+  .ct {
+    &__list {
+      .ct__mb {
+        display: block;
+      }
+      .ct__btn {
+        margin: 0 0 0 auto;
+      }
+      li {
+        margin-bottom: 1.5rem;
+      }
+    }
+    &__item {
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+    &__img {
+      margin: 0 0 2rem;
+      width: 100%;
+    }
+    &__btn {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &__info {
+      width: 100%;
+      .address,
+      .time,
+      .phone,
+      .title {
+        margin-bottom: 1rem;
+      }
+    }
+    &__form {
+      .col-6 {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,81 @@
+.siba {
+  &__img {
+    width: 9rem;
+    margin-right: 3rem;
+    .rto-box {
+      border-radius: 999px;
+      background: url('../assets/images/ava-df.png') 50% 50% / contain no-repeat #fff;
+    }
+  }
+  &__info {
+    width: calc(100% - 12rem);
+    @include fz(16);
+    line-height: 24px;
+  }
+  &__name {
+    margin-bottom: 9px;
+  }
+  &__mail {
+    margin-bottom: 9px;
+    color: #7f7f7f;
+    @include hover() {
+      color: #000;
+    }
+  }
+  &__list {
+    padding: 2.2rem 0;
+    li {
+      margin-bottom: 2.2rem;
+    }
+    a {
+      color: #7f7f7f;
+      display: block;
+      padding: 1rem 0;
+      transform: 0.2s linear;
+      @include fz(16);
+      line-height: 24px;
+      @include hover() {
+        color: #000;
+      }
+      &.active {
+        color: #000;
+      }
+    }
+  }
+}
+@include max-media(1200px) {
+  .siba {
+    &__list {
+      padding: 1rem 0;
+      li {
+        display: inline-block;
+        width: max-content;
+        margin-right: 2.5rem;
+        margin-bottom: 5px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+@include max-media(480px) {
+  .siba {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+      li {
+        width: calc(100% / 3);
+        margin: 0 0 5px;
+      }
+      a {
+        padding: 0;
+        margin: 0;
+      }
+    }
+    &__name {
+      margin-bottom: 0px;
+    }
+  }
+}

@@ -1,0 +1,105 @@
+.heart {
+  position: fixed;
+  bottom: 11.5rem;
+  left: 7.2rem;
+  z-index: 8;
+  &__btn {
+    background-color: #fff;
+    @include cir(46px);
+    box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.16);
+    cursor: pointer;
+    @include hover() {
+      animation: bigbabol 0.5s ease;
+    }
+  }
+  &__img {
+    margin-bottom: 3.2rem;
+  }
+  &__wrap {
+    position: absolute;
+    padding: 5.5rem 11.4rem;
+    bottom: 0;
+    right: -2.2rem;
+    transform: translateX(100%) scale(0);
+    background-color: #fff;
+    max-width: calc(100vw - 7rem);
+    width: 50rem;
+    text-align: center;
+    transform-origin: left bottom;
+    box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.16);
+    &.active {
+      transform: translateX(100%) scale(1);
+    }
+  }
+  &__close {
+    cursor: pointer;
+    padding: 12px 15px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #7f7f7f;
+    @include hover() {
+      color: #af0933;
+    }
+  }
+  &__txt {
+    @include fz(16);
+    line-height: 24px;
+    margin-bottom: 4.5rem;
+  }
+  &__title {
+    @include fz(16);
+    line-height: 24px;
+    margin-bottom: 1.5rem;
+  }
+  &__link {
+    width: 100%;
+    padding: 5px;
+    line-height: 21px;
+    margin-bottom: 1.5rem;
+  }
+  &__signup {
+    color: #707070;
+    a {
+      display: inline-block;
+      color: #009eff;
+    }
+  }
+  &__author {
+    @include fz(12);
+    @include svnM();
+    position: absolute;
+    color: #707070;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    @include hover() {
+      color: #000;
+    }
+  }
+}
+@include max-media(1670px) {
+  .heart {
+    left: 3rem;
+    bottom: 6rem;
+  }
+}
+@include max-media(768px) {
+  .heart {
+    &__wrap {
+      width: 40rem;
+      padding: 5rem;
+    }
+  }
+}
+@include max-media(450px) {
+  .heart {
+    &__wrap {
+      width: 360px;
+      max-width: calc(100vw - 4rem);
+      padding: 5rem 3rem;
+      bottom: 110%;
+      right: 100%;
+    }
+  }
+}

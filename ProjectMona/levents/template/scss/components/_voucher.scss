@@ -1,0 +1,66 @@
+.vou {
+  &__wrap {
+    width: calc(100% + 3rem);
+    margin: 0 -1.5rem;
+  }
+  &__item {
+    border: 1px solid rgba(112, 112, 112, 0.3);
+    padding: 3.6rem 3rem;
+    margin-top: 3rem;
+  }
+  &__txt {
+    margin-bottom: 1.5rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__btn {
+    width: 27rem;
+    margin: 4.5rem auto 0;
+  }
+  &__code {
+    @include svnM();
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: max-content;
+    max-width: 100%;
+    color: rgb(112, 112, 112);
+    transition: 0.2s linear;
+
+    img {
+      @include sqr(1.6rem);
+      margin-left: 10px;
+      transition: 0.2s linear;
+      filter: invert(0.5);
+    }
+    @include hover() {
+      color: #000;
+      img {
+        filter: invert(0);
+      }
+    }
+  }
+}
+@include max-media(768px) {
+  .vou {
+    &__wrap {
+      .col-6 {
+        width: 100%;
+      }
+    }
+
+    &__btn {
+      margin: 3rem auto 0;
+    }
+  }
+}
+@include max-media(480px) {
+  .vou {
+    &__item {
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+  }
+}

@@ -1,0 +1,117 @@
+.ban {
+  display: flex;
+  &-bg {
+    position: absolute;
+    top: 8.59vw;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+  &-con {
+    margin-top: auto;
+    background-color: #4c4c4c;
+    color: #fff;
+    width: 100%;
+    padding: 3.12vw 3.54vw 2.6vw;
+  }
+  &-item {
+    justify-content: flex-end;
+    width: 25%;
+    padding: 0 1.66vw;
+    flex-direction: column-reverse;
+  }
+  &-line {
+    height: 1px;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 1.56vw;
+    position: relative;
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      position: absolute;
+      transform: scale(0);
+      transform-origin: center right;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      top: 0;
+      transition: transform 0.5s ease;
+    }
+  }
+  &-btn {
+    white-space: nowrap;
+    text-transform: uppercase;
+    padding-left: 0;
+    @include hover() {
+      padding-left: 1.56vw;
+      & ~ .ban-line::after {
+        transform-origin: center left;
+        transform: scale(1);
+      }
+    }
+  }
+}
+@include max(1200px) {
+  .ban {
+    display: block;
+    &-bg {
+      position: static;
+      margin-top: 11rem;
+    }
+    &-btn {
+      padding-right: 0;
+    }
+    &-item {
+      padding: 0 2rem;
+    }
+  }
+}
+@include max(1024px) {
+  .ban {
+    &-con {
+      flex-wrap: wrap;
+      padding-top: 1rem;
+      padding-bottom: 2.5rem;
+    }
+    &-item {
+      width: 50%;
+    }
+    &-line {
+      margin: 1.5rem 0;
+    }
+  }
+}
+@include max(768px) {
+  .ban {
+    &-bg {
+      position: static;
+      margin-top: 8rem;
+    }
+    &-btn {
+      @include fz(16);
+    }
+    &-con {
+      padding: 1rem 0;
+    }
+    &-item {
+      padding: 0 1.5rem;
+    }
+    &-line {
+      margin: 5px 0;
+    }
+  }
+}
+@include max(400px) {
+  .ban-item {
+    width: 100%;
+    &:first-child {
+      .ban-line {
+        display: none;
+      }
+    }
+  }
+}

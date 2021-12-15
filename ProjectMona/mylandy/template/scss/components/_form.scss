@@ -1,0 +1,408 @@
+.form {
+  &-btn {
+    width: 100%;
+    &-wrap {
+      margin-bottom: 1.5rem;
+      .form-txt {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &-round {
+    overflow: hidden;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #f8f8f8;
+    margin-bottom: 1.5rem;
+
+    .line {
+      display: block;
+      width: calc(100% - 20px);
+      height: 1px;
+      background-color: rgba(0, 0, 0, 0.1);
+      margin: 0 auto;
+    }
+  }
+  &-inp {
+    width: 100%;
+    padding: 1.5rem 2rem;
+    background-color: transparent;
+    transition: 0.2s linear;
+    &:focus {
+      background-color: #fff;
+    }
+  }
+  &-pass {
+    position: relative;
+    &-btn {
+      cursor: pointer;
+      position: absolute;
+      right: 0.5rem;
+      top: 0;
+      height: 100%;
+      width: 4rem;
+      &::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 1px;
+        background-color: $c-sec;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        transition: 0.3s ease;
+      }
+      &.active {
+        &:after {
+          width: 20px;
+        }
+      }
+      img {
+        @include sqr(14px);
+      }
+    }
+  }
+  &-txt {
+    @include fz(12);
+    color: $c-red;
+    margin-bottom: 2.5rem;
+  }
+  &-text {
+    width: 100%;
+    padding: 1.5rem 2rem;
+    resize: none;
+    height: 12rem;
+    background-color: transparent;
+    transition: 0.2s linear;
+    overflow: hidden;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #f8f8f8;
+    margin-bottom: 1.5rem;
+    &:focus {
+      background-color: #fff;
+    }
+  }
+  &-check {
+    label {
+      display: flex;
+      // align-items: center;
+    }
+    input {
+      display: none;
+      &:checked ~ .box {
+        background: url('../assets/images/svg/ic-check.svg') 45% 55% / 12px no-repeat $c-gre;
+        border-color: $c-gre;
+      }
+    }
+    .box {
+      @include sqr(20px);
+      border-radius: 6px;
+      background: url('../assets/images/svg/ic-check.svg') 45% -200% / 12px no-repeat $c-sec;
+      margin-right: 12px;
+      margin-top: 4px;
+      transition: 0.2s linear;
+    }
+    &.round {
+      .box {
+        border-radius: 99px;
+        background-color: #fff;
+        border: 1px solid #c4c4c4;
+      }
+      .txt {
+        color: #000;
+        font-weight: bold;
+      }
+    }
+    &.black {
+      .box {
+        background-color: #fff;
+        border: 1px solid #c4c4c4;
+      }
+      .txt {
+        color: #000;
+        font-weight: bold;
+      }
+    }
+    .txt {
+      max-width: calc(100% - 32px);
+      color: $c-sec;
+    }
+    &-info {
+      label {
+        flex-wrap: wrap;
+      }
+      .info {
+        width: 100%;
+        background-color: #f8f8f8;
+        border-radius: 15px;
+        margin-top: 1.5rem;
+        padding: 2rem 3rem;
+        @include fz(15);
+        transition: 0.2s linear;
+        &-con {
+          max-height: 10rem;
+          padding-right: 3rem;
+          overflow-y: auto;
+          @include max-media(768px) {
+            padding-right: 1.5rem;
+          }
+          &::-webkit-scrollbar {
+            display: block;
+            width: 2px;
+            height: 2px;
+            background-color: #e5e5e5;
+          }
+          &::-webkit-scrollbar-thumb {
+            background-color: $c-gre;
+          }
+        }
+      }
+    }
+  }
+  &-line {
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 2.5rem 0;
+  }
+  &-link {
+    margin-bottom: 5rem;
+    a {
+      @include fz(15);
+      color: $c-gre;
+      transition: 0.2s linear;
+      @include hover() {
+        color: $c-pri;
+      }
+    }
+  }
+  &-social {
+    max-width: 768px;
+    &-btn {
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      border-radius: 99px;
+      border: 1px solid $c-bla;
+      padding: 7px;
+      transition: 0.2s linear;
+      @include hover() {
+        color: #fff;
+        background-color: $c-bla;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      span {
+        margin: 0 auto;
+        display: block;
+      }
+      &.green {
+        border: 1px solid #4fc340;
+        @include hover() {
+          color: #fff;
+          background-color: #4fc340;
+        }
+      }
+      &.yellow {
+        border: 1px solid #f8d64c;
+        @include hover() {
+          color: #fff;
+          background-color: #f8d64c;
+        }
+      }
+    }
+  }
+  &-address {
+    display: flex;
+    align-items: center;
+    .form-inp:focus {
+      background-color: transparent;
+    }
+  }
+  &-subbtn {
+    padding: 1rem 3rem;
+    width: max-content;
+    color: $c-pri;
+    background-color: rgba($color: $c-pri, $alpha: 0.2);
+    border-radius: 99px;
+    margin-right: 2rem;
+    white-space: nowrap;
+    border: 1px solid rgba($color: $c-pri, $alpha: 0.2);
+    transition: 0.2s linear;
+    line-height: 1;
+    margin-left: auto;
+    @include fz(13);
+
+    @include hover() {
+      background-color: transparent;
+      border: 1px solid rgba($color: $c-pri, $alpha: 1);
+    }
+  }
+  &-select {
+    &-wrap {
+      margin-bottom: 1.5rem;
+    }
+    width: 100%;
+    padding: 1.5rem 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    line-height: 1;
+    background: url('../assets/images/svg/ic-sel.svg') 97% 50% / 10px no-repeat #f8f8f8;
+    &:focus {
+      border-color: $c-gre;
+    }
+  }
+  &-connect {
+    padding: 0.7rem 0;
+    .title {
+      width: 10rem;
+      padding: 0 2rem;
+    }
+  }
+  &-file {
+    &__txt {
+      @include fz(12);
+      line-height: 18px;
+      margin-top: 10px;
+    }
+
+    .box {
+      width: 17rem;
+      margin-right: 3rem;
+      min-width: 19rem;
+      padding: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      user-select: none;
+      @include max-media(768px) {
+        margin-right: 1.5rem;
+        min-width: 15rem;
+      }
+    }
+    .txt {
+      @include fz(15);
+      max-width: calc(100% - 20rem);
+    }
+  }
+  &-cap {
+    .cap {
+      width: 14rem;
+      margin-right: 2rem;
+    }
+    .form-round {
+      width: 17rem;
+      margin-right: auto;
+      margin-bottom: 0;
+    }
+  }
+}
+.mg-t-25 {
+  margin-top: 2.5rem;
+}
+body {
+  .select2-container--focus.select2-container--default .select2-selection--single {
+    border-color: $c-gre;
+    background-color: #f8f8f8;
+  }
+  .select2-results__option {
+    padding: 6px 2rem;
+  }
+  .select2-container--open.select2-container--default .select2-selection--single {
+    border-bottom: none;
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+  .select2-container--open.select2-container--default.select2-container--above .select2-selection--single {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: none;
+  }
+  .select2-search {
+    display: none;
+  }
+
+  .select2-container--open .select2-dropdown--above {
+    border-radius: 15px 15px 0 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: none;
+    overflow: hidden;
+    margin-bottom: -2px;
+  }
+  .select2-container--open .select2-dropdown--below {
+    border-radius: 0 0 15px 15px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: none;
+    overflow: hidden;
+    margin-top: -2px;
+  }
+  .select2-container--default .select2-selection--single {
+    display: block;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    line-height: 1;
+    border-radius: 15px;
+    border-color: $c-gre;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #f8f8f8;
+  }
+  .select2-dropdown {
+    background-color: #f8f8f8;
+  }
+  .select2-container .select2-selection--single .select2-selection__rendered {
+    padding: 0;
+    line-height: 1;
+  }
+  .select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: auto;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+  }
+  .select2-container .select2-selection--single {
+    height: auto;
+  }
+  .select2-container--default .select2-results__option--selected {
+    background-color: transparent;
+    color: #000;
+    font-weight: bold;
+  }
+  .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+    background-color: transparent;
+    color: $c-pri;
+    font-weight: bold;
+  }
+  .select2-selection__arrow {
+    position: relative;
+    b {
+      display: none;
+    }
+    &::after {
+      content: '';
+      display: block;
+      width: 1rem;
+      height: 1rem;
+      background: url('../assets/images/svg/ic-sel.svg') 0 / contain no-repeat;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: 0.3s ease;
+    }
+  }
+}
+@include max-media(480px) {
+  .form {
+    &-connect {
+      flex-wrap: wrap;
+      .info {
+        width: calc(100% - 12rem);
+        margin-right: 2rem;
+      }
+      .form-subbtn {
+        margin: 1rem auto 0;
+      }
+    }
+  }
+}

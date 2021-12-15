@@ -1,0 +1,131 @@
+.ab {
+  &-info {
+    .col-7 {
+      max-width: 64rem;
+      margin-right: auto;
+    }
+    .col-5 {
+      max-width: 49rem;
+    }
+    .info-img .pic img {
+      clip-path: polygon(0px 0%, 100% 0px, 100% 100%, 0% 94%);
+    }
+  }
+  &-intro {
+    padding: 21.6rem 0;
+    margin: -11.4rem 0;
+    @include max-media(1920px) {
+      padding: 11.25vw 0;
+      margin: -5.9vw 0;
+    }
+    .info-img .pic img {
+      clip-path: polygon(0px 0%, 100% 0px, 100% 100%, 0% 94%);
+    }
+    .col-7 {
+      max-width: 66rem;
+      margin-left: auto;
+    }
+    .col-5 {
+      max-width: 49rem;
+    }
+  }
+  &-ban {
+    padding: 7rem 0 5rem;
+    overflow: hidden;
+  }
+  &-left {
+    width: 37%;
+    padding: 0 1.5rem;
+    position: relative;
+    &-top {
+      img {
+        clip-path: polygon(0px 0%, 100% 0px, 100% 100%, 0% 94%);
+      }
+    }
+    &-bot {
+      img {
+        clip-path: polygon(0px 0%, 100% 12%, 100% 100%, 0% 100%);
+      }
+    }
+    &-decor {
+      position: absolute;
+      bottom: -4.8rem;
+      left: -7rem;
+      width: 25rem;
+      z-index: -1;
+    }
+  }
+  &-right {
+    width: 63%;
+    padding: 0 1.5rem;
+    &-top {
+      width: 50vw;
+      max-width: 55rem;
+      margin-left: auto;
+      margin-bottom: 5.4rem;
+    }
+    &-bot {
+      img {
+        clip-path: polygon(0px 0%, 100% 12%, 100% 100%, 0% 100%);
+      }
+    }
+  }
+}
+@include max-media(768px) {
+  .ab {
+    &-ban {
+      padding: 6rem 0 5rem;
+      .con {
+        flex-direction: column-reverse;
+      }
+    }
+    &-left {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      &-top {
+        width: 48%;
+        @include max-media(480px) {
+          width: 49.5%;
+        }
+        img {
+          clip-path: polygon(0px 0%, 100% 6%, 100% 100%, 0% 100%);
+        }
+      }
+      &-bot {
+        padding-top: 4.5%;
+        width: calc(50% - 1.5rem);
+        clip-path: polygon(0px 0%, 100% 6%, 100% 100%, 0% 100%);
+      }
+    }
+    &-right {
+      width: 100%;
+      margin-bottom: -2rem;
+      &-top {
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 53rem;
+        margin-bottom: 3rem;
+      }
+      &-bot {
+        img {
+          clip-path: polygon(0px 0%, 100% 0%, 100% 100%, 0% 88%);
+        }
+      }
+    }
+
+    &-intro,
+    &-info {
+      .col-7 {
+        max-width: 53rem;
+        width: 100%;
+        margin: 0 auto 3rem;
+      }
+      .col5 {
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+  }
+}

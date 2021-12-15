@@ -1,0 +1,265 @@
+.sc {
+  &__item {
+    position: relative;
+    margin-bottom: 3rem;
+    @include hover() {
+      .sc {
+        &__btn {
+          transition-delay: 0.2s;
+        }
+        &__title,
+        &__btn {
+          transform: translateY(0);
+          opacity: 1;
+        }
+        &__img img {
+          transition: 1s linear;
+          transform: translate(-50%, -50%) scale(1.05);
+        }
+      }
+    }
+  }
+  &__wrap {
+    max-width: 130rem;
+    justify-content: center;
+    margin-bottom: -3rem;
+  }
+  &__img {
+    .rto-box {
+      padding-top: 120%;
+    }
+    img {
+      transition: 0.2s linear;
+    }
+  }
+  &__content {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    padding: 4.5rem 3rem;
+    justify-content: flex-end;
+    * {
+      pointer-events: auto;
+    }
+  }
+  &__title {
+    @include fz(20);
+    @include svnM();
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    line-height: 30px;
+    text-shadow: 5px 5px 10px #000;
+  }
+  &__btn {
+    width: 27rem;
+    @include svnL();
+  }
+  &__title,
+  &__btn {
+    @include min-media(1201px) {
+      opacity: 0;
+      transform: translateY(3rem);
+      transition: 0.5s ease;
+    }
+  }
+  &__list {
+    &__wrap {
+      padding: 5.2rem 0;
+      border-bottom: 1px solid rgba($color: #707070, $alpha: 0.3);
+      @include fz(16);
+      &:first-child {
+        padding-top: 0;
+      }
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+    &__title {
+      @include svnM();
+      margin-bottom: 3.2rem;
+      text-transform: uppercase;
+    }
+    li {
+      margin-bottom: 2.2rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__link {
+    color: #7f7f7f;
+    @include hover() {
+      color: #000;
+    }
+    &.active {
+      color: #000;
+    }
+  }
+  &-dt {
+    overflow: hidden;
+    .sec-title {
+      text-align: left;
+      margin-bottom: 1.8rem;
+    }
+    &__txt {
+      margin-bottom: 3.5rem;
+    }
+    .col-5 {
+      max-width: 62rem;
+    }
+    &__list {
+      .pd {
+        &__img {
+          width: 25.5rem;
+          margin-right: 2.5rem;
+        }
+        &__content {
+          width: calc(100% - 28rem);
+        }
+
+        &__btn {
+          margin-top: 4.5rem;
+          width: 17rem;
+        }
+      }
+    }
+    &__btn {
+      margin-top: 4.5rem;
+      width: 27rem;
+    }
+  }
+}
+@include max-media(1200px) {
+  .sc {
+    &-dt {
+      .col-7,
+      .col-5 {
+        width: 50%;
+      }
+      &__txt {
+        margin-bottom: 2rem;
+      }
+      &__list {
+        .pd {
+          @include min-media(769px) {
+            &__img {
+              width: 18rem;
+              margin-right: 1rem;
+            }
+            &__content {
+              width: calc(100% - 19rem);
+            }
+          }
+
+          &__btn {
+            margin-top: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+@include max-media(1024px) {
+  .sc {
+    &__content {
+      padding: 3rem;
+    }
+    .col-2 {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .col-10 {
+      width: 100%;
+    }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      li {
+        width: max-content;
+        padding: 0 10px;
+      }
+      &__title {
+        margin-bottom: 1.5rem;
+      }
+      &__wrap {
+        text-align: center;
+        padding: 0;
+        width: 50%;
+        border-bottom: none;
+        margin-bottom: 3rem;
+      }
+      li {
+        margin-bottom: 0;
+      }
+    }
+    &__link {
+      display: block;
+      padding: 5px;
+    }
+  }
+}
+@include max-media(768px) {
+  .sc {
+    .col-2 {
+      flex-wrap: wrap;
+    }
+    .col-4 {
+      width: 50%;
+    }
+    &-dt {
+      .sec-title,
+      &__txt {
+        text-align: center;
+      }
+      .col-7,
+      .col-5 {
+        width: 100%;
+        max-width: none;
+      }
+      &__img {
+        margin-bottom: 3rem;
+      }
+      &__btn {
+        margin-top: 3rem;
+      }
+    }
+  }
+}
+@include max-media(480px) {
+  .sc {
+    .col-4 {
+      width: 100%;
+    }
+    &__list {
+      &__wrap {
+        width: 100%;
+        border-bottom: 1px solid rgba($color: #707070, $alpha: 0.3);
+        padding: 2rem 0;
+        margin-bottom: 0;
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+    &-dt {
+      &__list {
+        .pd {
+          &__img {
+            width: calc(50% - 0.5rem);
+            margin-right: 1rem;
+          }
+          &__content {
+            width: calc(50% - 0.5rem);
+          }
+        }
+      }
+    }
+  }
+}

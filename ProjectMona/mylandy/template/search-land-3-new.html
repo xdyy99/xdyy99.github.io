@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-control" content="no-cache" />
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="" />
+
+    <link rel="icon" type="image/png" href="./assets/images/favicon/fav.png" />
+
+    <link rel="stylesheet" href="./css/style.min.css" />
+    <link rel="stylesheet" href="./css/backdoor.css" />
+
+    <title>Search land 3</title>
+  </head>
+  <body>
+    <header class="hd hdJS">
+      <div class="con">
+        <div class="hd__wrap">
+          <div class="hd__logo">
+            <a href="#">
+              <img src="./assets/images/logo.png" alt="" />
+            </a>
+          </div>
+          <div class="hd__menu menu menuBoard hov-df">
+            <div class="menu__wrap">
+              <ul id="menu-main-menu">
+                <li class="menu-item current-menu-item">
+                  <a href="#"> 서비스소개</a>
+                </li>
+
+                <li class="menu-item">
+                  <a href="#"> 상품소개 </a>
+                </li>
+                <li class="menu-item">
+                  <a href="#"> 토지조회 </a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">의뢰하기</a>
+                </li>
+
+                <li class="menu-item dropdown">
+                  <a href="javascript:void(0)"> 커뮤니티</a>
+
+                  <ul class="submenu">
+                    <li class="menu-item">
+                      <a href="#">공지사항</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#"> FAQ </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#"> Q&A </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#"> 제휴문의</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="menu-item dropdown hd__mb">
+                  <a href="javascript:void(0)"> 마이페이지 </a>
+
+                  <ul class="submenu">
+                    <li class="menu-item">
+                      <a href="#">정보변경 </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#">조회결과 </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#">상품의뢰 </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#">질의답변 </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#">로그아웃 </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="hd__mb">
+                <div class="hd__btn">
+                  <div class="hd__btn__item">
+                    <a href="#">
+                      <img src="./assets/images/svg/hd-btn1.svg" alt="" />
+                    </a>
+                  </div>
+                  <div class="hd__btn__item">
+                    <a href="#">
+                      <img src="./assets/images/svg/hd-btn2.svg" alt="" />
+                    </a>
+                  </div>
+                  <div class="hd__btn__item actPanel">
+                    <div class="hd__toggle__btn user user-noti actBtn">
+                      <img src="./assets/images/user.jpg" alt="" />
+                    </div>
+                    <div class="hd-sub">
+                      <!-- <ul>
+                        <li>
+                          <a href="#"> 로그인 </a>
+                        </li>
+                        <li>
+                          <a href="#"> 회원가입 </a>
+                        </li>
+                      </ul> -->
+
+                      <ul>
+                        <li>
+                          <a href="#"> 정보변경 </a>
+                        </li>
+                        <li>
+                          <a href="#"> 조회결과 </a>
+                        </li>
+                        <li>
+                          <a href="#"> 상품의뢰 </a>
+                        </li>
+                        <li>
+                          <a href="#"> 질의답변</a>
+                        </li>
+                        <li>
+                          <a href="#"> 로그아웃 </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="menuBg menu__bg"></div>
+          </div>
+          <div class="hd__ser">
+            <form action="#">
+              <div class="hd__ser__wrap">
+                <input type="text" class="rs-form hd__ser__inp" placeholder="검색" />
+                <button type="submit" class="rs-form hd__ser__btn">
+                  <img src="./assets/images/svg/ser-ic.svg" alt="" />
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="hd__btn hd__dt">
+            <div class="hd__btn__item">
+              <a href="#">
+                <img src="./assets/images/svg/hd-btn1.svg" alt="" />
+              </a>
+            </div>
+            <div class="hd__btn__item">
+              <a href="#">
+                <img src="./assets/images/svg/hd-btn2.svg" alt="" />
+              </a>
+            </div>
+            <div class="hd__btn__item actPanel">
+              <div class="hd__toggle__btn user user-noti actBtn">
+                <img src="./assets/images/user.jpg" alt="" />
+              </div>
+              <div class="hd-sub">
+                <!-- <ul>
+                        <li>
+                          <a href="#"> 로그인 </a>
+                        </li>
+                        <li>
+                          <a href="#"> 회원가입 </a>
+                        </li>
+                      </ul> -->
+
+                <ul>
+                  <li>
+                    <a href="#"> 정보변경 </a>
+                  </li>
+                  <li>
+                    <a href="#"> 조회결과 </a>
+                  </li>
+                  <li>
+                    <a href="#"> 상품의뢰 </a>
+                  </li>
+                  <li>
+                    <a href="#"> 질의답변</a>
+                  </li>
+                  <li>
+                    <a href="#"> 로그아웃 </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="menu__btn menuBtn">
+            <svg class="menu__svg" viewBox="0 0 100 100">
+              <path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path>
+              <path d="m 30,50 h 40"></path>
+              <path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="dt">
+        <div class="con">
+          <div class="dt-acc">
+            <div class="acc">
+              <div class="acc-ser-head fl-ct">
+                <div class="ser-info">
+                  <div>토지분석레포트 (베이직)</div>
+                  <div>제주특별시 제주시 첨단로 213-3</div>
+                </div>
+                <div class="ser-btn">
+                  <div class="print-btn" onclick="window.print()">
+                    <img src="./assets/images/svg/l-printer.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dt-item-head fl-wrap">
+            <div class="dt-title head">
+              토지 <br />
+              리포트
+            </div>
+            <div class="dt-content">
+              <div class="dt-head fl-ct">
+                <div class="dt-head-check">
+                  <form action="">
+                    <div class="form-check">
+                      <label for="1">
+                        <input id="1" type="radio" checked name="123" />
+                        <div class="box"></div>
+                        <div class="txt">Basic</div>
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label for="2">
+                        <input id="2" type="radio" name="123" />
+                        <div class="box"></div>
+                        <div class="txt">Premium</div>
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label for="3">
+                        <input id="3" type="radio" name="123" />
+                        <div class="box"></div>
+                        <div class="txt">Custom</div>
+                      </label>
+                    </div>
+                  </form>
+                </div>
+                <div class="dt-head-txt mg-l">‘ 마이랜디 ’ 토지 리포트</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="land-map-wrap">
+            <div class="land-map" id="map"></div>
+
+            <div class="land-map-siba actPanel">
+              <div class="mb-btn actBtn">
+                <img src="./assets/images/svg/mb-ic.svg" alt="" />
+              </div>
+              <div class="wrapper">
+                <div class="form-select-wrap">
+                  <div class="select2-group">
+                    <select class="select2-js rs-form form-select">
+                      <option value="1" selected>레이어</option>
+                      <option value="2">레이어 2</option>
+                      <option value="3">레이어 3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="land-map-btn fl-con">
+                  <div class="item laBtn">
+                    <div class="img">
+                      <img src="./assets/images/svg/map1.svg" alt="" />
+                    </div>
+                    지형도
+                  </div>
+                  <div class="item laBtn">
+                    <div class="img">
+                      <img src="./assets/images/svg/map3.svg" alt="" />
+                    </div>
+                    지적편집도
+                  </div>
+                  <div class="item laBtn">
+                    <div class="img">
+                      <img src="./assets/images/svg/map4.svg" alt="" />
+                    </div>
+                    법정경계
+                  </div>
+                  <div class="item laBtn">
+                    <div class="img">
+                      <img src="./assets/images/svg/map2.svg" alt="" />
+                    </div>
+                    행정경계
+                  </div>
+                </div>
+                <div class="land-map-list lmWrap active">
+                  <div class="btn lmBtn">분류1</div>
+                  <div class="list">
+                    <div class="item">
+                      <div class="form-check">
+                        <label for="01">
+                          <input id="01" type="checkbox" class="filBtn1" data-type="pro" />
+                          <div class="box"></div>
+                          <div class="txt mg-r">레이어명</div>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="form-check">
+                        <label for="02">
+                          <input id="02" type="checkbox" class="filBtn1" data-type="normal" />
+                          <div class="box"></div>
+                          <div class="txt mg-r">레이어명</div>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="form-check">
+                        <label for="03">
+                          <input id="03" type="checkbox" class="filBtn1" data-type="no" />
+                          <div class="box"></div>
+                          <div class="txt mg-r">레이어명</div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="land-map-list lmWrap">
+                  <div class="btn lmBtn">분류2</div>
+                  <div class="list">
+                    <div class="item">
+                      <div class="form-check">
+                        <label for="04">
+                          <input id="04" type="checkbox" class="filBtn1" data-type="no" />
+                          <div class="box"></div>
+                          <div class="txt mg-r">레이어명</div>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="form-check">
+                        <label for="05">
+                          <input id="05" type="checkbox" class="filBtn1" data-type="no" />
+                          <div class="box"></div>
+                          <div class="txt mg-r">레이어명</div>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="form-check">
+                        <label for="06">
+                          <input id="06" type="checkbox" class="filBtn1" data-type="no" />
+                          <div class="box"></div>
+                          <div class="txt mg-r">레이어명</div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="land-map-list lmWrap">
+                  <div class="btn lmBtn">분류3</div>
+                  <div class="list">
+                    <div class="item">
+                      <div class="form-check">
+                        <label for="07">
+                          <input id="07" type="checkbox" class="filBtn1" data-type="no" />
+                          <div class="box"></div>
+                          <div class="txt mg-r">레이어명</div>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="form-check">
+                        <label for="08">
+                          <input id="08" type="checkbox" class="filBtn1" data-type="no" />
+                          <div class="box"></div>
+                          <div class="txt mg-r">레이어명</div>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="form-check">
+                        <label for="09">
+                          <input id="09" type="checkbox" class="filBtn1" data-type="no" />
+                          <div class="box"></div>
+                          <div class="txt mg-r">레이어명</div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="land-map-list lmWrap">
+                  <div class="btn lmBtn">분류3</div>
+                  <div class="list">
+                    <div class="item">
+                      <div class="form-check">
+                        <label for="10">
+                          <input id="10" type="checkbox" class="filBtn1" data-type="no" />
+                          <div class="box"></div>
+                          <div class="txt mg-r">레이어명</div>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="form-check">
+                        <label for="11">
+                          <input id="11" type="checkbox" class="filBtn1" data-type="no" />
+                          <div class="box"></div>
+                          <div class="txt mg-r">레이어명</div>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="form-check">
+                        <label for="12">
+                          <input id="12" type="checkbox" class="filBtn1" data-type="no" />
+                          <div class="box"></div>
+                          <div class="txt mg-r">레이어명</div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="land-map-row actPanel">
+              <div class="btn actBtn">
+                <img src="./assets/images/svg/ic-color.svg" alt="" />
+              </div>
+              <div class="wrapper">
+                <div class="head fl-ct">
+                  <div class="form-select-wrap">
+                    <div class="select2-group">
+                      <select class="select2-js rs-form form-select">
+                        <option value="1" selected>레이어명</option>
+                        <option value="2">레이어명 2</option>
+                        <option value="3">레이어명 3</option>
+                      </select>
+                    </div>
+                  </div>
+                  범례
+                  <div class="close actClose"><img src="./assets/images/svg/close-ic.svg" alt="" /></div>
+                </div>
+                <div class="list fl-wrap">
+                  <div class="item">
+                    <div class="form-check">
+                      <label for="101">
+                        <input id="101" class="filBtn2" type="checkbox" data-cate="no" />
+                        <div class="box" style="background-color: #b7000e"></div>
+                        <div class="txt mg-r">범례명</div>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="form-check">
+                      <label for="102">
+                        <input id="102" class="filBtn2" type="checkbox" data-cate="red" />
+                        <div class="box" style="background-color: #fe0013"></div>
+                        <div class="txt mg-r">범례명</div>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="form-check">
+                      <label for="103">
+                        <input id="103" class="filBtn2" type="checkbox" data-cate="orange" />
+                        <div class="box" style="background-color: #ffb62b"></div>
+                        <div class="txt mg-r">범례명</div>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="form-check">
+                      <label for="104">
+                        <input id="104" class="filBtn2" type="checkbox" data-cate="no" />
+                        <div class="box" style="background-color: #16a64d"></div>
+                        <div class="txt mg-r">범례명</div>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="form-check">
+                      <label for="105">
+                        <input id="105" class="filBtn2" type="checkbox" data-cate="no" />
+                        <div class="box" style="background-color: #11a9e9"></div>
+                        <div class="txt mg-r">범례명</div>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="form-check">
+                      <label for="106">
+                        <input id="106" class="filBtn2" type="checkbox" data-cate="no" />
+                        <div class="box" style="background-color: #89c851"></div>
+                        <div class="txt mg-r">범례명</div>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="form-check">
+                      <label for="107">
+                        <input id="107" class="filBtn2" type="checkbox" data-cate="blue" />
+                        <div class="box" style="background-color: #0367b4"></div>
+                        <div class="txt mg-r">범례명</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dt-item fl-wrap">
+            <div class="dt-title">물건지 개요</div>
+            <div class="dt-content">
+              <div class="mona-content">
+                <div class="dt-tb">
+                  <div class="dt-tb-item">
+                    <div class="icon">
+                      <img src="./assets/images/svg/l-ic1.svg" alt="" />
+                    </div>
+                    <div class="txt">
+                      <div class="c-gre f-bold">지목</div>
+                      전
+                    </div>
+                  </div>
+                  <div class="dt-tb-item">
+                    <div class="icon">
+                      <img src="./assets/images/svg/l-ic2.svg" alt="" />
+                    </div>
+                    <div class="txt">
+                      <div class="c-gre f-bold">이용상황</div>
+                      전
+                    </div>
+                  </div>
+                  <div class="dt-tb-item">
+                    <div class="icon">
+                      <img src="./assets/images/svg/l-ic3.svg" alt="" />
+                    </div>
+                    <div class="txt">
+                      <div class="c-gre f-bold">용도지역</div>
+                      자연녹지
+                    </div>
+                  </div>
+                  <div class="dt-tb-item">
+                    <div class="icon">
+                      <img src="./assets/images/svg/l-ic4.svg" alt="" />
+                    </div>
+                    <div class="txt">
+                      <div class="c-gre f-bold">면적</div>
+                      3,729m²
+                    </div>
+                  </div>
+                  <div class="dt-tb-item">
+                    <div class="icon">
+                      <img src="./assets/images/svg/l-ic5.svg" alt="" />
+                    </div>
+                    <div class="txt">
+                      <div class="c-gre f-bold">도로</div>
+                      세로한면 가
+                    </div>
+                  </div>
+                  <div class="dt-tb-item">
+                    <div class="icon">
+                      <img src="./assets/images/svg/l-ic6.svg" alt="" />
+                    </div>
+                    <div class="txt">
+                      <div class="c-gre f-bold">형상</div>
+                      사다리형
+                    </div>
+                  </div>
+                  <div class="dt-tb-item">
+                    <div class="icon">
+                      <img src="./assets/images/svg/l-ic7.svg" alt="" />
+                    </div>
+                    <div class="txt">
+                      <div class="c-gre f-bold">지세</div>
+                      평지
+                    </div>
+                  </div>
+                  <div class="dt-tb-item">
+                    <div class="icon">
+                      <img src="./assets/images/svg/l-ic8.svg" alt="" />
+                    </div>
+                    <div class="txt">
+                      <div class="c-gre f-bold">공시지가 (m²)</div>
+                      523,000 원
+                    </div>
+                  </div>
+                </div>
+
+                <small>※ 위 정보는 2021 년 6 월 1 일자 기준 자료입니다</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="dt-item fl-wrap">
+            <div class="dt-content">
+              <div class="mona-content">
+                <h2>제주시 노형동 0000 0 개별공시지가 최근 5 개년 공시지가 추이</h2>
+
+                <div class="dt-table">
+                  <div class="table">
+                    <div class="head">
+                      <div class="col-20">가격기준년도</div>
+                      <div class="col-40">개별공시지가 원 , 평</div>
+                      <div class="col-20">기준일자</div>
+                      <div class="col-20">공시일자</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-20">2021</div>
+                      <div class="col-40">1,728,928</div>
+                      <div class="col-20">01 월 01 일</div>
+                      <div class="col-20">2021/05/31</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-20">2021</div>
+                      <div class="col-40">1,728,928</div>
+                      <div class="col-20">01 월 01 일</div>
+                      <div class="col-20">2021/05/31</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-20">2021</div>
+                      <div class="col-40">1,728,928</div>
+                      <div class="col-20">01 월 01 일</div>
+                      <div class="col-20">2021/05/31</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-20">2021</div>
+                      <div class="col-40">1,728,928</div>
+                      <div class="col-20">01 월 01 일</div>
+                      <div class="col-20">2021/05/31</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-20">2021</div>
+                      <div class="col-40">1,728,928</div>
+                      <div class="col-20">01 월 01 일</div>
+                      <div class="col-20">2021/05/31</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dt-item fl-wrap">
+            <div class="dt-content">
+              <div class="mona-content">
+                <h2>지역 실거래가(해당 읍면동)</h2>
+
+                <div class="dt-fil fl-wrap">
+                  <div class="dt-fil-item fl-ct">
+                    연도
+                    <div class="form-select-wrap">
+                      <div class="select2-group">
+                        <select class="select2-js rs-form form-select">
+                          <option value="1" selected>2021</option>
+                          <option value="2">2022</option>
+                          <option value="3">2023</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dt-fil-item fl-ct">
+                    지목
+                    <div class="form-select-wrap">
+                      <div class="select2-group">
+                        <select class="select2-js rs-form form-select">
+                          <option value="1" selected>전체</option>
+                          <option value="2">전체 2</option>
+                          <option value="3">전체 3</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dt-fil-item fl-ct">
+                    용도지역
+                    <div class="form-select-wrap">
+                      <div class="select2-group">
+                        <select class="select2-js rs-form form-select">
+                          <option value="1" selected>전체</option>
+                          <option value="2">전체 2</option>
+                          <option value="3">전체 3</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="dt-table">
+                  <div class="table">
+                    <div class="head">
+                      <div class="col-2">계약일</div>
+                      <div class="col-1">지목</div>
+                      <div class="col-3">용도지역</div>
+                      <div class="col-2">도로조건</div>
+                      <div class="col-2">계약면적(m²)</div>
+                      <div class="col-2">거래금액(만원)</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-2">2021.08.01</div>
+                      <div class="col-1">전</div>
+                      <div class="col-3">자연녹지지역</div>
+                      <div class="col-2"></div>
+                      <div class="col-2"></div>
+                      <div class="col-2"></div>
+                    </div>
+                    <div class="row">
+                      <div class="col-2">2021.08.01</div>
+                      <div class="col-1">과수원</div>
+                      <div class="col-3">자연녹지지역</div>
+                      <div class="col-2"></div>
+                      <div class="col-2"></div>
+                      <div class="col-2"></div>
+                    </div>
+                    <div class="row">
+                      <div class="col-2">2021.08.01</div>
+                      <div class="col-1">전</div>
+                      <div class="col-3">자연녹지지역</div>
+                      <div class="col-2"></div>
+                      <div class="col-2"></div>
+                      <div class="col-2"></div>
+                    </div>
+                    <div class="row">
+                      <div class="col-2">2021.08.01</div>
+                      <div class="col-1">전</div>
+                      <div class="col-3">자연녹지지역</div>
+                      <div class="col-2"></div>
+                      <div class="col-2"></div>
+                      <div class="col-2"></div>
+                    </div>
+                    <div class="row">
+                      <div class="col-2">2021.08.01</div>
+                      <div class="col-1">전</div>
+                      <div class="col-3">자연녹지지역</div>
+                      <div class="col-2"></div>
+                      <div class="col-2"></div>
+                      <div class="col-2"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pagination">
+                  <ul>
+                    <li>
+                      <a href="#" class="page-numbers">
+                        <img src="./assets/images/svg/pag1.svg" alt="" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="page-numbers current">01</a>
+                    </li>
+                    <li>
+                      <a href="#" class="page-numbers">02</a>
+                    </li>
+                    <li>
+                      <a href="#" class="page-numbers">03</a>
+                    </li>
+                    <li>
+                      <a href="#" class="page-numbers">...</a>
+                    </li>
+                    <li>
+                      <a href="#" class="page-numbers">09</a>
+                    </li>
+                    <li>
+                      <a href="#" class="page-numbers">10</a>
+                    </li>
+                    <li>
+                      <a href="#" class="page-numbers">11</a>
+                    </li>
+                    <li>
+                      <a href="#" class="page-numbers">
+                        <img src="./assets/images/svg/pag2.svg" alt="" />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dt-item fl-wrap">
+            <div class="dt-content">
+              <div class="mona-content">
+                <h2>지역지구 등 지정여부</h2>
+
+                <div class="dt-table">
+                  <div class="table">
+                    <div class="head">
+                      <div class="col-100 txt-ct">현황 및 분석 결과</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-100">
+                        <p>
+                          1. 국토의 계획 및 이용에 관한 법률에 따른 지역/지구
+                          <br />
+                          <span class="c-yel">자연녹지지역, 소로3류(저촉)</span>
+                        </p>
+
+                        <p>
+                          2. 다른 법령 등에 따른 지역/지구 등
+                          <br />
+                          <span class="c-yel">가축사육제한구역, 장애물제한표면구역, 상대보호구역, 공장설립제한지역</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dt-item fl-wrap">
+            <div class="dt-title">건축물 정보</div>
+            <div class="dt-content">
+              <div class="mona-content">
+                <h2>지역 실거래가(해당 읍면동)</h2>
+
+                <div class="dt-fil fl-wrap">
+                  <div class="dt-fil-item fl-ct">
+                    건축물대장 선택
+                    <div class="form-select-wrap">
+                      <div class="select2-group">
+                        <select class="select2-js rs-form form-select">
+                          <option value="1" selected>총괄표제부</option>
+                          <option value="2">총괄표제부</option>
+                          <option value="3">총괄표제부</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="dt-tb-flex fl-wrap jus-spa">
+                  <div class="dt-tb-col">
+                    <div class="dt-tb-wrap">
+                      <div class="dt-tb-row fl-con">
+                        <div class="col-4 head">계약일</div>
+                        <div class="col-8">
+                          <div class="form-select-wrap">
+                            <div class="select2-group">
+                              <select class="select2-js rs-form form-select">
+                                <option value="1" selected>302 동</option>
+                                <option value="2">303 동</option>
+                                <option value="3">304 동</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="dt-tb-row fl-con">
+                        <div class="col-4 head">주용도</div>
+                        <div class="col-8">공동주택</div>
+                      </div>
+                      <div class="dt-tb-row fl-con">
+                        <div class="col-4 head">대지면적</div>
+                        <div class="col-8">33865</div>
+                      </div>
+                      <div class="dt-tb-row fl-con">
+                        <div class="col-4 head">건폐율</div>
+                        <div class="col-8">18.23</div>
+                      </div>
+                      <div class="dt-tb-row fl-con">
+                        <div class="col-4 head">착공일</div>
+                        <div class="col-8">2004.01.01</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dt-tb-col">
+                    <div class="dt-tb-wrap">
+                      <div class="dt-tb-row fl-con">
+                        <div class="col-4 head">세대수</div>
+                        <div class="col-8">350</div>
+                      </div>
+                      <div class="dt-tb-row fl-con">
+                        <div class="col-4 head">기타용도</div>
+                        <div class="col-8">제2종근린생활시설</div>
+                      </div>
+                      <div class="dt-tb-row fl-con">
+                        <div class="col-4 head">건축면적</div>
+                        <div class="col-8">6172</div>
+                      </div>
+                      <div class="dt-tb-row fl-con">
+                        <div class="col-4 head">용적율</div>
+                        <div class="col-8">159.98</div>
+                      </div>
+                      <div class="dt-tb-row fl-con">
+                        <div class="col-4 head">사용승인일</div>
+                        <div class="col-8">2005.12.28</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dt-item fl-wrap">
+            <div class="dt-title">상권분석</div>
+            <div class="dt-content">
+              <div class="mona-content">
+                <p class="big-txt">
+                  물건지의 상권등급은 총 5등급 중 <span class="c-red">4등급(42.2점)</span>입니다. <br />
+                  분석지역은 <span class="c-red"> 성장성이 높고,</span> 상대적으로 <span class="c-red">영업력이 낮은 것</span>으로 나타납니다.
+                </p>
+                <p>(제주특별자치도 제주시 조천읍 물건지 반경 1.5km 기준</p>
+                <div class="dt-table mg-short">
+                  <div class="table">
+                    <div class="head">
+                      <div class="col-20">성장성</div>
+                      <div class="col-20">안정성</div>
+                      <div class="col-20">영업력</div>
+                      <div class="col-20">구매력</div>
+                      <div class="col-20">집객력</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-20">17.9</div>
+                      <div class="col-20">5.5</div>
+                      <div class="col-20">4.5</div>
+                      <div class="col-20">9.7</div>
+                      <div class="col-20">4.6</div>
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  상권 내 음식, 소매, 서비스업의 전반적인 업종경기와 상권의 인구 수, 교통시설, 집객시설 등을 종합하여 산출한 등급으로서, 점수가 1
+                  <br />
+                  등급에 가까울수록 상권이 활성화되어 있음을 의미(1~5등급)
+                </p>
+                <div class="dt-info-row fl-wrap">
+                  <div class="item"><b>1등급 : </b> 70점이상</div>
+                  <div class="item"><b>2등급 : </b> 57.5~70</div>
+                  <div class="item"><b>3등급 : </b> 45~57.5</div>
+                  <div class="item"><b>4등급 :</b> 32.5~45</div>
+                  <div class="item"><b>5등급 : </b> 32.5미만</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dt-item fl-wrap">
+            <div class="dt-title">성장성</div>
+            <div class="dt-title-right mg-l">(20점) <span class="c-red">17.9점</span></div>
+            <div class="dt-content">
+              <div class="mona-content">
+                <div class="dt-table mg-short">
+                  <div class="table">
+                    <div class="head">
+                      <div class="col-2">구분</div>
+                      <div class="col-2">점수(만점)</div>
+                      <div class="col-8">내용</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-2">매출 증감률</div>
+                      <div class="col-2">9.0 (10)</div>
+                      <div class="col-8">
+                        작년 동월대비 전체매출규모 증감률(5점)
+                        <br />작년 동월대비 가게당 매출규모 증감률(5점)
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-2">상권 매출비용</div>
+                      <div class="col-2">3.9 (5)</div>
+                      <div class="col-8">작년 동월대비 전국 대비 선택지역 매출 비중 증감률</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-2">예상 성장률</div>
+                      <div class="col-2">5.0 (5)</div>
+                      <div class="col-8">반기 별 매출 증감 추이를 이용하여 향후 1년간의 매출을 예측한 지표</div>
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  “위 ‘상권분석‘ 저작물은 ‘소상공인마당’에서 저작권법 제24조2에 의해 별도의 허락없이 자유이용을 허가한 저작물로서 해당 저작물은
+                  <br />
+                  ‘소상공인마당‘ 사이트에서 무료로 다운받으실 수 있습니다.
+                  <br />
+                  (https://www.sbiz.or.kr/sup/main.do)”
+                </p>
+
+                <h2>주변시설</h2>
+
+                <div class="dt-tb-res">
+                  <div class="dt-tb-wrap">
+                    <div class="dt-tb-row fl-con">
+                      <div class="col-2 head">학교</div>
+                      <div class="col-10">함덕중학교(1.0km), 함덕초등학교(1.2km), 북촌초등학교(2.4km)</div>
+                    </div>
+                    <div class="dt-tb-row fl-con">
+                      <div class="col-2 head">쇼핑</div>
+                      <div class="col-10">하나로마트 함덕농협본점(0.9km), 함덕민속오일시장(1.5km),</div>
+                    </div>
+
+                    <div class="dt-tb-row fl-con">
+                      <div class="col-2 head">행정</div>
+                      <div class="col-10">함덕리사무소(1.9km), 함덕파출소(1.9km)</div>
+                    </div>
+
+                    <div class="dt-tb-row fl-con">
+                      <div class="col-2 head">의료</div>
+                      <div class="col-10">하나로의원(480m), 신촌가축병원(641m), 함덕하나로약국(933m)</div>
+                    </div>
+
+                    <div class="dt-tb-row fl-con">
+                      <div class="col-2 head">교통</div>
+                      <div class="col-10">신사동 정류장(400m), 함덕5구 정류장(615m),</div>
+                    </div>
+
+                    <div class="dt-tb-row fl-con">
+                      <div class="col-2 head">공원</div>
+                      <div class="col-10">샘물공원(1.3km), 돌하루방미술관(1.5km), 서우봉공원(1.7km),</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dt-item fl-wrap">
+            <div class="dt-title">첨언</div>
+            <div class="dt-content">
+              <div class="mona-content">
+                <h2>구조분석</h2>
+                <div class="land-guide dt-land-guide">
+                  <ul>
+                    <li>현장에서의 토지 경계가 불분명하며 별도 측량을 통해 확인이 필요할 수 있음</li>
+                    <li>토지의 도로는 ‘중로한면’, ‘세로한면(불)’, ‘맹지’ 이며, 71-36 번지에 만들어진 자갈길을 통해 통행하고 있는 것으로 파악됨</li>
+                    <li>토지 대부분이 자연림이나, 71-34번지에 미등록 가건물과 각종 산업 자재들이 적재되어 있음</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="dt-btn-wrap fl-ct">
+                <a href="#" class="btn-pri">이전</a>
+                <a href="#" class="btn-grey">프린트</a>
+              </div>
+              <div class="txt-ct dt-link-wrap">
+                <a href="#">프리미엄(Premium) / 컨설팅(Consulting) 상품이용하기</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="ft">
+      <div class="con">
+        <div class="ft-head fl-ct">
+          <div class="ft-logo">
+            <a href="#">
+              <img src="./assets/images/logo-2.png" alt="" />
+            </a>
+          </div>
+          <div class="ft-line">
+            <div class="ft-btn fl-ct backToTop">
+              <img src="./assets/images/svg/arr-up.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="ft-wrap fl-wrap">
+          <div class="col-3">
+            <ul class="ft-list">
+              <li><a href="#"> 서비스소개 </a></li>
+              <li><a href="#"> 개인정보처리방침 </a></li>
+              <li><a href="#"> 이용약관 </a></li>
+              <li><a href="#">이메일주소 무단수집거부 </a></li>
+            </ul>
+          </div>
+          <div class="col-3">
+            <ul class="ft-list">
+              <li>
+                <span class="f-bold">㈜드론오렌지 </span>
+              </li>
+              <li>대표 : 정념</li>
+              <li>사업자등록번호 : 895-81-00203</li>
+              <li>통신판매신고 : 000-00-000000</li>
+            </ul>
+          </div>
+
+          <div class="col-6">
+            <ul class="ft-list">
+              <li><span class="f-bold">제주사무실 </span> 제주도 제주시 제주한라대학교 하이테크센터 1층 1121호</li>
+              <li><span class="f-bold">기술연구소 </span> 제주도 제주시 첨단로 213-3 스마트빌딩 321호</li>
+              <li><span class="f-bold">서울사무실 </span> 서울특별시 강남구 역삼로 165 해성빌딩 7층</li>
+              <li><span class="f-bold">해외법인인 </span> 베트남 호치민 소재법인(2022년 1월)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="ft-bot fl-ct jus-spa">
+          <a href="https://mona.media/" class="ft-copy">Designed and developed by Mona Media</a>
+          <a href="#" class="ft-chat fl-ct">
+            <img src="./assets/images/svg/chat-ic.svg" alt="" />
+            의뢰하기
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/libs/jquery-3.6.0.min.js"></script>
+    <script src="./js/libs/select2/select2.min.js"></script>
+    <script src="./js/libs/magnific/jquery.magnific-popup.min.js"></script>
+    <script src="./js/libs/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/libs/aos/aos.min.js"></script>
+    <script src="https://unpkg.com/@googlemaps/markerclusterer@1.0.8/dist/index.umd.js"></script>
+    <script>
+      let mmap = [
+        {
+          title: ' 제주특별자치도 제주시 영평동 2169-10',
+          txt: '(도로명) 제주특별자치도 제주시 곱은이길 3 ',
+          type: 'pro',
+          layer: 'a',
+          color: 'orange',
+          img: 'http://thietke.monamedia.net/mylandy/template/assets/images/svg/mk0.svg',
+          lat: 10.7791188,
+          lng: 106.648097,
+        },
+        {
+          title: ' 제주특별자치도 제주시 영평동 2169-100',
+          txt: '(도로명) 제주특별자치도 제주시 곱은이길 321 ',
+          type: 'pro',
+          layer: 'a',
+          color: 'red',
+          img: 'http://thietke.monamedia.net/mylandy/template/assets/images/svg/mk1.svg',
+          lat: 10.4034998,
+          lng: 107.0530107,
+        },
+        {
+          title: ' 제주특별자치도 제주시 영평동 2169-0',
+          txt: '(도로명) 제주특별자치도 제주시 곱은이길 123 ',
+          type: 'normal',
+          layer: 'a',
+          color: 'blue',
+          img: 'http://thietke.monamedia.net/mylandy/template/assets/images/svg/mk2.svg',
+          lat: 10.8661238,
+          lng: 106.8007311,
+        },
+        {
+          title: ' 제주특별자치도 제주시 영평동 2169-0',
+          txt: '(도로명) 제주특별자치도 제주시 곱은이길 123 ',
+          type: 'pro',
+          layer: 'b',
+          color: 'blue',
+          img: 'http://thietke.monamedia.net/mylandy/template/assets/images/svg/mk2.svg',
+          lat: 10.8661248,
+          lng: 106.7107311,
+        },
+      ];
+
+      let filter1 = [];
+      let filter2 = [];
+
+      function initMap() {
+        const markers = [];
+        const infoWindow = [];
+        // FIRST POSITION
+        const pos = { lat: mmap[0].lat, lng: mmap[0].lng };
+        const map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: pos,
+        });
+
+        mmap.forEach((el, i) => {
+          let cate = [];
+          cate[0] = el.type;
+          cate[1] = el.layer;
+          cate[2] = el.color;
+          const eachPos = {
+            position: {
+              lat: el.lat,
+              lng: el.lng,
+            },
+            map,
+            icon: el.img,
+            title: el.title,
+            category: cate,
+          };
+          const contentString =
+            '<div id="content" class="map-wrap">' +
+            '<div id="siteNotice">' +
+            '</div>' +
+            `<h1 id="firstHeading" class="map-title"> ` +
+            el.title +
+            ` </h1>` +
+            '<div id="bodyContent" class="map-content">' +
+            `<p class="map-txt"> ` +
+            el.txt +
+            ` </p>` +
+            '</div>' +
+            '</div>';
+
+          infoWindow[i] = new google.maps.InfoWindow({
+            content: contentString,
+          });
+
+          markers[i] = new google.maps.Marker(eachPos);
+
+          markers[i].addListener('click', () => {
+            infoWindow[i].open({
+              anchor: markers[i],
+              map,
+              shouldFocus: false,
+            });
+          });
+          filterMarkers = function (category) {
+            markers.forEach((mk) => {
+              mk.setVisible(false);
+            });
+
+            for (n1 = 0; n1 < markers.length; n1++) {
+              marker = markers[n1];
+              // If is same category or category not picked
+              if (filter1.length > 0) {
+                filter1.forEach((z, i1) => {
+                  let txt1 = z;
+                  if (Object.values(marker.category).includes(txt1)) {
+                    for (n2 = 0; n2 < markers.length; n2++) {
+                      // If is same category or category not picked
+                      if (filter2.length > 0) {
+                        filter2.forEach((z, i1) => {
+                          let txt2 = z;
+                          if (Object.values(marker.category).includes(txt2)) {
+                            marker.setVisible(true);
+                          }
+                        });
+                      } else {
+                        marker.setVisible(true);
+                      }
+                    }
+                  }
+                });
+              } else if (filter2.length > 0) {
+                filter2.forEach((z, i1) => {
+                  let txt2 = z;
+                  if (Object.values(marker.category).includes(txt2)) {
+                    marker.setVisible(true);
+                  }
+                });
+              } else {
+                marker.setVisible(true);
+              }
+            }
+          };
+        });
+
+        let mapInp1 = document.querySelectorAll('.filBtn1');
+        mapInp1.forEach((inp) => {
+          inp.addEventListener('change', () => {
+            let val = inp.getAttribute('data-type');
+
+            if (filter1.includes(val)) {
+              let filtered1 = filter1.filter(function (value, index, arr) {
+                return value != val;
+              });
+              filter1 = [];
+              filter1 = filtered1;
+            } else filter1.push(val);
+            filterMarkers();
+          });
+        });
+        let mapInp2 = document.querySelectorAll('.filBtn2');
+        mapInp2.forEach((inp) => {
+          inp.addEventListener('change', () => {
+            let val = inp.getAttribute('data-cate');
+
+            if (filter2.includes(val)) {
+              let filtered2 = filter2.filter(function (value, index, arr) {
+                return value != val;
+              });
+              filter2 = [];
+              filter2 = filtered2;
+            } else filter2.push(val);
+            filterMarkers();
+          });
+        });
+
+        new markerClusterer.MarkerClusterer({
+          map,
+          markers,
+        });
+      }
+    </script>
+
+    <script
+      type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIBv2NSaXOucmqnItW7y7wpQXKH0MoNJE&callback=initMap&v=weekly"
+      defer
+    ></script>
+    <script>
+      AOS.init({
+        disable: function () {
+          var maxWidth = 480;
+          return window.innerWidth < maxWidth;
+        },
+        duration: 800,
+        once: 'true',
+      });
+    </script>
+    <script src="./js/main.js" type="module" defer></script>
+  </body>
+</html>

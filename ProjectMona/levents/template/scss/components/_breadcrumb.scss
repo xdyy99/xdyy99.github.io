@@ -1,0 +1,42 @@
+.bc {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  @include fz(12);
+  line-height: 18px;
+  margin-bottom: -48px;
+  &__list {
+    margin-top: 12px;
+    margin-left: -10px;
+    li {
+      display: inline-block;
+      &::after {
+        content: '/';
+      }
+      &:last-child::after {
+        content: '';
+      }
+    }
+  }
+  &__link {
+    display: inline-block;
+    padding: 10px;
+    color: #7f7f7f;
+    @include hover() {
+      @include svnM();
+      color: #000;
+    }
+    &.active {
+      @include svnM();
+      color: #000;
+    }
+  }
+}
+@include max-media(768px) {
+  .bc {
+    margin-bottom: 0;
+    &__list {
+      margin-top: 0;
+    }
+  }
+}

@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-control" content="no-cache" />
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="" />
+
+    <link rel="icon" type="image/png" href="./assets/images/favicon/fav.png" />
+
+    <link rel="stylesheet" href="./css/style.min.css" />
+    <link rel="stylesheet" href="./css/backdoor.css" />
+
+    <title>Search land 3</title>
+  </head>
+  <body>
+    <header class="hd hdJS">
+      <div class="con">
+        <div class="hd__wrap">
+          <div class="hd__logo">
+            <a href="#">
+              <img src="./assets/images/logo.png" alt="" />
+            </a>
+          </div>
+          <div class="hd__menu menu menuBoard hov-df">
+            <div class="menu__wrap">
+              <ul id="menu-main-menu">
+                <li class="menu-item current-menu-item">
+                  <a href="#"> 서비스소개</a>
+                </li>
+
+                <li class="menu-item">
+                  <a href="#"> 상품소개 </a>
+                </li>
+                <li class="menu-item">
+                  <a href="#"> 토지조회 </a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">의뢰하기</a>
+                </li>
+
+                <li class="menu-item dropdown">
+                  <a href="javascript:void(0)"> 커뮤니티</a>
+
+                  <ul class="submenu">
+                    <li class="menu-item">
+                      <a href="#">공지사항</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#"> FAQ </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#"> Q&A </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#"> 제휴문의</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="menu-item dropdown hd__mb">
+                  <a href="javascript:void(0)"> 마이페이지 </a>
+
+                  <ul class="submenu">
+                    <li class="menu-item">
+                      <a href="#">정보변경 </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#">조회결과 </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#">상품의뢰 </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#">질의답변 </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#">로그아웃 </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="hd__mb">
+                <div class="hd__btn">
+                  <div class="hd__btn__item">
+                    <a href="#">
+                      <img src="./assets/images/svg/hd-btn1.svg" alt="" />
+                    </a>
+                  </div>
+                  <div class="hd__btn__item">
+                    <a href="#">
+                      <img src="./assets/images/svg/hd-btn2.svg" alt="" />
+                    </a>
+                  </div>
+                  <div class="hd__btn__item actPanel">
+                    <div class="hd__toggle__btn user user-noti actBtn">
+                      <img src="./assets/images/user.jpg" alt="" />
+                    </div>
+                    <div class="hd-sub">
+                      <!-- <ul>
+                        <li>
+                          <a href="#"> 로그인 </a>
+                        </li>
+                        <li>
+                          <a href="#"> 회원가입 </a>
+                        </li>
+                      </ul> -->
+
+                      <ul>
+                        <li>
+                          <a href="#"> 정보변경 </a>
+                        </li>
+                        <li>
+                          <a href="#"> 조회결과 </a>
+                        </li>
+                        <li>
+                          <a href="#"> 상품의뢰 </a>
+                        </li>
+                        <li>
+                          <a href="#"> 질의답변</a>
+                        </li>
+                        <li>
+                          <a href="#"> 로그아웃 </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="menuBg menu__bg"></div>
+          </div>
+          <div class="hd__ser">
+            <form action="#">
+              <div class="hd__ser__wrap">
+                <input type="text" class="rs-form hd__ser__inp" placeholder="검색" />
+                <button type="submit" class="rs-form hd__ser__btn">
+                  <img src="./assets/images/svg/ser-ic.svg" alt="" />
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="hd__btn hd__dt">
+            <div class="hd__btn__item">
+              <a href="#">
+                <img src="./assets/images/svg/hd-btn1.svg" alt="" />
+              </a>
+            </div>
+            <div class="hd__btn__item">
+              <a href="#">
+                <img src="./assets/images/svg/hd-btn2.svg" alt="" />
+              </a>
+            </div>
+            <div class="hd__btn__item actPanel">
+              <div class="hd__toggle__btn user user-noti actBtn">
+                <img src="./assets/images/user.jpg" alt="" />
+              </div>
+              <div class="hd-sub">
+                <!-- <ul>
+                        <li>
+                          <a href="#"> 로그인 </a>
+                        </li>
+                        <li>
+                          <a href="#"> 회원가입 </a>
+                        </li>
+                      </ul> -->
+
+                <ul>
+                  <li>
+                    <a href="#"> 정보변경 </a>
+                  </li>
+                  <li>
+                    <a href="#"> 조회결과 </a>
+                  </li>
+                  <li>
+                    <a href="#"> 상품의뢰 </a>
+                  </li>
+                  <li>
+                    <a href="#"> 질의답변</a>
+                  </li>
+                  <li>
+                    <a href="#"> 로그아웃 </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="menu__btn menuBtn">
+            <svg class="menu__svg" viewBox="0 0 100 100">
+              <path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path>
+              <path d="m 30,50 h 40"></path>
+              <path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="dt">
+        <div class="con">
+          <div class="dt-acc">
+            <div class="acc">
+              <div class="acc-ser-head fl-ct">
+                <div class="ser-info">
+                  <div>토지분석레포트 (베이직)</div>
+                  <div>제주특별시 제주시 첨단로 213-3</div>
+                </div>
+                <div class="ser-btn">
+                  <div class="print-btn" onclick="window.print()">
+                    <img src="./assets/images/svg/l-printer.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dt-item fl-wrap">
+            <div class="dt-title head">
+              토지 <br />
+              리포트
+            </div>
+            <div class="dt-content">
+              <div class="dt-head fl-ct">
+                <div class="dt-head-check">
+                  <form action="">
+                    <div class="form-check">
+                      <label for="1">
+                        <input id="1" type="radio" checked name="123" />
+                        <div class="box"></div>
+                        <div class="txt">Basic</div>
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label for="2">
+                        <input id="2" type="radio" name="123" />
+                        <div class="box"></div>
+                        <div class="txt">Premium</div>
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label for="3">
+                        <input id="3" type="radio" name="123" />
+                        <div class="box"></div>
+                        <div class="txt">Custom</div>
+                      </label>
+                    </div>
+                  </form>
+                </div>
+                <div class="dt-head-txt mg-l">‘ 마이랜디 ’ 토지 리포트</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dt-item fl-wrap">
+            <div class="dt-title">
+              물건지 <br />
+              개요
+            </div>
+            <div class="dt-content">
+              <div class="mona-content">
+                <h2>물건지 주소</h2>
+                <p>ￚ제주시 노형동에 위치한 0000 0 (2021 년 6 월 1 일 기준</p>
+                <img src="./assets/images/l1.jpg" alt="" />
+
+                <div class="dt-tb">
+                  <div class="dt-tb-item">
+                    <div class="icon">
+                      <img src="./assets/images/svg/l-ic1.svg" alt="" />
+                    </div>
+                    <div class="txt">
+                      <div class="c-gre f-bold">지목</div>
+                      전
+                    </div>
+                  </div>
+                  <div class="dt-tb-item">
+                    <div class="icon">
+                      <img src="./assets/images/svg/l-ic2.svg" alt="" />
+                    </div>
+                    <div class="txt">
+                      <div class="c-gre f-bold">이용상황</div>
+                      전
+                    </div>
+                  </div>
+                  <div class="dt-tb-item">
+                    <div class="icon">
+                      <img src="./assets/images/svg/l-ic3.svg" alt="" />
+                    </div>
+                    <div class="txt">
+                      <div class="c-gre f-bold">용도지역</div>
+                      자연녹지
+                    </div>
+                  </div>
+                  <div class="dt-tb-item">
+                    <div class="icon">
+                      <img src="./assets/images/svg/l-ic4.svg" alt="" />
+                    </div>
+                    <div class="txt">
+                      <div class="c-gre f-bold">면적</div>
+                      3,729m²
+                    </div>
+                  </div>
+                  <div class="dt-tb-item">
+                    <div class="icon">
+                      <img src="./assets/images/svg/l-ic5.svg" alt="" />
+                    </div>
+                    <div class="txt">
+                      <div class="c-gre f-bold">도로</div>
+                      세로한면 가
+                    </div>
+                  </div>
+                  <div class="dt-tb-item">
+                    <div class="icon">
+                      <img src="./assets/images/svg/l-ic6.svg" alt="" />
+                    </div>
+                    <div class="txt">
+                      <div class="c-gre f-bold">형상</div>
+                      사다리형
+                    </div>
+                  </div>
+                  <div class="dt-tb-item">
+                    <div class="icon">
+                      <img src="./assets/images/svg/l-ic7.svg" alt="" />
+                    </div>
+                    <div class="txt">
+                      <div class="c-gre f-bold">지세</div>
+                      평지
+                    </div>
+                  </div>
+                  <div class="dt-tb-item">
+                    <div class="icon">
+                      <img src="./assets/images/svg/l-ic8.svg" alt="" />
+                    </div>
+                    <div class="txt">
+                      <div class="c-gre f-bold">공시지가 (m²)</div>
+                      523,000 원
+                    </div>
+                  </div>
+                </div>
+
+                <small>※ 위 정보는 2021 년 6 월 1 일자 기준 자료입니다</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="dt-item fl-wrap">
+            <div class="dt-title">
+              물건지 <br />
+              개요
+            </div>
+            <div class="dt-content">
+              <div class="mona-content">
+                <h2>제주시 노형동 0000 0 개별공시지가 최근 5 개년 공시지가 추이</h2>
+
+                <div class="dt-table">
+                  <div class="table">
+                    <div class="head">
+                      <div class="col-20">가격기준년도</div>
+                      <div class="col-40">개별공시지가 원 , 평</div>
+                      <div class="col-20">기준일자</div>
+                      <div class="col-20">공시일자</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-20">2021</div>
+                      <div class="col-40">1,728,928</div>
+                      <div class="col-20">01 월 01 일</div>
+                      <div class="col-20">2021/05/31</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-20">2021</div>
+                      <div class="col-40">1,728,928</div>
+                      <div class="col-20">01 월 01 일</div>
+                      <div class="col-20">2021/05/31</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-20">2021</div>
+                      <div class="col-40">1,728,928</div>
+                      <div class="col-20">01 월 01 일</div>
+                      <div class="col-20">2021/05/31</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-20">2021</div>
+                      <div class="col-40">1,728,928</div>
+                      <div class="col-20">01 월 01 일</div>
+                      <div class="col-20">2021/05/31</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-20">2021</div>
+                      <div class="col-40">1,728,928</div>
+                      <div class="col-20">01 월 01 일</div>
+                      <div class="col-20">2021/05/31</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dt-item fl-wrap">
+            <div class="dt-title">건축 분석</div>
+            <div class="dt-content">
+              <div class="mona-content">
+                <h2>지역지구 등 지정여부</h2>
+
+                <div class="dt-table">
+                  <div class="table">
+                    <div class="head">
+                      <div class="col-100">현황 및 분석 결과</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-100">
+                        <p>
+                          1. 국토의 계획 및 이용에 관한 법률에 따른 지역/지구
+                          <br />
+                          <span class="c-yel">자연녹지지역, 소로3류(저촉)</span>
+                        </p>
+
+                        <p>
+                          2. 다른 법령 등에 따른 지역/지구 등
+                          <br />
+                          <span class="c-yel">가축사육제한구역, 장애물제한표면구역, 상대보호구역, 공장설립제한지역</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dt-item fl-wrap">
+            <div class="dt-title">실거래가</div>
+            <div class="dt-content">
+              <div class="mona-content">
+                <h2>제주시 노형동 0000-0 실거래가</h2>
+
+                <div class="dt-table">
+                  <div class="table">
+                    <div class="head">
+                      <div class="col-20">거래일자</div>
+                      <div class="col-40">면적</div>
+                      <div class="col-20">총액</div>
+                      <div class="col-20">단가</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-100 txt-ct">현 토지의 실거래 내역이 없습니다.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <h2>지역 매매가격(가까운 지역에 있는 동일 용도, 지목의 토지거래 내역)</h2>
+
+                <div class="dt-table">
+                  <div class="table">
+                    <div class="head">
+                      <div class="col-20">거래일자</div>
+                      <div class="col-40">면적</div>
+                      <div class="col-40">단가(평)</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-20">2021/01/29</div>
+                      <div class="col-40">154 평</div>
+                      <div class="col-40">4,020,204</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-20">2021/01/29</div>
+                      <div class="col-40">154 평</div>
+                      <div class="col-40">4,020,204</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-20">2021/01/29</div>
+                      <div class="col-40">154 평</div>
+                      <div class="col-40">4,020,204</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dt-item fl-wrap">
+            <div class="dt-title">용도분석</div>
+            <div class="dt-content">
+              <div class="mona-content">
+                <h2>건축법 및 조례에 의한 허용용도</h2>
+
+                <div class="dt-tb dt-tb-small">
+                  <div class="dt-tb-item">
+                    <div class="icon">
+                      <img src="./assets/images/svg/l-ic11.svg" alt="" />
+                    </div>
+                    <div class="txt">
+                      <div class="f-bold">단독주택</div>
+                    </div>
+                  </div>
+                  <div class="dt-tb-item">
+                    <div class="icon">
+                      <img src="./assets/images/svg/l-ic21.svg" alt="" />
+                    </div>
+                    <div class="txt">
+                      <div class="f-bold">연립및 다세대주택</div>
+                    </div>
+                  </div>
+                  <div class="dt-tb-item">
+                    <div class="icon">
+                      <img src="./assets/images/svg/l-ic31.svg" alt="" />
+                    </div>
+                    <div class="txt">
+                      <div class="f-bold">제1종근린생활시설</div>
+                    </div>
+                  </div>
+                  <div class="dt-tb-item">
+                    <div class="icon">
+                      <img src="./assets/images/svg/l-ic41.svg" alt="" />
+                    </div>
+                    <div class="txt">
+                      <div class="f-bold">제2종근린생활시설</div>
+                    </div>
+                  </div>
+                  <div class="dt-tb-item">
+                    <div class="icon">
+                      <img src="./assets/images/svg/l-ic51.svg" alt="" />
+                    </div>
+                    <div class="txt">
+                      <div class="f-bold">문화및 집회시설</div>
+                    </div>
+                  </div>
+                  <div class="dt-tb-item">
+                    <div class="icon">
+                      <img src="./assets/images/svg/l-ic61.svg" alt="" />
+                    </div>
+                    <div class="txt">
+                      <div class="f-bold">교육연구시설</div>
+                    </div>
+                  </div>
+                </div>
+
+                <small>※ 위의 용도는 대표적 용도이며 그 외의 용도는 해당 지역의 조례 참고</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="dt-item fl-wrap">
+            <div class="dt-title">용도분석</div>
+            <div class="dt-content">
+              <div class="mona-content">
+                <h2>건축법 및 조례에 의한 허용용도</h2>
+
+                <div class="dt-table">
+                  <div class="table full">
+                    <div class="head">
+                      <div class="col-50">건폐율</div>
+                      <div class="col-50">용적률</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-50">20%</div>
+                      <div class="col-50">80%</div>
+                    </div>
+                    <div class="head">
+                      <div class="col-50">층수제한</div>
+                      <div class="col-50">높이제한</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-50">4층</div>
+                      <div class="col-50">해당없음</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dt-item fl-wrap">
+            <div class="dt-title">유동인구</div>
+            <div class="dt-content">
+              <div class="mona-content">
+                <h2>노형동 유동인구 추이(2021년, 천명)</h2>
+                <img class="no-boder" src="./assets/images/l-c.jpg" alt="" />
+
+                <h3>물건지 정사 이미지(축소)</h3>
+                <img src="./assets/images/l2.jpg" alt="" />
+
+                <h3>물건지 정사 이미지(확대)</h3>
+                <img src="./assets/images/l3.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="ft">
+      <div class="con">
+        <div class="ft-head fl-ct">
+          <div class="ft-logo">
+            <a href="#">
+              <img src="./assets/images/logo-2.png" alt="" />
+            </a>
+          </div>
+          <div class="ft-line">
+            <div class="ft-btn fl-ct backToTop">
+              <img src="./assets/images/svg/arr-up.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="ft-wrap fl-wrap">
+          <div class="col-3">
+            <ul class="ft-list">
+              <li><a href="#"> 서비스소개 </a></li>
+              <li><a href="#"> 개인정보처리방침 </a></li>
+              <li><a href="#"> 이용약관 </a></li>
+              <li><a href="#">이메일주소 무단수집거부 </a></li>
+            </ul>
+          </div>
+          <div class="col-3">
+            <ul class="ft-list">
+              <li>
+                <span class="f-bold">㈜드론오렌지 </span>
+              </li>
+              <li>대표 : 정념</li>
+              <li>사업자등록번호 : 895-81-00203</li>
+              <li>통신판매신고 : 000-00-000000</li>
+            </ul>
+          </div>
+
+          <div class="col-6">
+            <ul class="ft-list">
+              <li><span class="f-bold">제주사무실 </span> 제주도 제주시 제주한라대학교 하이테크센터 1층 1121호</li>
+              <li><span class="f-bold">기술연구소 </span> 제주도 제주시 첨단로 213-3 스마트빌딩 321호</li>
+              <li><span class="f-bold">서울사무실 </span> 서울특별시 강남구 역삼로 165 해성빌딩 7층</li>
+              <li><span class="f-bold">해외법인인 </span> 베트남 호치민 소재법인(2022년 1월)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="ft-bot fl-ct jus-spa">
+          <a href="https://mona.media/" class="ft-copy">Designed and developed by Mona Media</a>
+          <a href="#" class="ft-chat fl-ct">
+            <img src="./assets/images/svg/chat-ic.svg" alt="" />
+            의뢰하기
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/libs/jquery-3.6.0.min.js"></script>
+    <script src="./js/libs/select2/select2.min.js"></script>
+    <script src="./js/libs/magnific/jquery.magnific-popup.min.js"></script>
+    <script src="./js/libs/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/libs/aos/aos.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_AJlLdBiP2MN7FzBlCbtVUulkmETf4-Q&callback=fn_initGoogleMap&libraries=drawing&v=weekly"
+      defer
+    ></script>
+    <script>
+      AOS.init({
+        disable: function () {
+          var maxWidth = 480;
+          return window.innerWidth < maxWidth;
+        },
+        duration: 800,
+        once: 'true',
+      });
+    </script>
+    <script src="./js/main.js" type="module" defer></script>
+  </body>
+</html>

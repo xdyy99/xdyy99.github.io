@@ -1,0 +1,303 @@
+#menu-main-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  .current-menu-item {
+    a {
+      color: $c-pri;
+    }
+  }
+  & > .menu-item {
+    padding: 0 8px;
+  }
+  a {
+    display: block;
+    padding: 2.7rem 8px;
+    font-weight: 600;
+    transition: 0.2s linear;
+    position: relative;
+    line-height: 21px;
+    font-size: 14px;
+    line-height: 1.5;
+    @include hover(1200px) {
+      background-color: #ffe7e7;
+    }
+  }
+  .dropdown {
+    position: relative;
+    a {
+      padding-right: 20px;
+    }
+    .submenu a {
+      padding: 1.6rem;
+      text-align: left;
+    }
+
+    @include hover() {
+      .submenu {
+        left: 8px;
+        opacity: 1;
+        pointer-events: auto;
+        &__btn {
+          img {
+            filter: brightness(0) invert(1);
+          }
+          background-color: $c-pri;
+        }
+      }
+    }
+  }
+}
+
+.menu {
+  &__svg {
+    width: 30px;
+    height: 30px;
+    transition: 0.4s ease;
+    path {
+      fill: none;
+      transition: stroke-dasharray 0.4s, stroke-dashoffset 0.4s;
+      stroke: $c-pri;
+      stroke-width: 5;
+      stroke-linecap: round;
+      &:nth-child(1) {
+        stroke-dasharray: 40 160;
+      }
+      &:nth-child(2) {
+        transform: rotate(0);
+      }
+      &:nth-child(3) {
+        stroke-dasharray: 40 85;
+        transform-origin: 50%;
+        transition: transform 0.4s, stroke-dashoffset 0.4s;
+      }
+    }
+  }
+  &__btn {
+    display: none;
+
+    &.active {
+      background-color: $c-pri;
+      .menu__svg {
+        transform: rotate(45deg);
+        path {
+          fill: none;
+          transition: stroke-dasharray 0.4s, stroke-dashoffset 0.4s;
+          stroke: #fff;
+          stroke-linecap: round;
+          &:nth-child(1) {
+            stroke-dasharray: 40 160;
+          }
+          &:nth-child(3) {
+            stroke-dasharray: 40 85;
+          }
+          &:nth-child(2) {
+            transform-origin: 50%;
+            transform: rotate(90deg);
+          }
+          &:nth-child(1),
+          &:nth-child(3) {
+            stroke-dashoffset: -64px;
+          }
+        }
+      }
+    }
+  }
+  &__bg {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.3s linear;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+.submenu {
+  position: absolute;
+  left: 20%;
+  top: 100%;
+
+  min-width: 25rem;
+  width: max-content;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+  background-color: #fff;
+  overflow: hidden;
+  text-align: right;
+  box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.1);
+
+  &.sub-over {
+    left: unset;
+    right: 0;
+  }
+  &__btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    @include sqr(12px);
+    border-radius: 3px;
+    box-shadow: 0rem 4px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    img {
+      display: block;
+    }
+    pointer-events: none;
+    top: 49%;
+    right: 12px;
+    transform: translateY(-50%);
+  }
+}
+
+@include max-media(1200px) {
+  .menu {
+    height: calc(100vh - var(--headH, 0vh));
+    height: calc(var(--vh, 1vh) * 100 - var(--headH, 0vh));
+    top: calc(100% + 5px);
+    width: 100vw;
+    right: 0;
+    pointer-events: none;
+    overflow: hidden;
+    position: absolute;
+    * > {
+      pointer-events: auto;
+    }
+    &::-webkit-scrollbar {
+      display: block;
+      width: 2px;
+      height: 2px;
+      background-color: #e5e5e5;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $c-pri;
+    }
+    &__btn {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 99px;
+      background-color: #fff;
+      box-shadow: 0 0 3rem rgba(0, 0, 0, 0.1);
+      transition: 0.2s linear;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 10;
+      cursor: pointer;
+      margin-left: 3rem;
+    }
+    &.active {
+      .menu__wrap {
+        transform: translateX(0);
+        pointer-events: auto;
+      }
+      .menu__bg {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+    &__wrap {
+      right: 0;
+      left: 0;
+      max-width: 30rem;
+      background-color: #fff;
+      height: 100%;
+      transform: translateX(100%);
+      transition: 0.3s linear;
+      z-index: 8;
+      overflow-y: auto;
+      margin-left: auto;
+      &::-webkit-scrollbar {
+        width: 4px;
+      }
+    }
+    &__bg {
+      display: block;
+    }
+  }
+  #menu-main-menu {
+    flex-direction: column;
+    a {
+      width: 100%;
+      padding: 2rem;
+      padding-right: 0;
+      text-align: left;
+    }
+    .menu {
+      &-item {
+        width: 100%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 0;
+        &.dropdown {
+          padding-right: 35px;
+          &.show {
+            .submenu {
+              max-height: var(--menuH);
+              border-top: 1px solid rgba(0, 0, 0, 0.1);
+            }
+          }
+        }
+        .menu-item:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+  .submenu {
+    border-top: 0px solid rgba(0, 0, 0, 0.1);
+    width: auto;
+    position: relative;
+    border-radius: 0;
+    overflow: unset;
+    top: 0;
+    left: 0;
+    box-shadow: none;
+    background-color: transparent;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.2s linear;
+    margin-left: 1.5rem;
+    margin-right: -2rem;
+    opacity: 1;
+    pointer-events: auto;
+    &__btn {
+      width: 30px;
+      height: 30px;
+      right: 5px;
+      top: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      pointer-events: auto;
+      img {
+        display: block;
+        @include sqr(12px);
+      }
+    }
+  }
+}
+@include max-media(768px) {
+  .submenu__btn {
+    top: 26px;
+  }
+  .menu__btn {
+    margin-left: 1.5rem;
+  }
+}
+@include max-media(600px) {
+  .submenu__btn {
+    top: 25px;
+  }
+}
+@include max-media(450px) {
+  .menu__wrap {
+    max-width: 100%;
+  }
+}

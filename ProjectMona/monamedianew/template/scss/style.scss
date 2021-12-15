@@ -1,0 +1,313 @@
+@import url('../assets/fonts/SFProText/stylesheet.css');
+@import url('../assets/fonts/Oswald/stylesheet.css');
+@import url('../js/libs/wowjs/animate.min.css');
+@import url('../js/libs/fontawesome/css/all.css');
+@import url('../js/libs/swiper/swiper-bundle.min.css');
+@import url('../js/libs/select2/select2.min.css');
+@import url('../js/libs/gallery/lightgallery.min.css');
+
+// core //
+@import './core/reset';
+@import './core/var-mix';
+@import './core/mona';
+@import './core/animation';
+@import './core/font';
+
+// style //
+:root {
+  --animate-duration: 0.8s;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  @include fz-20;
+  line-height: calc(3 / 2);
+  font-family: 'SFProText', sans-serif;
+  color: #000;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input,
+select,
+button,
+textarea {
+  outline: none;
+  border: none;
+  font-family: 'SFProText', sans-serif;
+  @include fz-20;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+.rs__form {
+  -webkit-appearance: none;
+  appearance: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
+li {
+  list-style-type: none;
+}
+
+::-webkit-scrollbar {
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: #e5e5e5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $c-blu-light;
+}
+::selection {
+  background: $c-sky-light;
+  color: #fff;
+}
+.no-scroll,
+.no-scroll-pop {
+  touch-action: none;
+  -webkit-overflow-scrolling: none;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+.realPRL {
+  pointer-events: auto !important;
+}
+.section {
+  width: 100%;
+  padding: 10rem 0;
+  position: relative;
+  &-80 {
+    padding: 8rem 0;
+  }
+  &-70 {
+    padding: 7rem 0;
+  }
+  &-60 {
+    padding: 6rem 0;
+  }
+}
+.container__big {
+  width: 100%;
+  max-width: 144rem;
+  padding: 0 1.5rem;
+  position: relative;
+  margin: 0 auto;
+}
+.container {
+  width: 100%;
+  max-width: 120rem;
+  padding: 0 1.5rem;
+  position: relative;
+  margin: 0 auto;
+}
+
+.main {
+  overflow: hidden;
+  padding-bottom: 250px;
+  margin-bottom: -250px;
+}
+.page__title {
+  @include fz-90;
+  font-weight: 500;
+  line-height: calc(48 / 40);
+  color: #fff;
+  .bold {
+    font-weight: 900;
+  }
+}
+.section__title {
+  display: inline-block;
+  @include fz-30;
+  line-height: calc(42 / 30);
+  font-weight: bold;
+  position: relative;
+  .blue {
+    color: $c-primary;
+  }
+  .upper {
+    text-transform: uppercase;
+  }
+}
+.section__title-40 {
+  display: block;
+  @include fz-40;
+  margin-bottom: 6rem;
+  .blue {
+    font-weight: 900;
+    color: $c-primary;
+  }
+  .upper {
+    text-transform: uppercase;
+  }
+}
+.section__subtitle {
+  text-align: center;
+  @include fz-18;
+  font-weight: 500;
+  display: block;
+  max-width: max-content;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+.txt {
+  opacity: 0.7;
+  transition: 0.3s linear;
+}
+
+.button {
+  position: relative;
+  display: block;
+  width: max-content;
+  text-align: center;
+  font-weight: 900;
+  color: #fff;
+  background-color: $c-secondary;
+  transition: 0.3s linear;
+  cursor: pointer;
+  padding: 1.5rem 4rem;
+  z-index: 1;
+
+  &::after,
+  &::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 100%;
+    background-color: $c-blu-light;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 0.7s ease;
+    z-index: -1;
+  }
+  &::after {
+    background-color: $c-blu-dark;
+    transition: 0.3s ease;
+  }
+  &:hover {
+    @media only screen and(min-width: 901px) {
+      &::after {
+        width: 100%;
+        transition: 0.7s ease;
+      }
+      &::before {
+        width: 100%;
+        transition: 0.3s ease;
+      }
+    }
+  }
+  &:disabled {
+    background-color: rgb(94, 94, 94);
+    color: #000;
+    cursor: not-allowed;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+}
+@media only screen and (max-width: 1024px) {
+  ::-webkit-scrollbar {
+    display: block;
+    width: 2px;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+  }
+  .section__title-40 {
+    font-weight: bold;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .section {
+    padding: 6rem 0;
+    &-80 {
+      padding: 5rem 0;
+    }
+    &-70 {
+      padding: 4rem 0;
+    }
+    &__title {
+      margin-bottom: 2rem;
+    }
+    &__subtitle {
+      margin-bottom: 1rem;
+    }
+  }
+  .phone {
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+// component //
+@import './components/preload';
+@import './components/cursor';
+@import './components/header';
+@import './components/backtotop';
+@import './components/search';
+@import './components/footer';
+@import './components/swiper';
+@import './components/banner';
+@import './components/dia';
+@import './components/intro';
+@import './components/quote';
+@import './components/number';
+@import './components/doitac';
+@import './components/service';
+@import './components/project';
+@import './components/news';
+@import './components/contact';
+@import './components/form';
+@import './components/career';
+@import './components/member';
+@import './components/road';
+@import './components/dream';
+@import './components/lead';
+@import './components/value';
+@import './components/best';
+@import './components/blog';
+@import './components/blog-dt';
+@import './components/blog-aside';
+@import './components/pagination';
+
+// page
+@import './pages/blog';
+@import './pages/blog-dt';
+@import './pages/recruitment';

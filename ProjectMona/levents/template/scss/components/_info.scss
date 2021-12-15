@@ -1,0 +1,58 @@
+.info {
+  padding-top: 3.2rem;
+  .form label {
+    display: inline-block;
+    @include fz(16);
+    margin-bottom: 1rem;
+  }
+  .form__inp {
+    @include svnL();
+    width: calc(100% - 4.5rem);
+    max-width: 1024px;
+    margin-right: auto;
+  }
+  &JS {
+    &.active {
+      .form__inp {
+        padding: 1rem 2.5rem;
+        border: 1px solid rgba(112, 112, 112, 0.3);
+        &:focus {
+          border: 1px solid #000;
+          @include svnM();
+        }
+      }
+      .info__btn {
+        img {
+          filter: brightness(0);
+        }
+      }
+    }
+  }
+  &__submit {
+    width: 27rem;
+  }
+  &__btn {
+    @include sqr(4.5rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 16px;
+      transition: 0.3s linear;
+      float: right;
+      cursor: pointer;
+    }
+    @include hover() {
+      img {
+        filter: brightness(0);
+      }
+    }
+  }
+}
+@include max-media(480px) {
+  .info {
+    &__submit {
+      margin: 0 auto;
+    }
+  }
+}

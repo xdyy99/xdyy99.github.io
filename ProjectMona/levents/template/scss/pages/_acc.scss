@@ -1,0 +1,21 @@
+.acc {
+  &__main {
+    padding-top: 7.2rem;
+    .wish {
+      width: 100%;
+      padding: 0;
+      max-width: none;
+    }
+  }
+}
+@include max-media(1200px) {
+  .acc {
+    &__main {
+      padding-top: 3rem;
+    }
+    .col-9,
+    .col-3 {
+      width: 100%;
+    }
+  }
+}

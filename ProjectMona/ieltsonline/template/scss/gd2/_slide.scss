@@ -1,0 +1,20 @@
+.swiper-test {
+  width: 100%;
+  position: relative;
+  .swiper-slide {
+    opacity: 0 !important;
+    &-active {
+      opacity: 1 !important;
+    }
+  }
+  .swiper-test-prev,
+  .swiper-test-next,
+  .swiper-test-pag {
+    cursor: pointer;
+  }
+}
+.slide {
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+}

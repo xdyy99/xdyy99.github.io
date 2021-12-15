@@ -1,0 +1,100 @@
+// Font //
+@import url('../assets/fonts/nanum/stylesheet.css');
+
+// Lib //
+@import url('../js/libs/swiper/swiper-bundle.min.css');
+@import url('../js/libs/fontawesome/css/all.css');
+@import url('../js/libs/select2/select2.min.css');
+@import url('../js/libs/magnific/magnific-popup.css');
+@import url('../js/libs/aos/aos.css');
+
+// Core //
+@import './core/var-mix';
+@import './core/reset';
+@import './core/font';
+@import './core/animation';
+@import './core/mona';
+@import './core/default';
+
+// Common style //
+body {
+  @include fz(17);
+  font-family: 'NanumGothic', sans-serif;
+  line-height: calc(34 / 20);
+}
+.main-grey {
+  min-height: 100vh;
+  background-color: #f7f8f9;
+}
+.main-home {
+  margin-top: calc(var(--headH, 0px));
+}
+.sec-title {
+  font-weight: bold;
+  @include fz(50);
+  margin-bottom: 4.8rem;
+  @include max-media(1200px) {
+    @include fz(40);
+    margin-bottom: 3rem;
+  }
+}
+
+.btn-grey,
+.btn-cur,
+.btn-pri,
+.btn-red,
+.btn-green,
+.btn-sec {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  padding: 1.5rem 3rem;
+  transition: 0.2s linear;
+  line-height: 1;
+  border-radius: 99px;
+  position: relative;
+  box-shadow: 0 1rem 2.5rem rgba($color: #94aeb6, $alpha: 0.4);
+  text-align: center;
+  color: #fff;
+  background-color: $c-bla;
+  @include hover() {
+    background-color: $c-pri;
+  }
+}
+
+.btn-green {
+  background-color: #4fc340;
+  @include hover() {
+    background-color: $c-pri;
+  }
+}
+.btn-red {
+  background-color: #db4d41;
+  @include hover() {
+    background-color: $c-pri;
+  }
+}
+.btn-grey {
+  background-color: #a5a6ad;
+  @include hover() {
+    background-color: $c-pri;
+  }
+}
+
+// Component //
+@import './components/header';
+@import './components/menu';
+@import './components/form';
+@import './components/pagination';
+@import './components/footer';
+@import './components/swiper';
+
+// Page //
+@import './pages/p404';
+@import './pages/login';
+@import './pages/acc';
+@import './pages/land';
+@import './pages/detail';
+@import './pages/about';
+@import './pages/pro';
+@import './pages/newpage';

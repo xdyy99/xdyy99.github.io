@@ -1,0 +1,144 @@
+.popup__close {
+  position: absolute;
+  right: 3rem;
+  top: 3rem;
+  font-size: 2.5rem;
+  user-select: none;
+  cursor: pointer;
+  transition: 0.3s linear;
+  &:hover {
+    color: #f72509;
+  }
+}
+.popup__container {
+  position: relative;
+  max-height: 80vh;
+  background: url('../assets/images/lolo.png') 35% 40% / 30% no-repeat #fff;
+  position: relative;
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 900px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.sim {
+  &__code {
+    width: 15rem;
+    margin: auto;
+  }
+  &__popup {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    height: calc(80vh - 90px);
+    overflow-y: auto;
+    .bold {
+      font-weight: bold;
+    }
+    .green {
+      color: #33c659;
+    }
+    .red {
+      color: #f72509;
+    }
+  }
+  &__col {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 1.5rem;
+  }
+  &__title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__info {
+    @include fz-14;
+    margin-bottom: 1rem;
+    &__item {
+      display: flex;
+
+      .half {
+        width: 50%;
+      }
+    }
+  }
+  &__check {
+    &__list {
+      margin-bottom: 1rem;
+    }
+    position: relative;
+    padding: 5px;
+    padding-left: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    &::after {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-image: url('../assets/images/svg/scheck.svg');
+      background-size: 100%;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &.false {
+      &::after {
+        background-image: url('../assets/images/svg/close.svg');
+      }
+    }
+  }
+  &__status {
+    &.no-ic {
+      .sim__info__item {
+        padding: 5px 10px;
+        &::after {
+          display: none;
+        }
+      }
+    }
+    &__title {
+      padding: 5px 10px;
+      background-color: #fff;
+    }
+    .sim__info__item {
+      &.no-ic {
+        &::after {
+          display: none;
+        }
+      }
+      padding: 5px 10px;
+      position: relative;
+      padding-right: 25px;
+      background-color: #fff;
+      &:nth-child(even) {
+        background-color: #f8f8f8;
+      }
+      &::after {
+        content: '';
+        display: block;
+        width: 16px;
+        height: 16px;
+        background-image: url('../assets/images/svg/sttcheck.svg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+@media only screen and (max-width: 700px) {
+  .sim {
+    &__col {
+      width: 100%;
+      padding: 0;
+    }
+  }
+}

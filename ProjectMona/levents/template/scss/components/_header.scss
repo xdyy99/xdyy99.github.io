@@ -1,0 +1,131 @@
+.admin-bar {
+  .hd {
+    top: 32px;
+  }
+  @media only screen and (max-width: 768px) {
+    .hd {
+      top: 46px;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .hd {
+      &.small {
+        top: 0;
+      }
+    }
+  }
+}
+.hd {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  pointer-events: none;
+  > * {
+    pointer-events: auto;
+  }
+  &__top {
+    background-color: #fff;
+    padding: 2rem 0;
+    border-bottom: 1px solid rgba($color: #707070, $alpha: 0.3);
+    position: relative;
+    z-index: 2;
+  }
+  &__logo {
+    width: 9.8rem;
+    img {
+      display: block;
+    }
+    &__img {
+      display: block;
+      width: 100%;
+    }
+  }
+  &__list {
+    justify-content: flex-end;
+  }
+  &__lang {
+    padding-right: 0;
+  }
+  &__bot {
+    transition: 0.5s ease;
+    background-color: #fff;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    border-bottom: 1px solid rgba(112, 112, 112, 0.3);
+    &__mb {
+      margin-top: 50px;
+      display: none;
+    }
+    &__acc {
+      padding: 1.3rem 1.5rem;
+    }
+  }
+  &__mb {
+    display: none;
+  }
+  &.small {
+    .hd__bot {
+      box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.1);
+      transform: translateY(-100%);
+    }
+    @include hover(1200px) {
+      .hd__bot {
+        transform: translateY(0);
+      }
+    }
+  }
+}
+@include max-media(1200px) {
+  .hd {
+    &__des {
+      display: none;
+    }
+    &__mb {
+      display: flex;
+    }
+    &__bot {
+      &__mb {
+        display: block;
+        & > div {
+          border-bottom: 1px solid rgba(112, 112, 112, 0.3);
+        }
+      }
+    }
+    &__lang {
+      display: none;
+    }
+    &__lang__mb {
+      padding: 1.3rem 1.5rem;
+      a {
+        display: block;
+        margin-left: 10px;
+      }
+      img {
+        display: block;
+        width: 20px;
+        margin-bottom: -2px;
+      }
+    }
+  }
+}
+@include max-media(480px) {
+  .hd {
+    &__logo {
+      width: 8rem;
+    }
+  }
+}
+@include max-media(450px) {
+  .hd {
+    &__top {
+      .pd-lr {
+        padding: 0 8px;
+      }
+      .col-4 {
+        padding: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,315 @@
+.form {
+  line-height: 21px;
+  &__wrap {
+    max-width: 48rem;
+  }
+  &__title {
+    margin-bottom: 3.2rem;
+  }
+  &__txt {
+    margin-bottom: 2.2rem;
+  }
+  input[type='text'].form__date {
+    background: url('../assets/images/svg/ic-date.svg') 100% 50% / 12px no-repeat;
+  }
+  input[type='date']::-webkit-calendar-picker-indicator {
+    background: url('../assets/images/svg/ic-date.svg') 100% 50% / 12px no-repeat;
+  }
+  input[type='date']::-webkit-datetime-edit-year-field:not([aria-valuenow]),
+  input[type='date']::-webkit-datetime-edit-month-field:not([aria-valuenow]),
+  input[type='date']::-webkit-datetime-edit-day-field:not([aria-valuenow]) {
+    color: transparent;
+  }
+
+  // input[type='date']:before {
+  //   content: attr(placeholder) !important;
+  //   color: #707070;
+  //   margin-right: 0.5em;
+  // }
+  input[type='date']:focus:before,
+  input[type='date']:valid:before {
+    content: '';
+  }
+
+  &__txtarea,
+  &__inp {
+    width: 100%;
+    border-bottom: 1px solid #c0c0c0;
+    padding: 1rem 0;
+    @include svnL();
+    margin-bottom: 2rem;
+    transition: 0.2s linear;
+    &:focus {
+      border-bottom: 1px solid #000;
+    }
+    &::placeholder {
+      color: #707070;
+    }
+  }
+  &__txtarea {
+    margin: 3.2rem 0;
+    height: 18rem;
+    resize: none;
+    border: 1px solid #c0c0c0;
+    padding: 2rem 2.5rem;
+    &:focus {
+      border: 1px solid #000;
+    }
+  }
+  &__check {
+    margin-bottom: 4.5rem;
+    label {
+      position: relative;
+      margin-bottom: 2rem;
+    }
+    .checkJS {
+      &:last-child {
+        label {
+          margin-bottom: 0;
+        }
+      }
+    }
+    input:checked + .form__cbox::after {
+      animation: bigbabol2 0.5s linear forwards;
+    }
+
+    input:checked ~ .form__ctxt {
+      color: #000;
+    }
+    label.active ~ .form__cwrap {
+      position: static;
+      transition: 0.5s linear;
+      opacity: 1;
+      transform: rotateX(0);
+      margin: 2rem 0;
+    }
+  }
+
+  &__cbox {
+    @include sqr(16px);
+    border: 1px solid #707070;
+    position: relative;
+    margin: 2px 10px 2px 0;
+    cursor: pointer;
+    &::after {
+      content: '';
+      display: block;
+      @include sqr(100%);
+      background-color: #7f7f7f;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+    }
+    &__co {
+      margin: 2px 10px 2px 0;
+      img {
+        display: block;
+      }
+    }
+  }
+  &__ctxt {
+    width: calc(100% - 26px);
+    @include svnL();
+    color: #47474c;
+    cursor: pointer;
+
+    @include hover() {
+      color: #000;
+    }
+  }
+  &__cwrap {
+    position: absolute;
+    opacity: 0;
+
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    width: 715px;
+    max-width: 100%;
+    transform-origin: top;
+    transform: rotateX(-90deg);
+    &.no-col {
+      padding: 1.5rem;
+      .form__txtarea {
+        margin: 0;
+      }
+      &::after {
+        display: none;
+      }
+    }
+    &::after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: calc(100% - 3rem);
+      background-color: rgba(112, 112, 112, 0.3);
+      position: absolute;
+      left: 50%;
+      top: 1.5rem;
+      transform: translateX(-50%);
+    }
+    .col {
+      max-width: 305px;
+    }
+  }
+  &__submit {
+    display: block;
+    width: 100%;
+    padding: 5px;
+
+    &-whi {
+      display: block;
+      width: 100%;
+      padding: 5px;
+
+      background-color: #fff;
+    }
+    &-small {
+      display: block;
+      padding: 5px;
+      width: 17rem;
+    }
+  }
+  &__file {
+    margin-bottom: 3.2rem;
+    &__txt {
+      @include fz(12);
+      line-height: 18px;
+      margin-top: 10px;
+    }
+  }
+  &__fbtn {
+    width: 17rem;
+    margin-right: 3rem;
+  }
+  &__fbox {
+    color: #009eff;
+  }
+  &__bot {
+    margin-top: 4.5rem;
+    .form__link {
+      margin: 1rem auto 1rem 0;
+    }
+  }
+  &__link {
+    color: #009eff;
+    @include svnL();
+    display: inline-block;
+    transition: 0.2s linear;
+    @include hover() {
+      color: #000;
+    }
+  }
+  &__back {
+    position: relative;
+    padding-left: 20px;
+    @include svnL();
+    &::after {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      background-image: url('../assets/images/svg/ic-back.svg');
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: 0.3s ease;
+    }
+    @include hover() {
+      &::after {
+        filter: brightness(0);
+      }
+    }
+  }
+  &__select {
+    width: 27rem;
+    max-width: 100%;
+    border: 1px solid rgba(112, 112, 112, 0.3);
+    padding: 5px 2.5rem;
+    background: url('../assets/images/svg/ic-arr.svg') 90% 50% / 12px no-repeat;
+  }
+  &__datalist {
+    background: url('../assets/images/svg/ic-arr.svg') 100% 50% / 12px no-repeat;
+  }
+}
+.select2-container .select2-selection--single {
+  height: auto;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  line-height: 21px;
+}
+.select2-container--default .select2-selection--single {
+  @include svnL();
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid #c0c0c0;
+  padding: 1rem 0;
+  background: url('../assets/images/svg/ic-arr.svg') 100% 50% / 12px no-repeat;
+}
+.select2-selection__arrow {
+  display: none;
+}
+.select2-container .select2-selection--single .select2-selection__rendered {
+  padding-left: 0;
+}
+@include max-media(1200px) {
+  .form {
+    &__title,
+    &__file,
+    &__check {
+      margin-bottom: 3rem;
+    }
+  }
+}
+@include max-media(768px) {
+  .form {
+    &__title,
+    &__file,
+    &__check {
+      margin-bottom: 1.5rem;
+    }
+    &__bot {
+      margin-top: 2rem;
+    }
+  }
+}
+@include max-media(480px) {
+  .form {
+    &__cwrap {
+      flex-wrap: wrap;
+      padding: 1.5rem 0;
+      &::after {
+        display: none;
+      }
+      .col {
+        max-width: none;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid rgba(112, 112, 112, 0.3);
+        margin-bottom: 2rem;
+        &:last-child {
+          padding-bottom: 0;
+          margin-bottom: 0;
+          border-bottom: none;
+        }
+      }
+      .form__txt {
+        margin-bottom: 1rem;
+      }
+    }
+    &__mb {
+      flex-direction: column;
+      .form__link {
+        margin: 0 auto 10px;
+      }
+    }
+    &__cbox {
+      margin-top: 4px;
+      @include sqr(12px);
+      &__co {
+        margin-top: 4px;
+        @include sqr(12px);
+      }
+    }
+  }
+}

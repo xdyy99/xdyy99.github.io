@@ -1,0 +1,118 @@
+.qa {
+  .sec-title {
+    margin-bottom: 0;
+  }
+  &__list {
+    position: relative;
+    .col-6 {
+      &:nth-child(2) {
+        .qa__item {
+          margin-left: auto;
+        }
+      }
+    }
+    &__col {
+      width: calc(50% - 6.5rem);
+    }
+    &::after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: calc(100% - 3.2rem);
+      background-color: rgba($color: #707070, $alpha: 0.3);
+      position: absolute;
+      left: 50%;
+      top: 3.2rem;
+      transform: translateX(-50%);
+    }
+  }
+  &__item {
+    width: calc(100% - 6.5rem);
+    position: relative;
+    padding: 3.2rem 0;
+    border-bottom: 1px solid rgba($color: #707070, $alpha: 0.3);
+  }
+  &__ques {
+    cursor: pointer;
+    position: relative;
+    padding-right: 20px;
+    color: #7f7f7f;
+    &::after {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      background: url('../assets/images/svg/ic-qa.svg') 50% 50% / contain no-repeat;
+      position: absolute;
+      right: 0;
+      top: 5px;
+      transition: 0.3s ease;
+    }
+    &.active {
+      color: #000;
+      margin-bottom: 3.2rem;
+      &::after {
+        transform: rotate(315deg);
+      }
+    }
+  }
+
+  &__ans {
+    height: max-content;
+    &__wrap {
+      position: absolute;
+      transform: rotateX(90deg);
+      pointer-events: none;
+      transition: 0.2s ease;
+      opacity: 0;
+      transform-origin: top;
+      &.active {
+        opacity: 1;
+        transition: 0.5s ease;
+        transform: rotateX(0deg);
+        position: relative;
+
+        pointer-events: auto;
+      }
+    }
+    background-color: #f9f9f9;
+    padding: 2.5rem;
+    .btn-pri {
+      width: 27rem;
+    }
+  }
+  &__txt {
+    margin-bottom: 2.5rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@include max-media(768px) {
+  .qa {
+    &__list {
+      .col-6 {
+        width: 100%;
+      }
+      &::after {
+        display: none;
+      }
+    }
+    &__item {
+      width: 100%;
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
+@include max-media(480px) {
+  .qa {
+    &__ans {
+      .btn-pri {
+        margin: 0 auto;
+      }
+    }
+  }
+}

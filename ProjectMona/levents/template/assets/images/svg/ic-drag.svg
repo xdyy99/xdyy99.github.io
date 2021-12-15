@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="27" viewBox="0 0 27 27">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_132" data-name="Rectangle 132" width="27" height="27" transform="translate(0.355 0.355)" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_39" data-name="Mask Group 39" transform="translate(-0.355 -0.355)" clip-path="url(#clip-path)">
+    <g id="slide" transform="translate(1.86)">
+      <g id="Group_174" data-name="Group 174" transform="translate(1.205)">
+        <g id="Group_173" data-name="Group 173">
+          <path id="Path_201" data-name="Path 201" d="M11.821,3.114H7.988L10.224.876,9.349,0,5.617,3.733,9.354,7.471l.876-.876L7.988,4.352h3.833Z" transform="translate(-5.617)"/>
+        </g>
+      </g>
+      <g id="Group_176" data-name="Group 176" transform="translate(17.332)">
+        <g id="Group_175" data-name="Group 175">
+          <path id="Path_202" data-name="Path 202" d="M37.668,0l-.876.876L39.03,3.114H35.165V4.352H39.03L36.787,6.6l.876.876L41.4,3.733Z" transform="translate(-35.165)"/>
+        </g>
+      </g>
+      <g id="Group_178" data-name="Group 178" transform="translate(0 2.497)">
+        <g id="Group_177" data-name="Group 177">
+          <path id="Path_203" data-name="Path 203" d="M25.44,17.4a.805.805,0,0,0-.16-.126,4.945,4.945,0,0,0-6.132.689l-.876.877V7.052a2.477,2.477,0,0,0-4.954,0V12.5a2.439,2.439,0,0,0-3.341-.45L4.642,15.141a2.467,2.467,0,0,0-1.234,2.134v4.074a8.011,8.011,0,0,0,13.545,5.8v.011l.137-.137.006-.006,8.341-8.342A.9.9,0,0,0,25.44,17.4ZM16.1,26.251a6.773,6.773,0,0,1-11.452-4.9V17.273a1.218,1.218,0,0,1,.621-1.058l5.43-3.157a1.2,1.2,0,0,1,1.66.225l1.1,1.348a.619.619,0,0,0,1.1-.391V7.052a1.239,1.239,0,1,1,2.477,0V19.435a1.225,1.225,0,0,0,.8,1.146.543.543,0,0,0,.576-.124l1.619-1.619a3.718,3.718,0,0,1,4.226-.725Z" transform="translate(-3.409 -4.575)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

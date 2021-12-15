@@ -1,0 +1,42 @@
+.rela {
+  border-top: 1px solid rgba($color: #707070, $alpha: 0.3);
+  .swiper-slide {
+    width: 25%;
+    padding: 0 5rem;
+  }
+  .swiper-wrapper {
+    width: calc(100% + 10rem);
+    margin: 0 -5rem;
+  }
+}
+@include max-media(1200px) {
+  .rela {
+    .swiper-slide {
+      width: 25%;
+      padding: 0 1.5rem;
+    }
+    .swiper-wrapper {
+      width: calc(100% + 3rem);
+      margin: 0 -1.5rem;
+    }
+  }
+}
+@include max-media(768px) {
+  .rela {
+    .swiper-slide {
+      width: 50%;
+    }
+  }
+}
+@include max-media(480px) {
+  .rela {
+    .swiper-slide {
+      width: 100%;
+      padding: 0;
+    }
+    .swiper-wrapper {
+      margin: 0;
+      width: 100%;
+    }
+  }
+}

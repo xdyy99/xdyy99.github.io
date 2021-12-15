@@ -1,0 +1,15 @@
+.user {
+  &__btn {
+    cursor: pointer;
+    img {
+      transition: 0.2s linear;
+      border-radius: 99px;
+    }
+    @include hover() {
+      animation: bigbabol 0.5s ease;
+      img {
+        filter: brightness(0);
+      }
+    }
+  }
+}

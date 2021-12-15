@@ -1,0 +1,24 @@
+@mixin fz($value) {
+  @if $value <= 16 {
+    font-size: $value / 19.2 + 0vw;
+    @include max(1200px) {
+      font-size: $value - 2px;
+    }
+  } @else if $value <= 30 {
+    font-size: $value / 19.2 + 0vw;
+    @include max(1200px) {
+      font-size: $value * 0.1 - 0.1rem;
+    }
+    @include max(768px) {
+      font-size: $value - 2px;
+    }
+  } @else {
+    font-size: $value / 19.2 + 0vw;
+    @include max(1200px) {
+      font-size: $value * 0.1 - ($value - 30) * 0.06 + 0rem;
+    }
+    @include max(768px) {
+      font-size: $value - ($value - 30) * 0.95 + 0px;
+    }
+  }
+}

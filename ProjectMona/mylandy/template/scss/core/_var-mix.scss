@@ -1,0 +1,57 @@
+// Color
+$c-pri: #e87623;
+$c-sec: #a5a6ad;
+$c-bla: #303030;
+$c-red: #fa1f1f;
+$c-gre: #4fb3ac;
+
+// mixin default
+@mixin center-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin default-background {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+// mixin advance
+
+@mixin lc($value: 3) {
+  display: -webkit-box;
+  -webkit-line-clamp: $value;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+@mixin max-media($value) {
+  @media screen and (max-width: $value) {
+    @content;
+  }
+}
+@mixin min-media($value) {
+  @media screen and (min-width: $value) {
+    @content;
+  }
+}
+@mixin hover($value: 1200px) {
+  &:hover {
+    @media screen and (min-width: $value) {
+      @content;
+    }
+  }
+}
+@mixin sqr($value: 4rem) {
+  width: $value;
+  height: $value;
+}
+@mixin cir($value: 4rem) {
+  width: $value;
+  height: $value;
+  border-radius: 999px;
+}
+@mixin naX() {
+  font-family: 'NanumGothicExtraBold', sans-serif;
+}

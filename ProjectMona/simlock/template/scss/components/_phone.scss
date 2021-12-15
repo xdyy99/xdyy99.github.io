@@ -1,0 +1,189 @@
+.phone {
+  width: 24.9rem;
+  position: absolute;
+  bottom: 50px;
+  right: 99px;
+  z-index: 8;
+  @include fz-25;
+  background-color: #fff;
+
+  &__wrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__scr {
+    &__wrap {
+      width: 100%;
+      margin: 0 10px;
+      overflow: hidden;
+      position: relative;
+      height: 5rem;
+    }
+    @include fz-25;
+    user-select: none;
+    display: block;
+
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    text-align: center;
+    white-space: nowrap;
+  }
+  &__del {
+    width: 5rem;
+    height: 5rem;
+    color: #000;
+    transition: 0.2s ease;
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+    margin: 0.5rem 1rem;
+    &::before {
+      content: '';
+      background-image: url('../assets/images/delete.png');
+      background-size: 48%;
+      background-position: 70% 50%;
+      background-repeat: no-repeat;
+      font-weight: 900;
+      font-size: 2rem;
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: 0.3s ease;
+    }
+    &::after {
+      content: '';
+      display: block;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 99px;
+      background-color: $c-secondary;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      transition: 0.3s ease;
+      z-index: -1;
+    }
+    &:hover {
+      @media only screen and(min-width: 901px) {
+        color: #fff;
+        &::before {
+          filter: brightness(0) invert(1);
+        }
+        &::after {
+          transform: translate(-50%, -50%) scale(1);
+        }
+      }
+    }
+  }
+  &__keyboard {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__blank {
+    width: 5rem;
+    height: 5rem;
+    margin: 0.5rem 1rem;
+  }
+  &__check {
+    display: block;
+    width: max-content;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    text-align: center;
+    color: #fff;
+    background-color: #33c659;
+    text-transform: uppercase;
+    border-radius: 99px;
+    @include fz-20;
+  }
+  &__btn {
+    text-align: center;
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 9.9rem;
+    background-color: #e4e4e4;
+    margin: 0.5rem 1rem;
+    line-height: 1;
+    padding: 7px 0;
+    user-select: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+    position: relative;
+
+    &.iconsmall {
+      padding-top: 3.5%;
+      @include fz-30;
+    }
+    &.iconbig {
+      padding-top: 3.5%;
+      @include fz-50;
+    }
+    &.call {
+      background-color: #33c659;
+      color: #fff;
+      margin: 0.5rem 1rem;
+      &::after {
+        content: '';
+        background-image: url('../assets/images/call.png');
+        filter: brightness(0) invert(1);
+        background-size: 35%;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        font-weight: 900;
+        font-size: 2rem;
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.3s ease;
+      }
+    }
+    &:hover {
+      @media only screen and(min-width: 901px) {
+        color: #fff;
+        background-color: $c-primary;
+        box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.16);
+        &::after {
+          animation: shaking 0.5s linear infinite;
+        }
+      }
+    }
+  }
+  &__txt {
+    display: block;
+    font-size: 8px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.1px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .phone {
+    right: 49px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .phone {
+    right: 60px;
+    &__btn {
+      padding: 1.2rem 0;
+    }
+  }
+}

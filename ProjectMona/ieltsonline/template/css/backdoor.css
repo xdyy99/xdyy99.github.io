@@ -1,0 +1,95 @@
+.less__img a {
+  min-height: 100%;
+}
+.submenu__container a {
+  border-bottom: 2px solid transparent;
+}
+@media screen and (min-width: 901px) {
+  .submenu__container a:hover {
+    background-color: transparent;
+    color: #e7194a;
+    border-bottom: 2px solid #e7194a;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .less__subtitle {
+    width: max-content;
+  }
+}
+@media screen and (max-width: 500px) {
+  .less__subtitle {
+    width: 100%;
+  }
+}
+.swiper-button-disabled {
+  opacity: 0.5 !important;
+  pointer-events: none !important;
+}
+/* label.cr.c-box .box {
+  background: url('../assets/images/2-ic-check.svg') 50% 50% / 15px no-repeat;
+} */
+label.hl-cr.cr.c-box .box {
+  background: url('../images/2-ic-check2.svg') 50% 50% / 15px no-repeat;
+}
+label.c-box.hl-false .box {
+  background: url('../images/wrong-ic.svg') 50% 50% / 11px no-repeat;
+}
+.item-tag {
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab;
+}
+.item-tag:active {
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: grabbing;
+}
+.inp-wrr.d-drag {
+  display: inline-block;
+  vertical-align: middle;
+  min-height: 36px;
+  width: 10rem;
+  background-color: #fff;
+  border: 1px solid #fff;
+  margin: 0 5px;
+  transition: none;
+}
+.inp-wrr.d-drag .item-tag {
+  display: inline-block;
+  min-width: max-content;
+  padding: 1.1rem 2rem 0.9rem;
+  line-height: 1;
+  background-color: #e7194a;
+  color: #fff;
+}
+.inp-wrr .check-input {
+  padding: 1.1rem 2rem 0.9rem;
+  white-space: nowrap;
+}
+.inp-wrr.d-drag.highlight {
+  border-color: #e7194a;
+}
+.inp-wrr.d-drag.hl-do,
+.inp-wrr.d-drag.hl-cr,
+.inp-wrr.d-drag.active {
+  max-width: 100%;
+  width: max-content;
+}
+.inp-wrr.d-drag input {
+  display: none;
+}
+.d-wrap {
+  min-height: 46px;
+  border: 1px dashed transparent;
+}
+.d-wrap.highlight {
+  border-color: rgb(231, 25, 74, 1);
+}
+.inp-wrr.d-drag.highlight .d-item-drag,
+.d-wrap.highlight .d-item-drag,
+.d-item-drag.highlight {
+  pointer-events: none;
+}
+.dragging {
+  pointer-events: auto !important;
+}

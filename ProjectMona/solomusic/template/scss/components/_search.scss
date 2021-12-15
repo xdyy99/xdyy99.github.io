@@ -1,0 +1,105 @@
+.ser {
+  &-wrap {
+    text-align: right;
+  }
+  &-form {
+    width: 16.25vw;
+    border: 1px solid #707070;
+    border-radius: 6px;
+    margin-bottom: 3.12vw;
+    overflow: hidden;
+    display: flex;
+  }
+  &-inp {
+    width: calc(100% - 3.75vw);
+    input {
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: 1.14vw 0.57vw 0.88vw;
+      &::placeholder {
+        font-weight: bold;
+        color: rgba(0, 0, 0, 0.8);
+        letter-spacing: 0.1em;
+      }
+    }
+  }
+  &-btn {
+    background: #fff;
+    border-radius: 0 6px 6px 0;
+    padding: 0.83vw 1.25vw;
+
+    display: flex;
+    align-items: center;
+    img {
+      display: block;
+      width: 1.25vw;
+      transition: 0.2s linear;
+    }
+    @include hover() {
+      img {
+        filter: brightness(0) invert(1);
+      }
+      background-color: $c-pri;
+    }
+  }
+  &-popular {
+    @include fz(15);
+    font-weight: 500;
+    letter-spacing: 0.5em;
+    margin-bottom: 1.56vw;
+  }
+  &-list {
+    margin: -0.52vw -0.52vw 0;
+    li {
+      margin-bottom: 0.54vw;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    a {
+      display: block;
+      @include fz(15);
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      line-height: 1;
+      padding: 0.62vw 0.52vw 0.42vw;
+      @include hover() {
+        color: $c-pri;
+      }
+    }
+  }
+}
+@include max(1200px) {
+  .ser {
+    &-form {
+      width: 31rem;
+      margin-bottom: 3rem;
+    }
+    &-inp {
+      width: 100%;
+      input {
+        padding: 1.7rem 1rem 1.3rem;
+      }
+    }
+    &-btn {
+      padding: 1.5rem 2rem;
+      img {
+        width: 24px;
+      }
+    }
+    &-popular {
+      margin-bottom: 3rem;
+    }
+    &-list {
+      margin: -1.6rem -1rem -1.2rem;
+      li {
+        margin-bottom: 0.5rem;
+      }
+      a {
+        padding: 1.6rem 1rem 1.2rem;
+      }
+    }
+  }
+}

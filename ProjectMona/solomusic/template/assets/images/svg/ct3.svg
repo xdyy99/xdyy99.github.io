@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_41" data-name="Rectangle 41" width="40" height="40" rx="20" transform="translate(855 731)" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_12" data-name="Mask Group 12" transform="translate(-855 -731)" clip-path="url(#clip-path)">
+    <g id="instagram_8_" data-name="instagram (8)" transform="translate(855 731)">
+      <path id="Path_29" data-name="Path 29" d="M34.067,21.187H25.578a4.395,4.395,0,0,0-4.391,4.391v8.489a4.395,4.395,0,0,0,4.391,4.391h8.489a4.395,4.395,0,0,0,4.391-4.391V25.578A4.4,4.4,0,0,0,34.067,21.187ZM29.818,35.5a5.68,5.68,0,1,1,5.68-5.68A5.69,5.69,0,0,1,29.818,35.5Zm5.964-10.729a.96.96,0,1,1,.96-.96A.956.956,0,0,1,35.782,24.769Z" transform="translate(-9.818 -9.818)"/>
+      <circle id="Ellipse_1" data-name="Ellipse 1" cx="3.449" cy="3.449" r="3.449" transform="matrix(0.012, -1, 1, 0.012, 16.514, 23.408)"/>
+      <path id="Path_30" data-name="Path 30" d="M24.133,4.133a20,20,0,1,0,20,20A20,20,0,0,0,24.133,4.133ZM35.244,28.382a6.866,6.866,0,0,1-6.862,6.862H19.893a6.866,6.866,0,0,1-6.862-6.862V19.893a6.866,6.866,0,0,1,6.862-6.862h8.489a6.866,6.866,0,0,1,6.862,6.862Z" transform="translate(-4.133 -4.133)"/>
+    </g>
+  </g>
+</svg>

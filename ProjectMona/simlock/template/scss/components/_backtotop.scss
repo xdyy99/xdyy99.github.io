@@ -1,0 +1,55 @@
+.back__to__top {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: $c-primary;
+  box-shadow: 0rem 0rem 3rem rgba(255, 255, 255, 0.3);
+  position: fixed;
+  bottom: 6rem;
+  right: 3rem;
+  z-index: 7;
+  transform: translateX(3rem);
+  opacity: 0;
+  transition: 0.5s linear;
+  cursor: pointer;
+  visibility: hidden;
+  user-select: none;
+
+  &.active {
+    visibility: visible;
+    transform: translateX(0);
+    opacity: 1;
+  }
+  &::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    z-index: 2;
+    border: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -15px);
+    &:nth-child(1) {
+      animation: BTT 1s linear 0.4s infinite;
+    }
+    &:nth-child(2) {
+      animation: BTT 1s linear 0.2s infinite;
+    }
+    &:nth-child(3) {
+      animation: BTT 1s linear 0s infinite;
+    }
+  }
+
+  &:hover {
+    @media only screen and (min-width: 901px) {
+      visibility: visible;
+      opacity: 1;
+      transform: translateX(0);
+      background-color: $c-secondary;
+    }
+  }
+}

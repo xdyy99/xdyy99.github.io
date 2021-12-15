@@ -1,0 +1,69 @@
+.apply {
+  max-width: 100%;
+  width: 108rem;
+  background-color: #fff;
+  padding: 3rem;
+  position: relative;
+  max-height: 80vh;
+  &.small {
+    width: max-content;
+    .apply__wrap {
+      width: 100%;
+      margin: 0;
+    }
+    .btn-sec {
+      margin: 4rem 0 1.5rem;
+    }
+  }
+  &__title {
+    @include fz(30);
+    @include svnX();
+    margin-bottom: 5.2rem;
+    line-height: 45px;
+  }
+  &__subtitle {
+    @include fz(16);
+    @include svnM();
+    line-height: 24px;
+    margin-bottom: 2.2rem;
+    text-transform: uppercase;
+  }
+  &__wrap {
+    width: calc(100% + 3rem);
+    margin: 0 -1.5rem;
+
+    max-height: calc(80vh - 14rem);
+    overflow-y: auto;
+    .col-6 {
+      min-height: min-content;
+    }
+  }
+  &__txt {
+    @include svnX();
+    padding: 1rem 0;
+    span {
+      display: inline-block;
+    }
+  }
+}
+@include max-media(768px) {
+  .apply {
+    padding: 1.5rem;
+    &__wrap {
+      .col-6 {
+        width: 100%;
+        margin-bottom: 2rem;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    &__title {
+      margin-bottom: 2rem;
+    }
+    &__subtitle {
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+  }
+}

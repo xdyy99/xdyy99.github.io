@@ -1,0 +1,219 @@
+/* overlay at start */
+.mfp-fade.mfp-bg {
+  opacity: 0;
+
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+}
+@keyframes roll1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes roll2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes BTT {
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes post1 {
+  0% {
+    margin-left: 0;
+  }
+  10% {
+    margin-left: 15px;
+  }
+  20% {
+    margin-left: 0px;
+  }
+  30% {
+    margin-left: 15px;
+  }
+  40% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: 0px;
+  }
+}
+@keyframes post2 {
+  0% {
+    margin-right: 0;
+  }
+  10% {
+    margin-right: 15px;
+  }
+  20% {
+    margin-right: 0px;
+  }
+  30% {
+    margin-right: 15px;
+  }
+  40% {
+    margin-right: 0px;
+  }
+  100% {
+    margin-right: 0px;
+  }
+}
+@keyframes shaking {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  10% {
+    transform: scale(1.1) rotate(20deg);
+  }
+  20% {
+    transform: scale(1.1) rotate(-20deg);
+  }
+  30% {
+    transform: scale(1.1) rotate(20deg);
+  }
+  40% {
+    transform: scale(1.1) rotate(-20deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(20deg);
+  }
+  55% {
+    transform: scale(1) rotate(0deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+@keyframes drag {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  25% {
+    transform: translate(-100%, -50%);
+  }
+  50% {
+    transform: translate(-50%, -50%);
+  }
+  75% {
+    transform: translate(0%, -50%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+@keyframes button {
+  0% {
+    transform: translate(100%, 100%) scale(1);
+  }
+  50% {
+    transform: translate(90%, 90%) scale(1.1);
+  }
+  100% {
+    transform: translate(100%, 100%) scale(1);
+  }
+}
+@keyframes jumping {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  15% {
+    transform: translate(-50%, -75%);
+  }
+  50% {
+    transform: translate(-50%, -50%);
+  }
+  75% {
+    transform: translate(-50%, -25%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+@keyframes bigin {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  30% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@keyframes bigout {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+}
+@keyframes jump {
+  0% {
+    transform: translateY(-50%);
+  }
+  25% {
+    transform: translateY(calc(-50% - 3px));
+  }
+  50% {
+    transform: translateY(-50%);
+  }
+  75% {
+    transform: translateY(calc(-50% + 3px));
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
