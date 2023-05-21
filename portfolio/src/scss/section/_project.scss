@@ -1,0 +1,141 @@
+.project {
+	min-height: 100vh;
+	padding: 5.55vh 0;
+	position: relative;
+	&-wrap {
+		top: 0;
+		max-width: 100%;
+		position: absolute;
+		// cursor: 'grab';
+	}
+	&-status {
+		margin-bottom: 3.125vw;
+		display: flex;
+		align-items: center;
+	}
+	&-title {
+		text-transform: uppercase;
+		margin-right: 15px;
+	}
+	&-group {
+		display: flex;
+		width: max-content;
+		align-items: center;
+		gap: 2.6vw;
+		transform: translate3d(-100%, 0, 0);
+	}
+	&-item {
+		// cursor: pointer;
+		position: relative;
+		z-index: 1;
+		@include hover() {
+			.project {
+				&-top {
+					transform: translate3D(0, -100%, 0);
+				}
+				&-bottom {
+					transform: translate3D(0, 100%, 0);
+				}
+			}
+		}
+	}
+	&-img {
+		display: block;
+		width: 40vw;
+		background-color: $c-black;
+		aspect-ratio: 16 / 9;
+		&.active {
+			& ~ .project {
+				&-top {
+					transform: translate3D(0, -100%, 0);
+				}
+				&-bottom {
+					transform: translate3D(0, 100%, 0);
+				}
+			}
+		}
+	}
+	&-top {
+		width: 100%;
+		position: absolute;
+		top: 0px;
+		padding: 0.52vw 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		z-index: -1;
+		transition: 0.3s ease-in-out;
+		.name {
+			display: flex;
+			align-items: center;
+			@include fz(32);
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+		.year {
+			color: $c-white !important;
+		}
+	}
+	&-bottom {
+		display: flex;
+		align-items: flex-start;
+		width: 100%;
+		position: absolute;
+		bottom: 0px;
+		padding: 0.52vw 0;
+		transition: 0.3s ease-in-out;
+		z-index: -1;
+		color: $c-white !important;
+		text-transform: none;
+		font-family: 'heveltica', sans-serif;
+	}
+	&-tag {
+		display: block;
+		min-width: 30%;
+		font-family: 'Space Mono', sans-serif;
+	}
+}
+@include max(1024px) {
+	.project {
+		padding: 30px 0;
+		&-wrap {
+			position: static;
+		}
+		&-number {
+			display: none;
+		}
+		&-status {
+			margin-bottom: 60px;
+		}
+		&-group {
+			width: 100%;
+			display: block;
+			position: static;
+			padding: 0 15px;
+			transform: translate3d(0, 0, 0);
+		}
+		&-item {
+			margin-bottom: 40px;
+		}
+		&-top {
+			position: static;
+			margin-bottom: 10px;
+			padding: 0;
+			pointer-events: auto;
+			.name {
+				font-size: 20px;
+			}
+		}
+		&-bottom {
+			position: static;
+			padding: 0;
+		}
+		&-tag {
+			display: none;
+		}
+		&-img {
+			width: 100%;
+			margin-bottom: 10px;
+		}
+	}
+}

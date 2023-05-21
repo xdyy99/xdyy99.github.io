@@ -1,0 +1,76 @@
+// Color
+$c-red: #d72323;
+$c-black: #131313;
+$c-white: #f5f5f5;
+$c-blue: #b0e0dd;
+
+// mixin default
+@mixin center-flex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin default-background {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+@mixin clear {
+	&::after {
+		content: '';
+		clear: both;
+		display: table;
+	}
+}
+// mixin advance
+
+@mixin lc($value: 3) {
+	display: -webkit-box;
+	-webkit-line-clamp: $value;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+@mixin max($value) {
+	@media screen and (max-width: $value) {
+		@content;
+	}
+}
+@mixin min($value) {
+	@media screen and (min-width: $value) {
+		@content;
+	}
+}
+@mixin hover($value: 1025px) {
+	&:hover {
+		@media screen and (min-width: $value) {
+			@content;
+		}
+	}
+}
+@mixin sqr($value: 4rem) {
+	width: $value;
+	height: $value;
+}
+@mixin cir($value: 4rem) {
+	width: $value;
+	height: $value;
+	border-radius: 999px;
+}
+@mixin vw($value) {
+	width: calc(#{$value} / 1920 * 100vw);
+}
+@mixin vh($value) {
+	height: calc(#{$value} / 1080 * 100vh);
+}
+@mixin vwbox($value) {
+	width: calc(#{$value} / 1920 * 100vw);
+	height: calc(#{$value} / 1920 * 100vw);
+}
+// font
+@mixin fz($value) {
+	$vw: $value / 19.2 + 0vw;
+	font-size: $vw;
+	@include max(1024px) {
+	}
+}
